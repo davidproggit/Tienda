@@ -1,8 +1,0 @@
-C:\Users\nose\source\repos\ConsoleApp2\obj\Debug\CapaDeNegocio.csproj.AssemblyReference.cache
-C:\Users\nose\source\repos\ConsoleApp2\obj\Debug\CapaDeNegocio.csproj.SuggestedBindingRedirects.cache
-C:\Users\nose\source\repos\ConsoleApp2\obj\Debug\CapaDeNegocio.csproj.CoreCompileInputs.cache
-C:\Users\nose\source\repos\ConsoleApp2\obj\Debug\ConsoleApp2.exe
-C:\Users\nose\source\repos\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
-C:\Users\nose\source\repos\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
-C:\Users\nose\source\repos\ConsoleApp2\bin\Debug\ConsoleApp2.exe
-C:\Users\nose\source\repos\ConsoleApp2\bin\Debug\ConsoleApp2.pdb

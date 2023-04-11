@@ -1,0 +1,12 @@
+C:\Users\nose\source\repos\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\nose\source\repos\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\nose\source\repos\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.AssemblyReference.cache
+C:\Users\nose\source\repos\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\nose\source\repos\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\nose\source\repos\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+C:\Users\nose\Documents\testLogin2\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+C:\Users\nose\Documents\testLogin2\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.AssemblyReference.cache
+C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.pdb

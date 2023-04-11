@@ -1,0 +1,11 @@
+C:\Users\nose\source\repos\Login\bin\Debug\Login.exe.config
+C:\Users\nose\source\repos\Login\bin\Debug\Login.exe
+C:\Users\nose\source\repos\Login\bin\Debug\Login.pdb
+C:\Users\nose\source\repos\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\nose\source\repos\Login\obj\Debug\Login.csproj.SuggestedBindingRedirects.cache
+C:\Users\nose\source\repos\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\nose\source\repos\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\nose\source\repos\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\nose\source\repos\Login\obj\Debug\Login.exe
+C:\Users\nose\source\repos\Login\obj\Debug\Login.pdb
+C:\Users\nose\source\repos\Login\obj\Debug\Login.Login.resources
