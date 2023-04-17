@@ -10,3 +10,9 @@ C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.Asse
 C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
 C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.dll
 C:\Users\nose\Documents\testLogin2\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
+F:\Tecnicas 2023\Proyecto Final\tienda\CapaDeDatos\bin\Debug\CapaDeDatos.dll
+F:\Tecnicas 2023\Proyecto Final\tienda\CapaDeDatos\bin\Debug\CapaDeDatos.pdb
+F:\Tecnicas 2023\Proyecto Final\tienda\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.AssemblyReference.cache
+F:\Tecnicas 2023\Proyecto Final\tienda\CapaDeDatos\obj\Debug\CapaDeDatos.csproj.CoreCompileInputs.cache
+F:\Tecnicas 2023\Proyecto Final\tienda\CapaDeDatos\obj\Debug\CapaDeDatos.dll
+F:\Tecnicas 2023\Proyecto Final\tienda\CapaDeDatos\obj\Debug\CapaDeDatos.pdb
