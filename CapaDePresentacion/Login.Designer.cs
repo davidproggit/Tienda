@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.etiquetaError = new System.Windows.Forms.Label();
             this.botonMinimizar = new System.Windows.Forms.PictureBox();
             this.botonCerrar = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.botonCerrar)).BeginInit();
@@ -52,6 +52,16 @@
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 204);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 32);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Login";
             // 
             // txtUsuario
             // 
@@ -131,16 +141,6 @@
             this.botonCerrar.TabIndex = 6;
             this.botonCerrar.TabStop = false;
             this.botonCerrar.Click += new System.EventHandler(this.botonCerrar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 204);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 32);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Login";
             // 
             // Login
             // 

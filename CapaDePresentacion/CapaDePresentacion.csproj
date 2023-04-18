@@ -131,16 +131,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BotonMinimizar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\BotonCerrar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BotonMinimizar1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BotonCerrar1.png" />
+    <None Include="Resources\BotonMinimizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
