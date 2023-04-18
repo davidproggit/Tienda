@@ -110,7 +110,7 @@
             // 
             // botonMinimizar
             // 
-            this.botonMinimizar.Image = global::Login.Properties.Resources.BotonMinimizar;
+            this.botonMinimizar.Image = global::CapaDePresentacion.Properties.Resources.BotonMinimizar;
             this.botonMinimizar.Location = new System.Drawing.Point(736, 0);
             this.botonMinimizar.Margin = new System.Windows.Forms.Padding(0);
             this.botonMinimizar.Name = "botonMinimizar";
@@ -122,7 +122,7 @@
             // 
             // botonCerrar
             // 
-            this.botonCerrar.Image = global::Login.Properties.Resources.BotonCerrar;
+            this.botonCerrar.Image = global::CapaDePresentacion.Properties.Resources.BotonCerrar;
             this.botonCerrar.Location = new System.Drawing.Point(768, 0);
             this.botonCerrar.Margin = new System.Windows.Forms.Padding(0);
             this.botonCerrar.Name = "botonCerrar";
