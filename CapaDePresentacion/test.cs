@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login
+namespace CapaDePresentacion
 {
-    public partial class ABMAdministrador : UserControl
+    public partial class test : Form
     {
-        public ABMAdministrador()
+        public test()
         {
             InitializeComponent();
         }

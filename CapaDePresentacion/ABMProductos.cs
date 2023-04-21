@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login
+namespace CapaDePresentacion
 {
-    public partial class AltaClientes : Form
+    public partial class ABMProductos : Form
     {
-        public AltaClientes()
+        public ABMProductos()
         {
             InitializeComponent();
+        }
+
+        private void ABMProductos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

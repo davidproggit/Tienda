@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Login
+    partial class ABMProductos_Load
     {
         /// <summary>
         /// Variable del diseñador necesaria.

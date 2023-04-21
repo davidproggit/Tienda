@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 
 namespace Login
 {
-    public partial class Login : Form
+    public partial class ABMProductos_Load : Form
     {
-        public Login()
+        public ABMProductos_Load()
         {
             InitializeComponent();
         }
