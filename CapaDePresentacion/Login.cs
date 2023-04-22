@@ -101,18 +101,18 @@ namespace Login
 
         private void MensajeError(string mensaje)
         {
-            etiquetaError.Text = "Error: " + mensaje;
-            etiquetaError.Visible = true;
+              etiquetaError.Text = "Error: " + mensaje;
+              etiquetaError.Visible = true;
         }
 
         private void botonCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+              Application.Exit();
         }
 
         private void botonMinimizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+                this.WindowState = FormWindowState.Minimized;
         }
 
         private void Login_MouseDown(object sender, MouseEventArgs e)

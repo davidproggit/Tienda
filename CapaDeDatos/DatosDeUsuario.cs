@@ -18,13 +18,13 @@ namespace CapaDeDatos
 
                 using (var comando = new SqlCommand())
                 {
-                    comando.Connection = conexion;
-                    comando.CommandText = "select *from Usuarios where NombreLogin=@usuario and Clave=@clave";
-                    comando.Parameters.AddWithValue("@usuario", usuario);
-                    comando.Parameters.AddWithValue("@clave", clave);
-                    comando.CommandType = CommandType.Text;
+                      comando.Connection = conexion;
+                      comando.CommandText = "select *from Usuarios where NombreLogin=@usuario and Clave=@clave";
+                      comando.Parameters.AddWithValue("@usuario", usuario);
+                      comando.Parameters.AddWithValue("@clave", clave);
+                      comando.CommandType = CommandType.Text;
 
-                    return DevolverFilas(comando);
+                      return DevolverFilas(comando);
                 }
             }
         }
@@ -35,9 +35,9 @@ namespace CapaDeDatos
 
             if (lector.HasRows)
             {
-                return true;
+                  return true;
             }
-            else { return false; }
+            else {   return false;   }
         }
     }
 }
