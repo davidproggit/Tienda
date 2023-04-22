@@ -16,7 +16,7 @@ namespace CapaDeDatos
             {
                 conexion.Open();
 
-                using (var comando = new SqlCommand()) 
+                using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexion;
                     comando.CommandText = "select *from Usuarios where NombreLogin=@usuario and Clave=@clave";
@@ -24,15 +24,28 @@ namespace CapaDeDatos
                     comando.Parameters.AddWithValue("@clave", clave);
                     comando.CommandType = CommandType.Text;
 
-                    SqlDataReader lector = comando.ExecuteReader();
-
-                    if (lector.HasRows)
-                    {
-                        return true;
-                    }
-                    else { return false; }
+                    return DevolverFilas(comando);
                 }
             }
         }
+
+        private static bool DevolverFilas(SqlCommand comando)
+        {
+            SqlDataReader lector = comando.ExecuteReader();
+
+            if (lector.HasRows)
+            {
+                return true;
+            }
+            else { return false; }
+        }
     }
 }
+
+
+
+
+
+
+
+

@@ -22,7 +22,7 @@ namespace Login
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,int wparam, int lparam);
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -69,25 +69,25 @@ namespace Login
                 if (txtClave.Text != "Clave")
                 {
                     ModeloUsuario usuario = new ModeloUsuario();
-                    var loginValido = usuario.LoginUsuario(txtUsuario.Text,txtClave.Text);
+                    var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
 
                     if (loginValido)
-                    {
-                        PaginaPrincipal paginaPrincipal = new PaginaPrincipal();
-                        paginaPrincipal.Show();
-                        paginaPrincipal.FormClosed += CerrarSesion;
-                        this.Hide();
-                    }
+                        AbrirPantallaInicio();
                     else
-                    {
                         MensajeError("Usuario o clave incorrecta");
-                        //txtClave.Clear();
-                        //txtUsuario.Focus();
-                    }
+
                 }
                 else MensajeError("Ingrese su clave");
             }
             else MensajeError("Ingrese su nombre de usuario");
+        }
+
+        private void AbrirPantallaInicio()
+        {
+            PaginaPrincipal paginaPrincipal = new PaginaPrincipal();
+            paginaPrincipal.Show();
+            paginaPrincipal.FormClosed += CerrarSesion;
+            this.Hide();
         }
 
         private void CerrarSesion(object sender, FormClosedEventArgs e)
@@ -101,7 +101,7 @@ namespace Login
 
         private void MensajeError(string mensaje)
         {
-            etiquetaError.Text = "Error: " +  mensaje;
+            etiquetaError.Text = "Error: " + mensaje;
             etiquetaError.Visible = true;
         }
 
@@ -118,7 +118,14 @@ namespace Login
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012,0);
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
+
+
+
+
+
+
+
