@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMClientes.Designer.cs">
+      <DependentUpon>ABMClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMCompraProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMCompraProductos.Designer.cs">
+      <DependentUpon>ABMCompraProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ABMProductos.Designer.cs">
       <DependentUpon>ABMProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlertadeProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertadeProducto.Designer.cs">
+      <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -72,8 +90,17 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ABMClientes.resx">
+      <DependentUpon>ABMClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMCompraProductos.resx">
+      <DependentUpon>ABMCompraProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ABMProductos.resx">
       <DependentUpon>ABMProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlertadeProducto.resx">
+      <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
