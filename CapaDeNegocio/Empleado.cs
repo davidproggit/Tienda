@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace CapaDeNegocio
 {
+
     public abstract class Empleado
     {
+
+
         private int _id;
 
-        public int Id
+        public int id
         {
             get { return _id; }
             set { _id = value; }
@@ -18,7 +21,7 @@ namespace CapaDeNegocio
 
         private string _nombre;
 
-        public string Nombre
+        public string nombre
         {
             get { return _nombre; }
             set { _nombre = value; }
@@ -26,7 +29,7 @@ namespace CapaDeNegocio
 
         private string _apellido;
 
-        public string Apellido
+        public string apellido
         {
             get { return _apellido; }
             set { _apellido = value; }
@@ -34,12 +37,17 @@ namespace CapaDeNegocio
 
         private double _sueldo;
 
-        public double Sueldo
+        public double sueldo
         {
             get { return _sueldo; }
             set { _sueldo = value; }
         }
 
-        public Empleado() { }
+        public Empleado() 
+        
+        {
+
+        }
     }
+    
 }

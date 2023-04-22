@@ -10,6 +10,17 @@ namespace CapaDeNegocio
     {
         public cliente() { }
 
-        public cliente(string nombre, string apellido) { }
+        public cliente(string nombre, string apellido)
+        
+        {
+            
+        }
     }
+
+    
+    
+    
+   
+
+
 }
