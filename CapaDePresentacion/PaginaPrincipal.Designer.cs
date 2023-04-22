@@ -1,4 +1,4 @@
-﻿namespace Login
+﻿namespace CapaDePresentacion
 {
     partial class PaginaPrincipal
     {
@@ -51,7 +51,7 @@
             // 
             // botonCerrar
             // 
-            this.botonCerrar.Image = global::CapaDePresentacion.Properties.Resources.BotonCerrar;
+           /* this.botonCerrar.Image = global::CapaDePresentacion.Properties.Resources.BotonCerrar;
             this.botonCerrar.Location = new System.Drawing.Point(768, 0);
             this.botonCerrar.Margin = new System.Windows.Forms.Padding(0);
             this.botonCerrar.Name = "botonCerrar";
@@ -60,10 +60,10 @@
             this.botonCerrar.TabIndex = 1;
             this.botonCerrar.TabStop = false;
             this.botonCerrar.Click += new System.EventHandler(this.botonCerrar_Click);
-            // 
+            */// 
             // botonMinimizar
             // 
-            this.botonMinimizar.Image = global::CapaDePresentacion.Properties.Resources.BotonMinimizar;
+           /* this.botonMinimizar.Image = global::CapaDePresentacion.Properties.Resources.BotonMinimizar;
             this.botonMinimizar.Location = new System.Drawing.Point(736, 0);
             this.botonMinimizar.Margin = new System.Windows.Forms.Padding(0);
             this.botonMinimizar.Name = "botonMinimizar";
@@ -72,7 +72,7 @@
             this.botonMinimizar.TabIndex = 2;
             this.botonMinimizar.TabStop = false;
             this.botonMinimizar.Click += new System.EventHandler(this.botonMinimizar_Click);
-            // 
+           */ // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;

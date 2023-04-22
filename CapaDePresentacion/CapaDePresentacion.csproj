@@ -46,25 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="PaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PaginaPrincipal.Designer.cs">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasGenerales\InterfazBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\InterfazBienvenida.Designer.cs">
+      <DependentUpon>InterfazBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasGenerales\InterfazUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\InterfazUsuario.Designer.cs">
+      <DependentUpon>InterfazUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasGenerales\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasGenerales\UsuarioPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\UsuarioPerfil.Designer.cs">
+      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasGenerales\InterfazBienvenida.resx">
+      <DependentUpon>InterfazBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasGenerales\InterfazUsuario.resx">
+      <DependentUpon>InterfazUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasGenerales\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasGenerales\UsuarioPerfil.resx">
+      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,16 +116,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{54a55b9c-b35d-4975-8b2f-d10e8131c62a}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDeNegocio\CapaDeNegocio.csproj">
       <Project>{321588d2-1b2f-4e82-826f-b60d7c1ab9ce}</Project>
       <Name>CapaDeNegocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\BotonCerrar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BotonMinimizar.png" />
+    <None Include="Resources\IconoUsuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

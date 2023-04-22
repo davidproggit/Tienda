@@ -45,5 +45,11 @@
     <Compile Include="DatosDeUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{54a55b9c-b35d-4975-8b2f-d10e8131c62a}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

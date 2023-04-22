@@ -1,16 +1,16 @@
-﻿using System;
+﻿using CapaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDeNegocio;
-using System.Runtime.InteropServices;
 
-namespace Login
+namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class Login : Form
     {
@@ -19,11 +19,23 @@ namespace Login
             InitializeComponent();
         }
 
-        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,int wparam, int lparam);
+        private void MoverVentana_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        //Metodos para poder mover la ventana
+        #region "Metodos"
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        #endregion
+
+        //Reemplazar los textos de entrada (usuario y clave)
+        #region "Reemplazo"
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "Usuario")
@@ -61,6 +73,7 @@ namespace Login
                 txtClave.UseSystemPasswordChar = false;
             }
         }
+        #endregion
 
         private void botonAcceder_Click(object sender, EventArgs e)
         {
@@ -69,25 +82,30 @@ namespace Login
                 if (txtClave.Text != "Clave")
                 {
                     ModeloUsuario usuario = new ModeloUsuario();
-                    var loginValido = usuario.LoginUsuario(txtUsuario.Text,txtClave.Text);
+                    var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
 
                     if (loginValido)
                     {
-                        PaginaPrincipal paginaPrincipal = new PaginaPrincipal();
-                        paginaPrincipal.Show();
-                        paginaPrincipal.FormClosed += CerrarSesion;
                         this.Hide();
+                        InterfazBienvenida interfazBienvenida = new InterfazBienvenida();
+                        interfazBienvenida.ShowDialog();
+
+                        InterfazUsuario interfazUsuario = new InterfazUsuario();
+                        interfazUsuario.Show();
+                        interfazUsuario.FormClosed += CerrarSesion;
                     }
                     else
-                    {
                         MensajeError("Usuario o clave incorrecta");
-                        //txtClave.Clear();
-                        //txtUsuario.Focus();
-                    }
                 }
                 else MensajeError("Ingrese su clave");
             }
             else MensajeError("Ingrese su nombre de usuario");
+        }
+
+        private void MensajeError(string mensaje)
+        {
+            etiquetaError.Text = "Error: " + mensaje;
+            etiquetaError.Visible = true;
         }
 
         private void CerrarSesion(object sender, FormClosedEventArgs e)
@@ -99,26 +117,6 @@ namespace Login
             txtUsuario.Focus();
         }
 
-        private void MensajeError(string mensaje)
-        {
-            etiquetaError.Text = "Error: " +  mensaje;
-            etiquetaError.Visible = true;
-        }
-
-        private void botonCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void botonMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Login_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012,0);
-        }
+    
     }
 }
