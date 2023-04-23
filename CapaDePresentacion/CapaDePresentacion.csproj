@@ -172,7 +172,6 @@
     <EmbeddedResource Include="testAbmUsuarios.resx">
       <DependentUpon>testAbmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CapaDePresentacion_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
