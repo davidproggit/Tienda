@@ -13,7 +13,7 @@ namespace CapaDeDatos
         private readonly string cadenaConexion;
         public ConexionSQL()
         {
-            cadenaConexion = "Server=(local); DataBase=TiendaUPE; integrated security = true";
+            cadenaConexion = @"Data Source=DESKTOP-PJBV73K\SQLEXPRESS; DataBase=TiendaUPE1; integrated security = true";
         }
 
         protected SqlConnection ObtenerConexion()
