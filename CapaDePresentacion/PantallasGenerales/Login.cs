@@ -19,14 +19,13 @@ namespace CapaDePresentacion.PantallasGenerales
             InitializeComponent();
         }
 
+        #region "Metodos de mover la ventana"
         private void MoverVentana_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //Metodos para poder mover la ventana
-        #region "Metodos"
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -34,8 +33,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
 
-        //Reemplazar los textos de entrada (usuario y clave)
-        #region "Reemplazo"
+        #region "Reemplazo campos de login"
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "Usuario")
@@ -77,11 +75,14 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void botonAcceder_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "Usuario")
+            ComprobarCamposFaltantes();
+
+            if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
             {
-                if (txtClave.Text != "Clave")
+                ModeloUsuario usuario = new ModeloUsuario();
+
+                try
                 {
-                    ModeloUsuario usuario = new ModeloUsuario();
                     var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
 
                     if (loginValido)
@@ -95,9 +96,25 @@ namespace CapaDePresentacion.PantallasGenerales
                     else
                         MensajeError("Usuario o clave incorrecta");
                 }
-                else MensajeError("Ingrese su clave");
+                catch (Exception)
+                {
+                    MessageBox.Show("Error: No se encontro la base de datos");
+                }
+
             }
-            else MensajeError("Ingrese su nombre de usuario");
+
+        }
+
+        private void ComprobarCamposFaltantes()
+        {
+            if (txtUsuario.Text == "Usuario")
+                MensajeError("Ingrese su nombre de usuario");
+
+            if (txtClave.Text == "Clave")
+                MensajeError("Ingrese su clave");
+
+            if (txtUsuario.Text == "Usuario" && txtClave.Text == "Clave")
+                MensajeError("Debe completar los campos");
         }
 
         private void MensajeError(string mensaje)
@@ -115,6 +132,5 @@ namespace CapaDePresentacion.PantallasGenerales
             txtUsuario.Focus();
         }
 
-    
     }
 }

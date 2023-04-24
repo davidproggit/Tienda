@@ -21,7 +21,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private void InterfazUsuario_Load(object sender, EventArgs e)
         {
             CargarDatosUsuario();
-            CargarPantallas();
+            CargarPantallasUsuarios();
         }
 
         private void CerrarFormulario()
@@ -29,14 +29,13 @@ namespace CapaDePresentacion.PantallasGenerales
             this.Close();
         }
 
+        #region "Mover la ventana"
         private void MoverVentana_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //Metodos para poder mover la ventana
-        #region "Metodos"
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -44,24 +43,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
 
-        private void CargarPantallas()
-        {
-            if (CacheSesionUsuario.Cargo == Cargos.Admin)
-                AbrirFormulario<testAmbEmpleados>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
-                AbrirFormulario<ABMClientes>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
-                AbrirFormulario<ABMProductos>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
-                AbrirFormulario<Reportes>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
-                AbrirFormulario<ABMCompraProductos>();
-        }
-
+        #region "Cargar pantalla generica"
         private bool perfil = false;
 
         private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -80,14 +62,37 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         private void CerrarPantallaPerfil()
         {
-            CargarPantallas();
+            CargarPantallasUsuarios();
             linkPerfil.Text = "Mi perfil";
             perfil = false;
+        }
+        private void CargarDatosUsuario()
+        {
+            etiquetaNombre.Text = CacheSesionUsuario.Nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CerrarFormulario();
+        }
+        #endregion
+
+        private void CargarPantallasUsuarios()
+        {
+            if (CacheSesionUsuario.Cargo == Cargos.Admin)
+                AbrirFormulario<testAmbEmpleados>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
+                AbrirFormulario<ABMClientes>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
+                AbrirFormulario<ABMProductos>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
+                AbrirFormulario<Reportes>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
+                AbrirFormulario<ABMCompraProductos>();
         }
 
         private void AbrirFormulario<MiFormulario>() where MiFormulario : Form, new()
@@ -109,11 +114,5 @@ namespace CapaDePresentacion.PantallasGenerales
                 formulario.BringToFront();
         }
 
-        private void CargarDatosUsuario()
-        {
-            etiqueta2.Text = CacheSesionUsuario.Nombre;
-        }
-
-      
     }
 }

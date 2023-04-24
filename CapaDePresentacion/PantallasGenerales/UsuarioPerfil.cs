@@ -21,16 +21,22 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void UsuarioPerfil_Load(object sender, EventArgs e)
         {
-            CargarPerfil();
+            DatosPerfil();
+            VentanaEdicion();
+        }
+        private void ActualizarInformacionPerfil()
+        {
+            DatosPerfil();
+            VentanaEdicion();
             IniciarEdicionClave();
         }
-
-        private void CargarPerfil()
+        private void botonEditar_Click(object sender, EventArgs e)
         {
-            DatosVisibles();
+            panelEdicion.Visible = true;
             VentanaEdicion();
         }
 
+        #region "Rellenar campos"
         private void VentanaEdicion()
         {
             textoUsuario.Text = CacheSesionUsuario.NombreLogin;
@@ -42,7 +48,7 @@ namespace CapaDePresentacion.PantallasGenerales
             textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
         }
 
-        private void DatosVisibles()
+        private void DatosPerfil()
         {
             etiquetaUsuario.Text = CacheSesionUsuario.NombreLogin;
             etiquetaNombre.Text = CacheSesionUsuario.Nombre;
@@ -50,7 +56,18 @@ namespace CapaDePresentacion.PantallasGenerales
             etiquetaEmail.Text = CacheSesionUsuario.Email;
             etiquetaCargo.Text = CacheSesionUsuario.Cargo;
         }
+        #endregion
 
+        private void linkClave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (linkClave.Text == "Editar")
+                HabilitarCamposEdicionClave();
+
+            else if (linkClave.Text == "Cancelar")
+                DeshabilitarCamposEdicionClave();
+        }
+
+        #region "Activar o desactivar campos"
         private void IniciarEdicionClave()
         {
             linkClave.Text = "Editar";
@@ -60,78 +77,62 @@ namespace CapaDePresentacion.PantallasGenerales
             textoClaveConfirmacion.UseSystemPasswordChar = true;
         }
 
-        private void ReiniciarInformacionPerfil()
+        private void HabilitarCamposEdicionClave()
         {
-            CargarPerfil();
+            linkClave.Text = "Cancelar";
+
+            textoClaveNueva.Enabled = true;
+            textoClaveNueva.Visible = true;
+            textoClaveNueva.Text = "";
+
+            textoClaveConfirmacion.Enabled = true;
+            textoClaveConfirmacion.Visible = true;
+            textoClaveConfirmacion.Text = "";
+
+            etiquetaClaveNueva.Visible = true;
+            etiquetaClaveConfirmacion.Visible = true;
+        }
+
+        private void DeshabilitarCamposEdicionClave()
+        {
             IniciarEdicionClave();
+            textoClaveNueva.Text = CacheSesionUsuario.Clave;
+            textoClaveNueva.Visible = false;
+
+            textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
+            textoClaveConfirmacion.Visible = false;
+
+            etiquetaClaveNueva.Visible = false;
+            etiquetaClaveConfirmacion.Visible = false;
         }
-
-        private void botonEditar_Click(object sender, EventArgs e)
-        {
-            panelEdicion.Visible = true;
-            CargarPerfil();
-        }
-
-        private void linkClave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            if (linkClave.Text == "Editar")
-            {
-                linkClave.Text = "Cancelar";
-                textoClaveNueva.Enabled = true;
-                textoClaveNueva.Text = "";
-                textoClaveConfirmacion.Enabled = true;
-                textoClaveConfirmacion.Text = "";
-
-                textoClaveNueva.Visible = true;
-                textoClaveConfirmacion.Visible = true;
-                etiquetaClaveNueva.Visible = true;
-                etiquetaClaveConfirmacion.Visible = true;
-            }
-            else if (linkClave.Text == "Cancelar")
-            {
-                IniciarEdicionClave();
-                textoClaveNueva.Text = CacheSesionUsuario.Clave;
-                textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
-
-                textoClaveNueva.Visible = false;
-                textoClaveConfirmacion.Visible = false;
-                etiquetaClaveNueva.Visible = false;
-                etiquetaClaveConfirmacion.Visible = false;
-            }
-        }
+        #endregion
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             if (textoClaveNueva.Text == textoClaveConfirmacion.Text)
             {
                 if (textoClaveActual.Text == CacheSesionUsuario.Clave)
-                {
-                    var modeloUsuario = new ModeloUsuario(
-                        id: CacheSesionUsuario.ID,
-                        usuario: textoUsuario.Text,
-                        clave: textoClaveNueva.Text,
-                        nombre: textoNombre.Text,
-                        apellido: textoApellido.Text,
-                        email: textoEmail.Text,
-                        cargo: null
-                        );
-
-                    var resultado = modeloUsuario.EditarPerfilUsuario();
-                    MessageBox.Show(resultado);
-                    ReiniciarInformacionPerfil();
-                    panelEdicion.Visible = false;
-                }
+                    EditarPerfilUsuario();
                 else
-                    MessageBox.Show("Error: clave incorrecta");
+                    MessageBox.Show("Error: Debe ingresar la clave");
             }
             else
                 MessageBox.Show("Error: las claves no coinciden");
         }
 
+        private void EditarPerfilUsuario()
+        {
+            var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: textoUsuario.Text, clave: textoClaveNueva.Text, nombre: textoNombre.Text, apellido: textoApellido.Text, email: textoEmail.Text, cargo: null);
+            var resultado = modeloUsuario.EditarPerfilUsuario();
+            MessageBox.Show(resultado);
+
+            ActualizarInformacionPerfil();
+            panelEdicion.Visible = false;
+        }
+
         private void botonCancelar_Click(object sender, EventArgs e)
         {
             panelEdicion.Visible = false;
-            ReiniciarInformacionPerfil();
         }
     }
 }
