@@ -89,10 +89,7 @@ namespace CapaDePresentacion.PantallasGenerales
                     if (loginValido)
                     {
                         this.Hide();
-
-                        InterfazUsuario interfazUsuario = new InterfazUsuario();
-                        interfazUsuario.Show();
-                        interfazUsuario.FormClosed += CerrarSesion;
+                        CrearInterfazUsuario();
                     }
                     else
                         MensajeError("Usuario o clave incorrecta");
@@ -104,6 +101,13 @@ namespace CapaDePresentacion.PantallasGenerales
 
             }
 
+        }
+
+        private void CrearInterfazUsuario()
+        {
+            InterfazUsuario interfazUsuario = new InterfazUsuario();
+            interfazUsuario.Show();
+            interfazUsuario.FormClosed += CerrarSesion;
         }
 
         private void ComprobarCamposFaltantes()
