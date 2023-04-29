@@ -62,7 +62,7 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             if (linkClave.Text == "Editar")
                 HabilitarCamposEdicionClave();
-            else 
+            else
                 DeshabilitarCamposEdicionClave();
         }
 

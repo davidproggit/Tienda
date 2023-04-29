@@ -80,7 +80,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private void CargarPantallasUsuarios()
         {
             if (CacheSesionUsuario.Cargo == Cargos.Admin)
-                AbrirFormulario<testAmbEmpleados>();
+                AbrirFormulario<testABMEmpleados>();
 
             if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
                 AbrirFormulario<ABMClientes>();
