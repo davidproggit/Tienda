@@ -77,30 +77,40 @@ namespace CapaDePresentacion.PantallasGenerales
         private void botonAcceder_Click(object sender, EventArgs e)
         {
             ComprobarCamposFaltantes();
+            IniciarSesion();
+        }
 
+        private void IniciarSesion()
+        {
             if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
             {
                 ModeloUsuario usuario = new ModeloUsuario();
-
-                try
-                {
-                    var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
-
-                    if (loginValido)
-                    {
-                        this.Hide();
-                        CrearInterfazUsuario();
-                    }
-                    else
-                        MensajeError("Usuario o clave incorrecta");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error: No se encontro la base de datos");
-                }
-
+                BusquedaUsuario(usuario);
             }
+        }
 
+        private void BusquedaUsuario(ModeloUsuario usuario)
+        {
+            try
+            {
+                var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
+                LoginValidado(loginValido);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error: No se encontro la base de datos");
+            }
+        }
+
+        private void LoginValidado(bool loginValido)
+        {
+            if (loginValido)
+            {
+                this.Hide();
+                CrearInterfazUsuario();
+            }
+            else
+                MensajeError("Usuario o clave incorrecta");
         }
 
         private void CrearInterfazUsuario()
