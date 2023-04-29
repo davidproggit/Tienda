@@ -62,8 +62,7 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             if (linkClave.Text == "Editar")
                 HabilitarCamposEdicionClave();
-
-            else if (linkClave.Text == "Cancelar")
+            else 
                 DeshabilitarCamposEdicionClave();
         }
 
@@ -110,14 +109,17 @@ namespace CapaDePresentacion.PantallasGenerales
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             if (textoClaveNueva.Text == textoClaveConfirmacion.Text)
-            {
-                if (textoClaveActual.Text == CacheSesionUsuario.Clave)
-                    EditarPerfilUsuario();
-                else
-                    MessageBox.Show("Error: Debe ingresar la clave");
-            }
+                ConfirmarGuardado();
             else
                 MessageBox.Show("Error: las claves no coinciden");
+        }
+
+        private void ConfirmarGuardado()
+        {
+            if (textoClaveActual.Text == CacheSesionUsuario.Clave)
+                EditarPerfilUsuario();
+            else
+                MessageBox.Show("Error: Debe ingresar la clave");
         }
 
         private void EditarPerfilUsuario()

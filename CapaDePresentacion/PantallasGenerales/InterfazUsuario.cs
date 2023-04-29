@@ -99,20 +99,32 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             Form formulario = new Form();
             formulario = panelFormulario.Controls.OfType<MiFormulario>().FirstOrDefault();
-
-            if (formulario == null)
-            {
-                formulario = new MiFormulario();
-                formulario.TopLevel = false;
-                panelFormulario.Controls.Add(formulario);
-                panelFormulario.Tag = formulario;
-                formulario.BringToFront();
-                formulario.Dock = DockStyle.Fill;
-                formulario.Show();
-            }
-            else
-                formulario.BringToFront();
+            formulario = CrearFormulario<MiFormulario>(formulario);
         }
 
+        private Form CrearFormulario<MiFormulario>(Form formulario) where MiFormulario : Form, new()
+        {
+            if (formulario == null)
+                formulario = CargarFormulario<MiFormulario>();
+            else
+                formulario.BringToFront();
+
+            return formulario;
+        }
+
+        private Form CargarFormulario<MiFormulario>() where MiFormulario : Form, new()
+        {
+            Form formulario = new MiFormulario();
+            formulario.TopLevel = false;
+            formulario.BringToFront();
+            formulario.Dock = DockStyle.Fill;
+
+            panelFormulario.Controls.Add(formulario);
+            panelFormulario.Tag = formulario;
+
+            formulario.Show();
+
+            return formulario;
+        }
     }
 }
