@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaComun.Cache;
+using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,14 +108,12 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void ComprobarCamposFaltantes()
         {
-            if (txtUsuario.Text == "Usuario")
-                MensajeError("Ingrese su nombre de usuario");
+            ComprobarCampos campos = new ComprobarCampos();
+            var resultado = campos.ComprobarCamposIndividuales(txtUsuario.Text);
+            resultado = campos.ComprobarCamposIndividuales(txtClave.Text);
+            resultado = campos.ComprobarCamposConjunto(txtUsuario.Text,txtClave.Text);
 
-            if (txtClave.Text == "Clave")
-                MensajeError("Ingrese su clave");
-
-            if (txtUsuario.Text == "Usuario" && txtClave.Text == "Clave")
-                MensajeError("Debe completar los campos");
+            MensajeError(resultado);
         }
 
         private void MensajeError(string mensaje)
