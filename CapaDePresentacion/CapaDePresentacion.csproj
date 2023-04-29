@@ -74,28 +74,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABMClientes.cs">
+    <Compile Include="PantallasUsuarios\Vendedor\ABMClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABMClientes.Designer.cs">
+    <Compile Include="PantallasUsuarios\Vendedor\ABMClientes.Designer.cs">
       <DependentUpon>ABMClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABMCompraProductos.cs">
+    <Compile Include="PantallasUsuarios\Cliente\ABMCompraProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABMCompraProductos.Designer.cs">
+    <Compile Include="PantallasUsuarios\Cliente\ABMCompraProductos.Designer.cs">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABMProductos.cs">
+    <Compile Include="PantallasUsuarios\Encargado\ABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABMProductos.Designer.cs">
+    <Compile Include="PantallasUsuarios\Encargado\ABMProductos.Designer.cs">
       <DependentUpon>ABMProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlertadeProducto.cs">
+    <Compile Include="PantallasUsuarios\Encargado\AlertadeProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlertadeProducto.Designer.cs">
+    <Compile Include="PantallasUsuarios\Encargado\AlertadeProducto.Designer.cs">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </Compile>
     <!--<Compile Include="Login.cs">
@@ -106,28 +106,28 @@
     </Compile>-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes.cs">
+    <Compile Include="PantallasUsuarios\Gerente\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes.Designer.cs">
+    <Compile Include="PantallasUsuarios\Gerente\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="testAbmUsuarios.cs">
+    <Compile Include="PantallasUsuarios\Admin\testABMUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testAbmUsuarios.Designer.cs">
-      <DependentUpon>testAbmUsuarios.cs</DependentUpon>
+    <Compile Include="PantallasUsuarios\Admin\testABMUsuarios.Designer.cs">
+      <DependentUpon>testABMUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ABMClientes.resx">
+    <EmbeddedResource Include="PantallasUsuarios\Vendedor\ABMClientes.resx">
       <DependentUpon>ABMClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABMCompraProductos.resx">
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\ABMCompraProductos.resx">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABMProductos.resx">
+    <EmbeddedResource Include="PantallasUsuarios\Encargado\ABMProductos.resx">
       <DependentUpon>ABMProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlertadeProducto.resx">
+    <EmbeddedResource Include="PantallasUsuarios\Encargado\AlertadeProducto.resx">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </EmbeddedResource>
     <!--<EmbeddedResource Include="Login.resx">
@@ -166,11 +166,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes.resx">
+    <EmbeddedResource Include="PantallasUsuarios\Gerente\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testAbmUsuarios.resx">
-      <DependentUpon>testAbmUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasUsuarios\Admin\testABMUsuarios.resx">
+      <DependentUpon>testABMUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -215,5 +215,6 @@
   <ItemGroup>
     <None Include="Resources\IconoUsuario.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
