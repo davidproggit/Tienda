@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5583948-83A4-4515-8BC0-53336B723525}</ProjectGuid>
+    <ProjectGuid>{54A55B9C-B35D-4975-8B2F-D10E8131C62A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaDeDatos</RootNamespace>
-    <AssemblyName>CapaDeDatos</AssemblyName>
+    <RootNamespace>CapaComun</RootNamespace>
+    <AssemblyName>CapaComun</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,17 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="DatosProductos.cs" />
-    <Compile Include="ConexionSQL.cs" />
-    <Compile Include="DatosDeUsuario.cs" />
+    <Compile Include="Cache\CacheSesionUsuario.cs" />
+    <Compile Include="Cache\Cargos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
-      <Project>{54a55b9c-b35d-4975-8b2f-d10e8131c62a}</Project>
-      <Name>CapaComun</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

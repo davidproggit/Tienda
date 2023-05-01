@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDeNegocio;
 
-namespace PracticaDatagridviewSql
+namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        CapaNegocioProductos objetoCapaNegocio = new CapaNegocioProductos();
+        Productos objetoCapaNegocio = new Productos();
         private string idProducto = null;
         private bool editar = false;
 
@@ -29,7 +29,7 @@ namespace PracticaDatagridviewSql
 
         private void MostrarProductos()
         {
-            CapaNegocioProductos objeto = new CapaNegocioProductos();
+            Productos objeto = new Productos();
             grillaProductos.DataSource = objeto.MostrarProducto();
         }
 

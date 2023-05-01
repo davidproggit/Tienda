@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaDeDatos
 {
-    public class CapaDatosProductos
+    public class DatosProductos
     {
         Conexion conexion = new Conexion();
         SqlDataReader lector;

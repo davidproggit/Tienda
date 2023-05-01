@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Productos.cs" />
     <Compile Include="ModeloUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendedor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{54a55b9c-b35d-4975-8b2f-d10e8131c62a}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj">
       <Project>{e5583948-83a4-4515-8bc0-53336b723525}</Project>
       <Name>CapaDeDatos</Name>

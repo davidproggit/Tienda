@@ -1,4 +1,4 @@
-﻿namespace PracticaDatagridviewSql
+﻿namespace CapaDePresentacion
 {
     partial class InterfazProducto
     {
