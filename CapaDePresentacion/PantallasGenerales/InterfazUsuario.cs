@@ -115,14 +115,15 @@ namespace CapaDePresentacion.PantallasGenerales
         private Form CargarFormulario<MiFormulario>() where MiFormulario : Form, new()
         {
             Form formulario = new MiFormulario();
+
             formulario.TopLevel = false;
-            formulario.BringToFront();
             formulario.Dock = DockStyle.Fill;
 
             panelFormulario.Controls.Add(formulario);
             panelFormulario.Tag = formulario;
 
             formulario.Show();
+            formulario.BringToFront();
 
             return formulario;
         }
