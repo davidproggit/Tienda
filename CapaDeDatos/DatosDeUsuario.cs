@@ -11,21 +11,6 @@ namespace CapaDeDatos
 {
     public class DatosDeUsuario : ConexionSQL
     {
-        public void EditarPerfi2l(int id, string usuario, string clave, string nombre, string apellido, string email)
-        {
-            using (var conexion = ObtenerConexion())
-            {
-                conexion.Open();
-                using (var comando = new SqlCommand())
-                {
-                    comando.Connection = conexion;
-                    comando.CommandText = "update Usuarios set NombreLogin=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
-                    comando.Parameters.AddWithValue("@usuario", usuario);
-                    comando.CommandType = CommandType.Text;
-                    comando.ExecuteNonQuery();
-                }
-            }
-        }
         public void EditarPerfil(int id, string usuario, string clave, string nombre, string apellido, string email)
         {
             using (var conexion = ObtenerConexion())
