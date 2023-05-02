@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaComun.Cache;
+using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +20,13 @@ namespace CapaDePresentacion.PantallasGenerales
             InitializeComponent();
         }
 
+        #region "Metodos de mover la ventana"
         private void MoverVentana_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //Metodos para poder mover la ventana
-        #region "Metodos"
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -34,8 +34,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
 
-        //Reemplazar los textos de entrada (usuario y clave)
-        #region "Reemplazo"
+        #region "Reemplazo campos de login"
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "Usuario")
@@ -77,27 +76,58 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void botonAcceder_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "Usuario")
+            ComprobarCamposFaltantes();
+            IniciarSesion();
+        }
+
+        private void IniciarSesion()
+        {
+            if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
             {
-                if (txtClave.Text != "Clave")
-                {
-                    ModeloUsuario usuario = new ModeloUsuario();
-                    var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
-
-                    if (loginValido)
-                    {
-                        this.Hide();
-
-                        InterfazUsuario interfazUsuario = new InterfazUsuario();
-                        interfazUsuario.Show();
-                        interfazUsuario.FormClosed += CerrarSesion;
-                    }
-                    else
-                        MensajeError("Usuario o clave incorrecta");
-                }
-                else MensajeError("Ingrese su clave");
+                ModeloUsuario usuario = new ModeloUsuario();
+                BusquedaUsuario(usuario);
             }
-            else MensajeError("Ingrese su nombre de usuario");
+        }
+
+        private void BusquedaUsuario(ModeloUsuario usuario)
+        {
+            try
+            {
+                var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
+                LoginValidado(loginValido);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error: No se encontro la base de datos");
+            }
+        }
+
+        private void LoginValidado(bool loginValido)
+        {
+            if (loginValido)
+            {
+                this.Hide();
+                CrearInterfazUsuario();
+            }
+            else
+                MensajeError("Usuario o clave incorrecta");
+        }
+
+        private void CrearInterfazUsuario()
+        {
+            InterfazUsuario interfazUsuario = new InterfazUsuario();
+            interfazUsuario.Show();
+            interfazUsuario.FormClosed += CerrarSesion;
+        }
+
+        private void ComprobarCamposFaltantes()
+        {
+            ComprobarCampos campos = new ComprobarCampos();
+            var resultado = campos.ComprobarCamposIndividuales(txtUsuario.Text);
+            resultado = campos.ComprobarCamposIndividuales(txtClave.Text);
+            resultado = campos.ComprobarCamposConjunto(txtUsuario.Text,txtClave.Text);
+
+            MensajeError(resultado);
         }
 
         private void MensajeError(string mensaje)
@@ -115,6 +145,5 @@ namespace CapaDePresentacion.PantallasGenerales
             txtUsuario.Focus();
         }
 
-    
     }
 }

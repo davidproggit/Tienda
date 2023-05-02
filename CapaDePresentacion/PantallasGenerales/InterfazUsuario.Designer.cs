@@ -34,7 +34,7 @@
             this.IconoPerfil = new System.Windows.Forms.PictureBox();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.linkPerfil = new System.Windows.Forms.LinkLabel();
-            this.etiqueta2 = new System.Windows.Forms.Label();
+            this.etiquetaNombre = new System.Windows.Forms.Label();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.Tienda = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
@@ -71,7 +71,7 @@
             this.panelMenu.Controls.Add(this.IconoPerfil);
             this.panelMenu.Controls.Add(this.linkCerrarSesion);
             this.panelMenu.Controls.Add(this.linkPerfil);
-            this.panelMenu.Controls.Add(this.etiqueta2);
+            this.panelMenu.Controls.Add(this.etiquetaNombre);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 51);
             this.panelMenu.Name = "panelMenu";
@@ -114,16 +114,16 @@
             this.linkPerfil.Text = "Mi perfil";
             this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
             // 
-            // etiqueta2
+            // etiquetaNombre
             // 
-            this.etiqueta2.AutoSize = true;
-            this.etiqueta2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiqueta2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.etiqueta2.Location = new System.Drawing.Point(59, 139);
-            this.etiqueta2.Name = "etiqueta2";
-            this.etiqueta2.Size = new System.Drawing.Size(94, 27);
-            this.etiqueta2.TabIndex = 1;
-            this.etiqueta2.Text = "Usuario";
+            this.etiquetaNombre.AutoSize = true;
+            this.etiquetaNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etiquetaNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.etiquetaNombre.Location = new System.Drawing.Point(59, 139);
+            this.etiquetaNombre.Name = "etiquetaNombre";
+            this.etiquetaNombre.Size = new System.Drawing.Size(94, 27);
+            this.etiquetaNombre.TabIndex = 1;
+            this.etiquetaNombre.Text = "Usuario";
             // 
             // panelBarraTitulo
             // 
@@ -176,7 +176,7 @@
         private System.Windows.Forms.PictureBox IconoPerfil;
         private System.Windows.Forms.LinkLabel linkCerrarSesion;
         private System.Windows.Forms.LinkLabel linkPerfil;
-        private System.Windows.Forms.Label etiqueta2;
+        private System.Windows.Forms.Label etiquetaNombre;
         private System.Windows.Forms.Panel panelBarraTitulo;
         private System.Windows.Forms.Label Tienda;
     }
