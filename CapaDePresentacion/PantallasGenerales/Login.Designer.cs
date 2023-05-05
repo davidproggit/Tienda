@@ -138,7 +138,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tienda UPE";
+            this.Text = "Tienda";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
