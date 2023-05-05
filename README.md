@@ -2,7 +2,7 @@
 
 ![Badge en Desarollo](https://img.shields.io/badge/Status-Desarrollando-green)
 
-Proyecto realizado por un grupo de estudiantes de universidad que simula una tienda mediante Windows Forms.
+Proyecto en desarollo por un grupo de estudiantes de universidad que simula una tienda mediante Windows Forms.
 
 ## Arquitectura
 
