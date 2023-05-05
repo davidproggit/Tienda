@@ -10,7 +10,7 @@ namespace CapaDeDatos
 {
     public class Conexion
     {
-        SqlConnection conexion = new SqlConnection("Server=(local); DataBase=TiendaUPE;Integrated Security=true");
+        SqlConnection conexion = new SqlConnection("Server=(local); DataBase=Tienda;Integrated Security=true");
 
         public SqlConnection AbrirConexion()
         {
