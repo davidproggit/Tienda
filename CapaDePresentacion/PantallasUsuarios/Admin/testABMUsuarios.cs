@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion
 {
-    public partial class test : Form
+    public partial class testABMEmpleados : Form
     {
-        public test()
+        public testABMEmpleados()
         {
             InitializeComponent();
+        }
+
+        private void lblNombreCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreCliente_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

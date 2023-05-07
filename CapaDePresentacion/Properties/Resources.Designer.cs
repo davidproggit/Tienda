@@ -63,19 +63,9 @@ namespace CapaDePresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BotonCerrar {
+        internal static System.Drawing.Bitmap IconoUsuario {
             get {
-                object obj = ResourceManager.GetObject("BotonCerrar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap BotonMinimizar {
-            get {
-                object obj = ResourceManager.GetObject("BotonMinimizar", resourceCulture);
+                object obj = ResourceManager.GetObject("IconoUsuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
