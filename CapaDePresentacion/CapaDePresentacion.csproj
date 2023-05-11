@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallasGenerales\UsuarioPerfilEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\UsuarioPerfilEdicion.designer.cs">
+      <DependentUpon>UsuarioPerfilEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuarios\Encargado\InterfazProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallasGenerales\UsuarioPerfilEdicion.resx">
+      <DependentUpon>UsuarioPerfilEdicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Encargado\InterfazProducto.resx">
       <DependentUpon>InterfazProducto.cs</DependentUpon>
     </EmbeddedResource>
