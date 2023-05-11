@@ -17,6 +17,7 @@ namespace CapaDePresentacion.PantallasGenerales
         public InterfazUsuario()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
         private void InterfazUsuario_Load(object sender, EventArgs e)
         {

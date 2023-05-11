@@ -49,7 +49,7 @@
             this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormulario.Location = new System.Drawing.Point(200, 51);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(1047, 623);
+            this.panelFormulario.Size = new System.Drawing.Size(1309, 599);
             this.panelFormulario.TabIndex = 2;
             // 
             // panelContenedor
@@ -62,7 +62,7 @@
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.MinimumSize = new System.Drawing.Size(650, 650);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1247, 674);
+            this.panelContenedor.Size = new System.Drawing.Size(1509, 650);
             this.panelContenedor.TabIndex = 1;
             // 
             // panelMenu
@@ -75,7 +75,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 51);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 623);
+            this.panelMenu.Size = new System.Drawing.Size(200, 599);
             this.panelMenu.TabIndex = 1;
             // 
             // IconoPerfil
@@ -132,7 +132,7 @@
             this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(1247, 51);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1509, 51);
             this.panelBarraTitulo.TabIndex = 0;
             // 
             // Tienda
@@ -151,11 +151,11 @@
             // 
             // InterfazUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 674);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1509, 586);
             this.Controls.Add(this.panelContenedor);
             this.Name = "InterfazUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InterfazUsuario";
             this.Load += new System.EventHandler(this.InterfazUsuario_Load);
             this.panelContenedor.ResumeLayout(false);
