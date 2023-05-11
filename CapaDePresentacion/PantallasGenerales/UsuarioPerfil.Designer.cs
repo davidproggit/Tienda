@@ -62,6 +62,7 @@
             this.etiquetaApellidoEdicion = new System.Windows.Forms.Label();
             this.etiquetaUsuarioEdicion = new System.Windows.Forms.Label();
             this.etiquetaNombreEdicion = new System.Windows.Forms.Label();
+            this.etiquetaMensaje = new System.Windows.Forms.Label();
             this.Perfil.SuspendLayout();
             this.tabPerfil.SuspendLayout();
             this.tabPerfilEdicion.SuspendLayout();
@@ -227,6 +228,7 @@
             // 
             // tabPerfilEdicion
             // 
+            this.tabPerfilEdicion.Controls.Add(this.etiquetaMensaje);
             this.tabPerfilEdicion.Controls.Add(this.label2);
             this.tabPerfilEdicion.Controls.Add(this.botonGuardar);
             this.tabPerfilEdicion.Controls.Add(this.botonCancelar);
@@ -449,6 +451,18 @@
             this.etiquetaNombreEdicion.TabIndex = 47;
             this.etiquetaNombreEdicion.Text = "Nombre";
             // 
+            // etiquetaMensaje
+            // 
+            this.etiquetaMensaje.AutoSize = true;
+            this.etiquetaMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etiquetaMensaje.ForeColor = System.Drawing.Color.Black;
+            this.etiquetaMensaje.Location = new System.Drawing.Point(709, 274);
+            this.etiquetaMensaje.Name = "etiquetaMensaje";
+            this.etiquetaMensaje.Size = new System.Drawing.Size(87, 25);
+            this.etiquetaMensaje.TabIndex = 64;
+            this.etiquetaMensaje.Text = "Mensaje";
+            this.etiquetaMensaje.Visible = false;
+            // 
             // UsuarioPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -505,5 +519,6 @@
         private System.Windows.Forms.Label etiquetaApellidoEdicion;
         private System.Windows.Forms.Label etiquetaUsuarioEdicion;
         private System.Windows.Forms.Label etiquetaNombreEdicion;
+        private System.Windows.Forms.Label etiquetaMensaje;
     }
 }

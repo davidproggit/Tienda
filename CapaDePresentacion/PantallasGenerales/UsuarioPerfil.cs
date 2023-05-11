@@ -116,21 +116,39 @@ namespace CapaDePresentacion.PantallasGenerales
                 DeshabilitarCamposEdicionClave();
             }
             else
-                MessageBox.Show("Error: las claves no coinciden");
+                MensajeEstado("Las claves no coinciden","error");
         }
 
-         private void ConfirmarGuardado()
-         {
-             EditarPerfilUsuario();
-         }
+        private void ConfirmarGuardado()
+        {
+            EditarPerfilUsuario();
+        }
 
-         private void EditarPerfilUsuario()
-         {
-             var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: textoUsuario.Text, clave: textoClaveNueva.Text, nombre: textoNombre.Text, apellido: textoApellido.Text, email: textoEmail.Text, cargo: null);
-             var resultado = modeloUsuario.EditarPerfilUsuario();
-             MessageBox.Show(resultado);
+        private void EditarPerfilUsuario()
+        {
+            var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: textoUsuario.Text, clave: textoClaveNueva.Text, nombre: textoNombre.Text, apellido: textoApellido.Text, email: textoEmail.Text, cargo: null);
+            var resultado = modeloUsuario.EditarPerfilUsuario();
+            MensajeEstado(resultado, "ok");
 
-             ActualizarInformacionPerfil();
-         }
+            ActualizarInformacionPerfil();
+        }
+
+        private void MensajeEstado(string mensaje, string tipo)
+        {
+            etiquetaMensaje.Visible = true;
+
+            switch (tipo)
+            {
+                case "ok":
+                    etiquetaMensaje.Text = mensaje;
+                    etiquetaMensaje.ForeColor = Color.Green;
+                    break;
+                case "error":
+                    etiquetaMensaje.Text = "Error: " + mensaje;
+                    etiquetaMensaje.ForeColor = Color.Red;
+                    break;
+            }
+
+        }
     }
 }
