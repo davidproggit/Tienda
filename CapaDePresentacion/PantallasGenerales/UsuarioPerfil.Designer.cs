@@ -73,6 +73,7 @@
             this.botonEditar.TabIndex = 23;
             this.botonEditar.Text = "Editar informacion";
             this.botonEditar.UseVisualStyleBackColor = true;
+            this.botonEditar.Click += new System.EventHandler(this.botonEditar_Click);
             // 
             // etiquetaEmailCategoria
             // 

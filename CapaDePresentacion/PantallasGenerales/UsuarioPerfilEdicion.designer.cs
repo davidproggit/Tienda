@@ -266,6 +266,7 @@
             this.Controls.Add(this.etiquetaNombreEdicion);
             this.Name = "UsuarioPerfilEdicion";
             this.Text = "UsuarioPerfilEdicion";
+            this.Load += new System.EventHandler(this.UsuarioPerfilEdicion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

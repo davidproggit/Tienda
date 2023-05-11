@@ -33,5 +33,10 @@ namespace CapaDePresentacion.PantallasGenerales
             etiquetaCargo.Text = CacheSesionUsuario.Cargo;
         }
 
+        private void botonEditar_Click(object sender, EventArgs e)
+        {
+            UsuarioPerfilEdicion usuarioPerfilEdicion = new UsuarioPerfilEdicion();
+            usuarioPerfilEdicion.Show();
+        }
     }
 }

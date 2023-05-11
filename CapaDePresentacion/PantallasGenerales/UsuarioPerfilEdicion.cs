@@ -18,5 +18,21 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             InitializeComponent();
         }
+
+        private void UsuarioPerfilEdicion_Load(object sender, EventArgs e)
+        {
+            VentanaEdicion();
+        }
+
+        private void VentanaEdicion()
+        {
+            textoUsuario.Text = CacheSesionUsuario.NombreLogin;
+            textoNombre.Text = CacheSesionUsuario.Nombre;
+            textoApellido.Text = CacheSesionUsuario.Apellido;
+            textoEmail.Text = CacheSesionUsuario.Email;
+            textoClaveActual.Text = "";
+            textoClaveNueva.Text = CacheSesionUsuario.Clave;
+            textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
+        }
     }
 }
