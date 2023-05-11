@@ -14,6 +14,8 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class UsuarioPerfil : Form
     {
+        private bool editarClave = false;
+
         public UsuarioPerfil()
         {
             InitializeComponent();
@@ -57,9 +59,15 @@ namespace CapaDePresentacion.PantallasGenerales
         private void linkClave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (linkClave.Text == "Editar")
+            {
+                MensajeEstado("", "vacio");
                 HabilitarCamposEdicionClave();
+            }
             else
+            {
+                MensajeEstado("", "vacio");
                 DeshabilitarCamposEdicionClave();
+            }
         }
         
         #region "Activar o desactivar campos"
@@ -77,6 +85,8 @@ namespace CapaDePresentacion.PantallasGenerales
         private void HabilitarCamposEdicionClave()
         {
             IniciarEdicionClave();
+            editarClave = true;
+
             linkClave.Text = "Cancelar";
 
             textoClaveActual.Enabled = true;
@@ -99,6 +109,9 @@ namespace CapaDePresentacion.PantallasGenerales
         private void DeshabilitarCamposEdicionClave()
         {
             IniciarEdicionClave();
+            editarClave = false;
+            
+
             textoClaveActual.Visible = false;
             textoClaveNueva.Visible = false;
             textoClaveConfirmacion.Visible = false;
@@ -116,8 +129,9 @@ namespace CapaDePresentacion.PantallasGenerales
             {
                 ConfirmarGuardado();
                 DeshabilitarCamposEdicionClave();
+                editarClave = false;
             }
-            else
+            else if (editarClave)
                 MensajeEstado("Las claves no coinciden","error");
         }
 
@@ -148,6 +162,9 @@ namespace CapaDePresentacion.PantallasGenerales
                 case "error":
                     etiquetaMensaje.Text = "Error: " + mensaje;
                     etiquetaMensaje.ForeColor = Color.Red;
+                    break;
+                case "vacio":
+                    etiquetaMensaje.Text = "";
                     break;
             }
 
