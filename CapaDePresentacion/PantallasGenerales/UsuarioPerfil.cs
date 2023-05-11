@@ -116,10 +116,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void ConfirmarGuardado()
         {
-            if (textoClaveActual.Text == CacheSesionUsuario.Clave)
                 EditarPerfilUsuario();
-            else
-                MessageBox.Show("Error: Debe ingresar la clave");
         }
 
         private void EditarPerfilUsuario()
