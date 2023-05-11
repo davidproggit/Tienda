@@ -76,6 +76,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void HabilitarCamposEdicionClave()
         {
+            IniciarEdicionClave();
             linkClave.Text = "Cancelar";
 
             textoClaveActual.Enabled = true;
@@ -110,7 +111,8 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            if (textoClaveNueva.Text == textoClaveConfirmacion.Text)
+            if (textoClaveActual.Text == CacheSesionUsuario.Clave && textoClaveNueva.Text == textoClaveConfirmacion.Text
+                && textoClaveNueva.Text != "" && textoClaveConfirmacion.Text != "")
             {
                 ConfirmarGuardado();
                 DeshabilitarCamposEdicionClave();
