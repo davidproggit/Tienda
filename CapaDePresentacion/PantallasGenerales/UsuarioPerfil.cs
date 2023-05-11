@@ -116,7 +116,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void ConfirmarGuardado()
         {
-                EditarPerfilUsuario();
+            EditarPerfilUsuario();
         }
 
         private void EditarPerfilUsuario()
