@@ -111,7 +111,10 @@ namespace CapaDePresentacion.PantallasGenerales
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             if (textoClaveNueva.Text == textoClaveConfirmacion.Text)
+            {
                 ConfirmarGuardado();
+                DeshabilitarCamposEdicionClave();
+            }
             else
                 MessageBox.Show("Error: las claves no coinciden");
         }
