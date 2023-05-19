@@ -217,6 +217,7 @@
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.textoNombre);
             this.Controls.Add(this.grillaProductos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazProducto";
             this.Text = "InterfazProducto";
             this.Load += new System.EventHandler(this.Form1_Load);
