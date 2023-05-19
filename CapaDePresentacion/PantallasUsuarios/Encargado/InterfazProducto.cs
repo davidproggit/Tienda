@@ -127,5 +127,10 @@ namespace CapaDePresentacion
             //MessageBox.Show("Eliminado correctamente");
             MostrarProductos();
         }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
     }
 }

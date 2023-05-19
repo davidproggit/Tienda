@@ -42,6 +42,7 @@
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonEditar = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,11 +166,22 @@
             this.botonEliminar.UseVisualStyleBackColor = true;
             this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
+            // botonCancelar
+            // 
+            this.botonCancelar.Location = new System.Drawing.Point(1024, 497);
+            this.botonCancelar.Name = "botonCancelar";
+            this.botonCancelar.Size = new System.Drawing.Size(140, 71);
+            this.botonCancelar.TabIndex = 14;
+            this.botonCancelar.Text = "Cancelar";
+            this.botonCancelar.UseVisualStyleBackColor = true;
+            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
+            // 
             // InterfazProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1275, 630);
+            this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonEditar);
             this.Controls.Add(this.botonGuardar);
@@ -209,6 +221,7 @@
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Button botonEditar;
         private System.Windows.Forms.Button botonEliminar;
+        private System.Windows.Forms.Button botonCancelar;
     }
 }
 
