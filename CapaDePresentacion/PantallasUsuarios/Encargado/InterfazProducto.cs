@@ -132,5 +132,11 @@ namespace CapaDePresentacion
         {
             LimpiarFormulario();
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            Productos objeto2 = new Productos();
+            grillaProductos.DataSource = objeto2.FiltrarProducto(textoBuscar.Text);
+        }
     }
 }

@@ -43,6 +43,8 @@
             this.botonEditar = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonCancelar = new System.Windows.Forms.Button();
+            this.textoBuscar = new System.Windows.Forms.TextBox();
+            this.botonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,11 +178,30 @@
             this.botonCancelar.UseVisualStyleBackColor = true;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
+            // textoBuscar
+            // 
+            this.textoBuscar.Location = new System.Drawing.Point(518, 532);
+            this.textoBuscar.Name = "textoBuscar";
+            this.textoBuscar.Size = new System.Drawing.Size(258, 26);
+            this.textoBuscar.TabIndex = 15;
+            // 
+            // botonBuscar
+            // 
+            this.botonBuscar.Location = new System.Drawing.Point(810, 510);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(140, 71);
+            this.botonBuscar.TabIndex = 16;
+            this.botonBuscar.Text = "Buscar";
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
+            // 
             // InterfazProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1275, 630);
+            this.Controls.Add(this.botonBuscar);
+            this.Controls.Add(this.textoBuscar);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonEditar);
@@ -222,6 +243,8 @@
         private System.Windows.Forms.Button botonEditar;
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.TextBox textoBuscar;
+        private System.Windows.Forms.Button botonBuscar;
     }
 }
 
