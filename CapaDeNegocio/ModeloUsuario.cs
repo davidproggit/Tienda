@@ -37,16 +37,9 @@ namespace CapaDeNegocio
 
         public string EditarPerfilUsuario()
         {
-            try
-            {
-                datosDeUsuario.EditarPerfil(id, usuario, clave, nombre, apellido, email);
-                LoginUsuario(usuario, clave);
-                return "Perfil actualizado";
-            }
-            catch (Exception)
-            {
-                return "El nombre de usuario ya esta registrado";
-            }
+            datosDeUsuario.EditarPerfil(id, usuario, clave, nombre, apellido, email);
+            LoginUsuario(usuario, clave);
+            return "Perfil actualizado";
         }
 
         public bool LoginUsuario(string usuario, string clave)

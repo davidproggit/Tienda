@@ -33,5 +33,12 @@ namespace CapaDeNegocio
         {
             objetoCapaDatos.Eliminar(Convert.ToInt32(id));
         }
+
+        public DataTable FiltrarProducto(string textoBuscar)
+        {
+            DataTable tablaFiltrada = new DataTable();
+            tablaFiltrada = objetoCapaDatos.Filtrar(textoBuscar);
+            return tablaFiltrada;
+        }
     }
 }

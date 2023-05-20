@@ -14,6 +14,8 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class UsuarioPerfil : Form
     {
+        private bool editarClave = false;
+
         public UsuarioPerfil()
         {
             InitializeComponent();
@@ -24,16 +26,12 @@ namespace CapaDePresentacion.PantallasGenerales
             DatosPerfil();
             VentanaEdicion();
         }
+
         private void ActualizarInformacionPerfil()
         {
             DatosPerfil();
             VentanaEdicion();
             IniciarEdicionClave();
-        }
-        private void botonEditar_Click(object sender, EventArgs e)
-        {
-            panelEdicion.Visible = true;
-            VentanaEdicion();
         }
 
         #region "Rellenar campos"
@@ -61,15 +59,23 @@ namespace CapaDePresentacion.PantallasGenerales
         private void linkClave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (linkClave.Text == "Editar")
+            {
+                MensajeEstado("", "vacio");
                 HabilitarCamposEdicionClave();
+            }
             else
+            {
+                MensajeEstado("", "vacio");
                 DeshabilitarCamposEdicionClave();
+            }
         }
-
+        
         #region "Activar o desactivar campos"
         private void IniciarEdicionClave()
         {
             linkClave.Text = "Editar";
+            textoClaveActual.Enabled = false;
+            textoClaveActual.UseSystemPasswordChar = true;   
             textoClaveNueva.Enabled = false;
             textoClaveNueva.UseSystemPasswordChar = true;
             textoClaveConfirmacion.Enabled = false;
@@ -78,7 +84,14 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void HabilitarCamposEdicionClave()
         {
+            IniciarEdicionClave();
+            editarClave = true;
+
             linkClave.Text = "Cancelar";
+
+            textoClaveActual.Enabled = true;
+            textoClaveActual.Visible = true;
+            textoClaveActual.Text = "";
 
             textoClaveNueva.Enabled = true;
             textoClaveNueva.Visible = true;
@@ -88,6 +101,7 @@ namespace CapaDePresentacion.PantallasGenerales
             textoClaveConfirmacion.Visible = true;
             textoClaveConfirmacion.Text = "";
 
+            etiquetaClaveActual.Visible = true;
             etiquetaClaveNueva.Visible = true;
             etiquetaClaveConfirmacion.Visible = true;
         }
@@ -95,12 +109,14 @@ namespace CapaDePresentacion.PantallasGenerales
         private void DeshabilitarCamposEdicionClave()
         {
             IniciarEdicionClave();
-            textoClaveNueva.Text = CacheSesionUsuario.Clave;
-            textoClaveNueva.Visible = false;
+            editarClave = false;
+            
 
-            textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
+            textoClaveActual.Visible = false;
+            textoClaveNueva.Visible = false;
             textoClaveConfirmacion.Visible = false;
 
+            etiquetaClaveActual.Visible = false;
             etiquetaClaveNueva.Visible = false;
             etiquetaClaveConfirmacion.Visible = false;
         }
@@ -108,33 +124,50 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            if (textoClaveNueva.Text == textoClaveConfirmacion.Text)
+            if (textoClaveActual.Text == CacheSesionUsuario.Clave && textoClaveNueva.Text == textoClaveConfirmacion.Text
+                && textoClaveNueva.Text != "" && textoClaveConfirmacion.Text != "")
+            {
                 ConfirmarGuardado();
-            else
-                MessageBox.Show("Error: las claves no coinciden");
+                DeshabilitarCamposEdicionClave();
+                editarClave = false;
+            }
+            else if (editarClave)
+                MensajeEstado("Las claves no coinciden","error");
         }
 
         private void ConfirmarGuardado()
         {
-            if (textoClaveActual.Text == CacheSesionUsuario.Clave)
-                EditarPerfilUsuario();
-            else
-                MessageBox.Show("Error: Debe ingresar la clave");
+            EditarPerfilUsuario();
         }
 
         private void EditarPerfilUsuario()
         {
             var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: textoUsuario.Text, clave: textoClaveNueva.Text, nombre: textoNombre.Text, apellido: textoApellido.Text, email: textoEmail.Text, cargo: null);
             var resultado = modeloUsuario.EditarPerfilUsuario();
-            MessageBox.Show(resultado);
+            MensajeEstado(resultado, "ok");
 
             ActualizarInformacionPerfil();
-            panelEdicion.Visible = false;
         }
 
-        private void botonCancelar_Click(object sender, EventArgs e)
+        private void MensajeEstado(string mensaje, string tipo)
         {
-            panelEdicion.Visible = false;
+            etiquetaMensaje.Visible = true;
+
+            switch (tipo)
+            {
+                case "ok":
+                    etiquetaMensaje.Text = mensaje;
+                    etiquetaMensaje.ForeColor = Color.Green;
+                    break;
+                case "error":
+                    etiquetaMensaje.Text = "Error: " + mensaje;
+                    etiquetaMensaje.ForeColor = Color.Red;
+                    break;
+                case "vacio":
+                    etiquetaMensaje.Text = "";
+                    break;
+            }
+
         }
     }
 }

@@ -17,6 +17,7 @@ namespace CapaDePresentacion.PantallasGenerales
         public InterfazUsuario()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
         private void InterfazUsuario_Load(object sender, EventArgs e)
         {
@@ -86,7 +87,7 @@ namespace CapaDePresentacion.PantallasGenerales
                 AbrirFormulario<ABMClientes>();
 
             if (CacheSesionUsuario.Cargo == Cargos.Encargado)
-                AbrirFormulario<ABMProductos>();
+                AbrirFormulario<InterfazProducto>();
 
             if (CacheSesionUsuario.Cargo == Cargos.Gerente)
                 AbrirFormulario<Reportes>();
