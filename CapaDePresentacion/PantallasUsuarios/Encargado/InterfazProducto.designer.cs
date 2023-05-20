@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
             this.textoNombre = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
@@ -57,7 +59,23 @@
             // 
             // grillaProductos
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaProductos.DefaultCellStyle = dataGridViewCellStyle2;
             this.grillaProductos.Location = new System.Drawing.Point(57, 21);
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 62;
@@ -67,86 +85,97 @@
             // 
             // textoNombre
             // 
-            this.textoNombre.Location = new System.Drawing.Point(126, 41);
+            this.textoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoNombre.Location = new System.Drawing.Point(139, 41);
             this.textoNombre.Name = "textoNombre";
-            this.textoNombre.Size = new System.Drawing.Size(163, 26);
+            this.textoNombre.Size = new System.Drawing.Size(163, 32);
             this.textoNombre.TabIndex = 1;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.Location = new System.Drawing.Point(14, 44);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(65, 20);
+            this.labelNombre.Size = new System.Drawing.Size(90, 26);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "Nombre";
             // 
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
-            this.labelDescripcion.Location = new System.Drawing.Point(14, 92);
+            this.labelDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescripcion.Location = new System.Drawing.Point(7, 95);
             this.labelDescripcion.Name = "labelDescripcion";
-            this.labelDescripcion.Size = new System.Drawing.Size(92, 20);
+            this.labelDescripcion.Size = new System.Drawing.Size(126, 26);
             this.labelDescripcion.TabIndex = 4;
             this.labelDescripcion.Text = "Descripcion";
             // 
             // textoDescripcion
             // 
-            this.textoDescripcion.Location = new System.Drawing.Point(126, 89);
+            this.textoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoDescripcion.Location = new System.Drawing.Point(139, 95);
             this.textoDescripcion.Name = "textoDescripcion";
-            this.textoDescripcion.Size = new System.Drawing.Size(163, 26);
+            this.textoDescripcion.Size = new System.Drawing.Size(163, 32);
             this.textoDescripcion.TabIndex = 3;
             // 
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
+            this.labelMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMarca.Location = new System.Drawing.Point(320, 44);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(53, 20);
+            this.labelMarca.Size = new System.Drawing.Size(72, 26);
             this.labelMarca.TabIndex = 6;
             this.labelMarca.Text = "Marca";
             // 
             // textoMarca
             // 
+            this.textoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textoMarca.Location = new System.Drawing.Point(432, 41);
             this.textoMarca.Name = "textoMarca";
-            this.textoMarca.Size = new System.Drawing.Size(163, 26);
+            this.textoMarca.Size = new System.Drawing.Size(163, 32);
             this.textoMarca.TabIndex = 5;
             // 
             // labelPrecio
             // 
             this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrecio.Location = new System.Drawing.Point(320, 95);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(53, 20);
+            this.labelPrecio.Size = new System.Drawing.Size(74, 26);
             this.labelPrecio.TabIndex = 8;
             this.labelPrecio.Text = "Precio";
             // 
             // textoPrecio
             // 
+            this.textoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textoPrecio.Location = new System.Drawing.Point(432, 92);
             this.textoPrecio.Name = "textoPrecio";
-            this.textoPrecio.Size = new System.Drawing.Size(163, 26);
+            this.textoPrecio.Size = new System.Drawing.Size(163, 32);
             this.textoPrecio.TabIndex = 7;
             // 
             // labelStock
             // 
             this.labelStock.AutoSize = true;
+            this.labelStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStock.Location = new System.Drawing.Point(628, 41);
             this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(50, 20);
+            this.labelStock.Size = new System.Drawing.Size(67, 26);
             this.labelStock.TabIndex = 10;
             this.labelStock.Text = "Stock";
             // 
             // textoStock
             // 
+            this.textoStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textoStock.Location = new System.Drawing.Point(720, 38);
             this.textoStock.Name = "textoStock";
-            this.textoStock.Size = new System.Drawing.Size(163, 26);
+            this.textoStock.Size = new System.Drawing.Size(163, 32);
             this.textoStock.TabIndex = 9;
             // 
             // botonGuardar
             // 
+            this.botonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonGuardar.Location = new System.Drawing.Point(939, 38);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(140, 71);
@@ -157,6 +186,7 @@
             // 
             // botonEditar
             // 
+            this.botonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonEditar.Location = new System.Drawing.Point(3, 3);
             this.botonEditar.Name = "botonEditar";
             this.botonEditar.Size = new System.Drawing.Size(140, 71);
@@ -167,6 +197,7 @@
             // 
             // botonEliminar
             // 
+            this.botonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonEliminar.Location = new System.Drawing.Point(197, 3);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(140, 71);
@@ -177,6 +208,7 @@
             // 
             // botonCancelar
             // 
+            this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCancelar.Location = new System.Drawing.Point(1128, 38);
             this.botonCancelar.Name = "botonCancelar";
             this.botonCancelar.Size = new System.Drawing.Size(140, 71);
@@ -187,13 +219,15 @@
             // 
             // textoBuscar
             // 
-            this.textoBuscar.Location = new System.Drawing.Point(72, 15);
+            this.textoBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoBuscar.Location = new System.Drawing.Point(80, 20);
             this.textoBuscar.Name = "textoBuscar";
-            this.textoBuscar.Size = new System.Drawing.Size(258, 26);
+            this.textoBuscar.Size = new System.Drawing.Size(258, 32);
             this.textoBuscar.TabIndex = 15;
             // 
             // botonBuscar
             // 
+            this.botonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonBuscar.Location = new System.Drawing.Point(363, 3);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(140, 71);
@@ -205,9 +239,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(67, 26);
             this.label1.TabIndex = 17;
             this.label1.Text = "Filtrar";
             // 
