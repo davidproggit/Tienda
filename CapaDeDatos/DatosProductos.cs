@@ -64,5 +64,21 @@ namespace CapaDeDatos
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
         }
+
+        public DataTable Filtrar(string textoBuscar)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "SELECT Id,Nombre, Descripcion, Marca, Precio, Stock FROM Productos where Nombre like ('" + textoBuscar + "%')";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+
+            DataTable tablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+
+            adaptador.Fill(tablaFiltrada);
+
+            conexion.CerrarConexion();
+            return tablaFiltrada;
+        }
     }
 }

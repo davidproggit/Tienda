@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallasGenerales\UsuarioPerfilEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\UsuarioPerfilEdicion.designer.cs">
+      <DependentUpon>UsuarioPerfilEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuarios\Encargado\InterfazProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +100,6 @@
     <Compile Include="PantallasUsuarios\Cliente\ABMCompraProductos.Designer.cs">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Encargado\ABMProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallasUsuarios\Encargado\ABMProductos.Designer.cs">
-      <DependentUpon>ABMProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="PantallasUsuarios\Encargado\AlertadeProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +114,9 @@
     </Compile>-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallasGenerales\UsuarioPerfilEdicion.resx">
+      <DependentUpon>UsuarioPerfilEdicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Encargado\InterfazProducto.resx">
       <DependentUpon>InterfazProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Cliente\ABMCompraProductos.resx">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Encargado\ABMProductos.resx">
-      <DependentUpon>ABMProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Encargado\AlertadeProducto.resx">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>

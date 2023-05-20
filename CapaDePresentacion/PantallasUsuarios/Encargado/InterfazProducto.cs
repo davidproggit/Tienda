@@ -46,7 +46,7 @@ namespace CapaDePresentacion
             try
             {
                 objetoCapaNegocio.EditarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text, idProducto);
-                MessageBox.Show("Datos editados");
+                //MessageBox.Show("Datos editados");
                 LimpiarFormulario();
                 MostrarProductos();
                 editar = false;
@@ -62,7 +62,7 @@ namespace CapaDePresentacion
             try
             {
                 objetoCapaNegocio.InsertarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text);
-                MessageBox.Show("Datos insertados");
+                //MessageBox.Show("Datos insertados");
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -126,6 +126,17 @@ namespace CapaDePresentacion
             objetoCapaNegocio.EliminarProducto(idProducto);
             //MessageBox.Show("Eliminado correctamente");
             MostrarProductos();
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            Productos objeto2 = new Productos();
+            grillaProductos.DataSource = objeto2.FiltrarProducto(textoBuscar.Text);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaDeNegocio
+namespace CapaDeEntidades
 {
     public class Vendedor
     {
@@ -30,7 +30,6 @@ namespace CapaDeNegocio
             get { return _apellido; }
             set { _apellido = value; }
         }
-       
 
     }
 }
