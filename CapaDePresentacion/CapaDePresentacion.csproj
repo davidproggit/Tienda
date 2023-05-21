@@ -106,6 +106,12 @@
     <Compile Include="PantallasUsuarios\Encargado\AlertadeProducto.Designer.cs">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuarios\Vendedor\AprobarOrdendeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Vendedor\AprobarOrdendeCompra.Designer.cs">
+      <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
+    </Compile>
     <!--<Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasGenerales\UsuarioPerfil.resx">
       <DependentUpon>UsuarioPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Vendedor\AprobarOrdendeCompra.resx">
+      <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGenerarAlerta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,28 +77,31 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grillaProductos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grillaProductos.Location = new System.Drawing.Point(57, 21);
+            this.grillaProductos.Location = new System.Drawing.Point(38, 14);
+            this.grillaProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 62;
             this.grillaProductos.RowTemplate.Height = 28;
-            this.grillaProductos.Size = new System.Drawing.Size(894, 427);
+            this.grillaProductos.Size = new System.Drawing.Size(864, 269);
             this.grillaProductos.TabIndex = 0;
             // 
             // textoNombre
             // 
             this.textoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoNombre.Location = new System.Drawing.Point(139, 41);
+            this.textoNombre.Location = new System.Drawing.Point(93, 27);
+            this.textoNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoNombre.Name = "textoNombre";
-            this.textoNombre.Size = new System.Drawing.Size(163, 32);
+            this.textoNombre.Size = new System.Drawing.Size(110, 24);
             this.textoNombre.TabIndex = 1;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(14, 44);
+            this.labelNombre.Location = new System.Drawing.Point(9, 29);
+            this.labelNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(90, 26);
+            this.labelNombre.Size = new System.Drawing.Size(62, 18);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "Nombre";
             // 
@@ -105,80 +109,89 @@
             // 
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescripcion.Location = new System.Drawing.Point(7, 95);
+            this.labelDescripcion.Location = new System.Drawing.Point(5, 62);
+            this.labelDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescripcion.Name = "labelDescripcion";
-            this.labelDescripcion.Size = new System.Drawing.Size(126, 26);
+            this.labelDescripcion.Size = new System.Drawing.Size(87, 18);
             this.labelDescripcion.TabIndex = 4;
             this.labelDescripcion.Text = "Descripcion";
             // 
             // textoDescripcion
             // 
             this.textoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoDescripcion.Location = new System.Drawing.Point(139, 95);
+            this.textoDescripcion.Location = new System.Drawing.Point(93, 62);
+            this.textoDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoDescripcion.Name = "textoDescripcion";
-            this.textoDescripcion.Size = new System.Drawing.Size(163, 32);
+            this.textoDescripcion.Size = new System.Drawing.Size(110, 24);
             this.textoDescripcion.TabIndex = 3;
             // 
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMarca.Location = new System.Drawing.Point(320, 44);
+            this.labelMarca.Location = new System.Drawing.Point(213, 29);
+            this.labelMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(72, 26);
+            this.labelMarca.Size = new System.Drawing.Size(50, 18);
             this.labelMarca.TabIndex = 6;
             this.labelMarca.Text = "Marca";
             // 
             // textoMarca
             // 
             this.textoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoMarca.Location = new System.Drawing.Point(432, 41);
+            this.textoMarca.Location = new System.Drawing.Point(288, 27);
+            this.textoMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoMarca.Name = "textoMarca";
-            this.textoMarca.Size = new System.Drawing.Size(163, 32);
+            this.textoMarca.Size = new System.Drawing.Size(110, 24);
             this.textoMarca.TabIndex = 5;
             // 
             // labelPrecio
             // 
             this.labelPrecio.AutoSize = true;
             this.labelPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecio.Location = new System.Drawing.Point(320, 95);
+            this.labelPrecio.Location = new System.Drawing.Point(213, 62);
+            this.labelPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(74, 26);
+            this.labelPrecio.Size = new System.Drawing.Size(51, 18);
             this.labelPrecio.TabIndex = 8;
             this.labelPrecio.Text = "Precio";
             // 
             // textoPrecio
             // 
             this.textoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoPrecio.Location = new System.Drawing.Point(432, 92);
+            this.textoPrecio.Location = new System.Drawing.Point(288, 60);
+            this.textoPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoPrecio.Name = "textoPrecio";
-            this.textoPrecio.Size = new System.Drawing.Size(163, 32);
+            this.textoPrecio.Size = new System.Drawing.Size(110, 24);
             this.textoPrecio.TabIndex = 7;
             // 
             // labelStock
             // 
             this.labelStock.AutoSize = true;
             this.labelStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStock.Location = new System.Drawing.Point(628, 41);
+            this.labelStock.Location = new System.Drawing.Point(419, 27);
+            this.labelStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(67, 26);
+            this.labelStock.Size = new System.Drawing.Size(47, 18);
             this.labelStock.TabIndex = 10;
             this.labelStock.Text = "Stock";
             // 
             // textoStock
             // 
             this.textoStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoStock.Location = new System.Drawing.Point(720, 38);
+            this.textoStock.Location = new System.Drawing.Point(480, 25);
+            this.textoStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoStock.Name = "textoStock";
-            this.textoStock.Size = new System.Drawing.Size(163, 32);
+            this.textoStock.Size = new System.Drawing.Size(110, 24);
             this.textoStock.TabIndex = 9;
             // 
             // botonGuardar
             // 
             this.botonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonGuardar.Location = new System.Drawing.Point(939, 38);
+            this.botonGuardar.Location = new System.Drawing.Point(626, 25);
+            this.botonGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonGuardar.Name = "botonGuardar";
-            this.botonGuardar.Size = new System.Drawing.Size(140, 71);
+            this.botonGuardar.Size = new System.Drawing.Size(93, 46);
             this.botonGuardar.TabIndex = 11;
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.UseVisualStyleBackColor = true;
@@ -187,9 +200,10 @@
             // botonEditar
             // 
             this.botonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonEditar.Location = new System.Drawing.Point(3, 3);
+            this.botonEditar.Location = new System.Drawing.Point(2, 2);
+            this.botonEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonEditar.Name = "botonEditar";
-            this.botonEditar.Size = new System.Drawing.Size(140, 71);
+            this.botonEditar.Size = new System.Drawing.Size(93, 46);
             this.botonEditar.TabIndex = 12;
             this.botonEditar.Text = "Editar";
             this.botonEditar.UseVisualStyleBackColor = true;
@@ -198,9 +212,10 @@
             // botonEliminar
             // 
             this.botonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonEliminar.Location = new System.Drawing.Point(197, 3);
+            this.botonEliminar.Location = new System.Drawing.Point(131, 2);
+            this.botonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonEliminar.Name = "botonEliminar";
-            this.botonEliminar.Size = new System.Drawing.Size(140, 71);
+            this.botonEliminar.Size = new System.Drawing.Size(93, 46);
             this.botonEliminar.TabIndex = 13;
             this.botonEliminar.Text = "Eliminar";
             this.botonEliminar.UseVisualStyleBackColor = true;
@@ -209,9 +224,10 @@
             // botonCancelar
             // 
             this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonCancelar.Location = new System.Drawing.Point(1128, 38);
+            this.botonCancelar.Location = new System.Drawing.Point(752, 25);
+            this.botonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(140, 71);
+            this.botonCancelar.Size = new System.Drawing.Size(93, 46);
             this.botonCancelar.TabIndex = 14;
             this.botonCancelar.Text = "Cancelar";
             this.botonCancelar.UseVisualStyleBackColor = true;
@@ -220,17 +236,19 @@
             // textoBuscar
             // 
             this.textoBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoBuscar.Location = new System.Drawing.Point(80, 20);
+            this.textoBuscar.Location = new System.Drawing.Point(53, 13);
+            this.textoBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textoBuscar.Name = "textoBuscar";
-            this.textoBuscar.Size = new System.Drawing.Size(258, 32);
+            this.textoBuscar.Size = new System.Drawing.Size(173, 24);
             this.textoBuscar.TabIndex = 15;
             // 
             // botonBuscar
             // 
             this.botonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonBuscar.Location = new System.Drawing.Point(363, 3);
+            this.botonBuscar.Location = new System.Drawing.Point(242, 2);
+            this.botonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(140, 71);
+            this.botonBuscar.Size = new System.Drawing.Size(93, 46);
             this.botonBuscar.TabIndex = 16;
             this.botonBuscar.Text = "Buscar";
             this.botonBuscar.UseVisualStyleBackColor = true;
@@ -240,9 +258,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 18);
+            this.label1.Location = new System.Drawing.Point(5, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 26);
+            this.label1.Size = new System.Drawing.Size(45, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Filtrar";
             // 
@@ -252,9 +271,10 @@
             this.panel1.Controls.Add(this.botonBuscar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textoBuscar);
-            this.panel1.Location = new System.Drawing.Point(68, 475);
+            this.panel1.Location = new System.Drawing.Point(45, 309);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 83);
+            this.panel1.Size = new System.Drawing.Size(343, 54);
             this.panel1.TabIndex = 18;
             // 
             // panel2
@@ -272,9 +292,10 @@
             this.panel2.Controls.Add(this.textoPrecio);
             this.panel2.Controls.Add(this.textoStock);
             this.panel2.Controls.Add(this.labelPrecio);
-            this.panel2.Location = new System.Drawing.Point(68, 607);
+            this.panel2.Location = new System.Drawing.Point(45, 395);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1283, 141);
+            this.panel2.Size = new System.Drawing.Size(855, 92);
             this.panel2.TabIndex = 19;
             // 
             // panel3
@@ -282,21 +303,34 @@
             this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.botonEditar);
             this.panel3.Controls.Add(this.botonEliminar);
-            this.panel3.Location = new System.Drawing.Point(620, 475);
+            this.panel3.Location = new System.Drawing.Point(413, 309);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(342, 83);
+            this.panel3.Size = new System.Drawing.Size(228, 54);
             this.panel3.TabIndex = 20;
+            // 
+            // btnGenerarAlerta
+            // 
+            this.btnGenerarAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarAlerta.Location = new System.Drawing.Point(786, 311);
+            this.btnGenerarAlerta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerarAlerta.Name = "btnGenerarAlerta";
+            this.btnGenerarAlerta.Size = new System.Drawing.Size(116, 52);
+            this.btnGenerarAlerta.TabIndex = 21;
+            this.btnGenerarAlerta.Text = "Generar Alerta";
+            this.btnGenerarAlerta.UseVisualStyleBackColor = true;
             // 
             // InterfazProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1684, 770);
+            this.ClientSize = new System.Drawing.Size(1123, 500);
+            this.Controls.Add(this.btnGenerarAlerta);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grillaProductos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InterfazProducto";
             this.Text = "InterfazProducto";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -333,6 +367,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnGenerarAlerta;
     }
 }
 
