@@ -21,10 +21,5 @@ namespace CapaDePresentacion
         {
 
         }
-
-        private void txtNombreCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

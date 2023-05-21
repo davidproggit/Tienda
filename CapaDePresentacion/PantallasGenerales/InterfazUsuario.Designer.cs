@@ -95,7 +95,7 @@
             this.linkCerrarSesion.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linkCerrarSesion.Location = new System.Drawing.Point(12, 483);
             this.linkCerrarSesion.Name = "linkCerrarSesion";
-            this.linkCerrarSesion.Size = new System.Drawing.Size(168, 30);
+            this.linkCerrarSesion.Size = new System.Drawing.Size(118, 22);
             this.linkCerrarSesion.TabIndex = 5;
             this.linkCerrarSesion.TabStop = true;
             this.linkCerrarSesion.Text = "Cerrar sesion";
@@ -108,7 +108,7 @@
             this.linkPerfil.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linkPerfil.Location = new System.Drawing.Point(12, 181);
             this.linkPerfil.Name = "linkPerfil";
-            this.linkPerfil.Size = new System.Drawing.Size(104, 30);
+            this.linkPerfil.Size = new System.Drawing.Size(72, 22);
             this.linkPerfil.TabIndex = 0;
             this.linkPerfil.TabStop = true;
             this.linkPerfil.Text = "Mi perfil";
@@ -121,7 +121,7 @@
             this.etiquetaNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.etiquetaNombre.Location = new System.Drawing.Point(59, 139);
             this.etiquetaNombre.Name = "etiquetaNombre";
-            this.etiquetaNombre.Size = new System.Drawing.Size(94, 27);
+            this.etiquetaNombre.Size = new System.Drawing.Size(62, 18);
             this.etiquetaNombre.TabIndex = 1;
             this.etiquetaNombre.Text = "Usuario";
             // 
@@ -145,7 +145,7 @@
             this.Tienda.ForeColor = System.Drawing.Color.White;
             this.Tienda.Location = new System.Drawing.Point(554, 11);
             this.Tienda.Name = "Tienda";
-            this.Tienda.Size = new System.Drawing.Size(115, 37);
+            this.Tienda.Size = new System.Drawing.Size(77, 26);
             this.Tienda.TabIndex = 3;
             this.Tienda.Text = "Tienda";
             // 
