@@ -52,6 +52,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnGenerarAlerta = new System.Windows.Forms.Button();
+            this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,6 +70,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grillaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColSeleccionar});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -299,6 +302,13 @@
             this.btnGenerarAlerta.UseVisualStyleBackColor = true;
             this.btnGenerarAlerta.Click += new System.EventHandler(this.btnGenerarAlerta_Click);
             // 
+            // ColSeleccionar
+            // 
+            this.ColSeleccionar.HeaderText = "Seleccionar";
+            this.ColSeleccionar.MinimumWidth = 8;
+            this.ColSeleccionar.Name = "ColSeleccionar";
+            this.ColSeleccionar.Width = 150;
+            // 
             // InterfazProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -346,6 +356,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnGenerarAlerta;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionar;
     }
 }
 
