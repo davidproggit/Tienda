@@ -35,17 +35,13 @@ namespace CapaDePresentacion
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblMen = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColAlerNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAlerMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAlePrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAlerStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAlerSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.grilla = new System.Windows.Forms.DataGridView();
             this.btnGuardarAlerta = new System.Windows.Forms.Button();
             this.btnAlertCancelar = new System.Windows.Forms.Button();
             this.btnAlerQuitarProducto = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGenerarAlerta
@@ -105,69 +101,19 @@ namespace CapaDePresentacion
             this.textBox2.Size = new System.Drawing.Size(212, 26);
             this.textBox2.TabIndex = 5;
             // 
-            // dataGridView1
+            // grilla
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColAlerNombre,
-            this.ColAlerMarca,
-            this.ColAlePrecio,
-            this.ColAlerStock,
-            this.ColDescripcion,
-            this.ColAlerSeleccionar});
-            this.dataGridView1.Location = new System.Drawing.Point(194, 237);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(836, 97);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // ColAlerNombre
-            // 
-            this.ColAlerNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColAlerNombre.HeaderText = "Nombre";
-            this.ColAlerNombre.MinimumWidth = 8;
-            this.ColAlerNombre.Name = "ColAlerNombre";
-            this.ColAlerNombre.Width = 101;
-            // 
-            // ColAlerMarca
-            // 
-            this.ColAlerMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColAlerMarca.HeaderText = "Marca";
-            this.ColAlerMarca.MinimumWidth = 8;
-            this.ColAlerMarca.Name = "ColAlerMarca";
-            this.ColAlerMarca.Width = 89;
-            // 
-            // ColAlePrecio
-            // 
-            this.ColAlePrecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColAlePrecio.HeaderText = "Precio";
-            this.ColAlePrecio.MinimumWidth = 8;
-            this.ColAlePrecio.Name = "ColAlePrecio";
-            this.ColAlePrecio.Width = 89;
-            // 
-            // ColAlerStock
-            // 
-            this.ColAlerStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColAlerStock.HeaderText = "Stock";
-            this.ColAlerStock.MinimumWidth = 8;
-            this.ColAlerStock.Name = "ColAlerStock";
-            this.ColAlerStock.Width = 86;
-            // 
-            // ColDescripcion
-            // 
-            this.ColDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColDescripcion.HeaderText = "Descripcion ";
-            this.ColDescripcion.MinimumWidth = 8;
-            this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.Width = 132;
-            // 
-            // ColAlerSeleccionar
-            // 
-            this.ColAlerSeleccionar.HeaderText = "Seleccionar";
-            this.ColAlerSeleccionar.MinimumWidth = 8;
-            this.ColAlerSeleccionar.Name = "ColAlerSeleccionar";
-            this.ColAlerSeleccionar.Width = 150;
+            this.grilla.AllowUserToAddRows = false;
+            this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColID,
+            this.ColNombre});
+            this.grilla.Location = new System.Drawing.Point(194, 237);
+            this.grilla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grilla.Name = "grilla";
+            this.grilla.RowHeadersWidth = 62;
+            this.grilla.Size = new System.Drawing.Size(383, 161);
+            this.grilla.TabIndex = 6;
             // 
             // btnGuardarAlerta
             // 
@@ -199,6 +145,21 @@ namespace CapaDePresentacion
             this.btnAlerQuitarProducto.Text = "Quitar producto";
             this.btnAlerQuitarProducto.UseVisualStyleBackColor = true;
             // 
+            // ColID
+            // 
+            this.ColID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColID.HeaderText = "ID";
+            this.ColID.MinimumWidth = 8;
+            this.ColID.Name = "ColID";
+            this.ColID.Width = 62;
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.MinimumWidth = 8;
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.Width = 150;
+            // 
             // AlertadeProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -207,7 +168,7 @@ namespace CapaDePresentacion
             this.Controls.Add(this.btnAlerQuitarProducto);
             this.Controls.Add(this.btnAlertCancelar);
             this.Controls.Add(this.btnGuardarAlerta);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grilla);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblMen);
             this.Controls.Add(this.textBox1);
@@ -218,7 +179,8 @@ namespace CapaDePresentacion
             this.Name = "AlertadeProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alerta de Producto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AlertadeProducto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,15 +194,11 @@ namespace CapaDePresentacion
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblMen;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grilla;
         private System.Windows.Forms.Button btnGuardarAlerta;
         private System.Windows.Forms.Button btnAlertCancelar;
         private System.Windows.Forms.Button btnAlerQuitarProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColAlerNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColAlerMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColAlePrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColAlerStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColAlerSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
     }
 }

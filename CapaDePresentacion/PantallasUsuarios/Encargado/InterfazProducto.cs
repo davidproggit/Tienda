@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaComun.Cache;
 using CapaDeNegocio;
 
 namespace CapaDePresentacion
@@ -141,7 +142,22 @@ namespace CapaDePresentacion
 
         private void btnGenerarAlerta_Click(object sender, EventArgs e)
         {
+            List<Datos> Valores = new List<Datos>();
+
+            foreach (DataGridViewRow celda in grillaProductos.Rows)
+            {
+                if (Convert.ToBoolean(celda.Cells[0].Value))
+                {
+                    Valores.Add(new Datos
+                    {
+                        id = (int) celda.Cells[1].Value,
+                        nombre = celda.Cells[2].Value.ToString()
+                    });
+                }
+            }
+
             AlertadeProducto alertadeProducto = new AlertadeProducto();
+            alertadeProducto.Valores = Valores;
             alertadeProducto.Show();
         }
     }

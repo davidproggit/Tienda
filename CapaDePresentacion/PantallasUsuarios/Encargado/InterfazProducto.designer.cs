@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
+            this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.textoNombre = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelDescripcion = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnGenerarAlerta = new System.Windows.Forms.Button();
-            this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +61,8 @@
             // 
             // grillaProductos
             // 
+            this.grillaProductos.AllowUserToAddRows = false;
+            this.grillaProductos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -86,6 +88,13 @@
             this.grillaProductos.RowTemplate.Height = 28;
             this.grillaProductos.Size = new System.Drawing.Size(1296, 414);
             this.grillaProductos.TabIndex = 0;
+            // 
+            // ColSeleccionar
+            // 
+            this.ColSeleccionar.HeaderText = "Seleccionar";
+            this.ColSeleccionar.MinimumWidth = 8;
+            this.ColSeleccionar.Name = "ColSeleccionar";
+            this.ColSeleccionar.Width = 150;
             // 
             // textoNombre
             // 
@@ -302,13 +311,6 @@
             this.btnGenerarAlerta.UseVisualStyleBackColor = true;
             this.btnGenerarAlerta.Click += new System.EventHandler(this.btnGenerarAlerta_Click);
             // 
-            // ColSeleccionar
-            // 
-            this.ColSeleccionar.HeaderText = "Seleccionar";
-            this.ColSeleccionar.MinimumWidth = 8;
-            this.ColSeleccionar.Name = "ColSeleccionar";
-            this.ColSeleccionar.Width = 150;
-            // 
             // InterfazProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -319,6 +321,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grillaProductos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazProducto";
             this.Text = "InterfazProducto";
             this.Load += new System.EventHandler(this.Form1_Load);
