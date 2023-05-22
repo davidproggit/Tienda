@@ -138,5 +138,11 @@ namespace CapaDePresentacion
             Productos objeto2 = new Productos();
             grillaProductos.DataSource = objeto2.FiltrarProducto(textoBuscar.Text);
         }
+
+        private void btnGenerarAlerta_Click(object sender, EventArgs e)
+        {
+            AlertadeProducto alertadeProducto = new AlertadeProducto();
+            alertadeProducto.Show();
+        }
     }
 }
