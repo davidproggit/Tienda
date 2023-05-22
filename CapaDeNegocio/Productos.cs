@@ -40,5 +40,10 @@ namespace CapaDeNegocio
             tablaFiltrada = objetoCapaDatos.Filtrar(textoBuscar);
             return tablaFiltrada;
         }
+
+        public void ModificarAlerta(string id, string mensaje, int cantidadMinima)
+        {
+            objetoCapaDatos.ModificarAlerta(Convert.ToInt32(id) , mensaje, Convert.ToInt32(cantidadMinima));
+        }
     }
 }

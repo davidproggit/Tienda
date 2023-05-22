@@ -80,5 +80,17 @@ namespace CapaDeDatos
             conexion.CerrarConexion();
             return tablaFiltrada;
         }
+
+        public void ModificarAlerta(int id, string mensaje, int cantidadMinima)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "ActualizarAlerta";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id", id);
+            comando.Parameters.AddWithValue("@mensaje", mensaje);
+            comando.Parameters.AddWithValue("@cantidadMinima", cantidadMinima);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
     }
 }

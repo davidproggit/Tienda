@@ -32,15 +32,15 @@ namespace CapaDePresentacion
             this.lblGenerarAlerta = new System.Windows.Forms.Label();
             this.lblcantidadproducto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCantidadMinima = new System.Windows.Forms.TextBox();
             this.lblMen = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMensaje = new System.Windows.Forms.TextBox();
             this.grilla = new System.Windows.Forms.DataGridView();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardarAlerta = new System.Windows.Forms.Button();
             this.btnAlertCancelar = new System.Windows.Forms.Button();
             this.btnAlerQuitarProducto = new System.Windows.Forms.Button();
-            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,13 +75,13 @@ namespace CapaDePresentacion
             this.label1.Text = "En esta pantalla se configurara el alerta dependiendo la cantidad de productos qu" +
     "e esten en stock";
             // 
-            // textBox1
+            // txtCantidadMinima
             // 
-            this.textBox1.Location = new System.Drawing.Point(250, 451);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 26);
-            this.textBox1.TabIndex = 3;
+            this.txtCantidadMinima.Location = new System.Drawing.Point(250, 451);
+            this.txtCantidadMinima.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidadMinima.Name = "txtCantidadMinima";
+            this.txtCantidadMinima.Size = new System.Drawing.Size(212, 26);
+            this.txtCantidadMinima.TabIndex = 3;
             // 
             // lblMen
             // 
@@ -93,13 +93,13 @@ namespace CapaDePresentacion
             this.lblMen.TabIndex = 4;
             this.lblMen.Text = "Mensaje:";
             // 
-            // textBox2
+            // txtMensaje
             // 
-            this.textBox2.Location = new System.Drawing.Point(250, 506);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 26);
-            this.textBox2.TabIndex = 5;
+            this.txtMensaje.Location = new System.Drawing.Point(250, 506);
+            this.txtMensaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMensaje.Name = "txtMensaje";
+            this.txtMensaje.Size = new System.Drawing.Size(212, 26);
+            this.txtMensaje.TabIndex = 5;
             // 
             // grilla
             // 
@@ -115,6 +115,21 @@ namespace CapaDePresentacion
             this.grilla.Size = new System.Drawing.Size(383, 161);
             this.grilla.TabIndex = 6;
             // 
+            // ColID
+            // 
+            this.ColID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColID.HeaderText = "ID";
+            this.ColID.MinimumWidth = 8;
+            this.ColID.Name = "ColID";
+            this.ColID.Width = 62;
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.MinimumWidth = 8;
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.Width = 150;
+            // 
             // btnGuardarAlerta
             // 
             this.btnGuardarAlerta.Location = new System.Drawing.Point(1016, 614);
@@ -124,6 +139,7 @@ namespace CapaDePresentacion
             this.btnGuardarAlerta.TabIndex = 7;
             this.btnGuardarAlerta.Text = "Guardar";
             this.btnGuardarAlerta.UseVisualStyleBackColor = true;
+            this.btnGuardarAlerta.Click += new System.EventHandler(this.btnGuardarAlerta_Click);
             // 
             // btnAlertCancelar
             // 
@@ -145,21 +161,6 @@ namespace CapaDePresentacion
             this.btnAlerQuitarProducto.Text = "Quitar producto";
             this.btnAlerQuitarProducto.UseVisualStyleBackColor = true;
             // 
-            // ColID
-            // 
-            this.ColID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColID.HeaderText = "ID";
-            this.ColID.MinimumWidth = 8;
-            this.ColID.Name = "ColID";
-            this.ColID.Width = 62;
-            // 
-            // ColNombre
-            // 
-            this.ColNombre.HeaderText = "Nombre";
-            this.ColNombre.MinimumWidth = 8;
-            this.ColNombre.Name = "ColNombre";
-            this.ColNombre.Width = 150;
-            // 
             // AlertadeProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -169,9 +170,9 @@ namespace CapaDePresentacion
             this.Controls.Add(this.btnAlertCancelar);
             this.Controls.Add(this.btnGuardarAlerta);
             this.Controls.Add(this.grilla);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMensaje);
             this.Controls.Add(this.lblMen);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCantidadMinima);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcantidadproducto);
             this.Controls.Add(this.lblGenerarAlerta);
@@ -191,9 +192,9 @@ namespace CapaDePresentacion
         private System.Windows.Forms.Label lblGenerarAlerta;
         private System.Windows.Forms.Label lblcantidadproducto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCantidadMinima;
         private System.Windows.Forms.Label lblMen;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMensaje;
         private System.Windows.Forms.DataGridView grilla;
         private System.Windows.Forms.Button btnGuardarAlerta;
         private System.Windows.Forms.Button btnAlertCancelar;
