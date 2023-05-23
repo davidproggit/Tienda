@@ -47,7 +47,6 @@ namespace CapaDePresentacion
             try
             {
                 objetoCapaNegocio.EditarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text, idProducto);
-                //MessageBox.Show("Datos editados");
                 LimpiarFormulario();
                 MostrarProductos();
                 editar = false;
@@ -63,7 +62,6 @@ namespace CapaDePresentacion
             try
             {
                 objetoCapaNegocio.InsertarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text);
-                //MessageBox.Show("Datos insertados");
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -125,7 +123,6 @@ namespace CapaDePresentacion
         {
             idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
             objetoCapaNegocio.EliminarProducto(idProducto);
-            //MessageBox.Show("Eliminado correctamente");
             MostrarProductos();
         }
 
