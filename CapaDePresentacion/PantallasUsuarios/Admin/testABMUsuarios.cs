@@ -26,6 +26,7 @@ namespace CapaDePresentacion
         private void testABMEmpleados_Load(object sender, EventArgs e)
         {
             CargarListaUsuarios();
+            CargarRoles();
         }
 
         private void CargarListaUsuarios()
@@ -44,6 +45,15 @@ namespace CapaDePresentacion
             ModeloUsuario objetoCapaNegocio = new ModeloUsuario();
 
              objetoCapaNegocio.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
+        }
+
+        private void CargarRoles()
+        {
+            comboCargo.Items.Add("cliente");
+            comboCargo.Items.Add("admin");
+            comboCargo.Items.Add("vendedor");
+            comboCargo.Items.Add("encargado");
+            comboCargo.Items.Add("gerente");
         }
 
     }
