@@ -162,7 +162,6 @@
             this.lblNombreCliente.Size = new System.Drawing.Size(69, 20);
             this.lblNombreCliente.TabIndex = 27;
             this.lblNombreCliente.Text = "Nombre:";
-            this.lblNombreCliente.Click += new System.EventHandler(this.lblNombreCliente_Click);
             // 
             // txtDNI
             // 
@@ -283,7 +282,7 @@
             this.txtUsuario.Size = new System.Drawing.Size(148, 26);
             this.txtUsuario.TabIndex = 46;
             // 
-            // testABMEmpleados
+            // ABMUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -312,7 +311,7 @@
             this.Controls.Add(this.lblDni);
             this.Controls.Add(this.lblApellido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "testABMEmpleados";
+            this.Name = "ABMUsuarios";
             this.Text = "testAmbEmpleados";
             this.Load += new System.EventHandler(this.testABMEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

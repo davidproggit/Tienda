@@ -18,11 +18,6 @@ namespace CapaDePresentacion
             InitializeComponent();
         }
 
-        private void lblNombreCliente_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void testABMEmpleados_Load(object sender, EventArgs e)
         {
             CargarListaUsuarios();
