@@ -19,7 +19,7 @@ namespace CapaDeDatos
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexion;
-                    comando.CommandText = "update Usuarios set NombreLogin=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
+                    comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
                     CamposUsuario(id, usuario, clave, nombre, apellido, email, comando);
                     comando.CommandType = CommandType.Text;
                     comando.ExecuteNonQuery();
@@ -46,7 +46,7 @@ namespace CapaDeDatos
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexion;
-                    comando.CommandText = "select ID, NombreLogin, Clave, Nombre, Apellido, Email, Cargo from Usuarios where NombreLogin=@usuario and Clave=@clave";
+                    comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo from Usuarios where Usuario=@usuario and Clave=@clave";
                     comando.Parameters.AddWithValue("@usuario", usuario);
                     comando.Parameters.AddWithValue("@clave", clave);
                     comando.CommandType = CommandType.Text;
