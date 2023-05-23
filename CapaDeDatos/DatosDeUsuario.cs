@@ -9,15 +9,15 @@ using CapaComun.Cache;
 
 namespace CapaDeDatos
 {
-    public class DatosDeUsuario : ConexionSQL
+    public class DatosDeUsuario
     {
+        Conexion conexion = new Conexion();
+        SqlDataReader lector;
+        DataTable tabla = new DataTable();
+        SqlCommand comando = new SqlCommand();
+
         public DataTable CargarUsuarios()
         {
-            Conexion conexion = new Conexion();
-            SqlDataReader lector;
-            DataTable tabla = new DataTable();
-            SqlCommand comando = new SqlCommand();
-
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "CargarUsuarios";
             lector = comando.ExecuteReader();
@@ -29,18 +29,12 @@ namespace CapaDeDatos
      
         public void EditarPerfil(int id, string usuario, string clave, string nombre, string apellido, string email)
         {
-            using (var conexion = ObtenerConexion())
-            {
-                conexion.Open();
-                using (var comando = new SqlCommand())
-                {
-                    comando.Connection = conexion;
-                    comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
-                    CamposUsuario(id, usuario, clave, nombre, apellido, email, comando);
-                    comando.CommandType = CommandType.Text;
-                    comando.ExecuteNonQuery();
-                }
-            }
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
+            CamposUsuario(id, usuario, clave, nombre, apellido, email, comando);
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+            conexion.CerrarConexion();
         }
 
         private static void CamposUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, SqlCommand comando)
@@ -55,36 +49,33 @@ namespace CapaDeDatos
 
         public bool Login(string usuario, string clave)
         {
-            using (var conexion = ObtenerConexion())
-            {
-                conexion.Open();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo from Usuarios where Usuario=@usuario and Clave=@clave";
+            comando.Parameters.AddWithValue("@usuario", usuario);
+            comando.Parameters.AddWithValue("@clave", clave);
+            comando.CommandType = CommandType.Text;
 
-                using (var comando = new SqlCommand())
-                {
-                    comando.Connection = conexion;
-                    comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo from Usuarios where Usuario=@usuario and Clave=@clave";
-                    comando.Parameters.AddWithValue("@usuario", usuario);
-                    comando.Parameters.AddWithValue("@clave", clave);
-                    comando.CommandType = CommandType.Text;
+            SqlDataReader lector = comando.ExecuteReader();
 
-                    SqlDataReader lector = comando.ExecuteReader();
-
-                    return LeerFilas(lector);
-                }
-            }
+            return LeerFilas(lector,conexion);
         }
 
-        private static bool LeerFilas(SqlDataReader lector)
+        private static bool LeerFilas(SqlDataReader lector, Conexion conexion)
         {
             if (lector.HasRows)
             {
                 while (lector.Read())
                     FormatoCamposCache(lector);
 
+                conexion.CerrarConexion();
                 return true;
             }
             else
+            { 
+                conexion.CerrarConexion();
                 return false;
+            }
+                
         }
 
         private static void FormatoCamposCache(SqlDataReader lector)
