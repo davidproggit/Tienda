@@ -48,35 +48,42 @@ namespace CapaDePresentacion
             this.btnDescargarReporte = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.panelControlReportes = new System.Windows.Forms.Panel();
+            this.panelAccion = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductosReporte)).BeginInit();
+            this.panelControlReportes.SuspendLayout();
+            this.panelAccion.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(474, 63);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(243, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(367, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Descargar reportes de productos";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(64, 180);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(24, 18);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblNombre.Size = new System.Drawing.Size(107, 29);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(136, 175);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(139, 15);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(190, 26);
+            this.txtNombre.Size = new System.Drawing.Size(190, 35);
             this.txtNombre.TabIndex = 2;
             // 
             // grillaProductosReporte
@@ -93,7 +100,7 @@ namespace CapaDePresentacion
             this.grillaProductosReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grillaProductosReporte.Name = "grillaProductosReporte";
             this.grillaProductosReporte.RowHeadersWidth = 62;
-            this.grillaProductosReporte.Size = new System.Drawing.Size(1164, 154);
+            this.grillaProductosReporte.Size = new System.Drawing.Size(1022, 154);
             this.grillaProductosReporte.TabIndex = 7;
             // 
             // ColNombreProd
@@ -141,65 +148,72 @@ namespace CapaDePresentacion
             // lblFechadesde
             // 
             this.lblFechadesde.AutoSize = true;
-            this.lblFechadesde.Location = new System.Drawing.Point(414, 185);
+            this.lblFechadesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechadesde.Location = new System.Drawing.Point(366, 15);
             this.lblFechadesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechadesde.Name = "lblFechadesde";
-            this.lblFechadesde.Size = new System.Drawing.Size(106, 20);
+            this.lblFechadesde.Size = new System.Drawing.Size(160, 29);
             this.lblFechadesde.TabIndex = 8;
             this.lblFechadesde.Text = "Fecha desde:";
             // 
             // dtpFechaDesde
             // 
-            this.dtpFechaDesde.Location = new System.Drawing.Point(528, 175);
+            this.dtpFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDesde.Location = new System.Drawing.Point(534, 15);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(298, 26);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(460, 35);
             this.dtpFechaDesde.TabIndex = 9;
             // 
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(416, 265);
+            this.lblFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHasta.Location = new System.Drawing.Point(368, 95);
             this.lblFechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaHasta.Name = "lblFechaHasta";
-            this.lblFechaHasta.Size = new System.Drawing.Size(102, 20);
+            this.lblFechaHasta.Size = new System.Drawing.Size(149, 29);
             this.lblFechaHasta.TabIndex = 10;
             this.lblFechaHasta.Text = "Fecha hasta:";
             // 
             // dtpFechaHasta
             // 
-            this.dtpFechaHasta.Location = new System.Drawing.Point(528, 255);
+            this.dtpFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaHasta.Location = new System.Drawing.Point(534, 89);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(298, 26);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(460, 35);
             this.dtpFechaHasta.TabIndex = 11;
             // 
             // btnBuscarProducto
             // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(986, 351);
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.Location = new System.Drawing.Point(168, 20);
             this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(137, 50);
             this.btnBuscarProducto.TabIndex = 12;
             this.btnBuscarProducto.Text = "Buscar ";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
             // 
             // btnCancelarProducto
             // 
-            this.btnCancelarProducto.Location = new System.Drawing.Point(826, 351);
+            this.btnCancelarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarProducto.Location = new System.Drawing.Point(14, 20);
             this.btnCancelarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelarProducto.Name = "btnCancelarProducto";
-            this.btnCancelarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnCancelarProducto.Size = new System.Drawing.Size(132, 50);
             this.btnCancelarProducto.TabIndex = 13;
             this.btnCancelarProducto.Text = "Cancelar";
             this.btnCancelarProducto.UseVisualStyleBackColor = true;
             // 
             // btnDescargarReporte
             // 
-            this.btnDescargarReporte.Location = new System.Drawing.Point(986, 611);
+            this.btnDescargarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargarReporte.Location = new System.Drawing.Point(726, 611);
             this.btnDescargarReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDescargarReporte.Name = "btnDescargarReporte";
-            this.btnDescargarReporte.Size = new System.Drawing.Size(112, 35);
+            this.btnDescargarReporte.Size = new System.Drawing.Size(282, 67);
             this.btnDescargarReporte.TabIndex = 14;
             this.btnDescargarReporte.Text = "Descargar reporte";
             this.btnDescargarReporte.UseVisualStyleBackColor = true;
@@ -207,44 +221,67 @@ namespace CapaDePresentacion
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(57, 272);
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(17, 107);
             this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(77, 20);
+            this.lblCantidad.Size = new System.Drawing.Size(115, 29);
             this.lblCantidad.TabIndex = 15;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(136, 268);
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(139, 101);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(190, 26);
+            this.txtCantidad.Size = new System.Drawing.Size(190, 35);
             this.txtCantidad.TabIndex = 16;
+            // 
+            // panelControlReportes
+            // 
+            this.panelControlReportes.BackColor = System.Drawing.Color.LightGray;
+            this.panelControlReportes.Controls.Add(this.lblNombre);
+            this.panelControlReportes.Controls.Add(this.txtCantidad);
+            this.panelControlReportes.Controls.Add(this.txtNombre);
+            this.panelControlReportes.Controls.Add(this.lblCantidad);
+            this.panelControlReportes.Controls.Add(this.lblFechadesde);
+            this.panelControlReportes.Controls.Add(this.dtpFechaDesde);
+            this.panelControlReportes.Controls.Add(this.lblFechaHasta);
+            this.panelControlReportes.Controls.Add(this.dtpFechaHasta);
+            this.panelControlReportes.Location = new System.Drawing.Point(18, 143);
+            this.panelControlReportes.Name = "panelControlReportes";
+            this.panelControlReportes.Size = new System.Drawing.Size(1022, 154);
+            this.panelControlReportes.TabIndex = 17;
+            // 
+            // panelAccion
+            // 
+            this.panelAccion.BackColor = System.Drawing.Color.LightGray;
+            this.panelAccion.Controls.Add(this.btnCancelarProducto);
+            this.panelAccion.Controls.Add(this.btnBuscarProducto);
+            this.panelAccion.Location = new System.Drawing.Point(719, 315);
+            this.panelAccion.Name = "panelAccion";
+            this.panelAccion.Size = new System.Drawing.Size(321, 89);
+            this.panelAccion.TabIndex = 18;
             // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.panelAccion);
+            this.Controls.Add(this.panelControlReportes);
             this.Controls.Add(this.btnDescargarReporte);
-            this.Controls.Add(this.btnCancelarProducto);
-            this.Controls.Add(this.btnBuscarProducto);
-            this.Controls.Add(this.dtpFechaHasta);
-            this.Controls.Add(this.lblFechaHasta);
-            this.Controls.Add(this.dtpFechaDesde);
-            this.Controls.Add(this.lblFechadesde);
             this.Controls.Add(this.grillaProductosReporte);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Reportes";
             this.Text = "Reportes";
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductosReporte)).EndInit();
+            this.panelControlReportes.ResumeLayout(false);
+            this.panelControlReportes.PerformLayout();
+            this.panelAccion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +308,7 @@ namespace CapaDePresentacion
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionarProd;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Panel panelControlReportes;
+        private System.Windows.Forms.Panel panelAccion;
     }
 }

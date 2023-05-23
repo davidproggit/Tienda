@@ -42,7 +42,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblEmailEdicion = new System.Windows.Forms.Label();
-            this.tituloEdicion = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblApellidoEdicion = new System.Windows.Forms.Label();
             this.lblUsuarioEdicion = new System.Windows.Forms.Label();
             this.lblNombreEdicion = new System.Windows.Forms.Label();
@@ -185,16 +185,16 @@
             this.lblEmailEdicion.TabIndex = 31;
             this.lblEmailEdicion.Text = "Email";
             // 
-            // tituloEdicion
+            // lblTitulo
             // 
-            this.tituloEdicion.AutoSize = true;
-            this.tituloEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloEdicion.ForeColor = System.Drawing.Color.Black;
-            this.tituloEdicion.Location = new System.Drawing.Point(539, 47);
-            this.tituloEdicion.Name = "tituloEdicion";
-            this.tituloEdicion.Size = new System.Drawing.Size(179, 37);
-            this.tituloEdicion.TabIndex = 26;
-            this.tituloEdicion.Text = "Editar perfil";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo.Location = new System.Drawing.Point(539, 47);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(179, 37);
+            this.lblTitulo.TabIndex = 26;
+            this.lblTitulo.Text = "Editar perfil";
             // 
             // lblApellidoEdicion
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblEmailEdicion);
-            this.Controls.Add(this.tituloEdicion);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblApellidoEdicion);
             this.Controls.Add(this.lblUsuarioEdicion);
             this.Controls.Add(this.lblNombreEdicion);
@@ -288,7 +288,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblEmailEdicion;
-        private System.Windows.Forms.Label tituloEdicion;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblApellidoEdicion;
         private System.Windows.Forms.Label lblUsuarioEdicion;
         private System.Windows.Forms.Label lblNombreEdicion;

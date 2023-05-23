@@ -59,7 +59,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblEmailEdicion = new System.Windows.Forms.Label();
-            this.tituloEdicion = new System.Windows.Forms.Label();
+            this.lblTituloEdicion = new System.Windows.Forms.Label();
             this.lblApellidoEdicion = new System.Windows.Forms.Label();
             this.lblUsuarioEdicion = new System.Windows.Forms.Label();
             this.lblNombreEdicion = new System.Windows.Forms.Label();
@@ -244,7 +244,7 @@
             this.tabPerfilEdicion.Controls.Add(this.txtNombre);
             this.tabPerfilEdicion.Controls.Add(this.txtUsuario);
             this.tabPerfilEdicion.Controls.Add(this.lblEmailEdicion);
-            this.tabPerfilEdicion.Controls.Add(this.tituloEdicion);
+            this.tabPerfilEdicion.Controls.Add(this.lblTituloEdicion);
             this.tabPerfilEdicion.Controls.Add(this.lblApellidoEdicion);
             this.tabPerfilEdicion.Controls.Add(this.lblUsuarioEdicion);
             this.tabPerfilEdicion.Controls.Add(this.lblNombreEdicion);
@@ -419,16 +419,16 @@
             this.lblEmailEdicion.TabIndex = 50;
             this.lblEmailEdicion.Text = "Email";
             // 
-            // tituloEdicion
+            // lblTituloEdicion
             // 
-            this.tituloEdicion.AutoSize = true;
-            this.tituloEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloEdicion.ForeColor = System.Drawing.Color.Black;
-            this.tituloEdicion.Location = new System.Drawing.Point(486, 7);
-            this.tituloEdicion.Name = "tituloEdicion";
-            this.tituloEdicion.Size = new System.Drawing.Size(179, 37);
-            this.tituloEdicion.TabIndex = 45;
-            this.tituloEdicion.Text = "Editar perfil";
+            this.lblTituloEdicion.AutoSize = true;
+            this.lblTituloEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloEdicion.ForeColor = System.Drawing.Color.Black;
+            this.lblTituloEdicion.Location = new System.Drawing.Point(486, 7);
+            this.lblTituloEdicion.Name = "lblTituloEdicion";
+            this.lblTituloEdicion.Size = new System.Drawing.Size(179, 37);
+            this.lblTituloEdicion.TabIndex = 45;
+            this.lblTituloEdicion.Text = "Editar perfil";
             // 
             // lblApellidoEdicion
             // 
@@ -515,7 +515,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblEmailEdicion;
-        private System.Windows.Forms.Label tituloEdicion;
+        private System.Windows.Forms.Label lblTituloEdicion;
         private System.Windows.Forms.Label lblApellidoEdicion;
         private System.Windows.Forms.Label lblUsuarioEdicion;
         private System.Windows.Forms.Label lblNombreEdicion;

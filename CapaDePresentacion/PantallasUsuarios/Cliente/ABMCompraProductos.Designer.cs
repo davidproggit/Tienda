@@ -48,38 +48,42 @@ namespace CapaDePresentacion
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(531, 86);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(145, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(220, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Comprar productos";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(62, 163);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblNombre.Size = new System.Drawing.Size(107, 29);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             this.lblNombre.UseWaitCursor = true;
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(141, 158);
+            this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.Location = new System.Drawing.Point(169, 160);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(834, 26);
+            this.txtBusqueda.Size = new System.Drawing.Size(834, 35);
             this.txtBusqueda.TabIndex = 2;
             // 
             // btnBuscarProducto
             // 
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProducto.Location = new System.Drawing.Point(1017, 155);
             this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(132, 50);
             this.btnBuscarProducto.TabIndex = 3;
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
@@ -152,20 +156,22 @@ namespace CapaDePresentacion
             // 
             // btnCompraProducto
             // 
+            this.btnCompraProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompraProducto.Location = new System.Drawing.Point(1017, 600);
             this.btnCompraProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCompraProducto.Name = "btnCompraProducto";
-            this.btnCompraProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnCompraProducto.Size = new System.Drawing.Size(132, 51);
             this.btnCompraProducto.TabIndex = 10;
             this.btnCompraProducto.Text = "Comprar";
             this.btnCompraProducto.UseVisualStyleBackColor = true;
             // 
             // btnQuitarProducto
             // 
-            this.btnQuitarProducto.Location = new System.Drawing.Point(864, 600);
+            this.btnQuitarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarProducto.Location = new System.Drawing.Point(824, 600);
             this.btnQuitarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQuitarProducto.Name = "btnQuitarProducto";
-            this.btnQuitarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnQuitarProducto.Size = new System.Drawing.Size(130, 51);
             this.btnQuitarProducto.TabIndex = 11;
             this.btnQuitarProducto.Text = "Quitar";
             this.btnQuitarProducto.UseVisualStyleBackColor = true;

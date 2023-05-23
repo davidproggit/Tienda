@@ -149,30 +149,33 @@ namespace CapaDePresentacion.PantallasUsuarios.Vendedor
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(474, 83);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(228, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(346, 29);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Gestión de ordenes de compra";
             this.lblTitulo.UseMnemonic = false;
             // 
             // btnAprobar
             // 
-            this.btnAprobar.Location = new System.Drawing.Point(870, 595);
+            this.btnAprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAprobar.Location = new System.Drawing.Point(846, 595);
             this.btnAprobar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(112, 35);
+            this.btnAprobar.Size = new System.Drawing.Size(139, 59);
             this.btnAprobar.TabIndex = 2;
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.UseVisualStyleBackColor = true;
             // 
             // btnRechazar
             // 
+            this.btnRechazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRechazar.Location = new System.Drawing.Point(1017, 595);
             this.btnRechazar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRechazar.Name = "btnRechazar";
-            this.btnRechazar.Size = new System.Drawing.Size(112, 35);
+            this.btnRechazar.Size = new System.Drawing.Size(137, 59);
             this.btnRechazar.TabIndex = 3;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;

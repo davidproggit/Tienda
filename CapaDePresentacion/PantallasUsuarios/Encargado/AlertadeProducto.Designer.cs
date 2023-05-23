@@ -42,70 +42,74 @@ namespace CapaDePresentacion
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardarAlerta = new System.Windows.Forms.Button();
             this.btnCancelarAlerta = new System.Windows.Forms.Button();
+            this.panelAlerta = new System.Windows.Forms.Panel();
+            this.panelAccion = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
+            this.panelAlerta.SuspendLayout();
+            this.panelAccion.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(498, 58);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(200, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(222, 29);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Alerta de productos";
             // 
             // lblCantidadProducto
             // 
             this.lblCantidadProducto.AutoSize = true;
-            this.lblCantidadProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadProducto.Location = new System.Drawing.Point(66, 511);
+            this.lblCantidadProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadProducto.Location = new System.Drawing.Point(13, 27);
             this.lblCantidadProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadProducto.Name = "lblCantidadProducto";
-            this.lblCantidadProducto.Size = new System.Drawing.Size(236, 26);
+            this.lblCantidadProducto.Size = new System.Drawing.Size(262, 29);
             this.lblCantidadProducto.TabIndex = 1;
             this.lblCantidadProducto.Text = "Cantidad de productos:";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(112, 137);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(955, 26);
+            this.lblDescripcion.Size = new System.Drawing.Size(1059, 29);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "En esta pantalla se configurara el alerta dependiendo la cantidad de productos qu" +
     "e esten en stock";
             // 
             // txtCantidadMinima
             // 
-            this.txtCantidadMinima.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadMinima.Location = new System.Drawing.Point(331, 511);
+            this.txtCantidadMinima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadMinima.Location = new System.Drawing.Point(278, 27);
             this.txtCantidadMinima.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCantidadMinima.Name = "txtCantidadMinima";
-            this.txtCantidadMinima.Size = new System.Drawing.Size(212, 32);
+            this.txtCantidadMinima.Size = new System.Drawing.Size(212, 35);
             this.txtCantidadMinima.TabIndex = 3;
             // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(605, 511);
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(556, 30);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(100, 26);
+            this.lblMensaje.Size = new System.Drawing.Size(111, 29);
             this.lblMensaje.TabIndex = 4;
             this.lblMensaje.Text = "Mensaje:";
             // 
             // txtMensaje
             // 
-            this.txtMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensaje.Location = new System.Drawing.Point(770, 513);
+            this.txtMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMensaje.Location = new System.Drawing.Point(675, 27);
             this.txtMensaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(212, 32);
+            this.txtMensaje.Size = new System.Drawing.Size(212, 35);
             this.txtMensaje.TabIndex = 5;
             // 
             // grillaProductos
@@ -160,7 +164,7 @@ namespace CapaDePresentacion
             // btnGuardarAlerta
             // 
             this.btnGuardarAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarAlerta.Location = new System.Drawing.Point(1021, 614);
+            this.btnGuardarAlerta.Location = new System.Drawing.Point(182, 18);
             this.btnGuardarAlerta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarAlerta.Name = "btnGuardarAlerta";
             this.btnGuardarAlerta.Size = new System.Drawing.Size(122, 51);
@@ -172,7 +176,7 @@ namespace CapaDePresentacion
             // btnCancelarAlerta
             // 
             this.btnCancelarAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarAlerta.Location = new System.Drawing.Point(849, 614);
+            this.btnCancelarAlerta.Location = new System.Drawing.Point(10, 18);
             this.btnCancelarAlerta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelarAlerta.Name = "btnCancelarAlerta";
             this.btnCancelarAlerta.Size = new System.Drawing.Size(133, 51);
@@ -181,19 +185,37 @@ namespace CapaDePresentacion
             this.btnCancelarAlerta.UseVisualStyleBackColor = true;
             this.btnCancelarAlerta.Click += new System.EventHandler(this.btnAlertCancelar_Click);
             // 
+            // panelAlerta
+            // 
+            this.panelAlerta.BackColor = System.Drawing.Color.LightGray;
+            this.panelAlerta.Controls.Add(this.lblCantidadProducto);
+            this.panelAlerta.Controls.Add(this.txtCantidadMinima);
+            this.panelAlerta.Controls.Add(this.lblMensaje);
+            this.panelAlerta.Controls.Add(this.txtMensaje);
+            this.panelAlerta.Location = new System.Drawing.Point(127, 487);
+            this.panelAlerta.Name = "panelAlerta";
+            this.panelAlerta.Size = new System.Drawing.Size(909, 87);
+            this.panelAlerta.TabIndex = 9;
+            // 
+            // panelAccion
+            // 
+            this.panelAccion.BackColor = System.Drawing.Color.LightGray;
+            this.panelAccion.Controls.Add(this.btnCancelarAlerta);
+            this.panelAccion.Controls.Add(this.btnGuardarAlerta);
+            this.panelAccion.Location = new System.Drawing.Point(719, 596);
+            this.panelAccion.Name = "panelAccion";
+            this.panelAccion.Size = new System.Drawing.Size(317, 84);
+            this.panelAccion.TabIndex = 10;
+            // 
             // AlertadeProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.btnCancelarAlerta);
-            this.Controls.Add(this.btnGuardarAlerta);
+            this.Controls.Add(this.panelAccion);
+            this.Controls.Add(this.panelAlerta);
             this.Controls.Add(this.grillaProductos);
-            this.Controls.Add(this.txtMensaje);
-            this.Controls.Add(this.lblMensaje);
-            this.Controls.Add(this.txtCantidadMinima);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.lblCantidadProducto);
             this.Controls.Add(this.lblTitulo);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AlertadeProducto";
@@ -201,6 +223,9 @@ namespace CapaDePresentacion
             this.Text = "Alerta de Producto";
             this.Load += new System.EventHandler(this.AlertadeProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
+            this.panelAlerta.ResumeLayout(false);
+            this.panelAlerta.PerformLayout();
+            this.panelAccion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +244,7 @@ namespace CapaDePresentacion
         private System.Windows.Forms.Button btnCancelarAlerta;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
+        private System.Windows.Forms.Panel panelAlerta;
+        private System.Windows.Forms.Panel panelAccion;
     }
 }
