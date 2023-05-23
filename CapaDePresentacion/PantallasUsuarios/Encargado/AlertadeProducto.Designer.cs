@@ -40,7 +40,6 @@ namespace CapaDePresentacion
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardarAlerta = new System.Windows.Forms.Button();
             this.btnAlertCancelar = new System.Windows.Forms.Button();
-            this.btnAlerQuitarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,23 +149,13 @@ namespace CapaDePresentacion
             this.btnAlertCancelar.TabIndex = 8;
             this.btnAlertCancelar.Text = "Cancelar";
             this.btnAlertCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnAlerQuitarProducto
-            // 
-            this.btnAlerQuitarProducto.Location = new System.Drawing.Point(662, 614);
-            this.btnAlerQuitarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAlerQuitarProducto.Name = "btnAlerQuitarProducto";
-            this.btnAlerQuitarProducto.Size = new System.Drawing.Size(174, 35);
-            this.btnAlerQuitarProducto.TabIndex = 9;
-            this.btnAlerQuitarProducto.Text = "Quitar producto";
-            this.btnAlerQuitarProducto.UseVisualStyleBackColor = true;
+            this.btnAlertCancelar.Click += new System.EventHandler(this.btnAlertCancelar_Click);
             // 
             // AlertadeProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.btnAlerQuitarProducto);
             this.Controls.Add(this.btnAlertCancelar);
             this.Controls.Add(this.btnGuardarAlerta);
             this.Controls.Add(this.grilla);
@@ -198,7 +187,6 @@ namespace CapaDePresentacion
         private System.Windows.Forms.DataGridView grilla;
         private System.Windows.Forms.Button btnGuardarAlerta;
         private System.Windows.Forms.Button btnAlertCancelar;
-        private System.Windows.Forms.Button btnAlerQuitarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
     }

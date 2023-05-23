@@ -82,5 +82,9 @@ namespace CapaDePresentacion
 
         }
 
+        private void btnAlertCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
