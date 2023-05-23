@@ -132,15 +132,15 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void MensajeError(string mensaje)
         {
-            etiquetaError.Text = "Error: " + mensaje;
-            etiquetaError.Visible = true;
+            lblError.Text = "Error: " + mensaje;
+            lblError.Visible = true;
         }
 
         private void CerrarSesion(object sender, FormClosedEventArgs e)
         {
             txtClave.Clear();
             txtUsuario.Clear();
-            etiquetaError.Visible = false;
+            lblError.Visible = false;
             this.Show();
             txtUsuario.Focus();
         }

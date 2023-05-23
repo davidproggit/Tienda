@@ -29,10 +29,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Vendedor
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblAprobarOC = new System.Windows.Forms.Label();
-            this.btnAprobar = new System.Windows.Forms.Button();
-            this.btnRechazar = new System.Windows.Forms.Button();
+            this.grillaOrdenes = new System.Windows.Forms.DataGridView();
             this.ColNomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +40,16 @@ namespace CapaDePresentacion.PantallasUsuarios.Vendedor
             this.ColPrecioProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnAprobar = new System.Windows.Forms.Button();
+            this.btnRechazar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // grillaOrdenes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grillaOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNomCliente,
             this.ColApellido,
             this.ColDNI,
@@ -60,119 +60,136 @@ namespace CapaDePresentacion.PantallasUsuarios.Vendedor
             this.ColPrecioProd,
             this.ColStock,
             this.ColSeleccionar});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 160);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(797, 110);
-            this.dataGridView1.TabIndex = 0;
+            this.grillaOrdenes.Location = new System.Drawing.Point(2, 246);
+            this.grillaOrdenes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grillaOrdenes.Name = "grillaOrdenes";
+            this.grillaOrdenes.RowHeadersWidth = 62;
+            this.grillaOrdenes.Size = new System.Drawing.Size(1196, 169);
+            this.grillaOrdenes.TabIndex = 0;
             // 
-            // lblAprobarOC
+            // ColNomCliente
             // 
-            this.lblAprobarOC.AutoSize = true;
-            this.lblAprobarOC.Location = new System.Drawing.Point(316, 54);
-            this.lblAprobarOC.Name = "lblAprobarOC";
-            this.lblAprobarOC.Size = new System.Drawing.Size(152, 13);
-            this.lblAprobarOC.TabIndex = 1;
-            this.lblAprobarOC.Text = "Gestión de ordenes de compra";
-            this.lblAprobarOC.UseMnemonic = false;
+            this.ColNomCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColNomCliente.HeaderText = "Nombre Cliente";
+            this.ColNomCliente.MinimumWidth = 8;
+            this.ColNomCliente.Name = "ColNomCliente";
+            this.ColNomCliente.Width = 142;
+            // 
+            // ColApellido
+            // 
+            this.ColApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColApellido.HeaderText = "Apellido";
+            this.ColApellido.MinimumWidth = 8;
+            this.ColApellido.Name = "ColApellido";
+            this.ColApellido.Width = 101;
+            // 
+            // ColDNI
+            // 
+            this.ColDNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColDNI.HeaderText = "DNI";
+            this.ColDNI.MinimumWidth = 8;
+            this.ColDNI.Name = "ColDNI";
+            this.ColDNI.Width = 73;
+            // 
+            // ColEmail
+            // 
+            this.ColEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColEmail.HeaderText = "Email";
+            this.ColEmail.MinimumWidth = 8;
+            this.ColEmail.Name = "ColEmail";
+            this.ColEmail.Width = 84;
+            // 
+            // ColNomProd
+            // 
+            this.ColNomProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColNomProd.HeaderText = "Nombre Producto";
+            this.ColNomProd.MinimumWidth = 8;
+            this.ColNomProd.Name = "ColNomProd";
+            this.ColNomProd.Width = 155;
+            // 
+            // ColDescProducto
+            // 
+            this.ColDescProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColDescProducto.HeaderText = "Descripcion";
+            this.ColDescProducto.MinimumWidth = 8;
+            this.ColDescProducto.Name = "ColDescProducto";
+            this.ColDescProducto.Width = 128;
+            // 
+            // ColMarca
+            // 
+            this.ColMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMarca.HeaderText = "Marca";
+            this.ColMarca.MinimumWidth = 8;
+            this.ColMarca.Name = "ColMarca";
+            this.ColMarca.Width = 89;
+            // 
+            // ColPrecioProd
+            // 
+            this.ColPrecioProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColPrecioProd.HeaderText = "Precio Unitario";
+            this.ColPrecioProd.MinimumWidth = 8;
+            this.ColPrecioProd.Name = "ColPrecioProd";
+            this.ColPrecioProd.Width = 136;
+            // 
+            // ColStock
+            // 
+            this.ColStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColStock.HeaderText = "Stock";
+            this.ColStock.MinimumWidth = 8;
+            this.ColStock.Name = "ColStock";
+            this.ColStock.Width = 86;
+            // 
+            // ColSeleccionar
+            // 
+            this.ColSeleccionar.HeaderText = "Seleccionar";
+            this.ColSeleccionar.MinimumWidth = 8;
+            this.ColSeleccionar.Name = "ColSeleccionar";
+            this.ColSeleccionar.Width = 150;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(474, 83);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(228, 20);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Gestión de ordenes de compra";
+            this.lblTitulo.UseMnemonic = false;
             // 
             // btnAprobar
             // 
-            this.btnAprobar.Location = new System.Drawing.Point(580, 387);
+            this.btnAprobar.Location = new System.Drawing.Point(870, 595);
+            this.btnAprobar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(75, 23);
+            this.btnAprobar.Size = new System.Drawing.Size(112, 35);
             this.btnAprobar.TabIndex = 2;
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.UseVisualStyleBackColor = true;
             // 
             // btnRechazar
             // 
-            this.btnRechazar.Location = new System.Drawing.Point(678, 387);
+            this.btnRechazar.Location = new System.Drawing.Point(1017, 595);
+            this.btnRechazar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRechazar.Name = "btnRechazar";
-            this.btnRechazar.Size = new System.Drawing.Size(75, 23);
+            this.btnRechazar.Size = new System.Drawing.Size(112, 35);
             this.btnRechazar.TabIndex = 3;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
             // 
-            // ColNomCliente
-            // 
-            this.ColNomCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColNomCliente.HeaderText = "Nombre Cliente";
-            this.ColNomCliente.Name = "ColNomCliente";
-            this.ColNomCliente.Width = 96;
-            // 
-            // ColApellido
-            // 
-            this.ColApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColApellido.HeaderText = "Apellido";
-            this.ColApellido.Name = "ColApellido";
-            this.ColApellido.Width = 69;
-            // 
-            // ColDNI
-            // 
-            this.ColDNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColDNI.HeaderText = "DNI";
-            this.ColDNI.Name = "ColDNI";
-            this.ColDNI.Width = 51;
-            // 
-            // ColEmail
-            // 
-            this.ColEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColEmail.HeaderText = "Email";
-            this.ColEmail.Name = "ColEmail";
-            this.ColEmail.Width = 57;
-            // 
-            // ColNomProd
-            // 
-            this.ColNomProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColNomProd.HeaderText = "Nombre Producto";
-            this.ColNomProd.Name = "ColNomProd";
-            this.ColNomProd.Width = 105;
-            // 
-            // ColDescProducto
-            // 
-            this.ColDescProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColDescProducto.HeaderText = "Descripcion";
-            this.ColDescProducto.Name = "ColDescProducto";
-            this.ColDescProducto.Width = 88;
-            // 
-            // ColMarca
-            // 
-            this.ColMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColMarca.HeaderText = "Marca";
-            this.ColMarca.Name = "ColMarca";
-            this.ColMarca.Width = 62;
-            // 
-            // ColPrecioProd
-            // 
-            this.ColPrecioProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColPrecioProd.HeaderText = "Precio Unitario";
-            this.ColPrecioProd.Name = "ColPrecioProd";
-            this.ColPrecioProd.Width = 93;
-            // 
-            // ColStock
-            // 
-            this.ColStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColStock.HeaderText = "Stock";
-            this.ColStock.Name = "ColStock";
-            this.ColStock.Width = 60;
-            // 
-            // ColSeleccionar
-            // 
-            this.ColSeleccionar.HeaderText = "Seleccionar";
-            this.ColSeleccionar.Name = "ColSeleccionar";
-            // 
             // AprobarOrdendeCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.btnRechazar);
             this.Controls.Add(this.btnAprobar);
-            this.Controls.Add(this.lblAprobarOC);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.grillaOrdenes);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AprobarOrdendeCompra";
             this.Text = "AprobarOrdendeCompra";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaOrdenes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,7 +197,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Vendedor
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grillaOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNomCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDNI;
@@ -191,7 +208,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Vendedor
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColStock;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionar;
-        private System.Windows.Forms.Label lblAprobarOC;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAprobar;
         private System.Windows.Forms.Button btnRechazar;
     }

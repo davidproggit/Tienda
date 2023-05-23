@@ -31,38 +31,38 @@
             this.tituloPerfil = new System.Windows.Forms.Label();
             this.Perfil = new System.Windows.Forms.TabControl();
             this.tabPerfil = new System.Windows.Forms.TabPage();
-            this.etiquetaUsuario = new System.Windows.Forms.Label();
-            this.etiquetaUsuarioCategoria = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.etiquetaApellido = new System.Windows.Forms.Label();
-            this.etiquetaApellidoCategoria = new System.Windows.Forms.Label();
-            this.etiquetaEmailCategoria = new System.Windows.Forms.Label();
-            this.etiquetaCargoCategoria = new System.Windows.Forms.Label();
-            this.etiquetaNombre = new System.Windows.Forms.Label();
-            this.etiquetaEmail = new System.Windows.Forms.Label();
-            this.etiquetaCargo = new System.Windows.Forms.Label();
-            this.etiquetaNombreCategoria = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblUsuarioCategoria = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblApellidoCategoria = new System.Windows.Forms.Label();
+            this.lblEmailCategoria = new System.Windows.Forms.Label();
+            this.lblCargoCategoria = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblNombreCategoria = new System.Windows.Forms.Label();
             this.tabPerfilEdicion = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.botonGuardar = new System.Windows.Forms.Button();
-            this.botonCancelar = new System.Windows.Forms.Button();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.lblClave = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.linkClave = new System.Windows.Forms.LinkLabel();
-            this.textoClaveConfirmacion = new System.Windows.Forms.TextBox();
-            this.etiquetaClaveConfirmacion = new System.Windows.Forms.Label();
-            this.textoClaveNueva = new System.Windows.Forms.TextBox();
-            this.etiquetaClaveNueva = new System.Windows.Forms.Label();
-            this.textoClaveActual = new System.Windows.Forms.TextBox();
-            this.etiquetaClaveActual = new System.Windows.Forms.Label();
-            this.textoEmail = new System.Windows.Forms.TextBox();
-            this.textoApellido = new System.Windows.Forms.TextBox();
-            this.textoNombre = new System.Windows.Forms.TextBox();
-            this.textoUsuario = new System.Windows.Forms.TextBox();
-            this.etiquetaEmailEdicion = new System.Windows.Forms.Label();
+            this.txtClaveConfirmacion = new System.Windows.Forms.TextBox();
+            this.lblClaveConfirmacion = new System.Windows.Forms.Label();
+            this.txtClaveNueva = new System.Windows.Forms.TextBox();
+            this.lblClaveNueva = new System.Windows.Forms.Label();
+            this.txtClaveActual = new System.Windows.Forms.TextBox();
+            this.lblClaveActual = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblEmailEdicion = new System.Windows.Forms.Label();
             this.tituloEdicion = new System.Windows.Forms.Label();
-            this.etiquetaApellidoEdicion = new System.Windows.Forms.Label();
-            this.etiquetaUsuarioEdicion = new System.Windows.Forms.Label();
-            this.etiquetaNombreEdicion = new System.Windows.Forms.Label();
-            this.etiquetaMensaje = new System.Windows.Forms.Label();
+            this.lblApellidoEdicion = new System.Windows.Forms.Label();
+            this.lblUsuarioEdicion = new System.Windows.Forms.Label();
+            this.lblNombreEdicion = new System.Windows.Forms.Label();
             this.Perfil.SuspendLayout();
             this.tabPerfil.SuspendLayout();
             this.tabPerfilEdicion.SuspendLayout();
@@ -92,17 +92,17 @@
             // 
             // tabPerfil
             // 
-            this.tabPerfil.Controls.Add(this.etiquetaUsuario);
-            this.tabPerfil.Controls.Add(this.etiquetaUsuarioCategoria);
-            this.tabPerfil.Controls.Add(this.label1);
-            this.tabPerfil.Controls.Add(this.etiquetaApellido);
-            this.tabPerfil.Controls.Add(this.etiquetaApellidoCategoria);
-            this.tabPerfil.Controls.Add(this.etiquetaEmailCategoria);
-            this.tabPerfil.Controls.Add(this.etiquetaCargoCategoria);
-            this.tabPerfil.Controls.Add(this.etiquetaNombre);
-            this.tabPerfil.Controls.Add(this.etiquetaEmail);
-            this.tabPerfil.Controls.Add(this.etiquetaCargo);
-            this.tabPerfil.Controls.Add(this.etiquetaNombreCategoria);
+            this.tabPerfil.Controls.Add(this.lblUsuario);
+            this.tabPerfil.Controls.Add(this.lblUsuarioCategoria);
+            this.tabPerfil.Controls.Add(this.lblTitulo);
+            this.tabPerfil.Controls.Add(this.lblApellido);
+            this.tabPerfil.Controls.Add(this.lblApellidoCategoria);
+            this.tabPerfil.Controls.Add(this.lblEmailCategoria);
+            this.tabPerfil.Controls.Add(this.lblCargoCategoria);
+            this.tabPerfil.Controls.Add(this.lblNombre);
+            this.tabPerfil.Controls.Add(this.lblEmail);
+            this.tabPerfil.Controls.Add(this.lblCargo);
+            this.tabPerfil.Controls.Add(this.lblNombreCategoria);
             this.tabPerfil.Location = new System.Drawing.Point(4, 39);
             this.tabPerfil.Name = "tabPerfil";
             this.tabPerfil.Padding = new System.Windows.Forms.Padding(3);
@@ -111,143 +111,143 @@
             this.tabPerfil.Text = "Perfil";
             this.tabPerfil.UseVisualStyleBackColor = true;
             // 
-            // etiquetaUsuario
+            // lblUsuario
             // 
-            this.etiquetaUsuario.AutoSize = true;
-            this.etiquetaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.etiquetaUsuario.Location = new System.Drawing.Point(612, 109);
-            this.etiquetaUsuario.Name = "etiquetaUsuario";
-            this.etiquetaUsuario.Size = new System.Drawing.Size(128, 37);
-            this.etiquetaUsuario.TabIndex = 15;
-            this.etiquetaUsuario.Text = "Usuario";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblUsuario.Location = new System.Drawing.Point(612, 109);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(128, 37);
+            this.lblUsuario.TabIndex = 15;
+            this.lblUsuario.Text = "Usuario";
             // 
-            // etiquetaUsuarioCategoria
+            // lblUsuarioCategoria
             // 
-            this.etiquetaUsuarioCategoria.AutoSize = true;
-            this.etiquetaUsuarioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaUsuarioCategoria.Location = new System.Drawing.Point(467, 109);
-            this.etiquetaUsuarioCategoria.Name = "etiquetaUsuarioCategoria";
-            this.etiquetaUsuarioCategoria.Size = new System.Drawing.Size(128, 37);
-            this.etiquetaUsuarioCategoria.TabIndex = 14;
-            this.etiquetaUsuarioCategoria.Text = "Usuario";
+            this.lblUsuarioCategoria.AutoSize = true;
+            this.lblUsuarioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioCategoria.Location = new System.Drawing.Point(467, 109);
+            this.lblUsuarioCategoria.Name = "lblUsuarioCategoria";
+            this.lblUsuarioCategoria.Size = new System.Drawing.Size(128, 37);
+            this.lblUsuarioCategoria.TabIndex = 14;
+            this.lblUsuarioCategoria.Text = "Usuario";
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(545, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 37);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Perfil";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(545, 35);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(89, 37);
+            this.lblTitulo.TabIndex = 26;
+            this.lblTitulo.Text = "Perfil";
             // 
-            // etiquetaApellido
+            // lblApellido
             // 
-            this.etiquetaApellido.AutoSize = true;
-            this.etiquetaApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.etiquetaApellido.Location = new System.Drawing.Point(613, 219);
-            this.etiquetaApellido.Name = "etiquetaApellido";
-            this.etiquetaApellido.Size = new System.Drawing.Size(131, 37);
-            this.etiquetaApellido.TabIndex = 19;
-            this.etiquetaApellido.Text = "Apellido";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblApellido.Location = new System.Drawing.Point(613, 219);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(131, 37);
+            this.lblApellido.TabIndex = 19;
+            this.lblApellido.Text = "Apellido";
             // 
-            // etiquetaApellidoCategoria
+            // lblApellidoCategoria
             // 
-            this.etiquetaApellidoCategoria.AutoSize = true;
-            this.etiquetaApellidoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaApellidoCategoria.Location = new System.Drawing.Point(467, 219);
-            this.etiquetaApellidoCategoria.Name = "etiquetaApellidoCategoria";
-            this.etiquetaApellidoCategoria.Size = new System.Drawing.Size(131, 37);
-            this.etiquetaApellidoCategoria.TabIndex = 18;
-            this.etiquetaApellidoCategoria.Text = "Apellido";
+            this.lblApellidoCategoria.AutoSize = true;
+            this.lblApellidoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoCategoria.Location = new System.Drawing.Point(467, 219);
+            this.lblApellidoCategoria.Name = "lblApellidoCategoria";
+            this.lblApellidoCategoria.Size = new System.Drawing.Size(131, 37);
+            this.lblApellidoCategoria.TabIndex = 18;
+            this.lblApellidoCategoria.Text = "Apellido";
             // 
-            // etiquetaEmailCategoria
+            // lblEmailCategoria
             // 
-            this.etiquetaEmailCategoria.AutoSize = true;
-            this.etiquetaEmailCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaEmailCategoria.Location = new System.Drawing.Point(467, 281);
-            this.etiquetaEmailCategoria.Name = "etiquetaEmailCategoria";
-            this.etiquetaEmailCategoria.Size = new System.Drawing.Size(97, 37);
-            this.etiquetaEmailCategoria.TabIndex = 20;
-            this.etiquetaEmailCategoria.Text = "Email";
+            this.lblEmailCategoria.AutoSize = true;
+            this.lblEmailCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailCategoria.Location = new System.Drawing.Point(467, 281);
+            this.lblEmailCategoria.Name = "lblEmailCategoria";
+            this.lblEmailCategoria.Size = new System.Drawing.Size(97, 37);
+            this.lblEmailCategoria.TabIndex = 20;
+            this.lblEmailCategoria.Text = "Email";
             // 
-            // etiquetaCargoCategoria
+            // lblCargoCategoria
             // 
-            this.etiquetaCargoCategoria.AutoSize = true;
-            this.etiquetaCargoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaCargoCategoria.Location = new System.Drawing.Point(467, 329);
-            this.etiquetaCargoCategoria.Name = "etiquetaCargoCategoria";
-            this.etiquetaCargoCategoria.Size = new System.Drawing.Size(105, 37);
-            this.etiquetaCargoCategoria.TabIndex = 25;
-            this.etiquetaCargoCategoria.Text = "Cargo";
+            this.lblCargoCategoria.AutoSize = true;
+            this.lblCargoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargoCategoria.Location = new System.Drawing.Point(467, 329);
+            this.lblCargoCategoria.Name = "lblCargoCategoria";
+            this.lblCargoCategoria.Size = new System.Drawing.Size(105, 37);
+            this.lblCargoCategoria.TabIndex = 25;
+            this.lblCargoCategoria.Text = "Cargo";
             // 
-            // etiquetaNombre
+            // lblNombre
             // 
-            this.etiquetaNombre.AutoSize = true;
-            this.etiquetaNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.etiquetaNombre.Location = new System.Drawing.Point(613, 166);
-            this.etiquetaNombre.Name = "etiquetaNombre";
-            this.etiquetaNombre.Size = new System.Drawing.Size(132, 37);
-            this.etiquetaNombre.TabIndex = 17;
-            this.etiquetaNombre.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNombre.Location = new System.Drawing.Point(613, 166);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(132, 37);
+            this.lblNombre.TabIndex = 17;
+            this.lblNombre.Text = "Nombre";
             // 
-            // etiquetaEmail
+            // lblEmail
             // 
-            this.etiquetaEmail.AutoSize = true;
-            this.etiquetaEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.etiquetaEmail.Location = new System.Drawing.Point(612, 281);
-            this.etiquetaEmail.Name = "etiquetaEmail";
-            this.etiquetaEmail.Size = new System.Drawing.Size(97, 37);
-            this.etiquetaEmail.TabIndex = 21;
-            this.etiquetaEmail.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEmail.Location = new System.Drawing.Point(612, 281);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(97, 37);
+            this.lblEmail.TabIndex = 21;
+            this.lblEmail.Text = "Email";
             // 
-            // etiquetaCargo
+            // lblCargo
             // 
-            this.etiquetaCargo.AutoSize = true;
-            this.etiquetaCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.etiquetaCargo.Location = new System.Drawing.Point(613, 329);
-            this.etiquetaCargo.Name = "etiquetaCargo";
-            this.etiquetaCargo.Size = new System.Drawing.Size(105, 37);
-            this.etiquetaCargo.TabIndex = 24;
-            this.etiquetaCargo.Text = "Cargo";
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCargo.Location = new System.Drawing.Point(613, 329);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(105, 37);
+            this.lblCargo.TabIndex = 24;
+            this.lblCargo.Text = "Cargo";
             // 
-            // etiquetaNombreCategoria
+            // lblNombreCategoria
             // 
-            this.etiquetaNombreCategoria.AutoSize = true;
-            this.etiquetaNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaNombreCategoria.Location = new System.Drawing.Point(467, 166);
-            this.etiquetaNombreCategoria.Name = "etiquetaNombreCategoria";
-            this.etiquetaNombreCategoria.Size = new System.Drawing.Size(132, 37);
-            this.etiquetaNombreCategoria.TabIndex = 16;
-            this.etiquetaNombreCategoria.Text = "Nombre";
+            this.lblNombreCategoria.AutoSize = true;
+            this.lblNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCategoria.Location = new System.Drawing.Point(467, 166);
+            this.lblNombreCategoria.Name = "lblNombreCategoria";
+            this.lblNombreCategoria.Size = new System.Drawing.Size(132, 37);
+            this.lblNombreCategoria.TabIndex = 16;
+            this.lblNombreCategoria.Text = "Nombre";
             // 
             // tabPerfilEdicion
             // 
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaMensaje);
-            this.tabPerfilEdicion.Controls.Add(this.label2);
-            this.tabPerfilEdicion.Controls.Add(this.botonGuardar);
-            this.tabPerfilEdicion.Controls.Add(this.botonCancelar);
+            this.tabPerfilEdicion.Controls.Add(this.lblMensaje);
+            this.tabPerfilEdicion.Controls.Add(this.lblClave);
+            this.tabPerfilEdicion.Controls.Add(this.btnGuardar);
+            this.tabPerfilEdicion.Controls.Add(this.btnCancelar);
             this.tabPerfilEdicion.Controls.Add(this.linkClave);
-            this.tabPerfilEdicion.Controls.Add(this.textoClaveConfirmacion);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaClaveConfirmacion);
-            this.tabPerfilEdicion.Controls.Add(this.textoClaveNueva);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaClaveNueva);
-            this.tabPerfilEdicion.Controls.Add(this.textoClaveActual);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaClaveActual);
-            this.tabPerfilEdicion.Controls.Add(this.textoEmail);
-            this.tabPerfilEdicion.Controls.Add(this.textoApellido);
-            this.tabPerfilEdicion.Controls.Add(this.textoNombre);
-            this.tabPerfilEdicion.Controls.Add(this.textoUsuario);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaEmailEdicion);
+            this.tabPerfilEdicion.Controls.Add(this.txtClaveConfirmacion);
+            this.tabPerfilEdicion.Controls.Add(this.lblClaveConfirmacion);
+            this.tabPerfilEdicion.Controls.Add(this.txtClaveNueva);
+            this.tabPerfilEdicion.Controls.Add(this.lblClaveNueva);
+            this.tabPerfilEdicion.Controls.Add(this.txtClaveActual);
+            this.tabPerfilEdicion.Controls.Add(this.lblClaveActual);
+            this.tabPerfilEdicion.Controls.Add(this.txtEmail);
+            this.tabPerfilEdicion.Controls.Add(this.txtApellido);
+            this.tabPerfilEdicion.Controls.Add(this.txtNombre);
+            this.tabPerfilEdicion.Controls.Add(this.txtUsuario);
+            this.tabPerfilEdicion.Controls.Add(this.lblEmailEdicion);
             this.tabPerfilEdicion.Controls.Add(this.tituloEdicion);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaApellidoEdicion);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaUsuarioEdicion);
-            this.tabPerfilEdicion.Controls.Add(this.etiquetaNombreEdicion);
+            this.tabPerfilEdicion.Controls.Add(this.lblApellidoEdicion);
+            this.tabPerfilEdicion.Controls.Add(this.lblUsuarioEdicion);
+            this.tabPerfilEdicion.Controls.Add(this.lblNombreEdicion);
             this.tabPerfilEdicion.Location = new System.Drawing.Point(4, 39);
             this.tabPerfilEdicion.Name = "tabPerfilEdicion";
             this.tabPerfilEdicion.Padding = new System.Windows.Forms.Padding(3);
@@ -256,37 +256,49 @@
             this.tabPerfilEdicion.Text = "Edicion";
             this.tabPerfilEdicion.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblMensaje
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(167, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 32);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Clave";
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.ForeColor = System.Drawing.Color.Black;
+            this.lblMensaje.Location = new System.Drawing.Point(709, 274);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(87, 25);
+            this.lblMensaje.TabIndex = 64;
+            this.lblMensaje.Text = "Mensaje";
+            this.lblMensaje.Visible = false;
             // 
-            // botonGuardar
+            // lblClave
             // 
-            this.botonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonGuardar.Location = new System.Drawing.Point(987, 348);
-            this.botonGuardar.Name = "botonGuardar";
-            this.botonGuardar.Size = new System.Drawing.Size(116, 55);
-            this.botonGuardar.TabIndex = 62;
-            this.botonGuardar.Text = "Guardar";
-            this.botonGuardar.UseVisualStyleBackColor = true;
-            this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
+            this.lblClave.AutoSize = true;
+            this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.ForeColor = System.Drawing.Color.Black;
+            this.lblClave.Location = new System.Drawing.Point(167, 249);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(87, 32);
+            this.lblClave.TabIndex = 63;
+            this.lblClave.Text = "Clave";
             // 
-            // botonCancelar
+            // btnGuardar
             // 
-            this.botonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonCancelar.Location = new System.Drawing.Point(714, 348);
-            this.botonCancelar.Name = "botonCancelar";
-            this.botonCancelar.Size = new System.Drawing.Size(125, 55);
-            this.botonCancelar.TabIndex = 48;
-            this.botonCancelar.Text = "Cancelar";
-            this.botonCancelar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(987, 348);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 55);
+            this.btnGuardar.TabIndex = 62;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(714, 348);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(125, 55);
+            this.btnCancelar.TabIndex = 48;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // linkClave
             // 
@@ -301,111 +313,111 @@
             this.linkClave.Text = "Editar";
             this.linkClave.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClave_LinkClicked);
             // 
-            // textoClaveConfirmacion
+            // txtClaveConfirmacion
             // 
-            this.textoClaveConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoClaveConfirmacion.Location = new System.Drawing.Point(263, 440);
-            this.textoClaveConfirmacion.Name = "textoClaveConfirmacion";
-            this.textoClaveConfirmacion.Size = new System.Drawing.Size(345, 35);
-            this.textoClaveConfirmacion.TabIndex = 60;
-            this.textoClaveConfirmacion.Visible = false;
+            this.txtClaveConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClaveConfirmacion.Location = new System.Drawing.Point(263, 440);
+            this.txtClaveConfirmacion.Name = "txtClaveConfirmacion";
+            this.txtClaveConfirmacion.Size = new System.Drawing.Size(345, 35);
+            this.txtClaveConfirmacion.TabIndex = 60;
+            this.txtClaveConfirmacion.Visible = false;
             // 
-            // etiquetaClaveConfirmacion
+            // lblClaveConfirmacion
             // 
-            this.etiquetaClaveConfirmacion.AutoSize = true;
-            this.etiquetaClaveConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaClaveConfirmacion.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaClaveConfirmacion.Location = new System.Drawing.Point(42, 436);
-            this.etiquetaClaveConfirmacion.Name = "etiquetaClaveConfirmacion";
-            this.etiquetaClaveConfirmacion.Size = new System.Drawing.Size(212, 32);
-            this.etiquetaClaveConfirmacion.TabIndex = 59;
-            this.etiquetaClaveConfirmacion.Text = "Confirmar clave";
-            this.etiquetaClaveConfirmacion.Visible = false;
+            this.lblClaveConfirmacion.AutoSize = true;
+            this.lblClaveConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClaveConfirmacion.ForeColor = System.Drawing.Color.Black;
+            this.lblClaveConfirmacion.Location = new System.Drawing.Point(42, 436);
+            this.lblClaveConfirmacion.Name = "lblClaveConfirmacion";
+            this.lblClaveConfirmacion.Size = new System.Drawing.Size(212, 32);
+            this.lblClaveConfirmacion.TabIndex = 59;
+            this.lblClaveConfirmacion.Text = "Confirmar clave";
+            this.lblClaveConfirmacion.Visible = false;
             // 
-            // textoClaveNueva
+            // txtClaveNueva
             // 
-            this.textoClaveNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoClaveNueva.Location = new System.Drawing.Point(263, 384);
-            this.textoClaveNueva.Name = "textoClaveNueva";
-            this.textoClaveNueva.Size = new System.Drawing.Size(345, 35);
-            this.textoClaveNueva.TabIndex = 58;
-            this.textoClaveNueva.Visible = false;
+            this.txtClaveNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClaveNueva.Location = new System.Drawing.Point(263, 384);
+            this.txtClaveNueva.Name = "txtClaveNueva";
+            this.txtClaveNueva.Size = new System.Drawing.Size(345, 35);
+            this.txtClaveNueva.TabIndex = 58;
+            this.txtClaveNueva.Visible = false;
             // 
-            // etiquetaClaveNueva
+            // lblClaveNueva
             // 
-            this.etiquetaClaveNueva.AutoSize = true;
-            this.etiquetaClaveNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaClaveNueva.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaClaveNueva.Location = new System.Drawing.Point(78, 380);
-            this.etiquetaClaveNueva.Name = "etiquetaClaveNueva";
-            this.etiquetaClaveNueva.Size = new System.Drawing.Size(172, 32);
-            this.etiquetaClaveNueva.TabIndex = 57;
-            this.etiquetaClaveNueva.Text = "Clave nueva";
-            this.etiquetaClaveNueva.Visible = false;
+            this.lblClaveNueva.AutoSize = true;
+            this.lblClaveNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClaveNueva.ForeColor = System.Drawing.Color.Black;
+            this.lblClaveNueva.Location = new System.Drawing.Point(78, 380);
+            this.lblClaveNueva.Name = "lblClaveNueva";
+            this.lblClaveNueva.Size = new System.Drawing.Size(172, 32);
+            this.lblClaveNueva.TabIndex = 57;
+            this.lblClaveNueva.Text = "Clave nueva";
+            this.lblClaveNueva.Visible = false;
             // 
-            // textoClaveActual
+            // txtClaveActual
             // 
-            this.textoClaveActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoClaveActual.Location = new System.Drawing.Point(263, 327);
-            this.textoClaveActual.Name = "textoClaveActual";
-            this.textoClaveActual.Size = new System.Drawing.Size(345, 35);
-            this.textoClaveActual.TabIndex = 56;
-            this.textoClaveActual.Visible = false;
+            this.txtClaveActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClaveActual.Location = new System.Drawing.Point(263, 327);
+            this.txtClaveActual.Name = "txtClaveActual";
+            this.txtClaveActual.Size = new System.Drawing.Size(345, 35);
+            this.txtClaveActual.TabIndex = 56;
+            this.txtClaveActual.Visible = false;
             // 
-            // etiquetaClaveActual
+            // lblClaveActual
             // 
-            this.etiquetaClaveActual.AutoSize = true;
-            this.etiquetaClaveActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaClaveActual.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaClaveActual.Location = new System.Drawing.Point(79, 322);
-            this.etiquetaClaveActual.Name = "etiquetaClaveActual";
-            this.etiquetaClaveActual.Size = new System.Drawing.Size(171, 32);
-            this.etiquetaClaveActual.TabIndex = 55;
-            this.etiquetaClaveActual.Text = "Clave actual";
-            this.etiquetaClaveActual.Visible = false;
+            this.lblClaveActual.AutoSize = true;
+            this.lblClaveActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClaveActual.ForeColor = System.Drawing.Color.Black;
+            this.lblClaveActual.Location = new System.Drawing.Point(79, 322);
+            this.lblClaveActual.Name = "lblClaveActual";
+            this.lblClaveActual.Size = new System.Drawing.Size(171, 32);
+            this.lblClaveActual.TabIndex = 55;
+            this.lblClaveActual.Text = "Clave actual";
+            this.lblClaveActual.Visible = false;
             // 
-            // textoEmail
+            // txtEmail
             // 
-            this.textoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoEmail.Location = new System.Drawing.Point(758, 165);
-            this.textoEmail.Name = "textoEmail";
-            this.textoEmail.Size = new System.Drawing.Size(345, 35);
-            this.textoEmail.TabIndex = 54;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(758, 165);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(345, 35);
+            this.txtEmail.TabIndex = 54;
             // 
-            // textoApellido
+            // txtApellido
             // 
-            this.textoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoApellido.Location = new System.Drawing.Point(263, 165);
-            this.textoApellido.Name = "textoApellido";
-            this.textoApellido.Size = new System.Drawing.Size(345, 35);
-            this.textoApellido.TabIndex = 53;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Location = new System.Drawing.Point(263, 165);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(345, 35);
+            this.txtApellido.TabIndex = 53;
             // 
-            // textoNombre
+            // txtNombre
             // 
-            this.textoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoNombre.Location = new System.Drawing.Point(758, 109);
-            this.textoNombre.Name = "textoNombre";
-            this.textoNombre.Size = new System.Drawing.Size(345, 35);
-            this.textoNombre.TabIndex = 52;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(758, 109);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(345, 35);
+            this.txtNombre.TabIndex = 52;
             // 
-            // textoUsuario
+            // txtUsuario
             // 
-            this.textoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoUsuario.Location = new System.Drawing.Point(263, 109);
-            this.textoUsuario.Name = "textoUsuario";
-            this.textoUsuario.Size = new System.Drawing.Size(345, 35);
-            this.textoUsuario.TabIndex = 51;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(263, 109);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(345, 35);
+            this.txtUsuario.TabIndex = 51;
             // 
-            // etiquetaEmailEdicion
+            // lblEmailEdicion
             // 
-            this.etiquetaEmailEdicion.AutoSize = true;
-            this.etiquetaEmailEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaEmailEdicion.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaEmailEdicion.Location = new System.Drawing.Point(666, 168);
-            this.etiquetaEmailEdicion.Name = "etiquetaEmailEdicion";
-            this.etiquetaEmailEdicion.Size = new System.Drawing.Size(86, 32);
-            this.etiquetaEmailEdicion.TabIndex = 50;
-            this.etiquetaEmailEdicion.Text = "Email";
+            this.lblEmailEdicion.AutoSize = true;
+            this.lblEmailEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailEdicion.ForeColor = System.Drawing.Color.Black;
+            this.lblEmailEdicion.Location = new System.Drawing.Point(666, 168);
+            this.lblEmailEdicion.Name = "lblEmailEdicion";
+            this.lblEmailEdicion.Size = new System.Drawing.Size(86, 32);
+            this.lblEmailEdicion.TabIndex = 50;
+            this.lblEmailEdicion.Text = "Email";
             // 
             // tituloEdicion
             // 
@@ -418,50 +430,38 @@
             this.tituloEdicion.TabIndex = 45;
             this.tituloEdicion.Text = "Editar perfil";
             // 
-            // etiquetaApellidoEdicion
+            // lblApellidoEdicion
             // 
-            this.etiquetaApellidoEdicion.AutoSize = true;
-            this.etiquetaApellidoEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaApellidoEdicion.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaApellidoEdicion.Location = new System.Drawing.Point(120, 160);
-            this.etiquetaApellidoEdicion.Name = "etiquetaApellidoEdicion";
-            this.etiquetaApellidoEdicion.Size = new System.Drawing.Size(118, 32);
-            this.etiquetaApellidoEdicion.TabIndex = 49;
-            this.etiquetaApellidoEdicion.Text = "Apellido";
+            this.lblApellidoEdicion.AutoSize = true;
+            this.lblApellidoEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoEdicion.ForeColor = System.Drawing.Color.Black;
+            this.lblApellidoEdicion.Location = new System.Drawing.Point(120, 160);
+            this.lblApellidoEdicion.Name = "lblApellidoEdicion";
+            this.lblApellidoEdicion.Size = new System.Drawing.Size(118, 32);
+            this.lblApellidoEdicion.TabIndex = 49;
+            this.lblApellidoEdicion.Text = "Apellido";
             // 
-            // etiquetaUsuarioEdicion
+            // lblUsuarioEdicion
             // 
-            this.etiquetaUsuarioEdicion.AutoSize = true;
-            this.etiquetaUsuarioEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaUsuarioEdicion.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaUsuarioEdicion.Location = new System.Drawing.Point(126, 109);
-            this.etiquetaUsuarioEdicion.Name = "etiquetaUsuarioEdicion";
-            this.etiquetaUsuarioEdicion.Size = new System.Drawing.Size(112, 32);
-            this.etiquetaUsuarioEdicion.TabIndex = 46;
-            this.etiquetaUsuarioEdicion.Text = "Usuario";
+            this.lblUsuarioEdicion.AutoSize = true;
+            this.lblUsuarioEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioEdicion.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuarioEdicion.Location = new System.Drawing.Point(126, 109);
+            this.lblUsuarioEdicion.Name = "lblUsuarioEdicion";
+            this.lblUsuarioEdicion.Size = new System.Drawing.Size(112, 32);
+            this.lblUsuarioEdicion.TabIndex = 46;
+            this.lblUsuarioEdicion.Text = "Usuario";
             // 
-            // etiquetaNombreEdicion
+            // lblNombreEdicion
             // 
-            this.etiquetaNombreEdicion.AutoSize = true;
-            this.etiquetaNombreEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaNombreEdicion.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaNombreEdicion.Location = new System.Drawing.Point(638, 109);
-            this.etiquetaNombreEdicion.Name = "etiquetaNombreEdicion";
-            this.etiquetaNombreEdicion.Size = new System.Drawing.Size(114, 32);
-            this.etiquetaNombreEdicion.TabIndex = 47;
-            this.etiquetaNombreEdicion.Text = "Nombre";
-            // 
-            // etiquetaMensaje
-            // 
-            this.etiquetaMensaje.AutoSize = true;
-            this.etiquetaMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaMensaje.ForeColor = System.Drawing.Color.Black;
-            this.etiquetaMensaje.Location = new System.Drawing.Point(709, 274);
-            this.etiquetaMensaje.Name = "etiquetaMensaje";
-            this.etiquetaMensaje.Size = new System.Drawing.Size(87, 25);
-            this.etiquetaMensaje.TabIndex = 64;
-            this.etiquetaMensaje.Text = "Mensaje";
-            this.etiquetaMensaje.Visible = false;
+            this.lblNombreEdicion.AutoSize = true;
+            this.lblNombreEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEdicion.ForeColor = System.Drawing.Color.Black;
+            this.lblNombreEdicion.Location = new System.Drawing.Point(638, 109);
+            this.lblNombreEdicion.Name = "lblNombreEdicion";
+            this.lblNombreEdicion.Size = new System.Drawing.Size(114, 32);
+            this.lblNombreEdicion.TabIndex = 47;
+            this.lblNombreEdicion.Text = "Nombre";
             // 
             // UsuarioPerfil
             // 
@@ -488,37 +488,37 @@
         private System.Windows.Forms.Label tituloPerfil;
         private System.Windows.Forms.TabControl Perfil;
         private System.Windows.Forms.TabPage tabPerfil;
-        private System.Windows.Forms.Label etiquetaUsuario;
-        private System.Windows.Forms.Label etiquetaUsuarioCategoria;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label etiquetaApellido;
-        private System.Windows.Forms.Label etiquetaApellidoCategoria;
-        private System.Windows.Forms.Label etiquetaEmailCategoria;
-        private System.Windows.Forms.Label etiquetaCargoCategoria;
-        private System.Windows.Forms.Label etiquetaNombre;
-        private System.Windows.Forms.Label etiquetaEmail;
-        private System.Windows.Forms.Label etiquetaCargo;
-        private System.Windows.Forms.Label etiquetaNombreCategoria;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblUsuarioCategoria;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblApellidoCategoria;
+        private System.Windows.Forms.Label lblEmailCategoria;
+        private System.Windows.Forms.Label lblCargoCategoria;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblNombreCategoria;
         private System.Windows.Forms.TabPage tabPerfilEdicion;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button botonGuardar;
-        private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.LinkLabel linkClave;
-        private System.Windows.Forms.TextBox textoClaveConfirmacion;
-        private System.Windows.Forms.Label etiquetaClaveConfirmacion;
-        private System.Windows.Forms.TextBox textoClaveNueva;
-        private System.Windows.Forms.Label etiquetaClaveNueva;
-        private System.Windows.Forms.TextBox textoClaveActual;
-        private System.Windows.Forms.Label etiquetaClaveActual;
-        private System.Windows.Forms.TextBox textoEmail;
-        private System.Windows.Forms.TextBox textoApellido;
-        private System.Windows.Forms.TextBox textoNombre;
-        private System.Windows.Forms.TextBox textoUsuario;
-        private System.Windows.Forms.Label etiquetaEmailEdicion;
+        private System.Windows.Forms.TextBox txtClaveConfirmacion;
+        private System.Windows.Forms.Label lblClaveConfirmacion;
+        private System.Windows.Forms.TextBox txtClaveNueva;
+        private System.Windows.Forms.Label lblClaveNueva;
+        private System.Windows.Forms.TextBox txtClaveActual;
+        private System.Windows.Forms.Label lblClaveActual;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblEmailEdicion;
         private System.Windows.Forms.Label tituloEdicion;
-        private System.Windows.Forms.Label etiquetaApellidoEdicion;
-        private System.Windows.Forms.Label etiquetaUsuarioEdicion;
-        private System.Windows.Forms.Label etiquetaNombreEdicion;
-        private System.Windows.Forms.Label etiquetaMensaje;
+        private System.Windows.Forms.Label lblApellidoEdicion;
+        private System.Windows.Forms.Label lblUsuarioEdicion;
+        private System.Windows.Forms.Label lblNombreEdicion;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

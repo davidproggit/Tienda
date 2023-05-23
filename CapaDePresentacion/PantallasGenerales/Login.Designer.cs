@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panelLateral = new System.Windows.Forms.Panel();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
-            this.botonAcceder = new System.Windows.Forms.Button();
-            this.etiquetaError = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.btnAcceder = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
+            this.panelLateral.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelLateral
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
+            this.panelLateral.BackColor = System.Drawing.Color.Black;
+            this.panelLateral.Controls.Add(this.lblLogin);
+            this.panelLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelLateral.Name = "panelLateral";
+            this.panelLateral.Size = new System.Drawing.Size(200, 450);
+            this.panelLateral.TabIndex = 0;
+            this.panelLateral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
             // 
-            // label2
+            // lblLogin
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 204);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 32);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Black;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(53, 204);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(85, 32);
+            this.lblLogin.TabIndex = 0;
+            this.lblLogin.Text = "Login";
             // 
             // txtUsuario
             // 
@@ -73,15 +73,15 @@
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(386, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Inicio de sesion";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(386, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(210, 32);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Inicio de sesion";
             // 
             // txtClave
             // 
@@ -95,33 +95,33 @@
             this.txtClave.Enter += new System.EventHandler(this.txtClave_Enter);
             this.txtClave.Leave += new System.EventHandler(this.txtClave_Leave);
             // 
-            // botonAcceder
+            // btnAcceder
             // 
-            this.botonAcceder.BackColor = System.Drawing.Color.Black;
-            this.botonAcceder.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.botonAcceder.FlatAppearance.BorderSize = 0;
-            this.botonAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonAcceder.ForeColor = System.Drawing.Color.White;
-            this.botonAcceder.Location = new System.Drawing.Point(283, 339);
-            this.botonAcceder.Name = "botonAcceder";
-            this.botonAcceder.Size = new System.Drawing.Size(423, 57);
-            this.botonAcceder.TabIndex = 1;
-            this.botonAcceder.Text = "Ingresar";
-            this.botonAcceder.UseVisualStyleBackColor = false;
-            this.botonAcceder.Click += new System.EventHandler(this.botonAcceder_Click);
+            this.btnAcceder.BackColor = System.Drawing.Color.Black;
+            this.btnAcceder.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAcceder.FlatAppearance.BorderSize = 0;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.ForeColor = System.Drawing.Color.White;
+            this.btnAcceder.Location = new System.Drawing.Point(283, 339);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(423, 57);
+            this.btnAcceder.TabIndex = 1;
+            this.btnAcceder.Text = "Ingresar";
+            this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.botonAcceder_Click);
             // 
-            // etiquetaError
+            // lblError
             // 
-            this.etiquetaError.AutoSize = true;
-            this.etiquetaError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.etiquetaError.ForeColor = System.Drawing.Color.Red;
-            this.etiquetaError.Location = new System.Drawing.Point(278, 281);
-            this.etiquetaError.Name = "etiquetaError";
-            this.etiquetaError.Size = new System.Drawing.Size(54, 25);
-            this.etiquetaError.TabIndex = 5;
-            this.etiquetaError.Text = "Error";
-            this.etiquetaError.Visible = false;
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(278, 281);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(54, 25);
+            this.lblError.TabIndex = 5;
+            this.lblError.Text = "Error";
+            this.lblError.Visible = false;
             // 
             // Login
             // 
@@ -129,19 +129,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.etiquetaError);
-            this.Controls.Add(this.botonAcceder);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtClave);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelLateral);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelLateral.ResumeLayout(false);
+            this.panelLateral.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,13 +149,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelLateral;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtClave;
-        private System.Windows.Forms.Button botonAcceder;
-        private System.Windows.Forms.Label etiquetaError;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAcceder;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblLogin;
     }
 }
 

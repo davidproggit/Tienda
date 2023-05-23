@@ -31,20 +31,20 @@
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grillaUsuarios = new System.Windows.Forms.DataGridView();
             this.ColSeleccionarCliente = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblNombreCliente = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.lblDatosPersonales = new System.Windows.Forms.Label();
             this.lblDatosLaborales = new System.Windows.Forms.Label();
             this.lblCuil = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.comboCargo = new System.Windows.Forms.ComboBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminarUsuario
@@ -86,17 +86,17 @@
             this.btnGuardarUsuario.UseVisualStyleBackColor = true;
             this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
-            // dataGridView1
+            // grillaUsuarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grillaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColSeleccionarCliente});
-            this.dataGridView1.Location = new System.Drawing.Point(164, 566);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1395, 165);
-            this.dataGridView1.TabIndex = 35;
+            this.grillaUsuarios.Location = new System.Drawing.Point(64, 566);
+            this.grillaUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grillaUsuarios.Name = "grillaUsuarios";
+            this.grillaUsuarios.RowHeadersWidth = 62;
+            this.grillaUsuarios.Size = new System.Drawing.Size(1454, 165);
+            this.grillaUsuarios.TabIndex = 35;
             // 
             // ColSeleccionarCliente
             // 
@@ -153,15 +153,15 @@
             this.lblTitulo.TabIndex = 28;
             this.lblTitulo.Text = "Administración de usuarios";
             // 
-            // lblNombreCliente
+            // lblNombre
             // 
-            this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(196, 166);
-            this.lblNombreCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(69, 20);
-            this.lblNombreCliente.TabIndex = 27;
-            this.lblNombreCliente.Text = "Nombre:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(196, 166);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblNombre.TabIndex = 27;
+            this.lblNombre.Text = "Nombre:";
             // 
             // txtDNI
             // 
@@ -207,15 +207,15 @@
             this.lblApellido.TabIndex = 21;
             this.lblApellido.Text = "Apellido:";
             // 
-            // label2
+            // lblCargo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(945, 377);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Cargo:";
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Location = new System.Drawing.Point(945, 377);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(56, 20);
+            this.lblCargo.TabIndex = 40;
+            this.lblCargo.Text = "Cargo:";
             // 
             // lblDatosPersonales
             // 
@@ -294,17 +294,17 @@
             this.Controls.Add(this.lblCuil);
             this.Controls.Add(this.lblDatosLaborales);
             this.Controls.Add(this.lblDatosPersonales);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.btnBuscarUsuario);
             this.Controls.Add(this.btnGuardarUsuario);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grillaUsuarios);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblNombreCliente);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -314,7 +314,7 @@
             this.Name = "ABMUsuarios";
             this.Text = "testAmbEmpleados";
             this.Load += new System.EventHandler(this.ABMUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,19 +325,19 @@
         private System.Windows.Forms.Button btnEliminarUsuario;
         private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.Button btnGuardarUsuario;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grillaUsuarios;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblNombreCliente;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label lblDatosPersonales;
         private System.Windows.Forms.Label lblDatosLaborales;
         private System.Windows.Forms.Label lblCuil;

@@ -69,7 +69,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         private void CargarDatosUsuario()
         {
-            etiquetaNombre.Text = CacheSesionUsuario.Nombre;
+            lblNombre.Text = CacheSesionUsuario.Nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

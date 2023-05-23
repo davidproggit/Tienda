@@ -29,90 +29,77 @@ namespace CapaDePresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblNombreprod = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBuscarProd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnCompraProd = new System.Windows.Forms.Button();
-            this.btnQuitarProd = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.grillaProductos = new System.Windows.Forms.DataGridView();
             this.ColNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStockProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnCompraProducto = new System.Windows.Forms.Button();
+            this.btnQuitarProducto = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Comprar productos";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(531, 86);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(145, 20);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Comprar productos";
             // 
-            // lblNombreprod
+            // lblNombre
             // 
-            this.lblNombreprod.AutoSize = true;
-            this.lblNombreprod.Location = new System.Drawing.Point(41, 106);
-            this.lblNombreprod.Name = "lblNombreprod";
-            this.lblNombreprod.Size = new System.Drawing.Size(47, 13);
-            this.lblNombreprod.TabIndex = 1;
-            this.lblNombreprod.Text = "Nombre:";
-            this.lblNombreprod.UseWaitCursor = true;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(62, 163);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre:";
+            this.lblNombre.UseWaitCursor = true;
             // 
-            // textBox1
+            // txtBusqueda
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(557, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBusqueda.Location = new System.Drawing.Point(141, 158);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(834, 26);
+            this.txtBusqueda.TabIndex = 2;
             // 
-            // btnBuscarProd
+            // btnBuscarProducto
             // 
-            this.btnBuscarProd.Location = new System.Drawing.Point(678, 101);
-            this.btnBuscarProd.Name = "btnBuscarProd";
-            this.btnBuscarProd.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarProd.TabIndex = 3;
-            this.btnBuscarProd.Text = "Buscar";
-            this.btnBuscarProd.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(1017, 155);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnBuscarProducto.TabIndex = 3;
+            this.btnBuscarProducto.Text = "Buscar";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // grillaProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNombreProducto,
             this.ColPrecio,
             this.ColDescripcion,
             this.ColMarca,
             this.ColStockProd,
             this.ColSeleccionar});
-            this.dataGridView1.Location = new System.Drawing.Point(115, 226);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 85);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // btnCompraProd
-            // 
-            this.btnCompraProd.Location = new System.Drawing.Point(678, 390);
-            this.btnCompraProd.Name = "btnCompraProd";
-            this.btnCompraProd.Size = new System.Drawing.Size(75, 23);
-            this.btnCompraProd.TabIndex = 10;
-            this.btnCompraProd.Text = "Comprar";
-            this.btnCompraProd.UseVisualStyleBackColor = true;
-            // 
-            // btnQuitarProd
-            // 
-            this.btnQuitarProd.Location = new System.Drawing.Point(576, 390);
-            this.btnQuitarProd.Name = "btnQuitarProd";
-            this.btnQuitarProd.Size = new System.Drawing.Size(75, 23);
-            this.btnQuitarProd.TabIndex = 11;
-            this.btnQuitarProd.Text = "Quitar";
-            this.btnQuitarProd.UseVisualStyleBackColor = true;
+            this.grillaProductos.Location = new System.Drawing.Point(172, 348);
+            this.grillaProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grillaProductos.Name = "grillaProductos";
+            this.grillaProductos.RowHeadersWidth = 62;
+            this.grillaProductos.Size = new System.Drawing.Size(831, 131);
+            this.grillaProductos.TabIndex = 4;
             // 
             // ColNombreProducto
             // 
@@ -120,28 +107,31 @@ namespace CapaDePresentacion
             this.ColNombreProducto.HeaderText = "Nombre";
             this.ColNombreProducto.MinimumWidth = 8;
             this.ColNombreProducto.Name = "ColNombreProducto";
-            this.ColNombreProducto.Width = 69;
+            this.ColNombreProducto.Width = 101;
             // 
             // ColPrecio
             // 
             this.ColPrecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColPrecio.HeaderText = "Precio";
+            this.ColPrecio.MinimumWidth = 8;
             this.ColPrecio.Name = "ColPrecio";
-            this.ColPrecio.Width = 62;
+            this.ColPrecio.Width = 89;
             // 
             // ColDescripcion
             // 
             this.ColDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColDescripcion.HeaderText = "Descripcion";
+            this.ColDescripcion.MinimumWidth = 8;
             this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.Width = 88;
+            this.ColDescripcion.Width = 128;
             // 
             // ColMarca
             // 
             this.ColMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColMarca.HeaderText = "Marca";
+            this.ColMarca.MinimumWidth = 8;
             this.ColMarca.Name = "ColMarca";
-            this.ColMarca.Width = 62;
+            this.ColMarca.Width = 89;
             // 
             // ColStockProd
             // 
@@ -149,7 +139,7 @@ namespace CapaDePresentacion
             this.ColStockProd.HeaderText = "Stock";
             this.ColStockProd.MinimumWidth = 8;
             this.ColStockProd.Name = "ColStockProd";
-            this.ColStockProd.Width = 60;
+            this.ColStockProd.Width = 86;
             // 
             // ColSeleccionar
             // 
@@ -160,22 +150,43 @@ namespace CapaDePresentacion
             this.ColSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ColSeleccionar.Width = 150;
             // 
+            // btnCompraProducto
+            // 
+            this.btnCompraProducto.Location = new System.Drawing.Point(1017, 600);
+            this.btnCompraProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCompraProducto.Name = "btnCompraProducto";
+            this.btnCompraProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnCompraProducto.TabIndex = 10;
+            this.btnCompraProducto.Text = "Comprar";
+            this.btnCompraProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitarProducto
+            // 
+            this.btnQuitarProducto.Location = new System.Drawing.Point(864, 600);
+            this.btnQuitarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQuitarProducto.Name = "btnQuitarProducto";
+            this.btnQuitarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnQuitarProducto.TabIndex = 11;
+            this.btnQuitarProducto.Text = "Quitar";
+            this.btnQuitarProducto.UseVisualStyleBackColor = true;
+            // 
             // ABMCompraProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnQuitarProd);
-            this.Controls.Add(this.btnCompraProd);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnBuscarProd);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblNombreprod);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.btnQuitarProducto);
+            this.Controls.Add(this.btnCompraProducto);
+            this.Controls.Add(this.grillaProductos);
+            this.Controls.Add(this.btnBuscarProducto);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ABMCompraProductos";
             this.Text = "Compra de Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,13 +194,13 @@ namespace CapaDePresentacion
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblNombreprod;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnBuscarProd;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnCompraProd;
-        private System.Windows.Forms.Button btnQuitarProd;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.DataGridView grillaProductos;
+        private System.Windows.Forms.Button btnCompraProducto;
+        private System.Windows.Forms.Button btnQuitarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;

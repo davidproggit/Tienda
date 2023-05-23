@@ -30,20 +30,20 @@ namespace CapaDePresentacion
         private void InitializeComponent()
         {
             this.lblApellido = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbldni = new System.Windows.Forms.Label();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.txtBox = new System.Windows.Forms.TextBox();
-            this.txtBoxDNI = new System.Windows.Forms.TextBox();
-            this.lblNombreCliente = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblContacto = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtBoxPassword = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblClave = new System.Windows.Forms.Label();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.grillaClientes = new System.Windows.Forms.DataGridView();
             this.ColNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColApellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@ namespace CapaDePresentacion
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblApellido
@@ -67,77 +67,77 @@ namespace CapaDePresentacion
             this.lblApellido.TabIndex = 1;
             this.lblApellido.Text = "Apellido:";
             // 
-            // label3
+            // lblFechaNacimiento
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(506, 122);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha de nacimiento:";
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(506, 122);
+            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(161, 20);
+            this.lblFechaNacimiento.TabIndex = 2;
+            this.lblFechaNacimiento.Text = "Fecha de nacimiento:";
             // 
-            // lbldni
+            // lblDni
             // 
-            this.lbldni.AutoSize = true;
-            this.lbldni.Location = new System.Drawing.Point(514, 191);
-            this.lbldni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbldni.Name = "lbldni";
-            this.lbldni.Size = new System.Drawing.Size(41, 20);
-            this.lbldni.TabIndex = 3;
-            this.lbldni.Text = "DNI:";
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(514, 191);
+            this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(41, 20);
+            this.lblDni.TabIndex = 3;
+            this.lblDni.Text = "DNI:";
             // 
-            // txtNombreCliente
+            // txtNombre
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(147, 115);
-            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(148, 26);
-            this.txtNombreCliente.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(147, 115);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(148, 26);
+            this.txtNombre.TabIndex = 4;
             // 
-            // txtBox
+            // txtApellido
             // 
-            this.txtBox.Location = new System.Drawing.Point(147, 186);
-            this.txtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBox.Name = "txtBox";
-            this.txtBox.Size = new System.Drawing.Size(148, 26);
-            this.txtBox.TabIndex = 5;
+            this.txtApellido.Location = new System.Drawing.Point(147, 186);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(148, 26);
+            this.txtApellido.TabIndex = 5;
             // 
-            // txtBoxDNI
+            // txtDNI
             // 
-            this.txtBoxDNI.Location = new System.Drawing.Point(567, 186);
-            this.txtBoxDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBoxDNI.Name = "txtBoxDNI";
-            this.txtBoxDNI.Size = new System.Drawing.Size(148, 26);
-            this.txtBoxDNI.TabIndex = 7;
+            this.txtDNI.Location = new System.Drawing.Point(567, 186);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(148, 26);
+            this.txtDNI.TabIndex = 7;
             // 
-            // lblNombreCliente
+            // lblNombre
             // 
-            this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(68, 120);
-            this.lblNombreCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(69, 20);
-            this.lblNombreCliente.TabIndex = 9;
-            this.lblNombreCliente.Text = "Nombre:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(68, 120);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblNombre.TabIndex = 9;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(506, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Administración de clientes";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(506, 42);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(193, 20);
+            this.lblTitulo.TabIndex = 10;
+            this.lblTitulo.Text = "Administración de clientes";
             // 
-            // dateTimePicker1
+            // dtpFechaNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(674, 115);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(298, 26);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(674, 115);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(298, 26);
+            this.dtpFechaNacimiento.TabIndex = 11;
             // 
             // lblContacto
             // 
@@ -159,36 +159,36 @@ namespace CapaDePresentacion
             this.lblEmail.TabIndex = 13;
             this.lblEmail.Text = "Email:";
             // 
-            // txtBoxEmail
+            // txtEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(117, 306);
-            this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(244, 26);
-            this.txtBoxEmail.TabIndex = 14;
+            this.txtEmail.Location = new System.Drawing.Point(117, 306);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(244, 26);
+            this.txtEmail.TabIndex = 14;
             // 
-            // lblPassword
+            // lblClave
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(490, 311);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(82, 20);
-            this.lblPassword.TabIndex = 15;
-            this.lblPassword.Text = "Password:";
+            this.lblClave.AutoSize = true;
+            this.lblClave.Location = new System.Drawing.Point(490, 311);
+            this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(82, 20);
+            this.lblClave.TabIndex = 15;
+            this.lblClave.Text = "Password:";
             // 
-            // txtBoxPassword
+            // txtClave
             // 
-            this.txtBoxPassword.Location = new System.Drawing.Point(584, 306);
-            this.txtBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.Size = new System.Drawing.Size(148, 26);
-            this.txtBoxPassword.TabIndex = 16;
+            this.txtClave.Location = new System.Drawing.Point(584, 306);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(148, 26);
+            this.txtClave.TabIndex = 16;
             // 
-            // dataGridView1
+            // grillaClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNombreCliente,
             this.ColApellidoCliente,
             this.ColFechaNac,
@@ -196,12 +196,12 @@ namespace CapaDePresentacion
             this.ColEmail,
             this.ColPasswordCliente,
             this.ColSeleccionarCliente});
-            this.dataGridView1.Location = new System.Drawing.Point(46, 445);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1113, 112);
-            this.dataGridView1.TabIndex = 17;
+            this.grillaClientes.Location = new System.Drawing.Point(46, 445);
+            this.grillaClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grillaClientes.Name = "grillaClientes";
+            this.grillaClientes.RowHeadersWidth = 62;
+            this.grillaClientes.Size = new System.Drawing.Size(1113, 112);
+            this.grillaClientes.TabIndex = 17;
             // 
             // ColNombreCliente
             // 
@@ -290,26 +290,26 @@ namespace CapaDePresentacion
             this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.btnBuscarCliente);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtBoxPassword);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.txtBoxEmail);
+            this.Controls.Add(this.grillaClientes);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.lblClave);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblContacto);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNombreCliente);
-            this.Controls.Add(this.txtBoxDNI);
-            this.Controls.Add(this.txtBox);
-            this.Controls.Add(this.txtNombreCliente);
-            this.Controls.Add(this.lbldni);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dtpFechaNacimiento);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblDni);
+            this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.lblApellido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ABMClientes";
             this.Text = "Administración de clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,20 +318,20 @@ namespace CapaDePresentacion
         #endregion
 
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbldni;
-        private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox txtBox;
-        private System.Windows.Forms.TextBox txtBoxDNI;
-        private System.Windows.Forms.Label lblNombreCliente;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtBoxPassword;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.DataGridView grillaClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColApellidoCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFechaNac;

@@ -46,7 +46,7 @@ namespace CapaDePresentacion
         {
             try
             {
-                objetoCapaNegocio.EditarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text, _idProducto);
+                objetoCapaNegocio.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
@@ -61,7 +61,7 @@ namespace CapaDePresentacion
         {
             try
             {
-                objetoCapaNegocio.InsertarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text);
+                objetoCapaNegocio.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -76,9 +76,9 @@ namespace CapaDePresentacion
 
         private bool CamposVacios()
         {
-            return string.IsNullOrEmpty(textoNombre.Text) || string.IsNullOrEmpty(textoDescripcion.Text)
-                || string.IsNullOrEmpty(textoMarca.Text) || string.IsNullOrEmpty(textoPrecio.Text)
-                || string.IsNullOrEmpty(textoStock.Text);
+            return string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text)
+                || string.IsNullOrEmpty(txtMarca.Text) || string.IsNullOrEmpty(txtPrecio.Text)
+                || string.IsNullOrEmpty(txtStock.Text);
         }
 
         private void botonEditar_Click(object sender, EventArgs e)
@@ -86,11 +86,11 @@ namespace CapaDePresentacion
             if (grillaProductos.SelectedRows.Count > 0)
             {
                 _editar = true;
-                textoNombre.Text = grillaProductos.CurrentRow.Cells["Nombre"].Value.ToString();
-                textoDescripcion.Text = grillaProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
-                textoMarca.Text = grillaProductos.CurrentRow.Cells["Marca"].Value.ToString();
-                textoPrecio.Text = grillaProductos.CurrentRow.Cells["Precio"].Value.ToString();
-                textoStock.Text = grillaProductos.CurrentRow.Cells["Stock"].Value.ToString();
+                txtNombre.Text = grillaProductos.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtDescripcion.Text = grillaProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
+                txtMarca.Text = grillaProductos.CurrentRow.Cells["Marca"].Value.ToString();
+                txtPrecio.Text = grillaProductos.CurrentRow.Cells["Precio"].Value.ToString();
+                txtStock.Text = grillaProductos.CurrentRow.Cells["Stock"].Value.ToString();
                 _idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
             }
             else
@@ -99,11 +99,11 @@ namespace CapaDePresentacion
 
         private void LimpiarFormulario()
         {
-            textoNombre.Clear();
-            textoDescripcion.Clear();
-            textoMarca.Clear();
-            textoPrecio.Clear();
-            textoStock.Clear();
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtMarca.Clear();
+            txtPrecio.Clear();
+            txtStock.Clear();
         }
 
         private void botonEliminar_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace CapaDePresentacion
         private void botonBuscar_Click(object sender, EventArgs e)
         {
             Productos objeto2 = new Productos();
-            grillaProductos.DataSource = objeto2.FiltrarProducto(textoBuscar.Text);
+            grillaProductos.DataSource = objeto2.FiltrarProducto(txtBuscar.Text);
         }
 
         private void btnGenerarAlerta_Click(object sender, EventArgs e)

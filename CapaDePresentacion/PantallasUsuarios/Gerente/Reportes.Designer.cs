@@ -29,143 +29,72 @@ namespace CapaDePresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblFechadesdeProd = new System.Windows.Forms.Label();
-            this.dtpFechaDesdeProd = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaHasta = new System.Windows.Forms.Label();
-            this.dtpFechaHastaProd = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscarProd = new System.Windows.Forms.Button();
-            this.btnCancelarProd = new System.Windows.Forms.Button();
-            this.btnDescargarReporte = new System.Windows.Forms.Button();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.tboxCantidad = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.grillaProductosReporte = new System.Windows.Forms.DataGridView();
             this.ColNombreProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCanVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFechaDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFechaHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStockProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSeleccionarProd = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblFechadesde = new System.Windows.Forms.Label();
+            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaHasta = new System.Windows.Forms.Label();
+            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.btnCancelarProducto = new System.Windows.Forms.Button();
+            this.btnDescargarReporte = new System.Windows.Forms.Button();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaProductosReporte)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Descargar reportes de productos";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(474, 63);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(243, 20);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Descargar reportes de productos";
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(64, 180);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 20);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(136, 175);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(190, 26);
+            this.txtNombre.TabIndex = 2;
             // 
-            // dataGridView1
+            // grillaProductosReporte
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grillaProductosReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaProductosReporte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNombreProd,
             this.ColCanVenta,
             this.ColFechaDesde,
             this.ColFechaHasta,
             this.ColStockProd,
             this.ColSeleccionarProd});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 282);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 100);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // lblFechadesdeProd
-            // 
-            this.lblFechadesdeProd.AutoSize = true;
-            this.lblFechadesdeProd.Location = new System.Drawing.Point(276, 120);
-            this.lblFechadesdeProd.Name = "lblFechadesdeProd";
-            this.lblFechadesdeProd.Size = new System.Drawing.Size(72, 13);
-            this.lblFechadesdeProd.TabIndex = 8;
-            this.lblFechadesdeProd.Text = "Fecha desde:";
-            // 
-            // dtpFechaDesdeProd
-            // 
-            this.dtpFechaDesdeProd.Location = new System.Drawing.Point(352, 114);
-            this.dtpFechaDesdeProd.Name = "dtpFechaDesdeProd";
-            this.dtpFechaDesdeProd.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaDesdeProd.TabIndex = 9;
-            // 
-            // lblFechaHasta
-            // 
-            this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(277, 172);
-            this.lblFechaHasta.Name = "lblFechaHasta";
-            this.lblFechaHasta.Size = new System.Drawing.Size(69, 13);
-            this.lblFechaHasta.TabIndex = 10;
-            this.lblFechaHasta.Text = "Fecha hasta:";
-            // 
-            // dtpFechaHastaProd
-            // 
-            this.dtpFechaHastaProd.Location = new System.Drawing.Point(352, 166);
-            this.dtpFechaHastaProd.Name = "dtpFechaHastaProd";
-            this.dtpFechaHastaProd.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaHastaProd.TabIndex = 11;
-            // 
-            // btnBuscarProd
-            // 
-            this.btnBuscarProd.Location = new System.Drawing.Point(657, 228);
-            this.btnBuscarProd.Name = "btnBuscarProd";
-            this.btnBuscarProd.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarProd.TabIndex = 12;
-            this.btnBuscarProd.Text = "Buscar ";
-            this.btnBuscarProd.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelarProd
-            // 
-            this.btnCancelarProd.Location = new System.Drawing.Point(551, 228);
-            this.btnCancelarProd.Name = "btnCancelarProd";
-            this.btnCancelarProd.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarProd.TabIndex = 13;
-            this.btnCancelarProd.Text = "Cancelar";
-            this.btnCancelarProd.UseVisualStyleBackColor = true;
-            // 
-            // btnDescargarReporte
-            // 
-            this.btnDescargarReporte.Location = new System.Drawing.Point(657, 397);
-            this.btnDescargarReporte.Name = "btnDescargarReporte";
-            this.btnDescargarReporte.Size = new System.Drawing.Size(75, 23);
-            this.btnDescargarReporte.TabIndex = 14;
-            this.btnDescargarReporte.Text = "Descargar reporte";
-            this.btnDescargarReporte.UseVisualStyleBackColor = true;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(38, 177);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(52, 13);
-            this.lblCantidad.TabIndex = 15;
-            this.lblCantidad.Text = "Cantidad:";
-            // 
-            // tboxCantidad
-            // 
-            this.tboxCantidad.Location = new System.Drawing.Point(91, 174);
-            this.tboxCantidad.Name = "tboxCantidad";
-            this.tboxCantidad.Size = new System.Drawing.Size(128, 20);
-            this.tboxCantidad.TabIndex = 16;
+            this.grillaProductosReporte.Location = new System.Drawing.Point(18, 434);
+            this.grillaProductosReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grillaProductosReporte.Name = "grillaProductosReporte";
+            this.grillaProductosReporte.RowHeadersWidth = 62;
+            this.grillaProductosReporte.Size = new System.Drawing.Size(1164, 154);
+            this.grillaProductosReporte.TabIndex = 7;
             // 
             // ColNombreProd
             // 
@@ -209,28 +138,113 @@ namespace CapaDePresentacion
             this.ColSeleccionarProd.Name = "ColSeleccionarProd";
             this.ColSeleccionarProd.Width = 150;
             // 
+            // lblFechadesde
+            // 
+            this.lblFechadesde.AutoSize = true;
+            this.lblFechadesde.Location = new System.Drawing.Point(414, 185);
+            this.lblFechadesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechadesde.Name = "lblFechadesde";
+            this.lblFechadesde.Size = new System.Drawing.Size(106, 20);
+            this.lblFechadesde.TabIndex = 8;
+            this.lblFechadesde.Text = "Fecha desde:";
+            // 
+            // dtpFechaDesde
+            // 
+            this.dtpFechaDesde.Location = new System.Drawing.Point(528, 175);
+            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpFechaDesde.Name = "dtpFechaDesde";
+            this.dtpFechaDesde.Size = new System.Drawing.Size(298, 26);
+            this.dtpFechaDesde.TabIndex = 9;
+            // 
+            // lblFechaHasta
+            // 
+            this.lblFechaHasta.AutoSize = true;
+            this.lblFechaHasta.Location = new System.Drawing.Point(416, 265);
+            this.lblFechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaHasta.Name = "lblFechaHasta";
+            this.lblFechaHasta.Size = new System.Drawing.Size(102, 20);
+            this.lblFechaHasta.TabIndex = 10;
+            this.lblFechaHasta.Text = "Fecha hasta:";
+            // 
+            // dtpFechaHasta
+            // 
+            this.dtpFechaHasta.Location = new System.Drawing.Point(528, 255);
+            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpFechaHasta.Name = "dtpFechaHasta";
+            this.dtpFechaHasta.Size = new System.Drawing.Size(298, 26);
+            this.dtpFechaHasta.TabIndex = 11;
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Location = new System.Drawing.Point(986, 351);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnBuscarProducto.TabIndex = 12;
+            this.btnBuscarProducto.Text = "Buscar ";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarProducto
+            // 
+            this.btnCancelarProducto.Location = new System.Drawing.Point(826, 351);
+            this.btnCancelarProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelarProducto.Name = "btnCancelarProducto";
+            this.btnCancelarProducto.Size = new System.Drawing.Size(112, 35);
+            this.btnCancelarProducto.TabIndex = 13;
+            this.btnCancelarProducto.Text = "Cancelar";
+            this.btnCancelarProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnDescargarReporte
+            // 
+            this.btnDescargarReporte.Location = new System.Drawing.Point(986, 611);
+            this.btnDescargarReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDescargarReporte.Name = "btnDescargarReporte";
+            this.btnDescargarReporte.Size = new System.Drawing.Size(112, 35);
+            this.btnDescargarReporte.TabIndex = 14;
+            this.btnDescargarReporte.Text = "Descargar reporte";
+            this.btnDescargarReporte.UseVisualStyleBackColor = true;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(57, 272);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(77, 20);
+            this.lblCantidad.TabIndex = 15;
+            this.lblCantidad.Text = "Cantidad:";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(136, 268);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(190, 26);
+            this.txtCantidad.TabIndex = 16;
+            // 
             // Reportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tboxCantidad);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnDescargarReporte);
-            this.Controls.Add(this.btnCancelarProd);
-            this.Controls.Add(this.btnBuscarProd);
-            this.Controls.Add(this.dtpFechaHastaProd);
+            this.Controls.Add(this.btnCancelarProducto);
+            this.Controls.Add(this.btnBuscarProducto);
+            this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.lblFechaHasta);
-            this.Controls.Add(this.dtpFechaDesdeProd);
-            this.Controls.Add(this.lblFechadesdeProd);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtpFechaDesde);
+            this.Controls.Add(this.lblFechadesde);
+            this.Controls.Add(this.grillaProductosReporte);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Reportes";
             this.Text = "Reportes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grillaProductosReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,16 +252,16 @@ namespace CapaDePresentacion
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblFechadesdeProd;
-        private System.Windows.Forms.DateTimePicker dtpFechaDesdeProd;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.DataGridView grillaProductosReporte;
+        private System.Windows.Forms.Label lblFechadesde;
+        private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Label lblFechaHasta;
-        private System.Windows.Forms.DateTimePicker dtpFechaHastaProd;
-        private System.Windows.Forms.Button btnBuscarProd;
-        private System.Windows.Forms.Button btnCancelarProd;
+        private System.Windows.Forms.DateTimePicker dtpFechaHasta;
+        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.Button btnCancelarProducto;
         private System.Windows.Forms.Button btnDescargarReporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombreProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCanVenta;
@@ -256,6 +270,6 @@ namespace CapaDePresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn ColStockProd;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionarProd;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.TextBox tboxCantidad;
+        private System.Windows.Forms.TextBox txtCantidad;
     }
 }

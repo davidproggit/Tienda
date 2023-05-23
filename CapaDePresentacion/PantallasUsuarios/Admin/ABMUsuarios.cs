@@ -27,7 +27,7 @@ namespace CapaDePresentacion
         private void CargarListaUsuarios()
         {
             ModeloUsuario objeto = new ModeloUsuario();
-            dataGridView1.DataSource = objeto.CargarUsuarios();
+            grillaUsuarios.DataSource = objeto.CargarUsuarios();
         }
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)

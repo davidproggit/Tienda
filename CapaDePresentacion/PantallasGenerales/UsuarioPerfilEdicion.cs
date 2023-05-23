@@ -26,13 +26,13 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void VentanaEdicion()
         {
-            textoUsuario.Text = CacheSesionUsuario.Usuario;
-            textoNombre.Text = CacheSesionUsuario.Nombre;
-            textoApellido.Text = CacheSesionUsuario.Apellido;
-            textoEmail.Text = CacheSesionUsuario.Email;
-            textoClaveActual.Text = "";
-            textoClaveNueva.Text = CacheSesionUsuario.Clave;
-            textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
+            txtUsuario.Text = CacheSesionUsuario.Usuario;
+            txtNombre.Text = CacheSesionUsuario.Nombre;
+            txtApellido.Text = CacheSesionUsuario.Apellido;
+            txtEmail.Text = CacheSesionUsuario.Email;
+            txtClaveActual.Text = "";
+            txtClaveNueva.Text = CacheSesionUsuario.Clave;
+            txtClaveConfirmacion.Text = CacheSesionUsuario.Clave;
         }
     }
 }

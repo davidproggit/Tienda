@@ -37,22 +37,22 @@ namespace CapaDePresentacion.PantallasGenerales
         #region "Rellenar campos"
         private void VentanaEdicion()
         {
-            textoUsuario.Text = CacheSesionUsuario.Usuario;
-            textoNombre.Text = CacheSesionUsuario.Nombre;
-            textoApellido.Text = CacheSesionUsuario.Apellido;
-            textoEmail.Text = CacheSesionUsuario.Email;
-            textoClaveActual.Text = "";
-            textoClaveNueva.Text = CacheSesionUsuario.Clave;
-            textoClaveConfirmacion.Text = CacheSesionUsuario.Clave;
+            txtUsuario.Text = CacheSesionUsuario.Usuario;
+            txtNombre.Text = CacheSesionUsuario.Nombre;
+            txtApellido.Text = CacheSesionUsuario.Apellido;
+            txtEmail.Text = CacheSesionUsuario.Email;
+            txtClaveActual.Text = "";
+            txtClaveNueva.Text = CacheSesionUsuario.Clave;
+            txtClaveConfirmacion.Text = CacheSesionUsuario.Clave;
         }
 
         private void DatosPerfil()
         {
-            etiquetaUsuario.Text = CacheSesionUsuario.Usuario;
-            etiquetaNombre.Text = CacheSesionUsuario.Nombre;
-            etiquetaApellido.Text = CacheSesionUsuario.Apellido;
-            etiquetaEmail.Text = CacheSesionUsuario.Email;
-            etiquetaCargo.Text = CacheSesionUsuario.Cargo;
+            lblUsuario.Text = CacheSesionUsuario.Usuario;
+            lblNombre.Text = CacheSesionUsuario.Nombre;
+            lblApellido.Text = CacheSesionUsuario.Apellido;
+            lblEmail.Text = CacheSesionUsuario.Email;
+            lblCargo.Text = CacheSesionUsuario.Cargo;
         }
         #endregion
 
@@ -74,12 +74,12 @@ namespace CapaDePresentacion.PantallasGenerales
         private void IniciarEdicionClave()
         {
             linkClave.Text = "Editar";
-            textoClaveActual.Enabled = false;
-            textoClaveActual.UseSystemPasswordChar = true;   
-            textoClaveNueva.Enabled = false;
-            textoClaveNueva.UseSystemPasswordChar = true;
-            textoClaveConfirmacion.Enabled = false;
-            textoClaveConfirmacion.UseSystemPasswordChar = true;
+            txtClaveActual.Enabled = false;
+            txtClaveActual.UseSystemPasswordChar = true;   
+            txtClaveNueva.Enabled = false;
+            txtClaveNueva.UseSystemPasswordChar = true;
+            txtClaveConfirmacion.Enabled = false;
+            txtClaveConfirmacion.UseSystemPasswordChar = true;
         }
 
         private void HabilitarCamposEdicionClave()
@@ -89,21 +89,21 @@ namespace CapaDePresentacion.PantallasGenerales
 
             linkClave.Text = "Cancelar";
 
-            textoClaveActual.Enabled = true;
-            textoClaveActual.Visible = true;
-            textoClaveActual.Text = "";
+            txtClaveActual.Enabled = true;
+            txtClaveActual.Visible = true;
+            txtClaveActual.Text = "";
 
-            textoClaveNueva.Enabled = true;
-            textoClaveNueva.Visible = true;
-            textoClaveNueva.Text = "";
+            txtClaveNueva.Enabled = true;
+            txtClaveNueva.Visible = true;
+            txtClaveNueva.Text = "";
 
-            textoClaveConfirmacion.Enabled = true;
-            textoClaveConfirmacion.Visible = true;
-            textoClaveConfirmacion.Text = "";
+            txtClaveConfirmacion.Enabled = true;
+            txtClaveConfirmacion.Visible = true;
+            txtClaveConfirmacion.Text = "";
 
-            etiquetaClaveActual.Visible = true;
-            etiquetaClaveNueva.Visible = true;
-            etiquetaClaveConfirmacion.Visible = true;
+            lblClaveActual.Visible = true;
+            lblClaveNueva.Visible = true;
+            lblClaveConfirmacion.Visible = true;
         }
 
         private void DeshabilitarCamposEdicionClave()
@@ -112,20 +112,20 @@ namespace CapaDePresentacion.PantallasGenerales
             _editarClave = false;
             
 
-            textoClaveActual.Visible = false;
-            textoClaveNueva.Visible = false;
-            textoClaveConfirmacion.Visible = false;
+            txtClaveActual.Visible = false;
+            txtClaveNueva.Visible = false;
+            txtClaveConfirmacion.Visible = false;
 
-            etiquetaClaveActual.Visible = false;
-            etiquetaClaveNueva.Visible = false;
-            etiquetaClaveConfirmacion.Visible = false;
+            lblClaveActual.Visible = false;
+            lblClaveNueva.Visible = false;
+            lblClaveConfirmacion.Visible = false;
         }
         #endregion
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            if (textoClaveActual.Text == CacheSesionUsuario.Clave && textoClaveNueva.Text == textoClaveConfirmacion.Text
-                && textoClaveNueva.Text != "" && textoClaveConfirmacion.Text != "")
+            if (txtClaveActual.Text == CacheSesionUsuario.Clave && txtClaveNueva.Text == txtClaveConfirmacion.Text
+                && txtClaveNueva.Text != "" && txtClaveConfirmacion.Text != "")
             {
                 ConfirmarGuardado();
                 DeshabilitarCamposEdicionClave();
@@ -142,7 +142,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void EditarPerfilUsuario()
         {
-            var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: textoUsuario.Text, clave: textoClaveNueva.Text, nombre: textoNombre.Text, apellido: textoApellido.Text, email: textoEmail.Text, cargo: null);
+            var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: txtUsuario.Text, clave: txtClaveNueva.Text, nombre: txtNombre.Text, apellido: txtApellido.Text, email: txtEmail.Text, cargo: null);
             var resultado = modeloUsuario.EditarPerfilUsuario();
             MensajeEstado(resultado, "ok");
 
@@ -151,20 +151,20 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void MensajeEstado(string mensaje, string tipo)
         {
-            etiquetaMensaje.Visible = true;
+            lblMensaje.Visible = true;
 
             switch (tipo)
             {
                 case "ok":
-                    etiquetaMensaje.Text = mensaje;
-                    etiquetaMensaje.ForeColor = Color.Green;
+                    lblMensaje.Text = mensaje;
+                    lblMensaje.ForeColor = Color.Green;
                     break;
                 case "error":
-                    etiquetaMensaje.Text = "Error: " + mensaje;
-                    etiquetaMensaje.ForeColor = Color.Red;
+                    lblMensaje.Text = "Error: " + mensaje;
+                    lblMensaje.ForeColor = Color.Red;
                     break;
                 case "vacio":
-                    etiquetaMensaje.Text = "";
+                    lblMensaje.Text = "";
                     break;
             }
 

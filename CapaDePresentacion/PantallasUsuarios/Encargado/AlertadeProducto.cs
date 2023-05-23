@@ -33,12 +33,12 @@ namespace CapaDePresentacion
         {
             foreach (Datos valor in valores)
             {
-                int posicion = grilla.Rows.Add();
+                int posicion = grillaProductos.Rows.Add();
 
                 try 
                 {
-                    grilla.Rows[posicion].Cells[0].Value = valor.id;
-                    grilla.Rows[posicion].Cells[1].Value = valor.nombre;
+                    grillaProductos.Rows[posicion].Cells[0].Value = valor.id;
+                    grillaProductos.Rows[posicion].Cells[1].Value = valor.nombre;
                     _idLista.Add(valor.id.ToString());
                     _sinProducto = false;
                 }
