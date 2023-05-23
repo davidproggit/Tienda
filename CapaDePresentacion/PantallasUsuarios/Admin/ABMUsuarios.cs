@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion
 {
-    public partial class testABMEmpleados : Form
+    public partial class ABMUsuarios : Form
     {
-        public testABMEmpleados()
+        public ABMUsuarios()
         {
             InitializeComponent();
         }

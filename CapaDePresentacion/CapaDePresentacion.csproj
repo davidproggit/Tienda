@@ -134,11 +134,11 @@
     <Compile Include="PantallasUsuarios\Gerente\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Admin\testABMUsuarios.cs">
+    <Compile Include="PantallasUsuarios\Admin\ABMUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Admin\testABMUsuarios.Designer.cs">
-      <DependentUpon>testABMUsuarios.cs</DependentUpon>
+    <Compile Include="PantallasUsuarios\Admin\ABMUsuarios.Designer.cs">
+      <DependentUpon>ABMUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="PantallasUsuarios\Vendedor\ABMClientes.resx">
       <DependentUpon>ABMClientes.cs</DependentUpon>
@@ -191,8 +191,8 @@
     <EmbeddedResource Include="PantallasUsuarios\Gerente\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Admin\testABMUsuarios.resx">
-      <DependentUpon>testABMUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasUsuarios\Admin\ABMUsuarios.resx">
+      <DependentUpon>ABMUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

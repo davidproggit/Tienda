@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion
 {
-    partial class testABMEmpleados
+    partial class ABMUsuarios
     {
         /// <summary>
         /// Required designer variable.
