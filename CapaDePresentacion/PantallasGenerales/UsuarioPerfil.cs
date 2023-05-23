@@ -37,7 +37,7 @@ namespace CapaDePresentacion.PantallasGenerales
         #region "Rellenar campos"
         private void VentanaEdicion()
         {
-            textoUsuario.Text = CacheSesionUsuario.NombreLogin;
+            textoUsuario.Text = CacheSesionUsuario.Usuario;
             textoNombre.Text = CacheSesionUsuario.Nombre;
             textoApellido.Text = CacheSesionUsuario.Apellido;
             textoEmail.Text = CacheSesionUsuario.Email;
@@ -48,7 +48,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void DatosPerfil()
         {
-            etiquetaUsuario.Text = CacheSesionUsuario.NombreLogin;
+            etiquetaUsuario.Text = CacheSesionUsuario.Usuario;
             etiquetaNombre.Text = CacheSesionUsuario.Nombre;
             etiquetaApellido.Text = CacheSesionUsuario.Apellido;
             etiquetaEmail.Text = CacheSesionUsuario.Email;

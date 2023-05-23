@@ -26,7 +26,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void VentanaEdicion()
         {
-            textoUsuario.Text = CacheSesionUsuario.NombreLogin;
+            textoUsuario.Text = CacheSesionUsuario.Usuario;
             textoNombre.Text = CacheSesionUsuario.Nombre;
             textoApellido.Text = CacheSesionUsuario.Apellido;
             textoEmail.Text = CacheSesionUsuario.Email;

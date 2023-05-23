@@ -74,7 +74,7 @@ namespace CapaDeDatos
         private static void FormatoCamposCache(SqlDataReader lector)
         {
             CacheSesionUsuario.ID = lector.GetInt32(0);
-            CacheSesionUsuario.NombreLogin = lector.GetString(1);
+            CacheSesionUsuario.Usuario = lector.GetString(1);
             CacheSesionUsuario.Clave = lector.GetString(2);
             CacheSesionUsuario.Nombre = lector.GetString(3);
             CacheSesionUsuario.Apellido = lector.GetString(4);
