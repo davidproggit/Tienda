@@ -324,7 +324,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazProducto";
             this.Text = "InterfazProducto";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.InterfazProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
