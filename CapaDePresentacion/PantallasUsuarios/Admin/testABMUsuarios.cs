@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +22,17 @@ namespace CapaDePresentacion
         {
 
         }
+
+        private void testABMEmpleados_Load(object sender, EventArgs e)
+        {
+            CargarListaUsuarios();
+        }
+
+        private void CargarListaUsuarios()
+        {
+            ModeloUsuario objeto = new ModeloUsuario();
+            dataGridView1.DataSource = objeto.CargarUsuarios();
+        }
+
     }
 }

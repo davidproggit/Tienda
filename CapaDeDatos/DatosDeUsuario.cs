@@ -11,6 +11,22 @@ namespace CapaDeDatos
 {
     public class DatosDeUsuario : ConexionSQL
     {
+        public DataTable CargarUsuarios()
+        {
+            Conexion conexion = new Conexion();
+            SqlDataReader lector;
+            DataTable tabla = new DataTable();
+            SqlCommand comando = new SqlCommand();
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "CargarUsuarios";
+            lector = comando.ExecuteReader();
+            comando.CommandType = CommandType.StoredProcedure;
+            tabla.Load(lector);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+     
         public void EditarPerfil(int id, string usuario, string clave, string nombre, string apellido, string email)
         {
             using (var conexion = ObtenerConexion())
