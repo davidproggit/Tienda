@@ -18,7 +18,7 @@ namespace CapaDePresentacion
             InitializeComponent();
         }
 
-        private void testABMEmpleados_Load(object sender, EventArgs e)
+        private void ABMUsuarios_Load(object sender, EventArgs e)
         {
             CargarListaUsuarios();
             CargarRoles();
