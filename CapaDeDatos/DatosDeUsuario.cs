@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using CapaComun.Cache;
+using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace CapaDeDatos
 {
@@ -15,6 +17,23 @@ namespace CapaDeDatos
         SqlDataReader lector;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
+
+        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "InsertarUsuario";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@usuario", usuario);
+            comando.Parameters.AddWithValue("@clave", clave);
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@apellido", apellido);
+            comando.Parameters.AddWithValue("@email", email);
+            comando.Parameters.AddWithValue("@cargo", cargo);
+            comando.Parameters.AddWithValue("@dni", dni);
+            comando.Parameters.AddWithValue("@cuil", cuil);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+        }
 
         public DataTable CargarUsuarios()
         {

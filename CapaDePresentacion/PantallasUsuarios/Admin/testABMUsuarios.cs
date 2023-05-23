@@ -34,5 +34,17 @@ namespace CapaDePresentacion
             dataGridView1.DataSource = objeto.CargarUsuarios();
         }
 
+        private void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+            GuardarNuevoUsuario();
+        }
+       
+        private void GuardarNuevoUsuario()
+        {
+            ModeloUsuario objetoCapaNegocio = new ModeloUsuario();
+
+             objetoCapaNegocio.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
+        }
+
     }
 }

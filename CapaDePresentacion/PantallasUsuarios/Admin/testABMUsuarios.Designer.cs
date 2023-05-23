@@ -37,14 +37,12 @@
             this.lblClave = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
-            this.lblNacimiento = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDatosPersonales = new System.Windows.Forms.Label();
@@ -86,6 +84,7 @@
             this.btnGuardarUsuario.TabIndex = 37;
             this.btnGuardarUsuario.Text = "Guardar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = true;
+            this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // dataGridView1
             // 
@@ -109,7 +108,7 @@
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(717, 380);
+            this.txtClave.Location = new System.Drawing.Point(765, 375);
             this.txtClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(148, 26);
@@ -118,7 +117,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(657, 385);
+            this.lblClave.Location = new System.Drawing.Point(712, 382);
             this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(52, 20);
@@ -128,7 +127,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(424, 380);
+            this.txtEmail.Location = new System.Drawing.Point(538, 379);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 26);
@@ -137,20 +136,12 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(324, 386);
+            this.lblEmail.Location = new System.Drawing.Point(459, 379);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(52, 20);
             this.lblEmail.TabIndex = 31;
             this.lblEmail.Text = "Email:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(582, 237);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(298, 26);
-            this.dateTimePicker1.TabIndex = 29;
             // 
             // lblTitulo
             // 
@@ -207,16 +198,6 @@
             this.lblDni.TabIndex = 23;
             this.lblDni.Text = "DNI:";
             // 
-            // lblNacimiento
-            // 
-            this.lblNacimiento.AutoSize = true;
-            this.lblNacimiento.Location = new System.Drawing.Point(459, 240);
-            this.lblNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNacimiento.Name = "lblNacimiento";
-            this.lblNacimiento.Size = new System.Drawing.Size(92, 20);
-            this.lblNacimiento.TabIndex = 22;
-            this.lblNacimiento.Text = "Nacimiento:";
-            // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
@@ -230,7 +211,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(946, 383);
+            this.label2.Location = new System.Drawing.Point(945, 377);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 20);
@@ -250,7 +231,7 @@
             // lblDatosLaborales
             // 
             this.lblDatosLaborales.AutoSize = true;
-            this.lblDatosLaborales.Location = new System.Drawing.Point(206, 317);
+            this.lblDatosLaborales.Location = new System.Drawing.Point(196, 319);
             this.lblDatosLaborales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatosLaborales.Name = "lblDatosLaborales";
             this.lblDatosLaborales.Size = new System.Drawing.Size(126, 20);
@@ -278,7 +259,7 @@
             // comboCargo
             // 
             this.comboCargo.FormattingEnabled = true;
-            this.comboCargo.Location = new System.Drawing.Point(1008, 375);
+            this.comboCargo.Location = new System.Drawing.Point(1005, 373);
             this.comboCargo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboCargo.Name = "comboCargo";
             this.comboCargo.Size = new System.Drawing.Size(180, 28);
@@ -287,7 +268,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(196, 243);
+            this.lblUsuario.Location = new System.Drawing.Point(197, 376);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(68, 20);
@@ -296,7 +277,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(280, 237);
+            this.txtUsuario.Location = new System.Drawing.Point(280, 377);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(148, 26);
@@ -323,14 +304,12 @@
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNombreCliente);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDni);
-            this.Controls.Add(this.lblNacimiento);
             this.Controls.Add(this.lblApellido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "testABMEmpleados";
@@ -352,14 +331,12 @@
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblNacimiento;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDatosPersonales;
