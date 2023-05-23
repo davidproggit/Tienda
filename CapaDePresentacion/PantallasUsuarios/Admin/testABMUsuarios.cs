@@ -49,6 +49,7 @@ namespace CapaDePresentacion
                 objetoCapaNegocio.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
+                LimpiarFormulario();
             }
             else
                 MessageBox.Show("Error: tiene que completar todos los campos");
@@ -71,5 +72,16 @@ namespace CapaDePresentacion
                  || string.IsNullOrEmpty(txtDNI.Text) || string.IsNullOrEmpty(txtCuil.Text);
         }
 
+        private void LimpiarFormulario()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDNI.Clear();
+            txtCuil.Clear();
+            txtUsuario.Clear();
+            txtEmail.Clear();
+            txtClave.Clear();
+            comboCargo.ResetText();
+        }
     }
 }
