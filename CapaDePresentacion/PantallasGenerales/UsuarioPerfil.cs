@@ -14,7 +14,7 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class UsuarioPerfil : Form
     {
-        private bool editarClave = false;
+        private bool _editarClave = false;
 
         public UsuarioPerfil()
         {
@@ -85,7 +85,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private void HabilitarCamposEdicionClave()
         {
             IniciarEdicionClave();
-            editarClave = true;
+            _editarClave = true;
 
             linkClave.Text = "Cancelar";
 
@@ -109,7 +109,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private void DeshabilitarCamposEdicionClave()
         {
             IniciarEdicionClave();
-            editarClave = false;
+            _editarClave = false;
             
 
             textoClaveActual.Visible = false;
@@ -129,9 +129,9 @@ namespace CapaDePresentacion.PantallasGenerales
             {
                 ConfirmarGuardado();
                 DeshabilitarCamposEdicionClave();
-                editarClave = false;
+                _editarClave = false;
             }
-            else if (editarClave)
+            else if (_editarClave)
                 MensajeEstado("Las claves no coinciden","error");
         }
 

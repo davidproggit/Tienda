@@ -14,7 +14,7 @@ namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
-        private bool sinProducto = true;
+        private bool _sinProducto = true;
 
         public AlertadeProducto()
         {
@@ -27,7 +27,7 @@ namespace CapaDePresentacion
         }
 
         public List<Datos> Valores { get; set; }
-        List<string> idLista = new List<string>();
+        private List<string> _idLista = new List<string>();
 
         public void Rellenar(List<Datos> valores)
         {
@@ -39,8 +39,8 @@ namespace CapaDePresentacion
                 {
                     grilla.Rows[posicion].Cells[0].Value = valor.id;
                     grilla.Rows[posicion].Cells[1].Value = valor.nombre;
-                    idLista.Add(valor.id.ToString());
-                    sinProducto = false;
+                    _idLista.Add(valor.id.ToString());
+                    _sinProducto = false;
                 }
                 catch (ArgumentOutOfRangeException)
                 {
@@ -56,7 +56,7 @@ namespace CapaDePresentacion
 
         private void btnGuardarAlerta_Click(object sender, EventArgs e)
         {
-            if (!sinProducto)
+            if (!_sinProducto)
                 CambiarMensajeCantidad(Valores);
             else
                 MessageBox.Show("Error: debe haber al menos 1 producto cargado");
@@ -68,7 +68,7 @@ namespace CapaDePresentacion
             {
                 Productos productos = new Productos();
 
-                foreach (string id in idLista)
+                foreach (string id in _idLista)
                 {
                     productos.ModificarAlerta(id, txtMensaje.Text, int.Parse(txtCantidadMinima.Text));
                 }

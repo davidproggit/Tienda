@@ -12,23 +12,23 @@ namespace CapaDeNegocio
     {
         DatosDeUsuario datosDeUsuario = new DatosDeUsuario();
 
-        private int id;
-        private string usuario;
-        private string clave;
-        private string nombre;
-        private string apellido;
-        private string email;
-        private string cargo;
+        private int _id;
+        private string _usuario;
+        private string _clave;
+        private string _nombre;
+        private string _apellido;
+        private string _email;
+        private string _cargo;
 
         public ModeloUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo)
         {
-            this.id = id;
-            this.usuario = usuario;
-            this.clave = clave;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.email = email;
-            this.cargo = cargo;
+            this._id = id;
+            this._usuario = usuario;
+            this._clave = clave;
+            this._nombre = nombre;
+            this._apellido = apellido;
+            this._email = email;
+            this._cargo = cargo;
         }
 
         public ModeloUsuario()
@@ -38,8 +38,8 @@ namespace CapaDeNegocio
 
         public string EditarPerfilUsuario()
         {
-            datosDeUsuario.EditarPerfil(id, usuario, clave, nombre, apellido, email);
-            LoginUsuario(usuario, clave);
+            datosDeUsuario.EditarPerfil(_id, _usuario, _clave, _nombre, _apellido, _email);
+            LoginUsuario(_usuario, _clave);
             return "Perfil actualizado";
         }
 

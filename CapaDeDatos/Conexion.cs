@@ -10,23 +10,23 @@ namespace CapaDeDatos
 {
     public class Conexion
     {
-        SqlConnection conexion = new SqlConnection("Server=(local); DataBase=Tienda;Integrated Security=true");
-        //SqlConnection conexion = new SqlConnection(@"Data Source=DESKTOP-PJBV73K\SQLEXPRESS; DataBase=Tienda; integrated security = true");
+        private SqlConnection _conexion = new SqlConnection("Server=(local); DataBase=Tienda;Integrated Security=true");
+        //private SqlConnection _conexion = new SqlConnection(@"Data Source=DESKTOP-PJBV73K\SQLEXPRESS; DataBase=Tienda; integrated security = true");
 
         public SqlConnection AbrirConexion()
         {
-            if (conexion.State == ConnectionState.Closed)
-                conexion.Open();
+            if (_conexion.State == ConnectionState.Closed)
+                _conexion.Open();
 
-            return conexion;
+            return _conexion;
         }
 
         public SqlConnection CerrarConexion()
         {
-            if (conexion.State == ConnectionState.Open)
-                conexion.Close();
+            if (_conexion.State == ConnectionState.Open)
+                _conexion.Close();
 
-            return conexion;
+            return _conexion;
         }
     }
 }

@@ -13,47 +13,47 @@ namespace CapaDeDatos
 {
     public class DatosDeUsuario
     {
-        Conexion conexion = new Conexion();
-        SqlDataReader lector;
-        DataTable tabla = new DataTable();
-        SqlCommand comando = new SqlCommand();
+        private Conexion _conexion = new Conexion();
+        private SqlDataReader _lector;
+        private DataTable _tabla = new DataTable();
+        private SqlCommand _comando = new SqlCommand();
 
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertarUsuario";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@usuario", usuario);
-            comando.Parameters.AddWithValue("@clave", clave);
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@apellido", apellido);
-            comando.Parameters.AddWithValue("@email", email);
-            comando.Parameters.AddWithValue("@cargo", cargo);
-            comando.Parameters.AddWithValue("@dni", dni);
-            comando.Parameters.AddWithValue("@cuil", cuil);
-            comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "InsertarUsuario";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@usuario", usuario);
+            _comando.Parameters.AddWithValue("@clave", clave);
+            _comando.Parameters.AddWithValue("@nombre", nombre);
+            _comando.Parameters.AddWithValue("@apellido", apellido);
+            _comando.Parameters.AddWithValue("@email", email);
+            _comando.Parameters.AddWithValue("@cargo", cargo);
+            _comando.Parameters.AddWithValue("@dni", dni);
+            _comando.Parameters.AddWithValue("@cuil", cuil);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
         }
 
         public DataTable CargarUsuarios()
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "CargarUsuarios";
-            lector = comando.ExecuteReader();
-            comando.CommandType = CommandType.StoredProcedure;
-            tabla.Load(lector);
-            conexion.CerrarConexion();
-            return tabla;
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarUsuarios";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
         }
      
         public void EditarPerfil(int id, string usuario, string clave, string nombre, string apellido, string email)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
-            CamposUsuario(id, usuario, clave, nombre, apellido, email, comando);
-            comando.CommandType = CommandType.Text;
-            comando.ExecuteNonQuery();
-            conexion.CerrarConexion();
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
+            CamposUsuario(id, usuario, clave, nombre, apellido, email, _comando);
+            _comando.CommandType = CommandType.Text;
+            _comando.ExecuteNonQuery();
+            _conexion.CerrarConexion();
         }
 
         private static void CamposUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, SqlCommand comando)
@@ -68,15 +68,15 @@ namespace CapaDeDatos
 
         public bool Login(string usuario, string clave)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo from Usuarios where Usuario=@usuario and Clave=@clave";
-            comando.Parameters.AddWithValue("@usuario", usuario);
-            comando.Parameters.AddWithValue("@clave", clave);
-            comando.CommandType = CommandType.Text;
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo from Usuarios where Usuario=@usuario and Clave=@clave";
+            _comando.Parameters.AddWithValue("@usuario", usuario);
+            _comando.Parameters.AddWithValue("@clave", clave);
+            _comando.CommandType = CommandType.Text;
 
-            SqlDataReader lector = comando.ExecuteReader();
+            SqlDataReader lector = _comando.ExecuteReader();
 
-            return LeerFilas(lector,conexion);
+            return LeerFilas(lector,_conexion);
         }
 
         private static bool LeerFilas(SqlDataReader lector, Conexion conexion)

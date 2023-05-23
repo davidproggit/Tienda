@@ -15,8 +15,8 @@ namespace CapaDePresentacion
     public partial class InterfazProducto : Form
     {
         Productos objetoCapaNegocio = new Productos();
-        private string idProducto = null;
-        private bool editar = false;
+        private string _idProducto = null;
+        private bool _editar = false;
 
         public InterfazProducto()
         {
@@ -36,9 +36,9 @@ namespace CapaDePresentacion
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            if (!editar)
+            if (!_editar)
                 GuardarProductoNuevo();
-            if (editar)
+            if (_editar)
                 GuardarProductoEditado();
         }
 
@@ -46,10 +46,10 @@ namespace CapaDePresentacion
         {
             try
             {
-                objetoCapaNegocio.EditarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text, idProducto);
+                objetoCapaNegocio.EditarProducto(textoNombre.Text, textoDescripcion.Text, textoMarca.Text, textoPrecio.Text, textoStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
-                editar = false;
+                _editar = false;
             }
             catch (Exception ex)
             {
@@ -85,13 +85,13 @@ namespace CapaDePresentacion
         {
             if (grillaProductos.SelectedRows.Count > 0)
             {
-                editar = true;
+                _editar = true;
                 textoNombre.Text = grillaProductos.CurrentRow.Cells["Nombre"].Value.ToString();
                 textoDescripcion.Text = grillaProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
                 textoMarca.Text = grillaProductos.CurrentRow.Cells["Marca"].Value.ToString();
                 textoPrecio.Text = grillaProductos.CurrentRow.Cells["Precio"].Value.ToString();
                 textoStock.Text = grillaProductos.CurrentRow.Cells["Stock"].Value.ToString();
-                idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
+                _idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
@@ -121,8 +121,8 @@ namespace CapaDePresentacion
 
         private void BorrarProducto()
         {
-            idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
-            objetoCapaNegocio.EliminarProducto(idProducto);
+            _idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
+            objetoCapaNegocio.EliminarProducto(_idProducto);
             MostrarProductos();
         }
 

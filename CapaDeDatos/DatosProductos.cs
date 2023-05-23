@@ -10,87 +10,87 @@ namespace CapaDeDatos
 {
     public class DatosProductos
     {
-        Conexion conexion = new Conexion();
-        SqlDataReader lector;
-        DataTable tabla = new DataTable();
-        SqlCommand comando = new SqlCommand();
+        private Conexion _conexion = new Conexion();
+        private SqlDataReader _lector;
+        private DataTable _tabla = new DataTable();
+        private SqlCommand _comando = new SqlCommand();
 
         public DataTable Mostrar()
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "MostrarProductos";
-            lector = comando.ExecuteReader();
-            comando.CommandType = CommandType.StoredProcedure;
-            tabla.Load(lector);
-            conexion.CerrarConexion();
-            return tabla;
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarProductos";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
         }
 
         public void Insertar(string nombre, string descripcion, string marca, double precio, int stock)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "InsertarProducto";
-            comando.CommandType = CommandType.StoredProcedure;
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "InsertarProducto";
+            _comando.CommandType = CommandType.StoredProcedure;
             CamposProducto(nombre, descripcion, marca, precio, stock);
-            comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
         }
 
         public void Editar(string nombre, string descripcion, string marca, double precio, int stock, int id)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EditarProducto";
-            comando.CommandType = CommandType.StoredProcedure;
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "EditarProducto";
+            _comando.CommandType = CommandType.StoredProcedure;
             CamposProducto(nombre, descripcion, marca, precio, stock);
-            comando.Parameters.AddWithValue("@id", id);
-            comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
         }
         private void CamposProducto(string nombre, string descripcion, string marca, double precio, int stock)
         {
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@descripcion", descripcion);
-            comando.Parameters.AddWithValue("@marca", marca);
-            comando.Parameters.AddWithValue("@precio", precio);
-            comando.Parameters.AddWithValue("@stock", stock);
+            _comando.Parameters.AddWithValue("@nombre", nombre);
+            _comando.Parameters.AddWithValue("@descripcion", descripcion);
+            _comando.Parameters.AddWithValue("@marca", marca);
+            _comando.Parameters.AddWithValue("@precio", precio);
+            _comando.Parameters.AddWithValue("@stock", stock);
         }
 
         public void Eliminar(int id)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EliminarProducto";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@idproductoeliminar", id);
-            comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "EliminarProducto";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@idproductoeliminar", id);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
         }
 
         public DataTable Filtrar(string textoBuscar)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "SELECT Id,Nombre, Descripcion, Marca, Precio, Stock FROM Productos where Nombre like ('" + textoBuscar + "%')";
-            comando.CommandType = CommandType.Text;
-            comando.ExecuteNonQuery();
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "SELECT Id,Nombre, Descripcion, Marca, Precio, Stock FROM Productos where Nombre like ('" + textoBuscar + "%')";
+            _comando.CommandType = CommandType.Text;
+            _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();
-            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
 
             adaptador.Fill(tablaFiltrada);
 
-            conexion.CerrarConexion();
+            _conexion.CerrarConexion();
             return tablaFiltrada;
         }
 
         public void ModificarAlerta(int id, string mensaje, int cantidadMinima)
         {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "ActualizarAlerta";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@id", id);
-            comando.Parameters.AddWithValue("@mensaje", mensaje);
-            comando.Parameters.AddWithValue("@cantidadMinima", cantidadMinima);
-            comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "ActualizarAlerta";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@mensaje", mensaje);
+            _comando.Parameters.AddWithValue("@cantidadMinima", cantidadMinima);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
         }
     }
 }

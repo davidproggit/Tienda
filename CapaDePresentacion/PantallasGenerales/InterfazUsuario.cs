@@ -45,11 +45,11 @@ namespace CapaDePresentacion.PantallasGenerales
         #endregion
 
         #region "Cargar pantalla generica"
-        private bool perfil = false;
+        private bool _perfil = false;
 
         private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (!perfil)
+            if (!_perfil)
                 CargarPantallaPerfil();
             else
                 CerrarPantallaPerfil();
@@ -59,13 +59,13 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             AbrirFormulario<UsuarioPerfil>();
             linkPerfil.Text = "Cerrar perfil";
-            perfil = true;
+            _perfil = true;
         }
         private void CerrarPantallaPerfil()
         {
             CargarPantallasUsuarios();
             linkPerfil.Text = "Mi perfil";
-            perfil = false;
+            _perfil = false;
         }
         private void CargarDatosUsuario()
         {
