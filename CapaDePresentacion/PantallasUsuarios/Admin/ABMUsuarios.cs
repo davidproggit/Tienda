@@ -103,5 +103,10 @@ namespace CapaDePresentacion
             CargarListaUsuarios();
         }
 
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            grillaUsuarios.DataSource = modeloUsuario.FiltrarUsuario(txtBuscar.Text);
+        }
+
     }
 }

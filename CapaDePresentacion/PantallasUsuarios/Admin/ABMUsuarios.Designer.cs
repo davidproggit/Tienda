@@ -54,11 +54,13 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panelDatosPersonales = new System.Windows.Forms.Panel();
             this.panelDatosLaborales = new System.Windows.Forms.Panel();
-            this.panelAccion = new System.Windows.Forms.Panel();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grillaUsuarios)).BeginInit();
             this.panelDatosPersonales.SuspendLayout();
             this.panelDatosLaborales.SuspendLayout();
-            this.panelAccion.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEliminarUsuario
@@ -76,18 +78,19 @@
             // btnBuscarUsuario
             // 
             this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(165, 14);
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(307, 27);
             this.btnBuscarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscarUsuario.Name = "btnBuscarUsuario";
             this.btnBuscarUsuario.Size = new System.Drawing.Size(126, 55);
             this.btnBuscarUsuario.TabIndex = 36;
             this.btnBuscarUsuario.Text = "Buscar";
             this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // btnGuardarUsuario
             // 
             this.btnGuardarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(15, 14);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(1103, 471);
             this.btnGuardarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(120, 55);
@@ -345,22 +348,43 @@
             this.panelDatosLaborales.Size = new System.Drawing.Size(1159, 126);
             this.panelDatosLaborales.TabIndex = 49;
             // 
-            // panelAccion
+            // txtBuscar
             // 
-            this.panelAccion.BackColor = System.Drawing.Color.LightGray;
-            this.panelAccion.Controls.Add(this.btnGuardarUsuario);
-            this.panelAccion.Controls.Add(this.btnBuscarUsuario);
-            this.panelAccion.Location = new System.Drawing.Point(918, 449);
-            this.panelAccion.Name = "panelAccion";
-            this.panelAccion.Size = new System.Drawing.Size(305, 82);
-            this.panelAccion.TabIndex = 50;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(104, 40);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(172, 32);
+            this.txtBuscar.TabIndex = 48;
+            // 
+            // lblFiltrar
+            // 
+            this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Location = new System.Drawing.Point(8, 40);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(81, 29);
+            this.lblFiltrar.TabIndex = 50;
+            this.lblFiltrar.Text = "Filtrar:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.txtBuscar);
+            this.panel1.Controls.Add(this.lblFiltrar);
+            this.panel1.Controls.Add(this.btnBuscarUsuario);
+            this.panel1.Location = new System.Drawing.Point(878, 739);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(449, 100);
+            this.panel1.TabIndex = 51;
             // 
             // ABMUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 846);
-            this.Controls.Add(this.panelAccion);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.panelDatosLaborales);
             this.Controls.Add(this.panelDatosPersonales);
             this.Controls.Add(this.btnEliminarUsuario);
@@ -375,7 +399,8 @@
             this.panelDatosPersonales.PerformLayout();
             this.panelDatosLaborales.ResumeLayout(false);
             this.panelDatosLaborales.PerformLayout();
-            this.panelAccion.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,6 +434,8 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Panel panelDatosPersonales;
         private System.Windows.Forms.Panel panelDatosLaborales;
-        private System.Windows.Forms.Panel panelAccion;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
