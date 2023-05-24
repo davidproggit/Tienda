@@ -66,5 +66,10 @@ namespace CapaDeNegocio
         {
             datosDeUsuario.InsertarNuevoUsuario(usuario,clave,nombre,apellido,email,cargo,dni,cuil);
         }
+
+        public void EliminarUsuario(int id)
+        {
+            datosDeUsuario.EliminarUsuario(id);
+        }
     }
 }

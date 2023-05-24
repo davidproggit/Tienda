@@ -13,6 +13,8 @@ namespace CapaDePresentacion
 {
     public partial class ABMUsuarios : Form
     {
+        private int _idUsuario;
+
         public ABMUsuarios()
         {
             InitializeComponent();
@@ -78,5 +80,28 @@ namespace CapaDePresentacion
             txtClave.Clear();
             comboCargo.ResetText();
         }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            if (grillaUsuarios.SelectedRows.Count > 0)
+            {
+                DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere eliminar al usuario?", "Eliminar usuario", MessageBoxButtons.YesNo);
+
+                if (pantallaAdvertencia == DialogResult.Yes)
+                    BorrarUsuario();
+            }
+            else
+                MessageBox.Show("Seleccione una fila por favor");
+        }
+
+        ModeloUsuario modeloUsuario = new ModeloUsuario();
+
+        private void BorrarUsuario()
+        {
+            _idUsuario = (int)grillaUsuarios.CurrentRow.Cells["Id"].Value;
+            modeloUsuario.EliminarUsuario(_idUsuario);
+            CargarListaUsuarios();
+        }
+
     }
 }

@@ -18,6 +18,16 @@ namespace CapaDeDatos
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
 
+        public void EliminarUsuario(int id)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "EliminarUsuario";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@idUsuario", id);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _comando.Connection = _conexion.AbrirConexion();
