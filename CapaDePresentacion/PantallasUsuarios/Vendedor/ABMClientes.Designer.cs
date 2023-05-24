@@ -30,32 +30,27 @@ namespace CapaDePresentacion
         private void InitializeComponent()
         {
             this.lblApellido = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblContacto = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.grillaClientes = new System.Windows.Forms.DataGridView();
-            this.ColNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColApellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPasswordCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeleccionarCliente = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.panelDatosCliente = new System.Windows.Forms.Panel();
             this.panelAccion = new System.Windows.Forms.Panel();
+            this.txtCuil = new System.Windows.Forms.TextBox();
+            this.lblCuil = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             this.panelDatosCliente.SuspendLayout();
             this.panelAccion.SuspendLayout();
@@ -72,22 +67,11 @@ namespace CapaDePresentacion
             this.lblApellido.TabIndex = 1;
             this.lblApellido.Text = "Apellido:";
             // 
-            // lblFechaNacimiento
-            // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(350, 58);
-            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(243, 29);
-            this.lblFechaNacimiento.TabIndex = 2;
-            this.lblFechaNacimiento.Text = "Fecha de nacimiento:";
-            // 
             // lblDni
             // 
             this.lblDni.AutoSize = true;
             this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.Location = new System.Drawing.Point(533, 130);
+            this.lblDni.Location = new System.Drawing.Point(460, 58);
             this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(60, 29);
@@ -115,10 +99,10 @@ namespace CapaDePresentacion
             // txtDNI
             // 
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNI.Location = new System.Drawing.Point(612, 124);
+            this.txtDNI.Location = new System.Drawing.Point(539, 52);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(148, 35);
+            this.txtDNI.Size = new System.Drawing.Size(191, 35);
             this.txtDNI.TabIndex = 7;
             // 
             // lblNombre
@@ -142,15 +126,6 @@ namespace CapaDePresentacion
             this.lblTitulo.Size = new System.Drawing.Size(294, 29);
             this.lblTitulo.TabIndex = 10;
             this.lblTitulo.Text = "Administración de clientes";
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(612, 53);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(472, 35);
-            this.dtpFechaNacimiento.TabIndex = 11;
             // 
             // lblContacto
             // 
@@ -187,7 +162,7 @@ namespace CapaDePresentacion
             // 
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.Location = new System.Drawing.Point(513, 190);
+            this.lblClave.Location = new System.Drawing.Point(440, 118);
             this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(80, 29);
@@ -197,78 +172,21 @@ namespace CapaDePresentacion
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(612, 193);
+            this.txtClave.Location = new System.Drawing.Point(539, 121);
             this.txtClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(148, 35);
+            this.txtClave.Size = new System.Drawing.Size(191, 35);
             this.txtClave.TabIndex = 16;
             // 
             // grillaClientes
             // 
             this.grillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColNombreCliente,
-            this.ColApellidoCliente,
-            this.ColFechaNac,
-            this.ColDNICliente,
-            this.ColEmail,
-            this.ColPasswordCliente,
-            this.ColSeleccionarCliente});
             this.grillaClientes.Location = new System.Drawing.Point(46, 454);
             this.grillaClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grillaClientes.Name = "grillaClientes";
             this.grillaClientes.RowHeadersWidth = 62;
-            this.grillaClientes.Size = new System.Drawing.Size(1113, 112);
+            this.grillaClientes.Size = new System.Drawing.Size(1113, 164);
             this.grillaClientes.TabIndex = 17;
-            // 
-            // ColNombreCliente
-            // 
-            this.ColNombreCliente.HeaderText = "Nombre";
-            this.ColNombreCliente.MinimumWidth = 8;
-            this.ColNombreCliente.Name = "ColNombreCliente";
-            this.ColNombreCliente.Width = 150;
-            // 
-            // ColApellidoCliente
-            // 
-            this.ColApellidoCliente.HeaderText = "Apellido";
-            this.ColApellidoCliente.MinimumWidth = 8;
-            this.ColApellidoCliente.Name = "ColApellidoCliente";
-            this.ColApellidoCliente.Width = 150;
-            // 
-            // ColFechaNac
-            // 
-            this.ColFechaNac.HeaderText = "Fecha de nacimiento";
-            this.ColFechaNac.MinimumWidth = 8;
-            this.ColFechaNac.Name = "ColFechaNac";
-            this.ColFechaNac.Width = 150;
-            // 
-            // ColDNICliente
-            // 
-            this.ColDNICliente.HeaderText = "DNI";
-            this.ColDNICliente.MinimumWidth = 8;
-            this.ColDNICliente.Name = "ColDNICliente";
-            this.ColDNICliente.Width = 150;
-            // 
-            // ColEmail
-            // 
-            this.ColEmail.HeaderText = "Email";
-            this.ColEmail.MinimumWidth = 8;
-            this.ColEmail.Name = "ColEmail";
-            this.ColEmail.Width = 150;
-            // 
-            // ColPasswordCliente
-            // 
-            this.ColPasswordCliente.HeaderText = "Password";
-            this.ColPasswordCliente.MinimumWidth = 8;
-            this.ColPasswordCliente.Name = "ColPasswordCliente";
-            this.ColPasswordCliente.Width = 150;
-            // 
-            // ColSeleccionarCliente
-            // 
-            this.ColSeleccionarCliente.HeaderText = "Seleccionar";
-            this.ColSeleccionarCliente.MinimumWidth = 8;
-            this.ColSeleccionarCliente.Name = "ColSeleccionarCliente";
-            this.ColSeleccionarCliente.Width = 150;
             // 
             // btnBuscarCliente
             // 
@@ -291,6 +209,7 @@ namespace CapaDePresentacion
             this.btnGuardarCliente.TabIndex = 19;
             this.btnGuardarCliente.Text = "Guardar";
             this.btnGuardarCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // btnEliminarCliente
             // 
@@ -306,9 +225,12 @@ namespace CapaDePresentacion
             // panelDatosCliente
             // 
             this.panelDatosCliente.BackColor = System.Drawing.Color.LightGray;
+            this.panelDatosCliente.Controls.Add(this.lblUsuario);
+            this.panelDatosCliente.Controls.Add(this.txtUsuario);
+            this.panelDatosCliente.Controls.Add(this.txtCuil);
+            this.panelDatosCliente.Controls.Add(this.lblCuil);
             this.panelDatosCliente.Controls.Add(this.lblContacto);
             this.panelDatosCliente.Controls.Add(this.lblApellido);
-            this.panelDatosCliente.Controls.Add(this.lblFechaNacimiento);
             this.panelDatosCliente.Controls.Add(this.lblDni);
             this.panelDatosCliente.Controls.Add(this.txtNombre);
             this.panelDatosCliente.Controls.Add(this.txtClave);
@@ -318,7 +240,6 @@ namespace CapaDePresentacion
             this.panelDatosCliente.Controls.Add(this.txtEmail);
             this.panelDatosCliente.Controls.Add(this.lblNombre);
             this.panelDatosCliente.Controls.Add(this.lblEmail);
-            this.panelDatosCliente.Controls.Add(this.dtpFechaNacimiento);
             this.panelDatosCliente.Location = new System.Drawing.Point(46, 94);
             this.panelDatosCliente.Name = "panelDatosCliente";
             this.panelDatosCliente.Size = new System.Drawing.Size(1113, 243);
@@ -334,6 +255,46 @@ namespace CapaDePresentacion
             this.panelAccion.Size = new System.Drawing.Size(291, 80);
             this.panelAccion.TabIndex = 22;
             // 
+            // txtCuil
+            // 
+            this.txtCuil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuil.Location = new System.Drawing.Point(539, 190);
+            this.txtCuil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCuil.Name = "txtCuil";
+            this.txtCuil.Size = new System.Drawing.Size(191, 32);
+            this.txtCuil.TabIndex = 46;
+            // 
+            // lblCuil
+            // 
+            this.lblCuil.AutoSize = true;
+            this.lblCuil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuil.Location = new System.Drawing.Point(448, 189);
+            this.lblCuil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCuil.Name = "lblCuil";
+            this.lblCuil.Size = new System.Drawing.Size(72, 29);
+            this.lblCuil.TabIndex = 45;
+            this.lblCuil.Text = "CUIL:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(784, 52);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(102, 29);
+            this.lblUsuario.TabIndex = 49;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(905, 54);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(164, 32);
+            this.txtUsuario.TabIndex = 48;
+            // 
             // ABMClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -348,6 +309,7 @@ namespace CapaDePresentacion
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ABMClientes";
             this.Text = "Administración de clientes";
+            this.Load += new System.EventHandler(this.ABMClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).EndInit();
             this.panelDatosCliente.ResumeLayout(false);
             this.panelDatosCliente.PerformLayout();
@@ -360,31 +322,26 @@ namespace CapaDePresentacion
         #endregion
 
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.DataGridView grillaClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColApellidoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColFechaNac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDNICliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPasswordCliente;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionarCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.Button btnEliminarCliente;
         private System.Windows.Forms.Panel panelDatosCliente;
         private System.Windows.Forms.Panel panelAccion;
+        private System.Windows.Forms.TextBox txtCuil;
+        private System.Windows.Forms.Label lblCuil;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }

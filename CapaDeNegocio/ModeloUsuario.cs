@@ -54,7 +54,14 @@ namespace CapaDeNegocio
             tabla = datosDeUsuario.CargarUsuarios();
             return tabla;
         }
-        
+
+        public DataTable CargarClientes()
+        {
+            DataTable tabla = new DataTable();
+            tabla = datosDeUsuario.CargarClientes();
+            return tabla;
+        }
+
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email , string cargo, string dni, string cuil)
         {
             datosDeUsuario.InsertarNuevoUsuario(usuario,clave,nombre,apellido,email,cargo,dni,cuil);
