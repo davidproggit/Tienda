@@ -49,10 +49,12 @@ namespace CapaDePresentacion
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtCuil = new System.Windows.Forms.TextBox();
             this.lblCuil = new System.Windows.Forms.Label();
-            this.panelAccion = new System.Windows.Forms.Panel();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             this.panelDatosCliente.SuspendLayout();
-            this.panelAccion.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblApellido
@@ -180,7 +182,7 @@ namespace CapaDePresentacion
             // grillaClientes
             // 
             this.grillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaClientes.Location = new System.Drawing.Point(46, 454);
+            this.grillaClientes.Location = new System.Drawing.Point(46, 446);
             this.grillaClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grillaClientes.Name = "grillaClientes";
             this.grillaClientes.RowHeadersWidth = 62;
@@ -190,18 +192,19 @@ namespace CapaDePresentacion
             // btnBuscarCliente
             // 
             this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCliente.Location = new System.Drawing.Point(158, 15);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(350, 21);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(125, 49);
             this.btnBuscarCliente.TabIndex = 18;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // btnGuardarCliente
             // 
             this.btnGuardarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarCliente.Location = new System.Drawing.Point(4, 15);
+            this.btnGuardarCliente.Location = new System.Drawing.Point(1031, 369);
             this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
             this.btnGuardarCliente.Size = new System.Drawing.Size(128, 49);
@@ -273,22 +276,42 @@ namespace CapaDePresentacion
             this.lblCuil.TabIndex = 45;
             this.lblCuil.Text = "CUIL:";
             // 
-            // panelAccion
+            // txtBuscar
             // 
-            this.panelAccion.BackColor = System.Drawing.Color.LightGray;
-            this.panelAccion.Controls.Add(this.btnGuardarCliente);
-            this.panelAccion.Controls.Add(this.btnBuscarCliente);
-            this.panelAccion.Location = new System.Drawing.Point(868, 357);
-            this.panelAccion.Name = "panelAccion";
-            this.panelAccion.Size = new System.Drawing.Size(291, 80);
-            this.panelAccion.TabIndex = 22;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(109, 30);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(198, 32);
+            this.txtBuscar.TabIndex = 22;
+            // 
+            // lblFiltrar
+            // 
+            this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Location = new System.Drawing.Point(14, 30);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(81, 29);
+            this.lblFiltrar.TabIndex = 51;
+            this.lblFiltrar.Text = "Filtrar:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.btnBuscarCliente);
+            this.panel1.Controls.Add(this.lblFiltrar);
+            this.panel1.Controls.Add(this.txtBuscar);
+            this.panel1.Location = new System.Drawing.Point(665, 634);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(494, 94);
+            this.panel1.TabIndex = 52;
             // 
             // ABMClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.panelAccion);
+            this.ClientSize = new System.Drawing.Size(1200, 740);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.panelDatosCliente);
             this.Controls.Add(this.grillaClientes);
             this.Controls.Add(this.lblTitulo);
@@ -300,7 +323,8 @@ namespace CapaDePresentacion
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).EndInit();
             this.panelDatosCliente.ResumeLayout(false);
             this.panelDatosCliente.PerformLayout();
-            this.panelAccion.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,10 +348,12 @@ namespace CapaDePresentacion
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.Panel panelDatosCliente;
-        private System.Windows.Forms.Panel panelAccion;
         private System.Windows.Forms.TextBox txtCuil;
         private System.Windows.Forms.Label lblCuil;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

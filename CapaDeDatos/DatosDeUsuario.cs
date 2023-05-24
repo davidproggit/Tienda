@@ -18,6 +18,22 @@ namespace CapaDeDatos
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
 
+        public DataTable FiltrarCliente(string txtBuscar)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "select ID, Usuario, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
+            _comando.CommandType = CommandType.Text;
+            _comando.ExecuteNonQuery();
+
+            DataTable tablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
+
+            adaptador.Fill(tablaFiltrada);
+
+            _conexion.CerrarConexion();
+            return tablaFiltrada;
+        }
+        
         public DataTable FiltrarUsuario(string txtBuscar)
         {
             _comando.Connection = _conexion.AbrirConexion();

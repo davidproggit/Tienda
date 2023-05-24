@@ -78,5 +78,12 @@ namespace CapaDeNegocio
             tablaFiltrada = datosDeUsuario.FiltrarUsuario(txtBuscar);
             return tablaFiltrada;
         }
+
+        public DataTable FiltrarCliente(string txtBuscar)
+        {
+            DataTable tablaFiltrada = new DataTable();
+            tablaFiltrada = datosDeUsuario.FiltrarCliente(txtBuscar);
+            return tablaFiltrada;
+        }
     }
 }
