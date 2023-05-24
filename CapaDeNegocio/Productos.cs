@@ -12,6 +12,13 @@ namespace CapaDeNegocio
     {
         DatosProductos objetoCapaDatos = new DatosProductos();
 
+        public DataTable MostrarProductosCliente()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCapaDatos.MostrarProductosCliente();
+            return tabla;
+        }
+
         public DataTable MostrarProducto()
         {
             DataTable tabla = new DataTable();

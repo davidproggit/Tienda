@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDeNegocio;
 
 namespace CapaDePresentacion
 {
@@ -15,6 +16,17 @@ namespace CapaDePresentacion
         public ABMCompraProductos()
         {
             InitializeComponent();
+        }
+
+        private void ABMCompraProductos_Load(object sender, EventArgs e)
+        {
+            MostrarProductos();
+        }
+
+        private void MostrarProductos()
+        {
+            Productos productos = new Productos();
+            grillaProductos.DataSource = productos.MostrarProductosCliente();
         }
     }
 }

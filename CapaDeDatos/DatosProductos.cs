@@ -15,6 +15,17 @@ namespace CapaDeDatos
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
 
+        public DataTable MostrarProductosCliente()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarProductosCliente";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
+
         public DataTable Mostrar()
         {
             _comando.Connection = _conexion.AbrirConexion();

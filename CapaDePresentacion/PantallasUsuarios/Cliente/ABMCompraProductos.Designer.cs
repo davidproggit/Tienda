@@ -29,14 +29,16 @@ namespace CapaDePresentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
-            this.grillaProductos = new System.Windows.Forms.DataGridView();
             this.btnCompraProducto = new System.Windows.Forms.Button();
             this.btnQuitarProducto = new System.Windows.Forms.Button();
-            this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.grillaProductos = new System.Windows.Forms.DataGridView();
+            this.ColSeleccionarProducto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,21 +85,6 @@ namespace CapaDePresentacion
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
             // 
-            // grillaProductos
-            // 
-            this.grillaProductos.AllowUserToAddRows = false;
-            this.grillaProductos.AllowUserToDeleteRows = false;
-            this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColSeleccionar});
-            this.grillaProductos.Location = new System.Drawing.Point(172, 348);
-            this.grillaProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grillaProductos.Name = "grillaProductos";
-            this.grillaProductos.ReadOnly = true;
-            this.grillaProductos.RowHeadersWidth = 62;
-            this.grillaProductos.Size = new System.Drawing.Size(831, 131);
-            this.grillaProductos.TabIndex = 4;
-            // 
             // btnCompraProducto
             // 
             this.btnCompraProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,25 +107,52 @@ namespace CapaDePresentacion
             this.btnQuitarProducto.Text = "Quitar";
             this.btnQuitarProducto.UseVisualStyleBackColor = true;
             // 
-            // ColSeleccionar
+            // grillaProductos
             // 
-            this.ColSeleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColSeleccionar.HeaderText = "Agregar al carrito";
-            this.ColSeleccionar.MinimumWidth = 8;
-            this.ColSeleccionar.Name = "ColSeleccionar";
-            this.ColSeleccionar.ReadOnly = true;
-            this.ColSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColSeleccionar.Width = 113;
+            this.grillaProductos.AllowUserToAddRows = false;
+            this.grillaProductos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColSeleccionarProducto});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaProductos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grillaProductos.Location = new System.Drawing.Point(67, 225);
+            this.grillaProductos.Name = "grillaProductos";
+            this.grillaProductos.RowHeadersVisible = false;
+            this.grillaProductos.RowHeadersWidth = 62;
+            this.grillaProductos.RowTemplate.Height = 28;
+            this.grillaProductos.Size = new System.Drawing.Size(1082, 265);
+            this.grillaProductos.TabIndex = 12;
+            // 
+            // ColSeleccionarProducto
+            // 
+            this.ColSeleccionarProducto.HeaderText = "Agregar";
+            this.ColSeleccionarProducto.MinimumWidth = 8;
+            this.ColSeleccionarProducto.Name = "ColSeleccionarProducto";
+            this.ColSeleccionarProducto.Width = 150;
             // 
             // ABMCompraProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.grillaProductos);
             this.Controls.Add(this.btnQuitarProducto);
             this.Controls.Add(this.btnCompraProducto);
-            this.Controls.Add(this.grillaProductos);
             this.Controls.Add(this.btnBuscarProducto);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.lblNombre);
@@ -147,6 +161,7 @@ namespace CapaDePresentacion
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ABMCompraProductos";
             this.Text = "Compra de Productos";
+            this.Load += new System.EventHandler(this.ABMCompraProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,9 +174,9 @@ namespace CapaDePresentacion
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnBuscarProducto;
-        private System.Windows.Forms.DataGridView grillaProductos;
         private System.Windows.Forms.Button btnCompraProducto;
         private System.Windows.Forms.Button btnQuitarProducto;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionar;
+        private System.Windows.Forms.DataGridView grillaProductos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionarProducto;
     }
 }
