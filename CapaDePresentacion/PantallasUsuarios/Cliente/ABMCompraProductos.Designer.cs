@@ -34,14 +34,9 @@ namespace CapaDePresentacion
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.grillaProductos = new System.Windows.Forms.DataGridView();
-            this.ColNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStockProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnCompraProducto = new System.Windows.Forms.Button();
             this.btnQuitarProducto = new System.Windows.Forms.Button();
+            this.ColSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,69 +85,18 @@ namespace CapaDePresentacion
             // 
             // grillaProductos
             // 
+            this.grillaProductos.AllowUserToAddRows = false;
+            this.grillaProductos.AllowUserToDeleteRows = false;
             this.grillaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColNombreProducto,
-            this.ColPrecio,
-            this.ColDescripcion,
-            this.ColMarca,
-            this.ColStockProd,
             this.ColSeleccionar});
             this.grillaProductos.Location = new System.Drawing.Point(172, 348);
             this.grillaProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grillaProductos.Name = "grillaProductos";
+            this.grillaProductos.ReadOnly = true;
             this.grillaProductos.RowHeadersWidth = 62;
             this.grillaProductos.Size = new System.Drawing.Size(831, 131);
             this.grillaProductos.TabIndex = 4;
-            // 
-            // ColNombreProducto
-            // 
-            this.ColNombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColNombreProducto.HeaderText = "Nombre";
-            this.ColNombreProducto.MinimumWidth = 8;
-            this.ColNombreProducto.Name = "ColNombreProducto";
-            this.ColNombreProducto.Width = 101;
-            // 
-            // ColPrecio
-            // 
-            this.ColPrecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColPrecio.HeaderText = "Precio";
-            this.ColPrecio.MinimumWidth = 8;
-            this.ColPrecio.Name = "ColPrecio";
-            this.ColPrecio.Width = 89;
-            // 
-            // ColDescripcion
-            // 
-            this.ColDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColDescripcion.HeaderText = "Descripcion";
-            this.ColDescripcion.MinimumWidth = 8;
-            this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.Width = 128;
-            // 
-            // ColMarca
-            // 
-            this.ColMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColMarca.HeaderText = "Marca";
-            this.ColMarca.MinimumWidth = 8;
-            this.ColMarca.Name = "ColMarca";
-            this.ColMarca.Width = 89;
-            // 
-            // ColStockProd
-            // 
-            this.ColStockProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColStockProd.HeaderText = "Stock";
-            this.ColStockProd.MinimumWidth = 8;
-            this.ColStockProd.Name = "ColStockProd";
-            this.ColStockProd.Width = 86;
-            // 
-            // ColSeleccionar
-            // 
-            this.ColSeleccionar.HeaderText = "Seleccionar";
-            this.ColSeleccionar.MinimumWidth = 8;
-            this.ColSeleccionar.Name = "ColSeleccionar";
-            this.ColSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColSeleccionar.Width = 150;
             // 
             // btnCompraProducto
             // 
@@ -175,6 +119,17 @@ namespace CapaDePresentacion
             this.btnQuitarProducto.TabIndex = 11;
             this.btnQuitarProducto.Text = "Quitar";
             this.btnQuitarProducto.UseVisualStyleBackColor = true;
+            // 
+            // ColSeleccionar
+            // 
+            this.ColSeleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColSeleccionar.HeaderText = "Agregar al carrito";
+            this.ColSeleccionar.MinimumWidth = 8;
+            this.ColSeleccionar.Name = "ColSeleccionar";
+            this.ColSeleccionar.ReadOnly = true;
+            this.ColSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColSeleccionar.Width = 113;
             // 
             // ABMCompraProductos
             // 
@@ -207,11 +162,6 @@ namespace CapaDePresentacion
         private System.Windows.Forms.DataGridView grillaProductos;
         private System.Windows.Forms.Button btnCompraProducto;
         private System.Windows.Forms.Button btnQuitarProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColStockProd;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionar;
     }
 }
