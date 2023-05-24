@@ -25,8 +25,8 @@ namespace CapaDePresentacion
 
         private void CargarListaUsuarios()
         {
-            ModeloUsuario objeto = new ModeloUsuario();
-            grillaClientes.DataSource = objeto.CargarClientes();
+            ModeloUsuario modeloUsuario = new ModeloUsuario();
+            grillaClientes.DataSource = modeloUsuario.CargarClientes();
         }
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
@@ -36,11 +36,11 @@ namespace CapaDePresentacion
 
         private void GuardarNuevoCliente()
         {
-            ModeloUsuario objetoCapaNegocio = new ModeloUsuario();
+            ModeloUsuario modeloUsuario = new ModeloUsuario();
 
             if (!CamposVacios())
             {
-                objetoCapaNegocio.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "cliente", txtDNI.Text, txtCuil.Text);
+                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();

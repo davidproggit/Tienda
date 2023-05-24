@@ -10,47 +10,47 @@ namespace CapaDeNegocio
 {
     public class Productos
     {
-        DatosProductos objetoCapaDatos = new DatosProductos();
+        DatosProductos datosProductos = new DatosProductos();
 
         public DataTable MostrarProductosCliente()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCapaDatos.MostrarProductosCliente();
+            tabla = datosProductos.MostrarProductosCliente();
             return tabla;
         }
 
         public DataTable MostrarProducto()
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCapaDatos.Mostrar();
+            tabla = datosProductos.Mostrar();
             return tabla;
         }
 
         public void InsertarProducto(string nombre, string descripcion, string marca, string precio, string stock)
         {
-            objetoCapaDatos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
+            datosProductos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
         }
 
         public void EditarProducto(string nombre, string descripcion, string marca, string precio, string stock, string id)
         {
-            objetoCapaDatos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
+            datosProductos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
         }
 
         public void EliminarProducto(string id)
         {
-            objetoCapaDatos.Eliminar(Convert.ToInt32(id));
+            datosProductos.Eliminar(Convert.ToInt32(id));
         }
 
         public DataTable FiltrarProducto(string textoBuscar)
         {
             DataTable tablaFiltrada = new DataTable();
-            tablaFiltrada = objetoCapaDatos.Filtrar(textoBuscar);
+            tablaFiltrada = datosProductos.Filtrar(textoBuscar);
             return tablaFiltrada;
         }
 
         public void ModificarAlerta(string id, string mensaje, int cantidadMinima)
         {
-            objetoCapaDatos.ModificarAlerta(Convert.ToInt32(id) , mensaje, Convert.ToInt32(cantidadMinima));
+            datosProductos.ModificarAlerta(Convert.ToInt32(id) , mensaje, Convert.ToInt32(cantidadMinima));
         }
     }
 }

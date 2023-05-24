@@ -14,7 +14,7 @@ namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        Productos objetoCapaNegocio = new Productos();
+        Productos productos = new Productos();
         private string _idProducto = null;
         private bool _editar = false;
 
@@ -30,8 +30,8 @@ namespace CapaDePresentacion
 
         private void MostrarProductos()
         {
-            Productos objeto = new Productos();
-            grillaProductos.DataSource = objeto.MostrarProducto();
+            Productos productos = new Productos();
+            grillaProductos.DataSource = productos.MostrarProducto();
         }
 
         private void botonGuardar_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace CapaDePresentacion
         {
             try
             {
-                objetoCapaNegocio.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
+                productos.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
@@ -61,7 +61,7 @@ namespace CapaDePresentacion
         {
             try
             {
-                objetoCapaNegocio.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                productos.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -122,7 +122,7 @@ namespace CapaDePresentacion
         private void BorrarProducto()
         {
             _idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
-            objetoCapaNegocio.EliminarProducto(_idProducto);
+            productos.EliminarProducto(_idProducto);
             MostrarProductos();
         }
 
@@ -133,8 +133,8 @@ namespace CapaDePresentacion
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
-            Productos objeto2 = new Productos();
-            grillaProductos.DataSource = objeto2.FiltrarProducto(txtBuscar.Text);
+            Productos productos = new Productos();
+            grillaProductos.DataSource = productos.FiltrarProducto(txtBuscar.Text);
         }
 
         private void btnGenerarAlerta_Click(object sender, EventArgs e)
