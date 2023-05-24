@@ -44,13 +44,12 @@ namespace CapaDePresentacion
             this.grillaClientes = new System.Windows.Forms.DataGridView();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.btnGuardarCliente = new System.Windows.Forms.Button();
-            this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.panelDatosCliente = new System.Windows.Forms.Panel();
-            this.panelAccion = new System.Windows.Forms.Panel();
-            this.txtCuil = new System.Windows.Forms.TextBox();
-            this.lblCuil = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtCuil = new System.Windows.Forms.TextBox();
+            this.lblCuil = new System.Windows.Forms.Label();
+            this.panelAccion = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             this.panelDatosCliente.SuspendLayout();
             this.panelAccion.SuspendLayout();
@@ -211,17 +210,6 @@ namespace CapaDePresentacion
             this.btnGuardarCliente.UseVisualStyleBackColor = true;
             this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
-            // btnEliminarCliente
-            // 
-            this.btnEliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCliente.Location = new System.Drawing.Point(1034, 620);
-            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Size = new System.Drawing.Size(125, 47);
-            this.btnEliminarCliente.TabIndex = 20;
-            this.btnEliminarCliente.Text = "Eliminar";
-            this.btnEliminarCliente.UseVisualStyleBackColor = true;
-            // 
             // panelDatosCliente
             // 
             this.panelDatosCliente.BackColor = System.Drawing.Color.LightGray;
@@ -245,15 +233,25 @@ namespace CapaDePresentacion
             this.panelDatosCliente.Size = new System.Drawing.Size(1113, 243);
             this.panelDatosCliente.TabIndex = 21;
             // 
-            // panelAccion
+            // lblUsuario
             // 
-            this.panelAccion.BackColor = System.Drawing.Color.LightGray;
-            this.panelAccion.Controls.Add(this.btnGuardarCliente);
-            this.panelAccion.Controls.Add(this.btnBuscarCliente);
-            this.panelAccion.Location = new System.Drawing.Point(868, 357);
-            this.panelAccion.Name = "panelAccion";
-            this.panelAccion.Size = new System.Drawing.Size(291, 80);
-            this.panelAccion.TabIndex = 22;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(784, 52);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(102, 29);
+            this.lblUsuario.TabIndex = 49;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(905, 54);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(164, 32);
+            this.txtUsuario.TabIndex = 48;
             // 
             // txtCuil
             // 
@@ -275,25 +273,15 @@ namespace CapaDePresentacion
             this.lblCuil.TabIndex = 45;
             this.lblCuil.Text = "CUIL:";
             // 
-            // lblUsuario
+            // panelAccion
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(784, 52);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(102, 29);
-            this.lblUsuario.TabIndex = 49;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(905, 54);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(164, 32);
-            this.txtUsuario.TabIndex = 48;
+            this.panelAccion.BackColor = System.Drawing.Color.LightGray;
+            this.panelAccion.Controls.Add(this.btnGuardarCliente);
+            this.panelAccion.Controls.Add(this.btnBuscarCliente);
+            this.panelAccion.Location = new System.Drawing.Point(868, 357);
+            this.panelAccion.Name = "panelAccion";
+            this.panelAccion.Size = new System.Drawing.Size(291, 80);
+            this.panelAccion.TabIndex = 22;
             // 
             // ABMClientes
             // 
@@ -302,7 +290,6 @@ namespace CapaDePresentacion
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.panelAccion);
             this.Controls.Add(this.panelDatosCliente);
-            this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.grillaClientes);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -336,7 +323,6 @@ namespace CapaDePresentacion
         private System.Windows.Forms.DataGridView grillaClientes;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Button btnGuardarCliente;
-        private System.Windows.Forms.Button btnEliminarCliente;
         private System.Windows.Forms.Panel panelDatosCliente;
         private System.Windows.Forms.Panel panelAccion;
         private System.Windows.Forms.TextBox txtCuil;
