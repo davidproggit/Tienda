@@ -30,14 +30,14 @@ namespace CapaDeNegocio
             _datosProductos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
         }
 
-        public void EditarProducto(string nombre, string descripcion, string marca, string precio, string stock, string id)
+        public void EditarProducto(string nombre, string descripcion, string marca, string precio, string stock, int id)
         {
-            _datosProductos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
+            _datosProductos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), id);
         }
 
-        public void EliminarProducto(string id)
+        public void EliminarProducto(int id)
         {
-            _datosProductos.Eliminar(Convert.ToInt32(id));
+            _datosProductos.Eliminar(id);
         }
 
         public DataTable FiltrarProducto(string textoBuscar)

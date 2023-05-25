@@ -15,7 +15,7 @@ namespace CapaDePresentacion
     public partial class InterfazProducto : Form
     {
         private Productos _productos = new Productos();
-        private string _idProducto = null;
+        private int _idProducto;
         private bool _editar = false;
 
         public InterfazProducto()
@@ -91,7 +91,7 @@ namespace CapaDePresentacion
                 txtMarca.Text = grillaProductos.CurrentRow.Cells["Marca"].Value.ToString();
                 txtPrecio.Text = grillaProductos.CurrentRow.Cells["Precio"].Value.ToString();
                 txtStock.Text = grillaProductos.CurrentRow.Cells["Stock"].Value.ToString();
-                _idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
+                _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
@@ -121,7 +121,7 @@ namespace CapaDePresentacion
 
         private void BorrarProducto()
         {
-            _idProducto = grillaProductos.CurrentRow.Cells["Id"].Value.ToString();
+            _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
             _productos.EliminarProducto(_idProducto);
             MostrarProductos();
         }
