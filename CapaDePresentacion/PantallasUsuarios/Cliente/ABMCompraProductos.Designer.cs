@@ -96,6 +96,7 @@ namespace CapaDePresentacion
             this.btnCompraProducto.TabIndex = 10;
             this.btnCompraProducto.Text = "Comprar";
             this.btnCompraProducto.UseVisualStyleBackColor = true;
+            this.btnCompraProducto.Click += new System.EventHandler(this.btnCompraProducto_Click);
             // 
             // btnQuitarProducto
             // 

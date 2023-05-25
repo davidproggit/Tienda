@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaComun.Cache;
 using CapaDeNegocio;
+using CapaDePresentacion.PantallasUsuarios.Cliente;
 
 namespace CapaDePresentacion
 {
@@ -41,6 +43,11 @@ namespace CapaDePresentacion
             BuscarProducto();
         }
 
+        private void btnCompraProducto_Click(object sender, EventArgs e)
+        {
+            EnviarDatosCarrito();
+        }
+
         #endregion
 
         #region "Metodos de los botones"
@@ -51,7 +58,31 @@ namespace CapaDePresentacion
             grillaProductos.DataSource = productos.FiltrarProducto(txtBusqueda.Text);
         }
 
+        private void EnviarDatosCarrito()
+        {
+            List<Datos> Valores = new List<Datos>();
+
+            foreach (DataGridViewRow celda in grillaProductos.Rows)
+            {
+                if (Convert.ToBoolean(celda.Cells[0].Value))
+                {
+                    Valores.Add(new Datos
+                    {
+                        id = (int)celda.Cells[1].Value,
+                        nombre = celda.Cells[2].Value.ToString(),
+                        precio = float.Parse(celda.Cells[5].Value.ToString()),
+                        cantidad = (int)celda.Cells[6].Value
+                    });
+                }
+            }
+
+            ClienteCarrito clienteCarrito = new ClienteCarrito();
+            clienteCarrito.Valores = Valores;
+            clienteCarrito.Show();
+        }
+
         #endregion
 
+        
     }
 }
