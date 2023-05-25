@@ -18,6 +18,8 @@ namespace CapaDePresentacion
             InitializeComponent();
         }
 
+        #region "Cargar datos"
+
         private void ABMClientes_Load(object sender, EventArgs e)
         {
             CargarListaUsuarios();
@@ -29,10 +31,23 @@ namespace CapaDePresentacion
             grillaClientes.DataSource = modeloUsuario.CargarClientes();
         }
 
+        #endregion
+
+        #region "Botones"
+
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
             GuardarNuevoCliente();
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            BuscarCliente();
+        }
+
+        #endregion
+
+        #region "Metodos de los botones"
 
         private void GuardarNuevoCliente()
         {
@@ -49,11 +64,21 @@ namespace CapaDePresentacion
                 MessageBox.Show("Error: tiene que completar todos los campos");
         }
 
+        private void BuscarCliente()
+        {
+            ModeloUsuario _modeloUsuario = new ModeloUsuario();
+            grillaClientes.DataSource = _modeloUsuario.FiltrarCliente(txtBuscar.Text);
+        }
+
+        #endregion
+
+        #region "Control de campos"
+
         private bool CamposVacios()
         {
             return string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtClave.Text)
                  || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text)
-                 || string.IsNullOrEmpty(txtEmail.Text)  || string.IsNullOrEmpty(txtDNI.Text) 
+                 || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtDNI.Text)
                  || string.IsNullOrEmpty(txtCuil.Text);
         }
 
@@ -68,10 +93,7 @@ namespace CapaDePresentacion
             txtClave.Clear();
         }
 
-        private ModeloUsuario _modeloUsuario = new ModeloUsuario();
-        private void btnBuscarCliente_Click(object sender, EventArgs e)
-        {
-            grillaClientes.DataSource = _modeloUsuario.FiltrarCliente(txtBuscar.Text);
-        }
+        #endregion
+        
     }
 }

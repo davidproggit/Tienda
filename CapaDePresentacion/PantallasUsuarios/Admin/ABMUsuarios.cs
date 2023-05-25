@@ -13,12 +13,12 @@ namespace CapaDePresentacion
 {
     public partial class ABMUsuarios : Form
     {
-        private int _idUsuario;
-
         public ABMUsuarios()
         {
             InitializeComponent();
         }
+
+        #region "Cargar datos"
 
         private void ABMUsuarios_Load(object sender, EventArgs e)
         {
@@ -32,26 +32,6 @@ namespace CapaDePresentacion
             grillaUsuarios.DataSource = modeloUsuario.CargarUsuarios();
         }
 
-        private void btnGuardarUsuario_Click(object sender, EventArgs e)
-        {
-            GuardarNuevoUsuario();
-        }
-       
-        private void GuardarNuevoUsuario()
-        {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
-
-            if (!CamposVacios())
-            {
-                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
-                MessageBox.Show("Datos insertados");
-                CargarListaUsuarios();
-                LimpiarFormulario();
-            }
-            else
-                MessageBox.Show("Error: tiene que completar todos los campos");
-        }
-
         private void CargarRoles()
         {
             comboCargo.Items.Add("cliente");
@@ -60,6 +40,10 @@ namespace CapaDePresentacion
             comboCargo.Items.Add("encargado");
             comboCargo.Items.Add("gerente");
         }
+
+        #endregion
+
+        #region "Control de campos"
 
         private bool CamposVacios()
         {
@@ -81,32 +65,75 @@ namespace CapaDePresentacion
             comboCargo.ResetText();
         }
 
+
+        #endregion
+
+        #region "Botones"
+
+        private void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+            GuardarNuevoUsuario();
+        }
+
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            ComprobarEliminarUsuario();
+        }
+
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            BuscarUsuario();
+        }
+
+        #endregion
+
+        #region "Metodos de los botones"
+
+        private void GuardarNuevoUsuario()
+        {
+            ModeloUsuario modeloUsuario = new ModeloUsuario();
+
+            if (!CamposVacios())
+            {
+                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
+                MessageBox.Show("Datos insertados");
+                CargarListaUsuarios();
+                LimpiarFormulario();
+            }
+            else
+                MessageBox.Show("Error: tiene que completar todos los campos");
+        }
+      
+        private void ComprobarEliminarUsuario()
         {
             if (grillaUsuarios.SelectedRows.Count > 0)
             {
                 DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere eliminar al usuario?", "Eliminar usuario", MessageBoxButtons.YesNo);
 
                 if (pantallaAdvertencia == DialogResult.Yes)
+                { 
                     BorrarUsuario();
+                    CargarListaUsuarios();
+                }
             }
             else
                 MessageBox.Show("Seleccione una fila por favor");
         }
 
-        ModeloUsuario modeloUsuario = new ModeloUsuario();
-
         private void BorrarUsuario()
         {
-            _idUsuario = (int)grillaUsuarios.CurrentRow.Cells["Id"].Value;
+            ModeloUsuario modeloUsuario = new ModeloUsuario();
+            int _idUsuario = (int)grillaUsuarios.CurrentRow.Cells["Id"].Value;
             modeloUsuario.EliminarUsuario(_idUsuario);
-            CargarListaUsuarios();
         }
 
-        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        private void BuscarUsuario()
         {
+            ModeloUsuario modeloUsuario = new ModeloUsuario();
             grillaUsuarios.DataSource = modeloUsuario.FiltrarUsuario(txtBuscar.Text);
         }
+
+        #endregion
 
     }
 }

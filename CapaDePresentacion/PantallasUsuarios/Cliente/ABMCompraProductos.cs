@@ -18,6 +18,8 @@ namespace CapaDePresentacion
             InitializeComponent();
         }
 
+        #region "Cargar datos"
+
         private void ABMCompraProductos_Load(object sender, EventArgs e)
         {
             MostrarProductos();
@@ -29,10 +31,26 @@ namespace CapaDePresentacion
             grillaProductos.DataSource = productos.MostrarProductosCliente();
         }
 
+        #endregion
+
+        #region "Botones"
+
         private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            BuscarProducto();
+        }
+
+        #endregion
+
+        #region "Metodos de los botones"
+
+        private void BuscarProducto()
         {
             Productos productos = new Productos();
             grillaProductos.DataSource = productos.FiltrarProducto(txtBusqueda.Text);
         }
+
+        #endregion
+
     }
 }

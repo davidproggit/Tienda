@@ -23,6 +23,8 @@ namespace CapaDePresentacion
             InitializeComponent();
         }
 
+        #region "Cargar datos"
+
         private void InterfazProducto_Load(object sender, EventArgs e)
         {
             MostrarProductos();
@@ -34,6 +36,30 @@ namespace CapaDePresentacion
             grillaProductos.DataSource = productos.MostrarProducto();
         }
 
+        #endregion
+
+        #region "Control de campos"
+
+        private bool CamposVacios()
+        {
+            return string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text)
+                || string.IsNullOrEmpty(txtMarca.Text) || string.IsNullOrEmpty(txtPrecio.Text)
+                || string.IsNullOrEmpty(txtStock.Text);
+        }
+
+        private void LimpiarFormulario()
+        {
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtMarca.Clear();
+            txtPrecio.Clear();
+            txtStock.Clear();
+        }
+
+        #endregion
+
+        #region "Botones"
+
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             if (!_editar)
@@ -41,6 +67,35 @@ namespace CapaDePresentacion
             if (_editar)
                 GuardarProductoEditado();
         }
+
+        private void botonEditar_Click(object sender, EventArgs e)
+        {
+            EditarProducto();
+        }
+
+        private void botonEliminar_Click(object sender, EventArgs e)
+        {
+            ComprobarEliminarProducto();
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            BuscarProducto();
+        }
+
+        private void btnGenerarAlerta_Click(object sender, EventArgs e)
+        {
+            EnviarDatosAlerta();
+        }
+
+        #endregion
+
+        #region "Metodos de los botones"
 
         private void GuardarProductoEditado()
         {
@@ -74,14 +129,7 @@ namespace CapaDePresentacion
             }
         }
 
-        private bool CamposVacios()
-        {
-            return string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtDescripcion.Text)
-                || string.IsNullOrEmpty(txtMarca.Text) || string.IsNullOrEmpty(txtPrecio.Text)
-                || string.IsNullOrEmpty(txtStock.Text);
-        }
-
-        private void botonEditar_Click(object sender, EventArgs e)
+        private void EditarProducto()
         {
             if (grillaProductos.SelectedRows.Count > 0)
             {
@@ -97,47 +145,35 @@ namespace CapaDePresentacion
                 MessageBox.Show("seleccione una fila por favor");
         }
 
-        private void LimpiarFormulario()
-        {
-            txtNombre.Clear();
-            txtDescripcion.Clear();
-            txtMarca.Clear();
-            txtPrecio.Clear();
-            txtStock.Clear();
-        }
-
-        private void botonEliminar_Click(object sender, EventArgs e)
+        private void ComprobarEliminarProducto()
         {
             if (grillaProductos.SelectedRows.Count > 0)
             {
                 DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere eliminar este producto?", "Eliminar producto", MessageBoxButtons.YesNo);
 
                 if (pantallaAdvertencia == DialogResult.Yes)
-                    BorrarProducto();
+                { 
+                    EliminarProducto();
+                    MostrarProductos();
+                }
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
 
-        private void BorrarProducto()
+        private void EliminarProducto()
         {
             _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
             _productos.EliminarProducto(_idProducto);
-            MostrarProductos();
         }
 
-        private void botonCancelar_Click(object sender, EventArgs e)
-        {
-            LimpiarFormulario();
-        }
-
-        private void botonBuscar_Click(object sender, EventArgs e)
+        private void BuscarProducto()
         {
             Productos productos = new Productos();
             grillaProductos.DataSource = productos.FiltrarProducto(txtBuscar.Text);
         }
 
-        private void btnGenerarAlerta_Click(object sender, EventArgs e)
+        private void EnviarDatosAlerta()
         {
             List<Datos> Valores = new List<Datos>();
 
@@ -147,7 +183,7 @@ namespace CapaDePresentacion
                 {
                     Valores.Add(new Datos
                     {
-                        id = (int) celda.Cells[1].Value,
+                        id = (int)celda.Cells[1].Value,
                         nombre = celda.Cells[2].Value.ToString()
                     });
                 }
@@ -157,5 +193,8 @@ namespace CapaDePresentacion
             alertadeProducto.Valores = Valores;
             alertadeProducto.Show();
         }
+
+        #endregion
+
     }
 }

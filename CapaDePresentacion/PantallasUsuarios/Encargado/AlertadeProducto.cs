@@ -21,13 +21,15 @@ namespace CapaDePresentacion
             InitializeComponent();
         }
 
+        #region "Cargar datos"
+
+        public List<Datos> Valores { get; set; }
+        private List<string> _idLista = new List<string>();
+
         private void AlertadeProducto_Load(object sender, EventArgs e)
         {
             Rellenar(Valores);
         }
-
-        public List<Datos> Valores { get; set; }
-        private List<string> _idLista = new List<string>();
 
         public void Rellenar(List<Datos> valores)
         {
@@ -35,7 +37,7 @@ namespace CapaDePresentacion
             {
                 int posicion = grillaProductos.Rows.Add();
 
-                try 
+                try
                 {
                     grillaProductos.Rows[posicion].Cells[0].Value = valor.id;
                     grillaProductos.Rows[posicion].Cells[1].Value = valor.nombre;
@@ -50,9 +52,13 @@ namespace CapaDePresentacion
                 {
                     MessageBox.Show("Error: operacion no valida");
                 }
-                    
+
             }
         }
+
+        #endregion
+
+        #region "Botones"
 
         private void btnGuardarAlerta_Click(object sender, EventArgs e)
         {
@@ -61,6 +67,15 @@ namespace CapaDePresentacion
             else
                 MessageBox.Show("Error: debe haber al menos 1 producto cargado");
         }
+
+        private void btnAlertCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+        #region "Metodos de los botones"
 
         private void CambiarMensajeCantidad(List<Datos> valores)
         {
@@ -82,9 +97,7 @@ namespace CapaDePresentacion
 
         }
 
-        private void btnAlertCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion
+
     }
 }
