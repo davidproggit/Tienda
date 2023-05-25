@@ -55,7 +55,7 @@ namespace CapaDePresentacion
 
             if (!CamposVacios())
             {
-                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "cliente", txtDNI.Text, txtCuil.Text);
+                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();

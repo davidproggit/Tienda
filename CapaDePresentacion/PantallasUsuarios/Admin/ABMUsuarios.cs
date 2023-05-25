@@ -34,11 +34,11 @@ namespace CapaDePresentacion
 
         private void CargarRoles()
         {
-            comboCargo.Items.Add("cliente");
-            comboCargo.Items.Add("admin");
-            comboCargo.Items.Add("vendedor");
-            comboCargo.Items.Add("encargado");
-            comboCargo.Items.Add("gerente");
+            comboCargo.Items.Add("Cliente");
+            comboCargo.Items.Add("Admin");
+            comboCargo.Items.Add("Vendedor");
+            comboCargo.Items.Add("Encargado");
+            comboCargo.Items.Add("Gerente");
         }
 
         #endregion
