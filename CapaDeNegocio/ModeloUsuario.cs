@@ -10,7 +10,8 @@ namespace CapaDeNegocio
 {
     public class ModeloUsuario
     {
-        DatosDeUsuario datosDeUsuario = new DatosDeUsuario();
+        private DatosDeUsuario datosDeUsuario = new DatosDeUsuario();
+        private DataTable tabla = new DataTable();
 
         private int _id;
         private string _usuario;
@@ -50,14 +51,12 @@ namespace CapaDeNegocio
 
         public DataTable CargarUsuarios()
         {
-            DataTable tabla = new DataTable();
             tabla = datosDeUsuario.CargarUsuarios();
             return tabla;
         }
 
         public DataTable CargarClientes()
         {
-            DataTable tabla = new DataTable();
             tabla = datosDeUsuario.CargarClientes();
             return tabla;
         }
@@ -74,16 +73,14 @@ namespace CapaDeNegocio
 
         public DataTable FiltrarUsuario(string txtBuscar)
         {
-            DataTable tablaFiltrada = new DataTable();
-            tablaFiltrada = datosDeUsuario.FiltrarUsuario(txtBuscar);
-            return tablaFiltrada;
+            tabla = datosDeUsuario.FiltrarUsuario(txtBuscar);
+            return tabla;
         }
 
         public DataTable FiltrarCliente(string txtBuscar)
         {
-            DataTable tablaFiltrada = new DataTable();
-            tablaFiltrada = datosDeUsuario.FiltrarCliente(txtBuscar);
-            return tablaFiltrada;
+            tabla = datosDeUsuario.FiltrarCliente(txtBuscar);
+            return tabla;
         }
     }
 }

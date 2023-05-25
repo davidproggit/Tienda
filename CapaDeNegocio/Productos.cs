@@ -10,18 +10,17 @@ namespace CapaDeNegocio
 {
     public class Productos
     {
-        DatosProductos datosProductos = new DatosProductos();
+        private DatosProductos datosProductos = new DatosProductos();
+        private DataTable tabla = new DataTable();
 
         public DataTable MostrarProductosCliente()
         {
-            DataTable tabla = new DataTable();
             tabla = datosProductos.MostrarProductosCliente();
             return tabla;
         }
 
         public DataTable MostrarProducto()
         {
-            DataTable tabla = new DataTable();
             tabla = datosProductos.Mostrar();
             return tabla;
         }
@@ -43,9 +42,8 @@ namespace CapaDeNegocio
 
         public DataTable FiltrarProducto(string textoBuscar)
         {
-            DataTable tablaFiltrada = new DataTable();
-            tablaFiltrada = datosProductos.Filtrar(textoBuscar);
-            return tablaFiltrada;
+            tabla = datosProductos.Filtrar(textoBuscar);
+            return tabla;
         }
 
         public void ModificarAlerta(string id, string mensaje, int cantidadMinima)
