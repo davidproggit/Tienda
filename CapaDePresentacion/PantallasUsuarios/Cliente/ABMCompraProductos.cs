@@ -28,5 +28,11 @@ namespace CapaDePresentacion
             Productos productos = new Productos();
             grillaProductos.DataSource = productos.MostrarProductosCliente();
         }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            Productos productos = new Productos();
+            grillaProductos.DataSource = productos.FiltrarProducto(txtBusqueda.Text);
+        }
     }
 }
