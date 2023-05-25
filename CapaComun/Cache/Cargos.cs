@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaComun.Cache
 {
-    public struct Cargos
+    public class Cargos
     {
         public const string Admin = "admin";
         public const string Vendedor = "vendedor";
