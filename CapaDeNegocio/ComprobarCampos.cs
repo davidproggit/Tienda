@@ -8,25 +8,25 @@ namespace CapaDeNegocio
 {
     public class ComprobarCampos
     {
-        public string mensaje = "";
+        private string _mensaje = "";
 
         public string ComprobarCamposIndividuales(string campo)
         {
             if (campo == "Usuario")
-                mensaje = "Ingrese su nombre de usuario";
+                _mensaje = "Ingrese su nombre de usuario";
 
             if (campo == "Clave")
-                mensaje = "Ingrese su clave";
+                _mensaje = "Ingrese su clave";
 
-            return mensaje;
+            return _mensaje;
         }
 
         public string ComprobarCamposConjunto(string campoUsuario, string campoClave)
         {
             if (campoUsuario == "Usuario" && campoClave == "Clave")
-                mensaje = "Debe completar los campos";
+                _mensaje = "Debe completar los campos";
 
-            return mensaje;
+            return _mensaje;
         }
     }
 }

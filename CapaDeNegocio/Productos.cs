@@ -10,45 +10,45 @@ namespace CapaDeNegocio
 {
     public class Productos
     {
-        private DatosProductos datosProductos = new DatosProductos();
-        private DataTable tabla = new DataTable();
+        private DatosProductos _datosProductos = new DatosProductos();
+        private DataTable _tabla = new DataTable();
 
         public DataTable MostrarProductosCliente()
         {
-            tabla = datosProductos.MostrarProductosCliente();
-            return tabla;
+            _tabla = _datosProductos.MostrarProductosCliente();
+            return _tabla;
         }
 
         public DataTable MostrarProducto()
         {
-            tabla = datosProductos.Mostrar();
-            return tabla;
+            _tabla = _datosProductos.Mostrar();
+            return _tabla;
         }
 
         public void InsertarProducto(string nombre, string descripcion, string marca, string precio, string stock)
         {
-            datosProductos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
+            _datosProductos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
         }
 
         public void EditarProducto(string nombre, string descripcion, string marca, string precio, string stock, string id)
         {
-            datosProductos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
+            _datosProductos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), Convert.ToInt32(id));
         }
 
         public void EliminarProducto(string id)
         {
-            datosProductos.Eliminar(Convert.ToInt32(id));
+            _datosProductos.Eliminar(Convert.ToInt32(id));
         }
 
         public DataTable FiltrarProducto(string textoBuscar)
         {
-            tabla = datosProductos.Filtrar(textoBuscar);
-            return tabla;
+            _tabla = _datosProductos.Filtrar(textoBuscar);
+            return _tabla;
         }
 
         public void ModificarAlerta(string id, string mensaje, int cantidadMinima)
         {
-            datosProductos.ModificarAlerta(Convert.ToInt32(id) , mensaje, Convert.ToInt32(cantidadMinima));
+            _datosProductos.ModificarAlerta(Convert.ToInt32(id) , mensaje, Convert.ToInt32(cantidadMinima));
         }
     }
 }

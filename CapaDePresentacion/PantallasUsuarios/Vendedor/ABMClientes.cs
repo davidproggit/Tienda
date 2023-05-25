@@ -68,10 +68,10 @@ namespace CapaDePresentacion
             txtClave.Clear();
         }
 
-        ModeloUsuario modeloUsuario = new ModeloUsuario();
+        private ModeloUsuario _modeloUsuario = new ModeloUsuario();
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            grillaClientes.DataSource = modeloUsuario.FiltrarCliente(txtBuscar.Text);
+            grillaClientes.DataSource = _modeloUsuario.FiltrarCliente(txtBuscar.Text);
         }
     }
 }
