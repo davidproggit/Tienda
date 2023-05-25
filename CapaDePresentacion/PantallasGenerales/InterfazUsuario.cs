@@ -19,16 +19,34 @@ namespace CapaDePresentacion.PantallasGenerales
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
         }
+
+        #region "Cargar datos principales"
+
         private void InterfazUsuario_Load(object sender, EventArgs e)
         {
-            CargarDatosUsuario();
+            CargarNombreUsuario();
             CargarPantallasUsuarios();
         }
 
-        private void CerrarFormulario()
+        private void CargarPantallasUsuarios()
         {
-            this.Close();
+            if (CacheSesionUsuario.Cargo == Cargos.Admin)
+                AbrirFormulario<ABMUsuarios>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
+                AbrirFormulario<ABMClientes>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
+                AbrirFormulario<InterfazProducto>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
+                AbrirFormulario<Reportes>();
+
+            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
+                AbrirFormulario<ABMCompraProductos>();
         }
+
+        #endregion
 
         #region "Mover la ventana"
         private void MoverVentana_MouseMove(object sender, MouseEventArgs e)
@@ -67,7 +85,7 @@ namespace CapaDePresentacion.PantallasGenerales
             linkPerfil.Text = "Mi perfil";
             _perfil = false;
         }
-        private void CargarDatosUsuario()
+        private void CargarNombreUsuario()
         {
             lblNombre.Text = CacheSesionUsuario.Nombre;
         }
@@ -76,25 +94,15 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             CerrarFormulario();
         }
+
+        private void CerrarFormulario()
+        {
+            this.Close();
+        }
+
         #endregion
 
-        private void CargarPantallasUsuarios()
-        {
-            if (CacheSesionUsuario.Cargo == Cargos.Admin)
-                AbrirFormulario<ABMUsuarios>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
-                AbrirFormulario<ABMClientes>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
-                AbrirFormulario<InterfazProducto>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
-                AbrirFormulario<Reportes>();
-
-            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
-                AbrirFormulario<ABMCompraProductos>();
-        }
+        #region "Cargar formulario"
 
         private void AbrirFormulario<MiFormulario>() where MiFormulario : Form, new()
         {
@@ -128,5 +136,8 @@ namespace CapaDePresentacion.PantallasGenerales
 
             return formulario;
         }
+
+        #endregion
+
     }
 }

@@ -21,20 +21,14 @@ namespace CapaDePresentacion.PantallasGenerales
             InitializeComponent();
         }
 
+        #region "Cargar datos"
+
         private void UsuarioPerfil_Load(object sender, EventArgs e)
         {
             DatosPerfil();
             VentanaEdicion();
         }
 
-        private void ActualizarInformacionPerfil()
-        {
-            DatosPerfil();
-            VentanaEdicion();
-            IniciarEdicionClave();
-        }
-
-        #region "Rellenar campos"
         private void VentanaEdicion()
         {
             txtUsuario.Text = CacheSesionUsuario.Usuario;
@@ -54,9 +48,33 @@ namespace CapaDePresentacion.PantallasGenerales
             lblEmail.Text = CacheSesionUsuario.Email;
             lblCargo.Text = CacheSesionUsuario.Cargo;
         }
+
+        private void ActualizarInformacionPerfil()
+        {
+            DatosPerfil();
+            VentanaEdicion();
+            IniciarEdicionClave();
+        }
+
         #endregion
 
+        #region "Botones"
+
         private void linkClave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ClaveComprobarEditar();
+        }
+
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            Guardar();
+        }
+     
+        #endregion
+
+        #region "Metodo de los botones"
+
+        private void ClaveComprobarEditar()
         {
             if (linkClave.Text == "Editar")
             {
@@ -69,7 +87,30 @@ namespace CapaDePresentacion.PantallasGenerales
                 DeshabilitarCamposEdicionClave();
             }
         }
-        
+
+        private void Guardar()
+        {
+            if (txtClaveActual.Text == CacheSesionUsuario.Clave && txtClaveNueva.Text == txtClaveConfirmacion.Text && txtClaveNueva.Text != "" && txtClaveConfirmacion.Text != "")
+            {
+                EditarPerfilUsuario();
+                DeshabilitarCamposEdicionClave();
+                _editarClave = false;
+            }
+            else if (_editarClave)
+                MensajeEstado("Las claves no coinciden", "error");
+        }
+
+        private void EditarPerfilUsuario()
+        {
+            var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: txtUsuario.Text, clave: txtClaveNueva.Text, nombre: txtNombre.Text, apellido: txtApellido.Text, email: txtEmail.Text, cargo: null);
+            var resultado = modeloUsuario.EditarPerfilUsuario();
+            MensajeEstado(resultado, "ok");
+
+            ActualizarInformacionPerfil();
+        }
+
+        #endregion
+
         #region "Activar o desactivar campos"
         private void IniciarEdicionClave()
         {
@@ -122,32 +163,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         #endregion
 
-        private void botonGuardar_Click(object sender, EventArgs e)
-        {
-            if (txtClaveActual.Text == CacheSesionUsuario.Clave && txtClaveNueva.Text == txtClaveConfirmacion.Text
-                && txtClaveNueva.Text != "" && txtClaveConfirmacion.Text != "")
-            {
-                ConfirmarGuardado();
-                DeshabilitarCamposEdicionClave();
-                _editarClave = false;
-            }
-            else if (_editarClave)
-                MensajeEstado("Las claves no coinciden","error");
-        }
-
-        private void ConfirmarGuardado()
-        {
-            EditarPerfilUsuario();
-        }
-
-        private void EditarPerfilUsuario()
-        {
-            var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: txtUsuario.Text, clave: txtClaveNueva.Text, nombre: txtNombre.Text, apellido: txtApellido.Text, email: txtEmail.Text, cargo: null);
-            var resultado = modeloUsuario.EditarPerfilUsuario();
-            MensajeEstado(resultado, "ok");
-
-            ActualizarInformacionPerfil();
-        }
+        #region "Mensajes"
 
         private void MensajeEstado(string mensaje, string tipo)
         {
@@ -169,5 +185,7 @@ namespace CapaDePresentacion.PantallasGenerales
             }
 
         }
+
+        #endregion
     }
 }

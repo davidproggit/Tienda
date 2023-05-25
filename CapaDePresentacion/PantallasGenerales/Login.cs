@@ -74,6 +74,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         #endregion
 
+        #region "Acceder"
         private void botonAcceder_Click(object sender, EventArgs e)
         {
             ComprobarCamposFaltantes();
@@ -102,23 +103,16 @@ namespace CapaDePresentacion.PantallasGenerales
             }
         }
 
-        private void LoginValidado(bool loginValido)
-        {
-            if (loginValido)
-            {
-                this.Hide();
-                CrearInterfazUsuario();
-            }
-            else
-                MensajeError("Usuario o clave incorrecta");
-        }
-
         private void CrearInterfazUsuario()
         {
             InterfazUsuario interfazUsuario = new InterfazUsuario();
             interfazUsuario.Show();
             interfazUsuario.FormClosed += CerrarSesion;
         }
+
+        #endregion
+
+        #region "Control de campos"
 
         private void ComprobarCamposFaltantes()
         {
@@ -128,6 +122,17 @@ namespace CapaDePresentacion.PantallasGenerales
             resultado = campos.ComprobarCamposConjunto(txtUsuario.Text,txtClave.Text);
 
             MensajeError(resultado);
+        }
+
+        private void LoginValidado(bool loginValido)
+        {
+            if (loginValido)
+            {
+                this.Hide();
+                CrearInterfazUsuario();
+            }
+            else
+                MensajeError("Usuario o clave incorrecta");
         }
 
         private void MensajeError(string mensaje)
@@ -145,5 +150,7 @@ namespace CapaDePresentacion.PantallasGenerales
             txtUsuario.Focus();
         }
 
+        #endregion
+       
     }
 }
