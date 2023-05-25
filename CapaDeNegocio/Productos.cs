@@ -13,12 +13,6 @@ namespace CapaDeNegocio
         private DatosProductos _datosProductos = new DatosProductos();
         private DataTable _tabla = new DataTable();
 
-        public DataTable MostrarProductosCliente()
-        {
-            _tabla = _datosProductos.MostrarProductosCliente();
-            return _tabla;
-        }
-
         public DataTable MostrarProducto()
         {
             _tabla = _datosProductos.Mostrar();
