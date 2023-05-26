@@ -21,7 +21,7 @@ namespace CapaDeDatos
         public DataTable FiltrarCliente(string txtBuscar)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
+            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
             _comando.CommandType = CommandType.Text;
             _comando.ExecuteNonQuery();
 
