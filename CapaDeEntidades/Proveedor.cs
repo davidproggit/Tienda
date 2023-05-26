@@ -12,6 +12,8 @@ namespace CapaDeEntidades
     {
         private DatosProductos _datosProductos = new DatosProductos();
 
+        public Proveedor() { }
+
         public void InsertarProducto(string nombre, string descripcion, string marca, string precio, string stock)
         {
             _datosProductos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));

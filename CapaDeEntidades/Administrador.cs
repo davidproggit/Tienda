@@ -13,6 +13,8 @@ namespace CapaDeEntidades
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DataTable _tabla = new DataTable();
 
+        public Administrador() { }
+
         public DataTable CargarUsuarios()
         {
             _tabla = _datosDeUsuario.CargarUsuarios();
