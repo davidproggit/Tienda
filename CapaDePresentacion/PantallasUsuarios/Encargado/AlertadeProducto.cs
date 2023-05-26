@@ -79,10 +79,10 @@ namespace CapaDePresentacion
 
         private void CambiarMensajeCantidad(List<Datos> valores)
         {
-            if (txtMensaje.Text != "" && txtCantidadMinima.Text != "")
+            if (rTBoxMensajeAlerta.Text != "" && txtCantidadMinima.Text != "")
             {
                 foreach (Datos valor in valores)
-                    _proveedor.ModificarAlerta(valor.id, txtMensaje.Text, txtCantidadMinima.Text);
+                    _proveedor.ModificarAlerta(valor.id, rTBoxMensajeAlerta.Text, txtCantidadMinima.Text);
 
                 MessageBox.Show("Alerta guardada");
             }
