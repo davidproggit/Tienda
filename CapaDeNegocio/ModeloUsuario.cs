@@ -22,7 +22,7 @@ namespace CapaDeNegocio
 
         public bool LoginUsuario(string usuario, string clave)
         {
-            return _datosDeUsuario.Login(usuario, clave);
+            return _datosDeUsuario.IniciarSesion(usuario, clave);
         }
 
         public DataTable CargarUsuarios()

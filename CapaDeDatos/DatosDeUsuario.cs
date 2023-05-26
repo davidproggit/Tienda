@@ -117,13 +117,13 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
         }
 
-        public bool Login(string usuario, string clave)
+        public bool IniciarSesion(string usuario, string clave)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo from Usuarios where Usuario=@usuario and Clave=@clave";
+            _comando.CommandText = "UsuarioIniciarSesion";
+            _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.AddWithValue("@usuario", usuario);
             _comando.Parameters.AddWithValue("@clave", clave);
-            _comando.CommandType = CommandType.Text;
 
             SqlDataReader lector = _comando.ExecuteReader();
 
