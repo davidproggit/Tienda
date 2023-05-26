@@ -102,7 +102,8 @@ namespace CapaDeDatos
         public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave, Dni=@dni, Cuil=@cuil where ID=@id AND Cargo=@cargo";
+            _comando.CommandText = "EditarPerfilUsuario";
+            _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.AddWithValue("@usuario", usuario);
             _comando.Parameters.AddWithValue("@nombre", nombre);
             _comando.Parameters.AddWithValue("@apellido", apellido);
@@ -112,7 +113,6 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@cargo", cargo);
             _comando.Parameters.AddWithValue("@dni", dni);
             _comando.Parameters.AddWithValue("@cuil", id);
-            _comando.CommandType = CommandType.Text;
             _comando.ExecuteNonQuery();
             _conexion.CerrarConexion();
         }
