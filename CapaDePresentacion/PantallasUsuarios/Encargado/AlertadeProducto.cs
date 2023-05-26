@@ -24,7 +24,6 @@ namespace CapaDePresentacion
         #region "Cargar datos"
 
         public List<Datos> Valores { get; set; }
-        private List<string> _idLista = new List<string>();
 
         private void AlertadeProducto_Load(object sender, EventArgs e)
         {
@@ -41,7 +40,6 @@ namespace CapaDePresentacion
                 {
                     grillaProductos.Rows[posicion].Cells[0].Value = valor.id;
                     grillaProductos.Rows[posicion].Cells[1].Value = valor.nombre;
-                    _idLista.Add(valor.id.ToString());
                     _sinProducto = false;
                 }
                 catch (ArgumentOutOfRangeException)
@@ -83,18 +81,13 @@ namespace CapaDePresentacion
             {
                 Productos productos = new Productos();
 
-                foreach (string id in _idLista)
-                {
-                    productos.ModificarAlerta(id, txtMensaje.Text, int.Parse(txtCantidadMinima.Text));
-                }
+                foreach (Datos valor in valores)
+                    productos.ModificarAlerta(valor.id, txtMensaje.Text, txtCantidadMinima.Text);
 
                 MessageBox.Show("Alerta guardada");
             }
             else
-            {
                 MessageBox.Show("Error: los campos no pueden estar vacios");
-            }
-
         }
 
         #endregion

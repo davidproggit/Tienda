@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -40,9 +41,9 @@ namespace CapaDeNegocio
             return _tabla;
         }
 
-        public void ModificarAlerta(string id, string mensaje, int cantidadMinima)
+        public void ModificarAlerta(int id, string mensaje, string cantidadMinima)
         {
-            _datosProductos.ModificarAlerta(Convert.ToInt32(id) , mensaje, Convert.ToInt32(cantidadMinima));
+            _datosProductos.ModificarAlerta(id, mensaje, Convert.ToInt32(cantidadMinima));
         }
     }
 }

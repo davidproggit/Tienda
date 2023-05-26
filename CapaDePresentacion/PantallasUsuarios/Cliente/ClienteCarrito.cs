@@ -22,7 +22,6 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
         #region "Cargar datos"
 
         public List<Datos> Valores { get; set; }
-        private List<string> _idLista = new List<string>();
 
         private void ClienteCarrito_Load(object sender, EventArgs e)
         {
@@ -41,7 +40,6 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
                     grillaProductos.Rows[posicion].Cells[1].Value = valor.nombre;
                     grillaProductos.Rows[posicion].Cells[2].Value = valor.precio;
                     grillaProductos.Rows[posicion].Cells[3].Value = valor.cantidad;
-                    _idLista.Add(valor.id.ToString());
                 }
                 catch (ArgumentOutOfRangeException)
                 {
