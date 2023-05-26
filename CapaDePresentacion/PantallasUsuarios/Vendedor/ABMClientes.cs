@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +31,8 @@ namespace CapaDePresentacion
 
         private void CargarListaUsuarios()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
-            grillaClientes.DataSource = modeloUsuario.CargarClientes();
+            Vendedor _vendedor = new Vendedor();
+            grillaClientes.DataSource = _vendedor.CargarClientes();
         }
 
         #endregion
@@ -62,11 +63,11 @@ namespace CapaDePresentacion
 
         private void GuardarNuevoCliente()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
+            Vendedor _vendedor = new Vendedor();
 
             if (!CamposVacios())
             {
-                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                _vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -77,8 +78,8 @@ namespace CapaDePresentacion
 
         private void BuscarCliente()
         {
-            ModeloUsuario _modeloUsuario = new ModeloUsuario();
-            grillaClientes.DataSource = _modeloUsuario.FiltrarCliente(txtBuscar.Text);
+            Vendedor _vendedor = new Vendedor();
+            grillaClientes.DataSource = _vendedor.FiltrarCliente(txtBuscar.Text);
         }
 
         private void RellenarCamposEdicion()
@@ -101,11 +102,11 @@ namespace CapaDePresentacion
 
         private void GuardarClienteEditado()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
+            Vendedor _vendedor = new Vendedor();
 
             if (!CamposVacios())
             {
-                modeloUsuario.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                _vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 LimpiarFormulario();
                 CargarListaUsuarios();
                 _editar = false;

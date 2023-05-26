@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CapaDeDatos;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,28 +10,31 @@ namespace CapaDeEntidades
 {
     public class Vendedor
     {
-        private int _id;
+        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
+        private DataTable _tabla = new DataTable();
 
-        public int ID
+        public Vendedor() { }
+
+        public DataTable CargarClientes()
         {
-            get { return _id; }
-            set { _id = value; }
+            _tabla = _datosDeUsuario.CargarClientes();
+            return _tabla;
         }
-        private string _nombre;
-
-        public string Nombre
+        public DataTable FiltrarCliente(string txtBuscar)
         {
-            get { return _nombre; }
-            set { _nombre = value; }
-        }
-
-        private string _apellido;
-
-        public string Apellido
-        {
-            get { return _apellido; }
-            set { _apellido = value; }
+            _tabla = _datosDeUsuario.FiltrarCliente(txtBuscar);
+            return _tabla;
         }
 
+        public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            _datosDeUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+        }
+
+        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+        }
+  
     }
 }
