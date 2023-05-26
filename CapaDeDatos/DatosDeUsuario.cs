@@ -18,21 +18,28 @@ namespace CapaDeDatos
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
 
-        public DataTable FiltrarCliente(string txtBuscar)
+        #region "Admin y vendedor"
+
+        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "InsertarUsuario";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@usuario", usuario);
+            _comando.Parameters.AddWithValue("@clave", clave);
+            _comando.Parameters.AddWithValue("@nombre", nombre);
+            _comando.Parameters.AddWithValue("@apellido", apellido);
+            _comando.Parameters.AddWithValue("@email", email);
+            _comando.Parameters.AddWithValue("@cargo", cargo);
+            _comando.Parameters.AddWithValue("@dni", dni);
+            _comando.Parameters.AddWithValue("@cuil", cuil);
             _comando.ExecuteNonQuery();
-
-            DataTable tablaFiltrada = new DataTable();
-            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
-
-            adaptador.Fill(tablaFiltrada);
-
-            _conexion.CerrarConexion();
-            return tablaFiltrada;
+            _comando.Parameters.Clear();
         }
+
+        #endregion
+
+        #region "Administrador"
 
         public DataTable FiltrarUsuario(string txtBuscar)
         {
@@ -60,27 +67,10 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public DataTable CargarUsuarios()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "InsertarUsuario";
-            _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.AddWithValue("@usuario", usuario);
-            _comando.Parameters.AddWithValue("@clave", clave);
-            _comando.Parameters.AddWithValue("@nombre", nombre);
-            _comando.Parameters.AddWithValue("@apellido", apellido);
-            _comando.Parameters.AddWithValue("@email", email);
-            _comando.Parameters.AddWithValue("@cargo", cargo);
-            _comando.Parameters.AddWithValue("@dni", dni);
-            _comando.Parameters.AddWithValue("@cuil", cuil);
-            _comando.ExecuteNonQuery();
-            _comando.Parameters.Clear();
-        }
-
-        public DataTable CargarClientes()
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "CargarClientes";
+            _comando.CommandText = "CargarUsuarios";
             _lector = _comando.ExecuteReader();
             _comando.CommandType = CommandType.StoredProcedure;
             _tabla.Load(_lector);
@@ -88,10 +78,30 @@ namespace CapaDeDatos
             return _tabla;
         }
 
-        public DataTable CargarUsuarios()
+        #endregion
+
+        #region "Vendedor"
+
+        public DataTable FiltrarCliente(string txtBuscar)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "CargarUsuarios";
+            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
+            _comando.CommandType = CommandType.Text;
+            _comando.ExecuteNonQuery();
+
+            DataTable tablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
+
+            adaptador.Fill(tablaFiltrada);
+
+            _conexion.CerrarConexion();
+            return tablaFiltrada;
+        }
+
+        public DataTable CargarClientes()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarClientes";
             _lector = _comando.ExecuteReader();
             _comando.CommandType = CommandType.StoredProcedure;
             _tabla.Load(_lector);
@@ -116,6 +126,11 @@ namespace CapaDeDatos
             _comando.ExecuteNonQuery();
             _conexion.CerrarConexion();
         }
+
+
+        #endregion
+        
+        #region "Usuario"
 
         public bool IniciarSesion(string usuario, string clave)
         {
@@ -158,5 +173,8 @@ namespace CapaDeDatos
             CacheSesionUsuario.Email = lector.GetString(5);
             CacheSesionUsuario.Cargo = lector.GetString(6);
         }
+
+        #endregion
+
     }
 }

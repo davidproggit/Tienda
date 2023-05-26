@@ -15,16 +15,7 @@ namespace CapaDeDatos
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
 
-        public DataTable Mostrar()
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "MostrarProductos";
-            _lector = _comando.ExecuteReader();
-            _comando.CommandType = CommandType.StoredProcedure;
-            _tabla.Load(_lector);
-            _conexion.CerrarConexion();
-            return _tabla;
-        }
+        #region "Proveedor"
 
         public void Insertar(string nombre, string descripcion, string marca, double precio, int stock)
         {
@@ -46,6 +37,7 @@ namespace CapaDeDatos
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
+
         private void CamposProducto(string nombre, string descripcion, string marca, double precio, int stock)
         {
             _comando.Parameters.AddWithValue("@nombre", nombre);
@@ -65,6 +57,33 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        public void ModificarAlerta(int id, string mensaje, int cantidadMinima)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "ActualizarAlerta";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@mensaje", mensaje);
+            _comando.Parameters.AddWithValue("@cantidadMinima", cantidadMinima);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
+        #endregion
+
+        #region "Cliente y proveedor"
+
+        public DataTable Mostrar()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarProductos";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
+
         public DataTable Filtrar(string textoBuscar)
         {
             _comando.Connection = _conexion.AbrirConexion();
@@ -81,16 +100,6 @@ namespace CapaDeDatos
             return tablaFiltrada;
         }
 
-        public void ModificarAlerta(int id, string mensaje, int cantidadMinima)
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "ActualizarAlerta";
-            _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.AddWithValue("@id", id);
-            _comando.Parameters.AddWithValue("@mensaje", mensaje);
-            _comando.Parameters.AddWithValue("@cantidadMinima", cantidadMinima);
-            _comando.ExecuteNonQuery();
-            _comando.Parameters.Clear();
-        }
+        #endregion
     }
 }
