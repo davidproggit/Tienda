@@ -13,29 +13,7 @@ namespace CapaDeNegocio
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DataTable _tabla = new DataTable();
 
-        private int _id;
-        private string _usuario;
-        private string _clave;
-        private string _nombre;
-        private string _apellido;
-        private string _email;
-        private string _cargo;
-
-        public ModeloUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo)
-        {
-            this._id = id;
-            this._usuario = usuario;
-            this._clave = clave;
-            this._nombre = nombre;
-            this._apellido = apellido;
-            this._email = email;
-            this._cargo = cargo;
-        }
-
-        public ModeloUsuario()
-        {
-
-        }
+        public ModeloUsuario() {}
 
         public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
