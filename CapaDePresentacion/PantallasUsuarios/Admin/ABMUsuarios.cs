@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +29,8 @@ namespace CapaDePresentacion
 
         private void CargarListaUsuarios()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
-            grillaUsuarios.DataSource = modeloUsuario.CargarUsuarios();
+            Administrador _administrador = new Administrador();
+            grillaUsuarios.DataSource = _administrador.CargarUsuarios();
         }
 
         private void CargarRoles()
@@ -91,11 +92,11 @@ namespace CapaDePresentacion
 
         private void GuardarNuevoUsuario()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
+            Administrador _administrador = new Administrador();
 
             if (!CamposVacios())
             {
-                modeloUsuario.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
+                _administrador.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -122,15 +123,15 @@ namespace CapaDePresentacion
 
         private void BorrarUsuario()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
+            Administrador _administrador = new Administrador();
             int _idUsuario = (int)grillaUsuarios.CurrentRow.Cells["Id"].Value;
-            modeloUsuario.EliminarUsuario(_idUsuario);
+            _administrador.EliminarUsuario(_idUsuario);
         }
 
         private void BuscarUsuario()
         {
-            ModeloUsuario modeloUsuario = new ModeloUsuario();
-            grillaUsuarios.DataSource = modeloUsuario.FiltrarUsuario(txtBuscar.Text);
+            Administrador _administrador = new Administrador();
+            grillaUsuarios.DataSource = _administrador.FiltrarUsuario(txtBuscar.Text);
         }
 
         #endregion

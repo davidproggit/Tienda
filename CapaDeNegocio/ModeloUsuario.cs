@@ -25,12 +25,6 @@ namespace CapaDeNegocio
             return _datosDeUsuario.IniciarSesion(usuario, clave);
         }
 
-        public DataTable CargarUsuarios()
-        {
-            _tabla = _datosDeUsuario.CargarUsuarios();
-            return _tabla;
-        }
-
         public DataTable CargarClientes()
         {
             _tabla = _datosDeUsuario.CargarClientes();
@@ -40,17 +34,6 @@ namespace CapaDeNegocio
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
-        }
-
-        public void EliminarUsuario(int id)
-        {
-            _datosDeUsuario.EliminarUsuario(id);
-        }
-
-        public DataTable FiltrarUsuario(string txtBuscar)
-        {
-            _tabla = _datosDeUsuario.FiltrarUsuario(txtBuscar);
-            return _tabla;
         }
 
         public DataTable FiltrarCliente(string txtBuscar)
