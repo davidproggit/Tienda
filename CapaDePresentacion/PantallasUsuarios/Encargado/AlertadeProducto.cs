@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun.Cache;
 using CapaDeNegocio;
+using CapaDeEntidades;
 
 namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
+        Proveedor _proveedor = new Proveedor();
         private bool _sinProducto = true;
 
         public AlertadeProducto()
@@ -79,10 +81,8 @@ namespace CapaDePresentacion
         {
             if (txtMensaje.Text != "" && txtCantidadMinima.Text != "")
             {
-                Productos productos = new Productos();
-
                 foreach (Datos valor in valores)
-                    productos.ModificarAlerta(valor.id, txtMensaje.Text, txtCantidadMinima.Text);
+                    _proveedor.ModificarAlerta(valor.id, txtMensaje.Text, txtCantidadMinima.Text);
 
                 MessageBox.Show("Alerta guardada");
             }

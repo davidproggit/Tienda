@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 
 namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        private Productos _productos = new Productos();
+        private Proveedor _proveedor = new Proveedor();
         private int _idProducto;
         private bool _editar = false;
 
@@ -32,8 +33,8 @@ namespace CapaDePresentacion
 
         private void MostrarProductos()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.MostrarProducto();
+            Productos _productos = new Productos();
+            grillaProductos.DataSource = _productos.MostrarProducto();
         }
 
         #endregion
@@ -101,7 +102,7 @@ namespace CapaDePresentacion
         {
             try
             {
-                _productos.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
+                _proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
@@ -116,7 +117,7 @@ namespace CapaDePresentacion
         {
             try
             {
-                _productos.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                _proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -164,13 +165,13 @@ namespace CapaDePresentacion
         private void EliminarProducto()
         {
             _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
-            _productos.EliminarProducto(_idProducto);
+            _proveedor.EliminarProducto(_idProducto);
         }
 
         private void BuscarProducto()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.FiltrarProducto(txtBuscar.Text);
+            Productos _productos = new Productos();
+            grillaProductos.DataSource = _productos.FiltrarProducto(txtBuscar.Text);
         }
 
         private void EnviarDatosAlerta()
