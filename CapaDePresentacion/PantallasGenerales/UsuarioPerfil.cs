@@ -103,8 +103,8 @@ namespace CapaDePresentacion.PantallasGenerales
         private void EditarPerfilUsuario()
         {
             var modeloUsuario = new ModeloUsuario(id: CacheSesionUsuario.ID, usuario: txtUsuario.Text, clave: txtClaveNueva.Text, nombre: txtNombre.Text, apellido: txtApellido.Text, email: txtEmail.Text, cargo: null);
-            var resultado = modeloUsuario.EditarPerfilUsuario();
-            MensajeEstado(resultado, "ok");
+            //var resultado = modeloUsuario.EditarPerfilUsuario();
+            //MensajeEstado(resultado, "ok");
 
             ActualizarInformacionPerfil();
         }

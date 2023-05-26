@@ -13,6 +13,9 @@ namespace CapaDePresentacion
 {
     public partial class ABMClientes : Form
     {
+        private bool _editar = false;
+        private int _idCliente;
+
         public ABMClientes()
         {
             InitializeComponent();
@@ -37,12 +40,20 @@ namespace CapaDePresentacion
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
-            GuardarNuevoCliente();
+            if (!_editar)
+                GuardarNuevoCliente();
+            if (_editar)
+                GuardarClienteEditado();
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             BuscarCliente();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            RellenarCamposEdicion();
         }
 
         #endregion
@@ -70,6 +81,39 @@ namespace CapaDePresentacion
             grillaClientes.DataSource = _modeloUsuario.FiltrarCliente(txtBuscar.Text);
         }
 
+        private void RellenarCamposEdicion()
+        {
+            if (grillaClientes.SelectedRows.Count > 0)
+            {
+                _editar = true;
+                txtNombre.Text = grillaClientes.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtApellido.Text = grillaClientes.CurrentRow.Cells["Apellido"].Value.ToString();
+                txtEmail.Text = grillaClientes.CurrentRow.Cells["Email"].Value.ToString();
+                txtDNI.Text = grillaClientes.CurrentRow.Cells["DNI"].Value.ToString();
+                txtClave.Text = grillaClientes.CurrentRow.Cells["Clave"].Value.ToString();
+                txtCuil.Text = grillaClientes.CurrentRow.Cells["Cuil"].Value.ToString();
+                txtUsuario.Text = grillaClientes.CurrentRow.Cells["Usuario"].Value.ToString();
+                _idCliente = (int)grillaClientes.CurrentRow.Cells["Id"].Value;
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void GuardarClienteEditado()
+        {
+            ModeloUsuario modeloUsuario = new ModeloUsuario();
+
+            if (!CamposVacios())
+            {
+                modeloUsuario.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                LimpiarFormulario();
+                CargarListaUsuarios();
+                _editar = false;
+            }
+            else
+                MessageBox.Show("Error: tiene que completar todos los campos");
+        }
+
         #endregion
 
         #region "Control de campos"
@@ -94,6 +138,6 @@ namespace CapaDePresentacion
         }
 
         #endregion
-        
+       
     }
 }

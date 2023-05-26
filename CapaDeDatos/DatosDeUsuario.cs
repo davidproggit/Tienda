@@ -33,7 +33,7 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
             return tablaFiltrada;
         }
-        
+
         public DataTable FiltrarUsuario(string txtBuscar)
         {
             _comando.Connection = _conexion.AbrirConexion();
@@ -87,7 +87,7 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
             return _tabla;
         }
-     
+
         public DataTable CargarUsuarios()
         {
             _comando.Connection = _conexion.AbrirConexion();
@@ -98,25 +98,23 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
             return _tabla;
         }
-     
-        public void EditarPerfil(int id, string usuario, string clave, string nombre, string apellido, string email)
+
+        public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave where ID=@id";
-            CamposUsuario(id, usuario, clave, nombre, apellido, email, _comando);
+            _comando.CommandText = "update Usuarios set Usuario=@usuario, Nombre=@nombre, Apellido=@apellido, Email=@email, Clave=@clave, Dni=@dni, Cuil=@cuil where ID=@id AND Cargo=@cargo";
+            _comando.Parameters.AddWithValue("@usuario", usuario);
+            _comando.Parameters.AddWithValue("@nombre", nombre);
+            _comando.Parameters.AddWithValue("@apellido", apellido);
+            _comando.Parameters.AddWithValue("@email", email);
+            _comando.Parameters.AddWithValue("@clave", clave);
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@cargo", cargo);
+            _comando.Parameters.AddWithValue("@dni", dni);
+            _comando.Parameters.AddWithValue("@cuil", id);
             _comando.CommandType = CommandType.Text;
             _comando.ExecuteNonQuery();
             _conexion.CerrarConexion();
-        }
-
-        private static void CamposUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, SqlCommand comando)
-        {
-            comando.Parameters.AddWithValue("@usuario", usuario);
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@apellido", apellido);
-            comando.Parameters.AddWithValue("@email", email);
-            comando.Parameters.AddWithValue("@clave", clave);
-            comando.Parameters.AddWithValue("@id", id);
         }
 
         public bool Login(string usuario, string clave)
@@ -129,7 +127,7 @@ namespace CapaDeDatos
 
             SqlDataReader lector = _comando.ExecuteReader();
 
-            return LeerFilas(lector,_conexion);
+            return LeerFilas(lector, _conexion);
         }
 
         private static bool LeerFilas(SqlDataReader lector, Conexion conexion)
@@ -143,11 +141,11 @@ namespace CapaDeDatos
                 return true;
             }
             else
-            { 
+            {
                 conexion.CerrarConexion();
                 return false;
             }
-                
+
         }
 
         private static void FormatoCamposCache(SqlDataReader lector)

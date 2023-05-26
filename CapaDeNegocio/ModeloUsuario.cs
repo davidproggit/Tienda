@@ -37,11 +37,9 @@ namespace CapaDeNegocio
 
         }
 
-        public string EditarPerfilUsuario()
+        public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
-            _datosDeUsuario.EditarPerfil(_id, _usuario, _clave, _nombre, _apellido, _email);
-            LoginUsuario(_usuario, _clave);
-            return "Perfil actualizado";
+            _datosDeUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
 
         public bool LoginUsuario(string usuario, string clave)
@@ -61,9 +59,9 @@ namespace CapaDeNegocio
             return _tabla;
         }
 
-        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email , string cargo, string dni, string cuil)
+        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
-            _datosDeUsuario.InsertarNuevoUsuario(usuario,clave,nombre,apellido,email,cargo,dni,cuil);
+            _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
 
         public void EliminarUsuario(int id)

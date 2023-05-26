@@ -52,6 +52,7 @@ namespace CapaDePresentacion
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             this.panelDatosCliente.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -305,11 +306,24 @@ namespace CapaDePresentacion
             this.panel1.Size = new System.Drawing.Size(494, 94);
             this.panel1.TabIndex = 52;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(491, 655);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(125, 49);
+            this.btnEditar.TabIndex = 52;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // ABMClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 740);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.panelDatosCliente);
@@ -355,5 +369,6 @@ namespace CapaDePresentacion
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
