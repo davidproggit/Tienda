@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaComun.Cache
 {
-    public static class CacheSesionUsuario
+    public class CacheSesionUsuario
     {
         public static int ID { get; set; }
         public static string Usuario { get; set; }
