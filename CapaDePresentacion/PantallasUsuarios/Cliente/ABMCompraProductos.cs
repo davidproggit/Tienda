@@ -45,7 +45,7 @@ namespace CapaDePresentacion
 
         private void btnCompraProducto_Click(object sender, EventArgs e)
         {
-            EnviarDatosCarrito();
+            AgregarProducto();
         }
 
         #endregion
@@ -58,7 +58,7 @@ namespace CapaDePresentacion
             grillaProductos.DataSource = productos.FiltrarProducto(txtBusqueda.Text);
         }
 
-        private void EnviarDatosCarrito()
+        private void AgregarProducto()
         {
             List<Datos> Valores = new List<Datos>();
 
