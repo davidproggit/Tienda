@@ -19,6 +19,10 @@ namespace WindowsFormsApp1
         public ProductosVista()
         {
             InitializeComponent();
+        }
+
+        private void ProductosVista_Load(object sender, EventArgs e)
+        {
             Llenar();
         }
 
@@ -37,6 +41,7 @@ namespace WindowsFormsApp1
                 productoPrevisualizacion.marca = datos.marca;
                 productoPrevisualizacion.precio = "$" + datos.precio;
                 productoPrevisualizacion.cantidad = datos.cantidad.ToString();
+                productoPrevisualizacion.enCarrito = datos.enCarrito;
 
                 contenedorProductos.Controls.Add(productoPrevisualizacion);
             }

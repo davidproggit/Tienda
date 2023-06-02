@@ -109,18 +109,19 @@ namespace CapaDeDatos
         public List<FormatoProductos> Rellenar()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Precio, Stock from Productos";
+            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Precio, Stock, EnCarrito from Productos";
             _comando.CommandType = CommandType.Text;
             _lector = _comando.ExecuteReader();
 
             while (_lector.Read())
             {
-                int productoId = int.Parse(_lector[0].ToString());
-                string productoNombre = _lector[1].ToString();
-                string productoDescripcion = _lector[2].ToString();
-                string productoMarca = _lector[3].ToString();
-                float productoPrecio = float.Parse(_lector[4].ToString());
-                int productoCantidad = int.Parse(_lector[5].ToString());
+                int productoId = int.Parse(_lector["Id"].ToString());
+                string productoNombre = _lector["Nombre"].ToString();
+                string productoDescripcion = _lector["Descripcion"].ToString();
+                string productoMarca = _lector["Marca"].ToString();
+                float productoPrecio = float.Parse(_lector["Precio"].ToString());
+                int productoCantidad = int.Parse(_lector["Stock"].ToString());
+                bool productoEnCarrito = Convert.ToBoolean(_lector["EnCarrito"]);
 
                 _valores.Add(new FormatoProductos
                 {
@@ -129,7 +130,8 @@ namespace CapaDeDatos
                     descripcion = productoDescripcion,
                     marca = productoMarca,
                     precio = productoPrecio,
-                    cantidad = productoCantidad
+                    cantidad = productoCantidad,
+                    enCarrito = productoEnCarrito
                 });
             }
 

@@ -17,6 +17,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void ProductoDetalle_Load(object sender, EventArgs e)
+        {
+            Verificar();
+        }
+
         private int _id;
 
         public int id
@@ -65,5 +70,24 @@ namespace WindowsFormsApp1
             set { lblPrecio.Text = value; }
         }
 
+        private bool _enCarrito;
+
+        public bool enCarrito
+        {
+            get { return _enCarrito; }
+            set { _enCarrito = value; }
+        }
+
+        private void Verificar()
+        {
+            if (!enCarrito) 
+                btnAgregarCarrito.Text = "Agregar al carrito";
+            else
+            {
+                btnAgregarCarrito.Text = "Ya agregado al carrito";
+                btnAgregarCarrito.Enabled = false;
+            }
+        }
+       
     }
 }

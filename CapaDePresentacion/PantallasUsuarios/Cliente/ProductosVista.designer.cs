@@ -48,6 +48,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductosVista";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.ProductosVista_Load);
             this.ResumeLayout(false);
 
         }

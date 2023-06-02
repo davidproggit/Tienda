@@ -65,6 +65,14 @@ namespace WindowsFormsApp1
             set { _cantidad = value; }
         }
 
+        private bool _enCarrito;
+
+        public bool enCarrito
+        {
+            get { return _enCarrito; }
+            set { _enCarrito = value; }
+        }
+
         private void btnVerMas_Click(object sender, EventArgs e)
         {
             ProductoDetalle productoDetalle = new ProductoDetalle();
@@ -75,6 +83,7 @@ namespace WindowsFormsApp1
             productoDetalle.marca = marca;
             productoDetalle.precio = precio;
             productoDetalle.cantidad = cantidad;
+            productoDetalle.enCarrito = enCarrito;
 
             productoDetalle.Show();
         }

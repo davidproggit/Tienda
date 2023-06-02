@@ -96,10 +96,10 @@
             // 
             // btnAgregarCarrito
             // 
-            this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCarrito.Location = new System.Drawing.Point(343, 346);
+            this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(343, 329);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
-            this.btnAgregarCarrito.Size = new System.Drawing.Size(284, 78);
+            this.btnAgregarCarrito.Size = new System.Drawing.Size(284, 92);
             this.btnAgregarCarrito.TabIndex = 4;
             this.btnAgregarCarrito.Text = "Agregar al carrito";
             this.btnAgregarCarrito.UseVisualStyleBackColor = true;
@@ -135,6 +135,7 @@
             this.Name = "ProductoDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductoDetalle";
+            this.Load += new System.EventHandler(this.ProductoDetalle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectorCantidad)).EndInit();
