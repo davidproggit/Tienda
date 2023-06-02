@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun;
+using CapaDePresentacion.PantallasUsuarios.Cliente;
 
 namespace WindowsFormsApp1
 {
@@ -47,5 +48,10 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void linkCarrito_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ClienteCarrito clienteCarrito = new ClienteCarrito();
+            clienteCarrito.Show();
+        }
     }
 }

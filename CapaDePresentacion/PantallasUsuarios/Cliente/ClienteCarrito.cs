@@ -25,7 +25,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
 
         private void ClienteCarrito_Load(object sender, EventArgs e)
         {
-            Rellenar(Valores);
+            //Rellenar(Valores);
         }
 
         public void Rellenar(List<Datos> valores)
