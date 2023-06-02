@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         private void ProductoDetalle_Load(object sender, EventArgs e)
         {
             Verificar();
+            EstablecerCantidadMaxima();
         }
 
         private int _id;
@@ -54,9 +55,9 @@ namespace WindowsFormsApp1
             set { lblMarca.Text = value; }
         }
 
-        private string _cantidad;
+        private int _cantidad;
 
-        public string cantidad
+        public int cantidad
         {
             get { return _cantidad; }
             set { _cantidad = value; }
@@ -88,6 +89,10 @@ namespace WindowsFormsApp1
                 btnAgregarCarrito.Enabled = false;
             }
         }
-       
+
+        private void EstablecerCantidadMaxima()
+        {
+            selectorCantidad.Maximum = cantidad;
+        }
     }
 }

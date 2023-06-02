@@ -57,9 +57,9 @@ namespace WindowsFormsApp1
             set { lblPrecio.Text = value; }
         }
 
-        private string _cantidad;
+        private int _cantidad;
 
-        public string cantidad
+        public int cantidad
         {
             get { return _cantidad; }
             set { _cantidad = value; }
