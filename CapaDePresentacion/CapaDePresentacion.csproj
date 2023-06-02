@@ -74,11 +74,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallasUsuarios\Cliente\Carrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\Carrito.Designer.cs">
+      <DependentUpon>Carrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuarios\Cliente\ClienteCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PantallasUsuarios\Cliente\ClienteCarrito.Designer.cs">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\ProductoCarrito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\ProductoCarrito.Designer.cs">
+      <DependentUpon>ProductoCarrito.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\Cliente\ProductoDetalle.cs">
       <SubType>Form</SubType>
@@ -144,8 +156,14 @@
     </Compile>-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\Carrito.resx">
+      <DependentUpon>Carrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Cliente\ClienteCarrito.resx">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoCarrito.resx">
+      <DependentUpon>ProductoCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoDetalle.resx">
       <DependentUpon>ProductoDetalle.cs</DependentUpon>
