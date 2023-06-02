@@ -50,8 +50,8 @@ namespace WindowsFormsApp1
 
         private void linkCarrito_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ClienteCarrito clienteCarrito = new ClienteCarrito();
-            clienteCarrito.Show();
+            Carrito carrito = new Carrito();
+            carrito.Show();
         }
     }
 }
