@@ -80,6 +80,18 @@
     <Compile Include="PantallasUsuarios\Cliente\ClienteCarrito.Designer.cs">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\ProductoPrevisualizacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\ProductoPrevisualizacion.designer.cs">
+      <DependentUpon>ProductoPrevisualizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\ProductosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\ProductosVista.designer.cs">
+      <DependentUpon>ProductosVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuarios\Encargado\InterfazProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PantallasUsuarios\Cliente\ClienteCarrito.resx">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoPrevisualizacion.resx">
+      <DependentUpon>ProductoPrevisualizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductosVista.resx">
+      <DependentUpon>ProductosVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Encargado\InterfazProducto.resx">
       <DependentUpon>InterfazProducto.cs</DependentUpon>

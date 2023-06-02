@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaComun;
 using CapaDeDatos;
 
 namespace CapaDeNegocio
@@ -25,6 +26,10 @@ namespace CapaDeNegocio
             _tabla = _datosProductos.Filtrar(textoBuscar);
             return _tabla;
        }
-       
+
+        public List<FormatoProductos> Rellenar()
+        {
+            return _datosProductos.Rellenar();
+        }
     }
 }
