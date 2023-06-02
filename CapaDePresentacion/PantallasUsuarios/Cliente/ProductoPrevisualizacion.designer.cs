@@ -44,14 +44,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(299, 235);
+            this.panel1.Size = new System.Drawing.Size(299, 347);
             this.panel1.TabIndex = 2;
             // 
             // btnVerMas
             // 
-            this.btnVerMas.Location = new System.Drawing.Point(182, 122);
+            this.btnVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMas.Location = new System.Drawing.Point(23, 252);
             this.btnVerMas.Name = "btnVerMas";
-            this.btnVerMas.Size = new System.Drawing.Size(102, 37);
+            this.btnVerMas.Size = new System.Drawing.Size(155, 53);
             this.btnVerMas.TabIndex = 4;
             this.btnVerMas.Text = "Ver mas";
             this.btnVerMas.UseVisualStyleBackColor = true;
@@ -85,7 +86,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "ProductoPrevisualizacion";
-            this.Size = new System.Drawing.Size(299, 235);
+            this.Size = new System.Drawing.Size(299, 347);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

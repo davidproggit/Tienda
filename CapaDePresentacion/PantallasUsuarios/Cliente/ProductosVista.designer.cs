@@ -39,13 +39,14 @@
             this.contenedorProductos.Size = new System.Drawing.Size(1237, 540);
             this.contenedorProductos.TabIndex = 0;
             // 
-            // PantallaPrincipal
+            // ProductosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1339, 660);
             this.Controls.Add(this.contenedorProductos);
-            this.Name = "PantallaPrincipal";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "ProductosVista";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
