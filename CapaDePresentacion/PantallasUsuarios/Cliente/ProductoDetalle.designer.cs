@@ -70,9 +70,24 @@
             // 
             this.selectorCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectorCantidad.Location = new System.Drawing.Point(518, 203);
+            this.selectorCantidad.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.selectorCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.selectorCantidad.Name = "selectorCantidad";
             this.selectorCantidad.Size = new System.Drawing.Size(120, 44);
             this.selectorCantidad.TabIndex = 7;
+            this.selectorCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblMarca
             // 
