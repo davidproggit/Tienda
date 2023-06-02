@@ -55,6 +55,7 @@
             this.btnVerMas.TabIndex = 4;
             this.btnVerMas.Text = "Ver mas";
             this.btnVerMas.UseVisualStyleBackColor = true;
+            this.btnVerMas.Click += new System.EventHandler(this.btnVerMas_Click);
             // 
             // lblPrecio
             // 

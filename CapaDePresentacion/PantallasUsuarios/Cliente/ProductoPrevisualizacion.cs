@@ -65,5 +65,18 @@ namespace WindowsFormsApp1
             set { _cantidad = value; }
         }
 
+        private void btnVerMas_Click(object sender, EventArgs e)
+        {
+            ProductoDetalle productoDetalle = new ProductoDetalle();
+
+            productoDetalle.id = id;
+            productoDetalle.nombre = nombre;
+            productoDetalle.descripcion = descripcion;
+            productoDetalle.marca = marca;
+            productoDetalle.precio = precio;
+            productoDetalle.cantidad = cantidad;
+
+            productoDetalle.Show();
+        }
     }
 }

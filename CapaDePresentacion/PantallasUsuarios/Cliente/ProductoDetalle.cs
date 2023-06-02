@@ -17,9 +17,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private string _id;
+        private int _id;
 
-        public string id
+        public int id
         {
             get { return _id; }
             set { _id = value; }
