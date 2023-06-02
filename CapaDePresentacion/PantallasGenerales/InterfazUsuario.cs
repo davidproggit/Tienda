@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace CapaDePresentacion.PantallasGenerales
 {
@@ -43,7 +44,7 @@ namespace CapaDePresentacion.PantallasGenerales
                 AbrirFormulario<Reportes>();
 
             if (CacheSesionUsuario.Cargo == Cargos.Cliente)
-                AbrirFormulario<ABMCompraProductos>();
+                AbrirFormulario<ProductosVista>();
         }
 
         #endregion
