@@ -139,6 +139,40 @@ namespace CapaDeDatos
 
             return _valores;
         }
+        
+        public List<FormatoProductos> RellenarCarrito()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Cantidad, Precio from Carrito";
+            _comando.CommandType = CommandType.Text;
+            _lector = _comando.ExecuteReader();
+
+            while (_lector.Read())
+            {
+                int productoId = int.Parse(_lector["Id"].ToString());
+                string productoNombre = _lector["Nombre"].ToString();
+                string productoDescripcion = _lector["Descripcion"].ToString();
+                string productoMarca = _lector["Marca"].ToString();
+                float productoPrecio = float.Parse(_lector["Precio"].ToString());
+                int productoCantidad = int.Parse(_lector["Cantidad"].ToString());
+
+                _valores.Add(new FormatoProductos
+                {
+                    id = productoId,
+                    nombre = productoNombre,
+                    descripcion = productoDescripcion,
+                    marca = productoMarca,
+                    precio = productoPrecio,
+                    cantidad = productoCantidad,
+                });
+            }
+
+            _conexion.CerrarConexion();
+
+            return _valores;
+        }
+
+
         #endregion
 
     }

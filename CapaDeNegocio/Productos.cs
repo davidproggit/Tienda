@@ -31,5 +31,10 @@ namespace CapaDeNegocio
         {
             return _datosProductos.Rellenar();
         }
+
+        public List<FormatoProductos> RellenarCarrito()
+        {
+            return _datosProductos.RellenarCarrito();
+        }
     }
 }
