@@ -87,6 +87,7 @@ namespace WindowsFormsApp1
             {
                 btnAgregarCarrito.Text = "Ya agregado al carrito";
                 btnAgregarCarrito.Enabled = false;
+                selectorCantidad.Enabled = false;
             }
         }
 
