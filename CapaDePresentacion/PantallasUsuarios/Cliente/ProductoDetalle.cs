@@ -108,7 +108,9 @@ namespace WindowsFormsApp1
         {
             Productos productos = new Productos();
 
-            productos.AgregarCarrito(id, nombre, descripcion, marca, cantidad, precio);
+            int cantidadSeleccionada = (int)selectorCantidad.Value;
+
+            productos.AgregarCarrito(id, nombre, descripcion, marca, cantidadSeleccionada, precio);
         }
     }
 }
