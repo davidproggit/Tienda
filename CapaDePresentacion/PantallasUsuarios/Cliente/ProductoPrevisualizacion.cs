@@ -17,6 +17,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void ProductoPrevisualizacion_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
         private int _id;
 
         public int id
@@ -49,12 +54,12 @@ namespace WindowsFormsApp1
             set { _marca = value; }
         }
 
-        private string _precio;
+        private float _precio;
 
-        public string precio
+        public float precio
         {
-            get { return lblPrecio.Text; }
-            set { lblPrecio.Text = value; }
+            get { return _precio; }
+            set { _precio = value; }
         }
 
         private int _cantidad;
@@ -73,6 +78,12 @@ namespace WindowsFormsApp1
             set { _enCarrito = value; }
         }
 
+        private void CargarDatos()
+        {
+            lblNombre.Text = nombre;
+            lblPrecio.Text = "$" + precio.ToString();
+        }
+
         private void btnVerMas_Click(object sender, EventArgs e)
         {
             ProductoDetalle productoDetalle = new ProductoDetalle();
@@ -87,5 +98,6 @@ namespace WindowsFormsApp1
 
             productoDetalle.Show();
         }
+
     }
 }

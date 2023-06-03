@@ -172,6 +172,22 @@ namespace CapaDeDatos
             return _valores;
         }
 
+        public void AgregarCarrito(int id, string nombre, string descripcion, string marca, int cantidad, float precio)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "AgregarProductoCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@nombre", nombre);
+            _comando.Parameters.AddWithValue("@descripcion", descripcion);
+            _comando.Parameters.AddWithValue("@marca", marca);
+            _comando.Parameters.AddWithValue("@cantidad", cantidad);
+            _comando.Parameters.AddWithValue("@precio", precio);
+           
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
 
         #endregion
 

@@ -87,6 +87,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ProductoPrevisualizacion";
             this.Size = new System.Drawing.Size(299, 347);
+            this.Load += new System.EventHandler(this.ProductoPrevisualizacion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

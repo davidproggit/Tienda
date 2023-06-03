@@ -118,6 +118,7 @@
             this.btnAgregarCarrito.TabIndex = 4;
             this.btnAgregarCarrito.Text = "Agregar al carrito";
             this.btnAgregarCarrito.UseVisualStyleBackColor = true;
+            this.btnAgregarCarrito.Click += new System.EventHandler(this.btnAgregarCarrito_Click);
             // 
             // lblPrecio
             // 

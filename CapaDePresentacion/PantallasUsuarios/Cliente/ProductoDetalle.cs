@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace WindowsFormsApp1
         {
             Verificar();
             EstablecerCantidadMaxima();
+            CargarDatos();
         }
 
         private int _id;
@@ -63,12 +65,12 @@ namespace WindowsFormsApp1
             set { _cantidad = value; }
         }
 
-        private string _precio;
+        private float _precio;
 
-        public string precio
+        public float precio
         {
-            get { return lblPrecio.Text; }
-            set { lblPrecio.Text = value; }
+            get { return _precio; }
+            set { _precio = value; }
         }
 
         private bool _enCarrito;
@@ -77,6 +79,12 @@ namespace WindowsFormsApp1
         {
             get { return _enCarrito; }
             set { _enCarrito = value; }
+        }
+
+        private void CargarDatos()
+        {
+            lblNombre.Text = nombre;
+            lblPrecio.Text = "$" + precio.ToString();
         }
 
         private void Verificar()
@@ -94,6 +102,13 @@ namespace WindowsFormsApp1
         private void EstablecerCantidadMaxima()
         {
             selectorCantidad.Maximum = cantidad;
+        }
+
+        private void btnAgregarCarrito_Click(object sender, EventArgs e)
+        {
+            Productos productos = new Productos();
+
+            productos.AgregarCarrito(id, nombre, descripcion, marca, cantidad, precio);
         }
     }
 }

@@ -36,5 +36,10 @@ namespace CapaDeNegocio
         {
             return _datosProductos.RellenarCarrito();
         }
+
+        public void AgregarCarrito(int id, string nombre, string descripcion, string marca, int cantidad, float precio)
+        {
+            _datosProductos.AgregarCarrito(id, nombre, descripcion, marca, cantidad, precio);
+        }
     }
 }
