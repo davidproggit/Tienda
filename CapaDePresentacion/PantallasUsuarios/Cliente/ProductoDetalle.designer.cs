@@ -151,6 +151,7 @@
             this.Name = "ProductoDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductoDetalle";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductoDetalle_FormClosed);
             this.Load += new System.EventHandler(this.ProductoDetalle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

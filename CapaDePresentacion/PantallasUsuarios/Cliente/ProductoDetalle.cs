@@ -122,10 +122,12 @@ namespace WindowsFormsApp1
             enCarrito = true;
 
             Verificar();
+        }
 
+        private void ProductoDetalle_FormClosed(object sender, FormClosedEventArgs e)
+        {
             (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
             (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
-            
         }
     }
 }
