@@ -51,5 +51,10 @@ namespace CapaDeNegocio
         {
             _datosProductos.EliminarProductoCarrito(id);
         }
+
+        public void EnviarCompra(int id, string nombre, string descripcion, string marca, int cantidad, float precio)
+        {
+            _datosProductos.EnviarCompra(id, nombre, descripcion, marca, cantidad, precio);
+        }
     }
 }

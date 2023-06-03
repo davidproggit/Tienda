@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
@@ -52,5 +53,14 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             contenedorProductos.Controls.Clear();
         }
 
+        private void linkEnviarCompra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Productos productos = new Productos();
+
+            foreach (FormatoProductos datos in _valores)
+            {
+                productos.EnviarCompra(datos.id, datos.nombre, datos.descripcion, datos.marca, datos.cantidad, datos.precio);
+            }
+        }
     }
 }
