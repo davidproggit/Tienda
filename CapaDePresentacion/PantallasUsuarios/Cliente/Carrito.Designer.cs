@@ -46,6 +46,7 @@
             this.ClientSize = new System.Drawing.Size(906, 558);
             this.Controls.Add(this.contenedorProductos);
             this.Name = "Carrito";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carrito";
             this.Load += new System.EventHandler(this.Carrito_Load);
             this.ResumeLayout(false);

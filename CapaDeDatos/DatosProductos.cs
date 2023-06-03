@@ -153,8 +153,8 @@ namespace CapaDeDatos
                 string productoNombre = _lector["Nombre"].ToString();
                 string productoDescripcion = _lector["Descripcion"].ToString();
                 string productoMarca = _lector["Marca"].ToString();
-                float productoPrecio = float.Parse(_lector["Precio"].ToString());
                 int productoCantidad = int.Parse(_lector["Cantidad"].ToString());
+                float productoPrecio = float.Parse(_lector["Precio"].ToString());
 
                 _valores.Add(new FormatoProductos
                 {
@@ -162,8 +162,8 @@ namespace CapaDeDatos
                     nombre = productoNombre,
                     descripcion = productoDescripcion,
                     marca = productoMarca,
-                    precio = productoPrecio,
                     cantidad = productoCantidad,
+                    precio = productoPrecio
                 });
             }
 

@@ -17,6 +17,11 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             InitializeComponent();
         }
 
+        private void ProductoCarrito_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
         private int _id;
 
         public int id
@@ -29,8 +34,8 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
 
         public string nombre
         {
-            get { return lblNombre.Text; }
-            set { lblNombre.Text = value; }
+            get { return _nombre; }
+            set { _nombre = value; }
         }
 
         private string _descripcion;
@@ -49,12 +54,12 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             set { _marca = value; }
         }
 
-        private string _precio;
+        private float _precio;
 
-        public string precio
+        public float precio
         {
-            get { return lblPrecio.Text; }
-            set { lblPrecio.Text = value; }
+            get { return _precio; }
+            set { _precio = value; }
         }
 
         private int _cantidad;
@@ -64,6 +69,14 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             get { return _cantidad; }
             set { _cantidad = value; }
         }
+
       
+        private void CargarDatos()
+        {
+            lblNombre.Text = nombre;
+            lblPrecio.Text = "$" + precio.ToString();
+            lblCantidad.Text = "Cantidad: " + cantidad.ToString();
+        }
+
     }
 }

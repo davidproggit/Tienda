@@ -40,9 +40,8 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
                 productoCarrito.nombre = datos.nombre;
                 productoCarrito.descripcion = datos.descripcion;
                 productoCarrito.marca = datos.marca;
-                productoCarrito.precio = "$" + datos.precio;
+                productoCarrito.precio = datos.precio;
                 productoCarrito.cantidad = datos.cantidad;
-                //productoCarrito.enCarrito = datos.enCarrito;
 
                 contenedorProductos.Controls.Add(productoCarrito);
             }
