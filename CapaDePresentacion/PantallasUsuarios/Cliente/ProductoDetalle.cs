@@ -122,6 +122,10 @@ namespace WindowsFormsApp1
             enCarrito = true;
 
             Verificar();
+
+            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
+            
         }
     }
 }

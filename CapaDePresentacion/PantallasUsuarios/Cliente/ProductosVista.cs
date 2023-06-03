@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
             Llenar();
         }
 
-        private void Llenar()
+        public void Llenar()
         {
             Productos productos = new Productos();
             _valores = productos.Rellenar();
@@ -52,6 +52,11 @@ namespace WindowsFormsApp1
         {
             Carrito carrito = new Carrito();
             carrito.Show();
+        }
+
+        public void LimpiarProductos()
+        {
+            contenedorProductos.Controls.Clear();
         }
     }
 }
