@@ -33,6 +33,7 @@
             // 
             // contenedorProductos
             // 
+            this.contenedorProductos.AutoScroll = true;
             this.contenedorProductos.BackColor = System.Drawing.Color.Gray;
             this.contenedorProductos.Location = new System.Drawing.Point(37, 72);
             this.contenedorProductos.Name = "contenedorProductos";

@@ -73,7 +73,7 @@
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
             this.Name = "ProductoCarrito";
-            this.Size = new System.Drawing.Size(905, 220);
+            this.Size = new System.Drawing.Size(576, 220);
             this.Load += new System.EventHandler(this.ProductoCarrito_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
