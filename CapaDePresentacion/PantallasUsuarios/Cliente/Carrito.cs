@@ -27,7 +27,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             Llenar();
         }
 
-        private void Llenar()
+        public void Llenar()
         {
             Productos productos = new Productos();
             _valores = productos.RellenarCarrito();
@@ -46,6 +46,11 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
                 contenedorProductos.Controls.Add(productoCarrito);
             }
         }
-       
+
+        public void LimpiarProductos()
+        {
+            contenedorProductos.Controls.Clear();
+        }
+
     }
 }

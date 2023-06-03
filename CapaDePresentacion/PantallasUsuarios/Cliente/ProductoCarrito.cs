@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace CapaDePresentacion.PantallasUsuarios.Cliente
 {
@@ -78,5 +81,37 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             lblCantidad.Text = "Cantidad: " + cantidad.ToString();
         }
 
+        private void linkQuitarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ComprobarEliminarProducto();
+        }
+
+        private void ComprobarEliminarProducto()
+        {
+            DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere eliminar el producto?", "Eliminar producto", MessageBoxButtons.YesNo);
+
+            if (pantallaAdvertencia == DialogResult.Yes)
+            {
+                EliminarProducto();
+            }
+        }
+
+        private void EliminarProducto()
+        {
+            Productos productos = new Productos();
+
+            productos.CambiarEstadoProducto(id, false);
+            productos.EliminarProductoCarrito(id);
+            RecargarPantalla();
+
+        }
+
+        private static void RecargarPantalla()
+        {
+            (Application.OpenForms["Carrito"] as Carrito).LimpiarProductos();
+            (Application.OpenForms["Carrito"] as Carrito).Llenar();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace CapaDeNegocio
         {
             _datosProductos.CambiarEstadoProducto(id, estado);
         }
+
+        public void EliminarProductoCarrito(int id)
+        {
+            _datosProductos.EliminarProductoCarrito(id);
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
+            this.linkQuitarProducto = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblPrecio
@@ -65,11 +66,24 @@
             this.lblCantidad.TabIndex = 6;
             this.lblCantidad.Text = "Cantidad";
             // 
+            // linkQuitarProducto
+            // 
+            this.linkQuitarProducto.AutoSize = true;
+            this.linkQuitarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkQuitarProducto.Location = new System.Drawing.Point(320, 81);
+            this.linkQuitarProducto.Name = "linkQuitarProducto";
+            this.linkQuitarProducto.Size = new System.Drawing.Size(210, 32);
+            this.linkQuitarProducto.TabIndex = 7;
+            this.linkQuitarProducto.TabStop = true;
+            this.linkQuitarProducto.Text = "Quitar producto";
+            this.linkQuitarProducto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkQuitarProducto_LinkClicked);
+            // 
             // ProductoCarrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.linkQuitarProducto);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
@@ -86,5 +100,6 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.LinkLabel linkQuitarProducto;
     }
 }

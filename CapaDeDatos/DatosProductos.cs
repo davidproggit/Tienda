@@ -203,6 +203,16 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        public void EliminarProductoCarrito(int id)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "EliminarProductoCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
         #endregion
 
     }
