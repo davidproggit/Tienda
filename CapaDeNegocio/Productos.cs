@@ -41,5 +41,10 @@ namespace CapaDeNegocio
         {
             _datosProductos.AgregarCarrito(id, nombre, descripcion, marca, cantidad, precio);
         }
+        
+        public void CambiarEstadoProducto(int id, bool estado)
+        {
+            _datosProductos.CambiarEstadoProducto(id, estado);
+        }
     }
 }

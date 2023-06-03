@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CapaDeDatos
@@ -185,6 +186,19 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@cantidad", cantidad);
             _comando.Parameters.AddWithValue("@precio", precio);
            
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
+        public void CambiarEstadoProducto(int id, bool estado)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CambiarEstadoProducto";
+            _comando.CommandType = CommandType.StoredProcedure;
+
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@estado", estado);
+
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }

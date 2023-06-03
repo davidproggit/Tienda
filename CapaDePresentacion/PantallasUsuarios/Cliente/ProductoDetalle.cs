@@ -1,4 +1,5 @@
 ﻿using CapaDeNegocio;
+using CapaDePresentacion.PantallasUsuarios.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -106,11 +107,21 @@ namespace WindowsFormsApp1
 
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
+            AgregarCarrito();
+        }
+
+        private void AgregarCarrito()
+        {
             Productos productos = new Productos();
 
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
             productos.AgregarCarrito(id, nombre, descripcion, marca, cantidadSeleccionada, precio);
+
+            productos.CambiarEstadoProducto(id, true);
+            enCarrito = true;
+
+            Verificar();
         }
     }
 }
