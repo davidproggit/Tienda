@@ -173,18 +173,20 @@ namespace CapaDeDatos
             return _valores;
         }
 
-        public void AgregarCarrito(int id, string nombre, string descripcion, string marca, int cantidad, float precio)
+        public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "AgregarProductoCarrito";
             _comando.CommandType = CommandType.StoredProcedure;
 
-            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _comando.Parameters.AddWithValue("@idProducto", idProducto);
             _comando.Parameters.AddWithValue("@nombre", nombre);
             _comando.Parameters.AddWithValue("@descripcion", descripcion);
             _comando.Parameters.AddWithValue("@marca", marca);
             _comando.Parameters.AddWithValue("@cantidad", cantidad);
             _comando.Parameters.AddWithValue("@precio", precio);
+            _comando.Parameters.AddWithValue("@estado", estado);
            
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
@@ -213,18 +215,20 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void EnviarCompra(int id, string nombre, string descripcion, string marca, int cantidad, float precio)
+        public void EnviarOrdenCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EnviarCompra";
+            _comando.CommandText = "EnviarOrdenCompra";
             _comando.CommandType = CommandType.StoredProcedure;
 
-            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@idProducto", idProducto);
+            _comando.Parameters.AddWithValue("@idCLiente", idCLiente);
             _comando.Parameters.AddWithValue("@nombre", nombre);
             _comando.Parameters.AddWithValue("@descripcion", descripcion);
             _comando.Parameters.AddWithValue("@marca", marca);
             _comando.Parameters.AddWithValue("@cantidad", cantidad);
             _comando.Parameters.AddWithValue("@precio", precio);
+            _comando.Parameters.AddWithValue("@estado", estado);
 
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
@@ -249,6 +253,18 @@ namespace CapaDeDatos
             _comando.CommandText = "EliminarClienteProducto";
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.AddWithValue("@id", id);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
+        public void VaciarCarrito(int idCliente)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "VaciarCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+
+            _comando.Parameters.AddWithValue("@idCliente", idCliente);
+
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }

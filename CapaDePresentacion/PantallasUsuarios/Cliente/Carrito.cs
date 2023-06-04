@@ -1,4 +1,5 @@
 ﻿using CapaComun;
+using CapaComun.Cache;
 using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
@@ -55,14 +56,21 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
 
         private void linkEnviarCompra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           /* Productos productos = new Productos();
+            Productos productos = new Productos();
 
             foreach (FormatoProductos datos in _valores)
             {
                 productos.CambiarEstadoProducto(datos.id, "Enviado");
+                productos.EnviarOrdenCompra(datos.id, CacheSesionUsuario.ID, datos.nombre, datos.descripcion, datos.marca, datos.cantidad, datos.precio, "Pendiente");
+                productos.VaciarCarrito(CacheSesionUsuario.ID);
+                LimpiarCarrito();
+                Llenar();
+            }
+        }
 
-                productos.EnviarCompra(datos.id, datos.nombre, datos.descripcion, datos.marca, datos.cantidad, datos.precio);
-            }*/
+        private void LimpiarCarrito()
+        {
+            contenedorProductos.Controls.Clear();
         }
     }
 }
