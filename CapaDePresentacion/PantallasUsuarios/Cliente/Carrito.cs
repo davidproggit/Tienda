@@ -55,12 +55,14 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
 
         private void linkEnviarCompra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Productos productos = new Productos();
+           /* Productos productos = new Productos();
 
             foreach (FormatoProductos datos in _valores)
             {
+                productos.CambiarEstadoProducto(datos.id, "Enviado");
+
                 productos.EnviarCompra(datos.id, datos.nombre, datos.descripcion, datos.marca, datos.cantidad, datos.precio);
-            }
+            }*/
         }
     }
 }
