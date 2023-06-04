@@ -70,12 +70,12 @@ namespace WindowsFormsApp1
             set { _cantidad = value; }
         }
 
-        private bool _enCarrito;
+        private string _estado;
 
-        public bool enCarrito
+        public string estado
         {
-            get { return _enCarrito; }
-            set { _enCarrito = value; }
+            get { return _estado; }
+            set { _estado = value; }
         }
 
         private void CargarDatos()
@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             productoDetalle.marca = marca;
             productoDetalle.precio = precio;
             productoDetalle.cantidad = cantidad;
-            productoDetalle.enCarrito = enCarrito;
+            productoDetalle.estado = estado;
 
             productoDetalle.Show();
         }

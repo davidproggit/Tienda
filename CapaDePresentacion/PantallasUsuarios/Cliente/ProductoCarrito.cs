@@ -1,4 +1,5 @@
-﻿using CapaDeEntidades;
+﻿using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
@@ -100,10 +101,11 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
         {
             Productos productos = new Productos();
 
-            productos.CambiarEstadoProducto(id, false);
+            productos.CambiarEstadoProducto(id, "Disponible");
             productos.EliminarProductoCarrito(id);
-            RecargarPantalla();
+            productos.EliminarClienteProducto(id);
 
+            RecargarPantalla();
         }
 
         private static void RecargarPantalla()

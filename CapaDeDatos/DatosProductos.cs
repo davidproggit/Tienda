@@ -110,7 +110,7 @@ namespace CapaDeDatos
         public List<FormatoProductos> Rellenar()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Precio, Stock, EnCarrito from Productos";
+            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Precio, Stock, Estado from Productos";
             _comando.CommandType = CommandType.Text;
             _lector = _comando.ExecuteReader();
 
@@ -122,7 +122,7 @@ namespace CapaDeDatos
                 string productoMarca = _lector["Marca"].ToString();
                 float productoPrecio = float.Parse(_lector["Precio"].ToString());
                 int productoCantidad = int.Parse(_lector["Stock"].ToString());
-                bool productoEnCarrito = Convert.ToBoolean(_lector["EnCarrito"]);
+                string productoEstado = _lector["Estado"].ToString();
 
                 _valores.Add(new FormatoProductos
                 {
@@ -132,7 +132,7 @@ namespace CapaDeDatos
                     marca = productoMarca,
                     precio = productoPrecio,
                     cantidad = productoCantidad,
-                    enCarrito = productoEnCarrito
+                    estado = productoEstado
                 });
             }
 
@@ -190,7 +190,7 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void CambiarEstadoProducto(int id, bool estado)
+        public void CambiarEstadoProducto(int id, string estado)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "CambiarEstadoProducto";
@@ -230,6 +230,28 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        public void AsignarClienteProducto(int id, int idCliente)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "AsignarClienteProducto";
+            _comando.CommandType = CommandType.StoredProcedure;
+
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@idCliente", idCliente);
+
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
+        public void EliminarClienteProducto(int id)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "EliminarClienteProducto";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@id", id);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
 
         #endregion
 

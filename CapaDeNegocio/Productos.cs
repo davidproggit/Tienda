@@ -42,7 +42,7 @@ namespace CapaDeNegocio
             _datosProductos.AgregarCarrito(id, nombre, descripcion, marca, cantidad, precio);
         }
         
-        public void CambiarEstadoProducto(int id, bool estado)
+        public void CambiarEstadoProducto(int id, string estado)
         {
             _datosProductos.CambiarEstadoProducto(id, estado);
         }
@@ -55,6 +55,16 @@ namespace CapaDeNegocio
         public void EnviarCompra(int id, string nombre, string descripcion, string marca, int cantidad, float precio)
         {
             _datosProductos.EnviarCompra(id, nombre, descripcion, marca, cantidad, precio);
+        }
+
+        public void AsignarClienteProducto(int id, int idCliente)
+        {
+            _datosProductos.AsignarClienteProducto(id, idCliente);
+        }
+
+        public void EliminarClienteProducto(int id)
+        {
+            _datosProductos.EliminarClienteProducto(id);
         }
     }
 }

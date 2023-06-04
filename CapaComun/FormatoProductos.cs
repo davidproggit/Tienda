@@ -14,6 +14,6 @@ namespace CapaComun
         public string marca { get; set; }
         public int cantidad { get; set; }
         public float precio { get; set; }
-        public bool enCarrito { get; set; }
+        public string estado { get; set; }
     }
 }

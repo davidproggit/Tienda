@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
                 productoPrevisualizacion.marca = datos.marca;
                 productoPrevisualizacion.precio = datos.precio;
                 productoPrevisualizacion.cantidad = datos.cantidad;
-                productoPrevisualizacion.enCarrito = datos.enCarrito;
+                productoPrevisualizacion.estado = datos.estado;
 
                 contenedorProductos.Controls.Add(productoPrevisualizacion);
             }

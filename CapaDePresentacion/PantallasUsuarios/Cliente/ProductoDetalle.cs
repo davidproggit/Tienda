@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaComun.Cache;
+using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuarios.Cliente;
 using System;
 using System.Collections.Generic;
@@ -74,12 +75,12 @@ namespace WindowsFormsApp1
             set { _precio = value; }
         }
 
-        private bool _enCarrito;
+        private string _estado;
 
-        public bool enCarrito
+        public string estado
         {
-            get { return _enCarrito; }
-            set { _enCarrito = value; }
+            get { return _estado; }
+            set { _estado = value; }
         }
 
         private void CargarDatos()
@@ -90,7 +91,7 @@ namespace WindowsFormsApp1
 
         private void Verificar()
         {
-            if (!enCarrito) 
+            if (estado == "Disponible") 
                 btnAgregarCarrito.Text = "Agregar al carrito";
             else
             {
@@ -117,9 +118,10 @@ namespace WindowsFormsApp1
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
             productos.AgregarCarrito(id, nombre, descripcion, marca, cantidadSeleccionada, precio);
+            productos.CambiarEstadoProducto(id, "Carrito");
+            productos.AsignarClienteProducto(id, CacheSesionUsuario.ID);
 
-            productos.CambiarEstadoProducto(id, true);
-            enCarrito = true;
+            estado = "Carrito";
 
             Verificar();
         }
