@@ -38,7 +38,7 @@ namespace CapaDePresentacion.PantallasGenerales
             if (CacheSesionUsuario.Cargo == Cargos.cargoVendedor)
                 AbrirFormulario<ABMClientes>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.cargoEncargado)
+            if (CacheSesionUsuario.Cargo == Cargos.cargoProveedor)
                 AbrirFormulario<InterfazProducto>();
 
             if (CacheSesionUsuario.Cargo == Cargos.cargoGerente)

@@ -38,7 +38,7 @@ namespace CapaDePresentacion
             comboCargo.Items.Add("Cliente");
             comboCargo.Items.Add("Admin");
             comboCargo.Items.Add("Vendedor");
-            comboCargo.Items.Add("Encargado");
+            comboCargo.Items.Add("Proveedor");
             comboCargo.Items.Add("Gerente");
         }
 
