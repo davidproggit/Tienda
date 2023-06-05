@@ -15,17 +15,16 @@ namespace WindowsFormsApp1
 {
     public partial class ProductoDetalle : Form
     {
+        #region "Constructor"
+
         public ProductoDetalle()
         {
             InitializeComponent();
         }
 
-        private void ProductoDetalle_Load(object sender, EventArgs e)
-        {
-            Verificar();
-            EstablecerCantidadMaxima();
-            CargarDatos();
-        }
+        #endregion
+
+        #region "Atributos"
 
         private int _ProductoId;
 
@@ -83,11 +82,35 @@ namespace WindowsFormsApp1
             set { _ProductoEstado = value; }
         }
 
+        #endregion
+
+        #region "Cargar datos"
+
+        private void ProductoDetalle_Load(object sender, EventArgs e)
+        {
+            Verificar();
+            EstablecerCantidadMaxima();
+            CargarDatos();
+        }
+
         private void CargarDatos()
         {
             lblNombre.Text = ProductoNombre;
             lblPrecio.Text = "$" + ProductoPrecio.ToString();
         }
+
+        #endregion
+
+        #region "Opciones"
+
+        private void btnAgregarCarrito_Click(object sender, EventArgs e)
+        {
+            AgregarCarrito();
+        }
+
+        #endregion
+
+        #region "Metodos"
 
         private void Verificar()
         {
@@ -104,11 +127,6 @@ namespace WindowsFormsApp1
         private void EstablecerCantidadMaxima()
         {
             selectorCantidad.Maximum = ProductoCantidad;
-        }
-
-        private void btnAgregarCarrito_Click(object sender, EventArgs e)
-        {
-            AgregarCarrito();
         }
 
         private void AgregarCarrito()
@@ -131,5 +149,8 @@ namespace WindowsFormsApp1
             (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
             (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
         }
+
+        #endregion
+
     }
 }

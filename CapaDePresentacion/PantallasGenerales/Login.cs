@@ -15,10 +15,14 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class Login : Form
     {
+        #region "Constructor"
+
         public Login()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Metodos de mover la ventana"
         private void MoverVentana_MouseDown(object sender, MouseEventArgs e)

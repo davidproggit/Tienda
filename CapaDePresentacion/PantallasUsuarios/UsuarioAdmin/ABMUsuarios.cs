@@ -14,10 +14,14 @@ namespace CapaDePresentacion
 {
     public partial class ABMUsuarios : Form
     {
+        #region "Constructor"
+
         public ABMUsuarios()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 

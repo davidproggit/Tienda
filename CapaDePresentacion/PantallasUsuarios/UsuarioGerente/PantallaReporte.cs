@@ -14,16 +14,37 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
 {
     public partial class PantallaReporte : Form
     {
+        #region "Constructor"
+
         public PantallaReporte()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region "Carga de datos"
 
         private void PantallaReporte_Load(object sender, EventArgs e)
         {
             MostrarOrdenes();
             CargarVendedores();
         }
+
+        private void CargarVendedores()
+        {
+            Gerente gerente = new Gerente();
+            DataTable vendedores = new DataTable();
+
+            vendedores = gerente.CargarVendedores();
+
+            foreach (DataRow vendedor in vendedores.Rows)
+                comboVendedores.Items.Add(vendedor["Nombre"].ToString());
+        }
+
+        #endregion
+
+        #region "Botones"
 
         private void btnMostrarTodo_Click(object sender, EventArgs e)
         {
@@ -39,6 +60,15 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
         {
             MostrarOrdenesMes();
         }
+
+        private void comboVendedores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MostrarOrdenesVendedor();
+        }
+
+        #endregion
+
+        #region "Metodos de los botones"
 
         private void MostrarOrdenes()
         {
@@ -64,21 +94,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
             grillaOrdenes.DataSource = productos.MostrarOrdenesVendedor(comboVendedores.Text);
         }
 
-        private void CargarVendedores()
-        {
-            Gerente gerente = new Gerente();
-            DataTable vendedores = new DataTable();
-
-            vendedores = gerente.CargarVendedores();
-
-            foreach (DataRow vendedor in vendedores.Rows) 
-                comboVendedores.Items.Add(vendedor["Nombre"].ToString());
-        }
-
-        private void comboVendedores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MostrarOrdenesVendedor();
-        }
+        #endregion
 
     }
 }

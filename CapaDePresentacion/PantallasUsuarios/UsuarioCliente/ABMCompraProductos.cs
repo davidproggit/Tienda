@@ -15,10 +15,14 @@ namespace CapaDePresentacion
 {
     public partial class ABMCompraProductos : Form
     {
+        #region "Constructor"
+
         public ABMCompraProductos()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 

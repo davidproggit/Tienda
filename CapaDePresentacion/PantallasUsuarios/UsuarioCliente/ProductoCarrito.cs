@@ -16,15 +16,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class ProductoCarrito : UserControl
     {
+        #region "Constructor"
+
         public ProductoCarrito()
         {
             InitializeComponent();
         }
 
-        private void ProductoCarrito_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
-        }
+        #endregion
 
         #region "Atributos"
 
@@ -86,6 +85,13 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+        #region "Cargar datos"
+
+        private void ProductoCarrito_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
         private void CargarDatos()
         {
             lblNombre.Text = ProductoNombre;
@@ -93,19 +99,25 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             lblCantidad.Text = "Cantidad: " + ProductoCantidad.ToString();
         }
 
+        #endregion
+
+        #region "Opciones"
+
         private void linkQuitarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ComprobarEliminarProducto();
         }
+
+        #endregion
+
+        #region "Metodos de las opciones"
 
         private void ComprobarEliminarProducto()
         {
             DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere eliminar el producto?", "Eliminar producto", MessageBoxButtons.YesNo);
 
             if (pantallaAdvertencia == DialogResult.Yes)
-            {
                 EliminarProducto();
-            }
         }
 
         private void EliminarProducto()
@@ -126,5 +138,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
             (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
         }
+
+        #endregion
+
     }
 }

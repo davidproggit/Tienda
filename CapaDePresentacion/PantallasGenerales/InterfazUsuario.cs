@@ -16,11 +16,15 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class InterfazUsuario : Form
     {
+        #region "Constructor"
+
         public InterfazUsuario()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
         }
+
+        #endregion
 
         #region "Cargar datos principales"
 

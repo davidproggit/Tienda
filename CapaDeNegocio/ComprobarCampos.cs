@@ -8,7 +8,13 @@ namespace CapaDeNegocio
 {
     public class ComprobarCampos
     {
+        #region "Atributo"
+
         private string _mensaje = "";
+
+        #endregion
+
+        #region "Metodo"
 
         public string ComprobarCamposIndividuales(string campo)
         {
@@ -28,5 +34,7 @@ namespace CapaDeNegocio
 
             return _mensaje;
         }
+
+        #endregion
     }
 }

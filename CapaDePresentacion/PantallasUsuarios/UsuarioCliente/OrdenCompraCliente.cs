@@ -12,14 +12,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class OrdenCompraCliente : UserControl
     {
+        #region "Constructor"
+
         public OrdenCompraCliente()
         {
             InitializeComponent();
         }
-        private void OrdenCompraCliente_Load(object sender, EventArgs e)
-        {
-            CargarInformacion();
-        }
+
+        #endregion
 
         #region "Atributos"
 
@@ -81,6 +81,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+        #region "Cargar datos"
+
+        private void OrdenCompraCliente_Load(object sender, EventArgs e)
+        {
+            CargarInformacion();
+        }
+
+
         private void CargarInformacion()
         {
             lblNombreProducto.Text = ProductoNombre;
@@ -88,5 +96,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             lblCantidad.Text = "Cantidad: " + ProductoCantidad.ToString();
             lblEstado.Text = ProductoEstado;
         }
+
+        #endregion
+
     }
 }

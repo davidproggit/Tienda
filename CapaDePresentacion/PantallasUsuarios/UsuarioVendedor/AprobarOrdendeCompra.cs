@@ -12,14 +12,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     public partial class AprobarOrdendeCompra : Form
     {
+        #region "Constructor"
+
         public AprobarOrdendeCompra()
         {
             InitializeComponent();
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        #endregion
 
-        }
     }
 }

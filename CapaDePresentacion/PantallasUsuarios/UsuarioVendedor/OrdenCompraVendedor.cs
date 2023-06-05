@@ -14,16 +14,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class OrdenCompraVendedor : UserControl
     {
+        #region "Constructor"
+
         public OrdenCompraVendedor()
         {
             InitializeComponent();
         }
 
-        private void OrdenCompraVendedor_Load(object sender, EventArgs e)
-        {
-            CargarInformacion();
-            VerificarEstado();
-        }
+        #endregion
 
         #region "Atributos"
 
@@ -41,8 +39,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             get { return _ProductoId; }
             set { _ProductoId = value; }
-        }  
-        
+        }
+
         private int _idCliente;
 
         public int idCliente
@@ -101,6 +99,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+        #region "Cargar datos"
+
+        private void OrdenCompraVendedor_Load(object sender, EventArgs e)
+        {
+            CargarInformacion();
+            VerificarEstado();
+        }
+      
         private void CargarInformacion()
         {
             lblNombreCliente.Text = "Cliente nº: " + idCliente;
@@ -110,7 +116,25 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             lblEstado.Text = ProductoEstado;
         }
 
+        #endregion
+
+        #region "Opciones"
+
         private void btnAprobar_Click(object sender, EventArgs e)
+        {
+            AprobarOrden();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            CancelarOrden();
+        }
+
+        #endregion
+
+        #region "Metodos de las opciones"
+
+        private void AprobarOrden()
         {
             Productos productos = new Productos();
 
@@ -119,7 +143,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             CargarInformacion();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void CancelarOrden()
         {
             Productos productos = new Productos();
 
@@ -139,5 +163,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             btnAprobar.Enabled = false;
             btnCancelar.Enabled = false;
         }
+
+        #endregion
+
     }
 }

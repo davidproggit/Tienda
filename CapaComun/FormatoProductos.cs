@@ -8,6 +8,8 @@ namespace CapaComun
 {
     public class FormatoProductos
     {
+        #region "Atributos"
+
         public int ProductoId { get; set; }
         public int ordenId { get; set; }
         public int ClienteId { get; set; }
@@ -18,5 +20,8 @@ namespace CapaComun
         public int ProductoCantidad { get; set; }
         public float ProductoPrecio { get; set; }
         public string ProductoEstado { get; set; }
+
+        #endregion
+
     }
 }

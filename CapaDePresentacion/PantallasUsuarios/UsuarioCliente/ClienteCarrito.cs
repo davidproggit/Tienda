@@ -13,11 +13,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class ClienteCarrito : Form
     {
+        #region "Constructor"
+        
         public ClienteCarrito()
         {
             InitializeComponent();
         }
 
+        #endregion
 
         #region "Cargar datos"
 
@@ -55,6 +58,5 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
-       
     }
 }

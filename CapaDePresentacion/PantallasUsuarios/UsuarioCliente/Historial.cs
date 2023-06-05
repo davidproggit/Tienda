@@ -16,12 +16,22 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class Historial : Form
     {
+        #region "Lista"
+
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
+
+        #endregion
+
+        #region "Constructor"
 
         public Historial()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region "Cargar datos"
 
         private void Historial_Load(object sender, EventArgs e)
         {
@@ -48,6 +58,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
                 contenedorProductos.Controls.Add(ordenCompraCliente);
             }
         }
-       
+
+        #endregion
+
     }
 }

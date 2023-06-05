@@ -15,13 +15,26 @@ namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
+        #region "Objeto"
+
         Proveedor _proveedor = new Proveedor();
+
+        #endregion
+
+        #region "Atributo"
+
         private bool _sinProducto = true;
+
+        #endregion
+
+        #region "Constructor"
 
         public AlertadeProducto()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 

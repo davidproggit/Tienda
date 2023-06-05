@@ -15,14 +15,27 @@ namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
+        #region "Objeto"
+
         private Proveedor _proveedor = new Proveedor();
+
+        #endregion
+
+        #region "Condicionales"
+
         private int _idProducto;
         private bool _editar = false;
+
+        #endregion
+
+        #region "Constructor"
 
         public InterfazProducto()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 

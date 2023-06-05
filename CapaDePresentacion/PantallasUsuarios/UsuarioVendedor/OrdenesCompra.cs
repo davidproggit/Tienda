@@ -16,12 +16,22 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     public partial class OrdenesCompra : Form
     {
+        #region "Lista"
+
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
+
+        #endregion
+
+        #region "Constructor"
 
         public OrdenesCompra()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region "Cargar datos"
 
         private void OrdenesCompra_Load(object sender, EventArgs e)
         {
@@ -51,6 +61,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
             }
         }
 
-       
+        #endregion
+
     }
 }

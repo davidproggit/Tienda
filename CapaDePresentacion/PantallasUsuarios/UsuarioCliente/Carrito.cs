@@ -17,12 +17,22 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class Carrito : Form
     {
+        #region "Lista"
+
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
+
+        #endregion
+
+        #region "Constructor"
 
         public Carrito()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region "Cargar datos"
 
         private void Carrito_Load(object sender, EventArgs e)
         {
@@ -49,12 +59,20 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             }
         }
 
-        public void LimpiarProductos()
-        {
-            contenedorProductos.Controls.Clear();
-        }
+        #endregion
+
+        #region "Opciones"
 
         private void linkEnviarCompra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            EnviarOrdenCompra();
+        }
+
+        #endregion
+
+        #region "Metodos de las opciones"
+
+        private void EnviarOrdenCompra()
         {
             Productos productos = new Productos();
 
@@ -72,5 +90,13 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             contenedorProductos.Controls.Clear();
         }
+
+        public void LimpiarProductos()
+        {
+            contenedorProductos.Controls.Clear();
+        }
+
+        #endregion
+
     }
 }

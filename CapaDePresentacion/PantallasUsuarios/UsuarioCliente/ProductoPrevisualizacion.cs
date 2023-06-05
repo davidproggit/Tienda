@@ -12,15 +12,14 @@ namespace WindowsFormsApp1
 {
     public partial class ProductoPrevisualizacion : UserControl
     {
+        #region "Constructor"
+
         public ProductoPrevisualizacion()
         {
             InitializeComponent();
         }
 
-        private void ProductoPrevisualizacion_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
-        }
+        #endregion
 
         #region "Atributos"
 
@@ -82,13 +81,33 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        #region "Cargar datos"
+
+        private void ProductoPrevisualizacion_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
         private void CargarDatos()
         {
             lblNombre.Text = ProductoNombre;
             lblPrecio.Text = "$" + ProductoPrecio.ToString();
         }
 
+        #endregion
+
+        #region "Opciones"
+
         private void btnVerMas_Click(object sender, EventArgs e)
+        {
+            VerMas();
+        }
+
+        #endregion
+
+        #region "Metodos"
+
+        private void VerMas()
         {
             ProductoDetalle productoDetalle = new ProductoDetalle();
 
@@ -102,6 +121,8 @@ namespace WindowsFormsApp1
 
             productoDetalle.Show();
         }
+
+        #endregion
 
     }
 }

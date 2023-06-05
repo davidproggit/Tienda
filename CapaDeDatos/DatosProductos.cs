@@ -12,11 +12,15 @@ namespace CapaDeDatos
 {
     public class DatosProductos
     {
+        #region "Objetos"
+
         private Conexion _conexion = new Conexion();
         private SqlDataReader _lector;
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
+
+        #endregion
 
         #region "Proveedor"
 
@@ -313,6 +317,8 @@ namespace CapaDeDatos
 
         #endregion
 
+        #region "Vendedor"
+
         public List<FormatoProductos> CargarOrdenesCompra()
         {
             _comando.Connection = _conexion.AbrirConexion();
@@ -372,6 +378,10 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        #endregion
+
+        #region "Gerente"
+
         public DataTable MostrarOrdenes()
         {
             _comando.Connection = _conexion.AbrirConexion();
@@ -423,5 +433,8 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
             return tablaFiltrada;
         }
+
+        #endregion
+
     }
 }

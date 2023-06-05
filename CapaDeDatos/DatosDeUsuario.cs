@@ -13,10 +13,14 @@ namespace CapaDeDatos
 {
     public class DatosDeUsuario
     {
+        #region "Objetos"
+
         private Conexion _conexion = new Conexion();
         private SqlDataReader _lector;
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
+
+        #endregion
 
         #region "Admin y vendedor"
 
@@ -187,6 +191,8 @@ namespace CapaDeDatos
 
         #endregion
 
+        #region "Gerente"
+
         public DataTable CargarVendedores()
         {
             _comando.Connection = _conexion.AbrirConexion();
@@ -202,5 +208,8 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
             return tablaFiltrada;
         }
+
+        #endregion
+
     }
 }

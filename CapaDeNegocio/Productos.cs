@@ -13,16 +13,22 @@ namespace CapaDeNegocio
 {
     public class Productos
     {
+        #region "Objetos"
+
         private DatosProductos _datosProductos = new DatosProductos();
         private DataTable _tabla = new DataTable();
 
-       public DataTable MostrarProducto()
+        #endregion
+
+        #region "DataTable"
+
+        public DataTable MostrarProducto()
        {
             _tabla = _datosProductos.Mostrar();
             return _tabla;
        }
 
-       public DataTable FiltrarProducto(string textoBuscar)
+        public DataTable FiltrarProducto(string textoBuscar)
        {
             _tabla = _datosProductos.Filtrar(textoBuscar);
             return _tabla;
@@ -48,6 +54,10 @@ namespace CapaDeNegocio
             return _datosProductos.MostrarOrdenesVendedor(vendedor);
         }
 
+        #endregion
+
+        #region "List"
+
         public List<FormatoProductos> Rellenar()
         {
             return _datosProductos.Rellenar();
@@ -67,6 +77,10 @@ namespace CapaDeNegocio
         {
             return _datosProductos.CargarOrdenesCompra();
         }
+
+        #endregion
+
+        #region "Metodos generales"
 
         public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
@@ -112,5 +126,8 @@ namespace CapaDeNegocio
         {
             _datosProductos.CancelarOrden(ordenId);
         }
+
+        #endregion
+
     }
 }

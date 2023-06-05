@@ -15,13 +15,21 @@ namespace CapaDePresentacion
 {
     public partial class ABMClientes : Form
     {
+        #region "Condicionales"
+
         private bool _editar = false;
         private int _idCliente;
+
+        #endregion
+
+        #region "Constructor"
 
         public ABMClientes()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 
@@ -56,6 +64,11 @@ namespace CapaDePresentacion
         private void btnEditar_Click(object sender, EventArgs e)
         {
             RellenarCamposEdicion();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirOrdenesCompra();
         }
 
         #endregion
@@ -116,6 +129,12 @@ namespace CapaDePresentacion
                 MessageBox.Show("Error: tiene que completar todos los campos");
         }
 
+        private static void AbrirOrdenesCompra()
+        {
+            OrdenesCompra ordenesCompra = new OrdenesCompra();
+            ordenesCompra.Show();
+        }
+
         #endregion
 
         #region "Control de campos"
@@ -141,10 +160,5 @@ namespace CapaDePresentacion
 
         #endregion
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            OrdenesCompra ordenesCompra = new OrdenesCompra();
-            ordenesCompra.Show();
-        }
     }
 }

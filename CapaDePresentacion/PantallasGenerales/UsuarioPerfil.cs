@@ -13,10 +13,15 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class UsuarioPerfil : Form
     {
+
+        #region "Constructor"
+
         public UsuarioPerfil()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 

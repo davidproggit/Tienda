@@ -15,12 +15,22 @@ namespace WindowsFormsApp1
 {
     public partial class ProductosVista : Form
     {
+        #region "Lista"
+
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
+
+        #endregion
+
+        #region "Constructor"
 
         public ProductosVista()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region "Cargar datos"
 
         private void ProductosVista_Load(object sender, EventArgs e)
         {
@@ -48,22 +58,37 @@ namespace WindowsFormsApp1
             }
         }
 
+        #endregion
+
+        #region "Opciones"
+
         private void linkCarrito_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Carrito carrito = new Carrito();
             carrito.Show();
         }
 
+        private void linkHistorial_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirOrdenes();
+        }
+
+        #endregion
+
+        #region "Metodos"
+
         public void LimpiarProductos()
         {
             contenedorProductos.Controls.Clear();
         }
 
-        private void linkHistorial_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private static void AbrirOrdenes()
         {
             Historial historial = new Historial();
             historial.Show();
         }
-       
+
+        #endregion
+
     }
 }

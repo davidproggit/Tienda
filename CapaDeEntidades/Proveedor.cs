@@ -10,9 +10,19 @@ namespace CapaDeEntidades
 {
     public class Proveedor
     {
+        #region "Objetos"
+
         private DatosProductos _datosProductos = new DatosProductos();
 
+        #endregion
+
+        #region "Constructor"
+
         public Proveedor() { }
+
+        #endregion
+
+        #region "Metodos"
 
         public void InsertarProducto(string nombre, string descripcion, string marca, string precio, string stock)
         {
@@ -33,5 +43,8 @@ namespace CapaDeEntidades
         {
             _datosProductos.ModificarAlerta(id, mensaje, Convert.ToInt32(cantidadMinima));
         }
+
+        #endregion
+
     }
 }
