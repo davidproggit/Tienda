@@ -1,5 +1,6 @@
 ﻿using CapaDeEntidades;
 using CapaDeNegocio;
+using CapaDePresentacion.PantallasUsuarios.Vendedor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -139,6 +140,11 @@ namespace CapaDePresentacion
         }
 
         #endregion
-       
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OrdenesCompra ordenesCompra = new OrdenesCompra();
+            ordenesCompra.Show();
+        }
     }
 }

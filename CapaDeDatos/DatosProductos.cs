@@ -126,13 +126,13 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
-                    id = productoId,
-                    nombre = productoNombre,
-                    descripcion = productoDescripcion,
-                    marca = productoMarca,
-                    precio = productoPrecio,
-                    cantidad = productoCantidad,
-                    estado = productoEstado
+                    idProducto = productoId,
+                    nombreProducto = productoNombre,
+                    descripcionProducto = productoDescripcion,
+                    marcaProducto = productoMarca,
+                    precioProducto = productoPrecio,
+                    cantidadProducto = productoCantidad,
+                    estadoProducto = productoEstado
                 });
             }
 
@@ -159,12 +159,12 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
-                    id = productoId,
-                    nombre = productoNombre,
-                    descripcion = productoDescripcion,
-                    marca = productoMarca,
-                    cantidad = productoCantidad,
-                    precio = productoPrecio
+                    idProducto = productoId,
+                    nombreProducto = productoNombre,
+                    descripcionProducto = productoDescripcion,
+                    marcaProducto = productoMarca,
+                    cantidadProducto = productoCantidad,
+                    precioProducto = productoPrecio
                 });
             }
 
@@ -199,13 +199,13 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
-                    id = productoId,
-                    nombre = productoNombre,
-                    descripcion = productoDescripcion,
-                    marca = productoMarca,
-                    cantidad = productoCantidad,
-                    precio = productoPrecio,
-                    estado = productoEstado
+                    idProducto = productoId,
+                    nombreProducto = productoNombre,
+                    descripcionProducto = productoDescripcion,
+                    marcaProducto = productoMarca,
+                    cantidadProducto = productoCantidad,
+                    precioProducto = productoPrecio,
+                    estadoProducto = productoEstado
                 });
             }
 
@@ -312,6 +312,44 @@ namespace CapaDeDatos
         }
 
         #endregion
+
+        public List<FormatoProductos> CargarOrdenesCompra()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarOrdenesCompra";
+            _comando.CommandType = CommandType.StoredProcedure;
+
+            _lector = _comando.ExecuteReader();
+
+            while (_lector.Read())
+            {
+                int productoId = int.Parse(_lector["IdProducto"].ToString());
+                int clienteId = int.Parse(_lector["IdCliente"].ToString());
+                string productoNombre = _lector["NombreProducto"].ToString();
+                string productoDescripcion = _lector["DescripcionProducto"].ToString();
+                string productoMarca = _lector["MarcaProducto"].ToString();
+                int productoCantidad = int.Parse(_lector["CantidadProducto"].ToString());
+                float productoPrecio = float.Parse(_lector["PrecioProducto"].ToString());
+                string productoEstado = _lector["EstadoProducto"].ToString();
+
+                _valores.Add(new FormatoProductos
+                {
+                    idProducto = productoId,
+                    idCliente = clienteId,
+                    nombreProducto = productoNombre,
+                    descripcionProducto = productoDescripcion,
+                    marcaProducto = productoMarca,
+                    cantidadProducto = productoCantidad,
+                    precioProducto = productoPrecio,
+                    estadoProducto = productoEstado
+                });
+            }
+
+            _conexion.CerrarConexion();
+
+            return _valores;
+        }
+
 
     }
 }
