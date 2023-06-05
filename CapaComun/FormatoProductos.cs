@@ -9,6 +9,7 @@ namespace CapaComun
     public class FormatoProductos
     {
         public int ProductoId { get; set; }
+        public int ordenId { get; set; }
         public int ClienteId { get; set; }
         public string ProductoNombre { get; set; }
         public string ClienteNombre { get; set; }

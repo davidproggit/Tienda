@@ -323,6 +323,7 @@ namespace CapaDeDatos
 
             while (_lector.Read())
             {
+                int ordenId = int.Parse(_lector["IdOrden"].ToString());
                 int productoId = int.Parse(_lector["IdProducto"].ToString());
                 int clienteId = int.Parse(_lector["IdCliente"].ToString());
                 string productoNombre = _lector["NombreProducto"].ToString();
@@ -334,6 +335,7 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
+                    ordenId = ordenId,
                     ProductoId = productoId,
                     ClienteId = clienteId,
                     ProductoNombre = productoNombre,
@@ -350,6 +352,25 @@ namespace CapaDeDatos
             return _valores;
         }
 
+        public void AprobarOrden(int ordenId)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "AprobarOrden";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@ordenId", ordenId);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
+        public void CancelarOrden(int ordenId)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CancelarOrden";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@ordenId", ordenId);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
 
     }
 }

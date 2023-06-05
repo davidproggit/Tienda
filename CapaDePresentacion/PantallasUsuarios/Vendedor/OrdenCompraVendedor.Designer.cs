@@ -79,6 +79,7 @@
             this.btnAprobar.TabIndex = 11;
             this.btnAprobar.Text = "Aprobar compra";
             this.btnAprobar.UseVisualStyleBackColor = true;
+            this.btnAprobar.Click += new System.EventHandler(this.btnAprobar_Click);
             // 
             // btnCancelar
             // 
@@ -89,6 +90,7 @@
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar compra";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
