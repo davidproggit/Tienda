@@ -35,6 +35,7 @@ namespace CapaDePresentacion
         {
             Productos _productos = new Productos();
             grillaProductos.DataSource = _productos.MostrarProducto();
+            grillaProductos.Columns["ID"].Visible = false;
         }
 
         #endregion
