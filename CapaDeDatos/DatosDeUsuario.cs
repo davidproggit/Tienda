@@ -41,6 +41,17 @@ namespace CapaDeDatos
 
         #region "Administrador"
 
+        public DataTable CargarRoles()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarRoles";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
+
         public DataTable FiltrarUsuario(string txtBuscar)
         {
             _comando.Connection = _conexion.AbrirConexion();

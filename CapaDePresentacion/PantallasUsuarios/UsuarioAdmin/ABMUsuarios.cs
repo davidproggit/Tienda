@@ -35,11 +35,13 @@ namespace CapaDePresentacion
 
         private void CargarRoles()
         {
-            comboCargo.Items.Add("Cliente");
-            comboCargo.Items.Add("Admin");
-            comboCargo.Items.Add("Vendedor");
-            comboCargo.Items.Add("Proveedor");
-            comboCargo.Items.Add("Gerente");
+            Administrador _administrador = new Administrador();
+            DataTable cargos = new DataTable();
+
+            cargos = _administrador.CargarRoles();
+
+            foreach (DataRow vendedor in cargos.Rows)
+                comboCargo.Items.Add(vendedor["Cargo"].ToString());
         }
 
         #endregion

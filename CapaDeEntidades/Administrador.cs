@@ -15,6 +15,12 @@ namespace CapaDeEntidades
 
         public Administrador() { }
 
+        public DataTable CargarRoles()
+        {
+            _tabla = _datosDeUsuario.CargarRoles();
+            return _tabla;
+        }
+
         public DataTable CargarUsuarios()
         {
             _tabla = _datosDeUsuario.CargarUsuarios();
