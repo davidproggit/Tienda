@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaComun;
+using CapaComun.Cache;
 using CapaDeDatos;
 
 namespace CapaDeNegocio
@@ -26,6 +27,21 @@ namespace CapaDeNegocio
             _tabla = _datosProductos.Filtrar(textoBuscar);
             return _tabla;
        }
+
+        public DataTable MostrarOrdenes()
+        {
+            return _datosProductos.MostrarOrdenes();
+        }
+
+        public DataTable MostrarOrdenesSemana()
+        {
+            return _datosProductos.MostrarOrdenesSemana();
+        }
+
+        public DataTable MostrarOrdenesMes()
+        {
+            return _datosProductos.MostrarOrdenesMes(); ;
+        }
 
         public List<FormatoProductos> Rellenar()
         {

@@ -372,5 +372,37 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        public DataTable MostrarOrdenes()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarOrdenes";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
+
+        public DataTable MostrarOrdenesSemana()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarOrdenesSemana";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
+
+        public DataTable MostrarOrdenesMes()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarOrdenesMes";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
     }
 }

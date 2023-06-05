@@ -1,4 +1,5 @@
 ﻿using CapaComun.Cache;
+using CapaDePresentacion.PantallasUsuarios.Gerente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,7 @@ namespace CapaDePresentacion.PantallasGenerales
                 AbrirFormulario<InterfazProducto>();
 
             if (CacheSesionUsuario.Cargo == Cargos.Gerente)
-                AbrirFormulario<Reportes>();
+                AbrirFormulario<PantallaReporte>();
 
             if (CacheSesionUsuario.Cargo == Cargos.Cliente)
                 AbrirFormulario<ProductosVista>();
