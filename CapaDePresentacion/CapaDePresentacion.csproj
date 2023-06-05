@@ -74,108 +74,108 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PantallasUsuarios\Cliente\Carrito.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Carrito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\Carrito.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Carrito.Designer.cs">
       <DependentUpon>Carrito.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ClienteCarrito.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ClienteCarrito.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.Designer.cs">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\Historial.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Historial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\Historial.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Historial.Designer.cs">
       <DependentUpon>Historial.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\OrdenCompraCliente.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\OrdenCompraCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\OrdenCompraCliente.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\OrdenCompraCliente.Designer.cs">
       <DependentUpon>OrdenCompraCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Gerente\PantallaReporte.cs">
+    <Compile Include="PantallasUsuarios\UsuarioGerente\PantallaReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Gerente\PantallaReporte.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioGerente\PantallaReporte.Designer.cs">
       <DependentUpon>PantallaReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\OrdenCompraVendedor.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenCompraVendedor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\OrdenCompraVendedor.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenCompraVendedor.Designer.cs">
       <DependentUpon>OrdenCompraVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductoCarrito.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoCarrito.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductoCarrito.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoCarrito.Designer.cs">
       <DependentUpon>ProductoCarrito.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductoDetalle.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductoDetalle.designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoDetalle.designer.cs">
       <DependentUpon>ProductoDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductoPrevisualizacion.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoPrevisualizacion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductoPrevisualizacion.designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoPrevisualizacion.designer.cs">
       <DependentUpon>ProductoPrevisualizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductosVista.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductosVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ProductosVista.designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ProductosVista.designer.cs">
       <DependentUpon>ProductosVista.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Encargado\InterfazProducto.cs">
+    <Compile Include="PantallasUsuarios\UsuarioEncargado\InterfazProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Encargado\InterfazProducto.designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioEncargado\InterfazProducto.designer.cs">
       <DependentUpon>InterfazProducto.cs</DependentUpon>
     </Compile>
     <!--<Compile Include="Login.cs">-->
     <!--<Compile Include="ABMClientes.cs">-->
-    <Compile Include="PantallasUsuarios\Vendedor\ABMClientes.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\ABMClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\ABMClientes.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\ABMClientes.Designer.cs">
       <DependentUpon>ABMClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ABMCompraProductos.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Cliente\ABMCompraProductos.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.Designer.cs">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Encargado\AlertadeProducto.cs">
+    <Compile Include="PantallasUsuarios\UsuarioEncargado\AlertadeProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Encargado\AlertadeProducto.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioEncargado\AlertadeProducto.Designer.cs">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\AprobarOrdendeCompra.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\AprobarOrdendeCompra.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.Designer.cs">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\OrdenesCompra.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\OrdenesCompra.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompra.Designer.cs">
       <DependentUpon>OrdenesCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\VerdetalleOC.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Vendedor\VerdetalleOC.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.Designer.cs">
       <DependentUpon>VerdetalleOC.cs</DependentUpon>
     </Compile>
     <!--<Compile Include="Login.cs">
@@ -186,60 +186,60 @@
     </Compile>-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\Carrito.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\Carrito.resx">
       <DependentUpon>Carrito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\ClienteCarrito.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.resx">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\Historial.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\Historial.resx">
       <DependentUpon>Historial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\OrdenCompraCliente.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\OrdenCompraCliente.resx">
       <DependentUpon>OrdenCompraCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Gerente\PantallaReporte.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioGerente\PantallaReporte.resx">
       <DependentUpon>PantallaReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Vendedor\OrdenCompraVendedor.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenCompraVendedor.resx">
       <DependentUpon>OrdenCompraVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoCarrito.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ProductoCarrito.resx">
       <DependentUpon>ProductoCarrito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoDetalle.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ProductoDetalle.resx">
       <DependentUpon>ProductoDetalle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoPrevisualizacion.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ProductoPrevisualizacion.resx">
       <DependentUpon>ProductoPrevisualizacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductosVista.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ProductosVista.resx">
       <DependentUpon>ProductosVista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Encargado\InterfazProducto.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioEncargado\InterfazProducto.resx">
       <DependentUpon>InterfazProducto.cs</DependentUpon>
     </EmbeddedResource>
     <!-- <EmbeddedResource Include="Login.resx">-->
     <!--<Compile Include="Reportes.cs">-->
-    <Compile Include="PantallasUsuarios\Gerente\Reportes.cs">
+    <Compile Include="PantallasUsuarios\UsuarioGerente\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Gerente\Reportes.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioGerente\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\Admin\ABMUsuarios.cs">
+    <Compile Include="PantallasUsuarios\UsuarioAdmin\ABMUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\Admin\ABMUsuarios.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioAdmin\ABMUsuarios.Designer.cs">
       <DependentUpon>ABMUsuarios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PantallasUsuarios\Vendedor\ABMClientes.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\ABMClientes.resx">
       <DependentUpon>ABMClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Cliente\ABMCompraProductos.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.resx">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Encargado\AlertadeProducto.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioEncargado\AlertadeProducto.resx">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </EmbeddedResource>
     <!--<EmbeddedResource Include="Login.resx">
@@ -274,23 +274,23 @@
     <EmbeddedResource Include="PantallasGenerales\UsuarioPerfil.resx">
       <DependentUpon>UsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Vendedor\AprobarOrdendeCompra.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.resx">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Vendedor\OrdenesCompra.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompra.resx">
       <DependentUpon>OrdenesCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Vendedor\VerdetalleOC.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.resx">
       <DependentUpon>VerdetalleOC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Gerente\Reportes.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioGerente\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\Admin\ABMUsuarios.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioAdmin\ABMUsuarios.resx">
       <DependentUpon>ABMUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
