@@ -58,6 +58,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
             grillaOrdenes.DataSource = productos.MostrarOrdenesMes();
         }
 
+        private void MostrarOrdenesVendedor()
+        {
+            Productos productos = new Productos();
+            grillaOrdenes.DataSource = productos.MostrarOrdenesVendedor(comboVendedores.Text);
+        }
+
         private void CargarVendedores()
         {
             Gerente gerente = new Gerente();
@@ -67,6 +73,11 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
 
             foreach (DataRow vendedor in vendedores.Rows) 
                 comboVendedores.Items.Add(vendedor["Nombre"].ToString());
+        }
+
+        private void comboVendedores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MostrarOrdenesVendedor();
         }
 
     }

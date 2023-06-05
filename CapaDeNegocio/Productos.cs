@@ -43,6 +43,11 @@ namespace CapaDeNegocio
             return _datosProductos.MostrarOrdenesMes(); ;
         }
 
+        public DataTable MostrarOrdenesVendedor(string vendedor)
+        {
+            return _datosProductos.MostrarOrdenesVendedor(vendedor);
+        }
+
         public List<FormatoProductos> Rellenar()
         {
             return _datosProductos.Rellenar();

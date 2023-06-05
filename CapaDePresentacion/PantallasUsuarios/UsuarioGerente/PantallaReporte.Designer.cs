@@ -33,6 +33,7 @@
             this.btnUltimaSemana = new System.Windows.Forms.Button();
             this.btnUltimoMes = new System.Windows.Forms.Button();
             this.comboVendedores = new System.Windows.Forms.ComboBox();
+            this.lblVendedor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,17 +82,30 @@
             // 
             // comboVendedores
             // 
+            this.comboVendedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboVendedores.FormattingEnabled = true;
-            this.comboVendedores.Location = new System.Drawing.Point(811, 64);
+            this.comboVendedores.Location = new System.Drawing.Point(979, 51);
             this.comboVendedores.Name = "comboVendedores";
-            this.comboVendedores.Size = new System.Drawing.Size(121, 28);
+            this.comboVendedores.Size = new System.Drawing.Size(185, 45);
             this.comboVendedores.TabIndex = 4;
+            this.comboVendedores.SelectedIndexChanged += new System.EventHandler(this.comboVendedores_SelectedIndexChanged);
+            // 
+            // lblVendedor
+            // 
+            this.lblVendedor.AutoSize = true;
+            this.lblVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVendedor.Location = new System.Drawing.Point(789, 51);
+            this.lblVendedor.Name = "lblVendedor";
+            this.lblVendedor.Size = new System.Drawing.Size(174, 37);
+            this.lblVendedor.TabIndex = 6;
+            this.lblVendedor.Text = "Vendedor: ";
             // 
             // PantallaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 741);
+            this.Controls.Add(this.lblVendedor);
             this.Controls.Add(this.comboVendedores);
             this.Controls.Add(this.btnUltimoMes);
             this.Controls.Add(this.btnUltimaSemana);
@@ -103,6 +117,7 @@
             this.Load += new System.EventHandler(this.PantallaReporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaOrdenes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -113,5 +128,6 @@
         private System.Windows.Forms.Button btnUltimaSemana;
         private System.Windows.Forms.Button btnUltimoMes;
         private System.Windows.Forms.ComboBox comboVendedores;
+        private System.Windows.Forms.Label lblVendedor;
     }
 }

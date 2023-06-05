@@ -404,5 +404,24 @@ namespace CapaDeDatos
             _conexion.CerrarConexion();
             return _tabla;
         }
+
+        public DataTable MostrarOrdenesVendedor(string vendedor)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "MostrarOrdenesVendedor";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@vendedor", vendedor);
+
+
+            _comando.ExecuteNonQuery();
+
+            DataTable tablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
+
+            adaptador.Fill(tablaFiltrada);
+
+            _conexion.CerrarConexion();
+            return tablaFiltrada;
+        }
     }
 }
