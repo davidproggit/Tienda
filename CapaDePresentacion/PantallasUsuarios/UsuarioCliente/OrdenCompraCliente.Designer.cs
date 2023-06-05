@@ -1,4 +1,4 @@
-﻿namespace CapaDePresentacion.PantallasUsuarios.Cliente
+﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     partial class OrdenCompraCliente
     {

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun;
-using CapaDePresentacion.PantallasUsuarios.Cliente;
+using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 
 namespace WindowsFormsApp1
 {

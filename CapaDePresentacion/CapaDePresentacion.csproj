@@ -134,10 +134,10 @@
     <Compile Include="PantallasUsuarios\UsuarioCliente\ProductosVista.designer.cs">
       <DependentUpon>ProductosVista.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioEncargado\InterfazProducto.cs">
+    <Compile Include="PantallasUsuarios\UsuarioProveedor\InterfazProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioEncargado\InterfazProducto.designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioProveedor\InterfazProducto.designer.cs">
       <DependentUpon>InterfazProducto.cs</DependentUpon>
     </Compile>
     <!--<Compile Include="Login.cs">-->
@@ -154,10 +154,10 @@
     <Compile Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.Designer.cs">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioEncargado\AlertadeProducto.cs">
+    <Compile Include="PantallasUsuarios\UsuarioProveedor\AlertadeProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioEncargado\AlertadeProducto.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioProveedor\AlertadeProducto.Designer.cs">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.cs">
@@ -216,7 +216,7 @@
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ProductosVista.resx">
       <DependentUpon>ProductosVista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioEncargado\InterfazProducto.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioProveedor\InterfazProducto.resx">
       <DependentUpon>InterfazProducto.cs</DependentUpon>
     </EmbeddedResource>
     <!-- <EmbeddedResource Include="Login.resx">-->
@@ -239,7 +239,7 @@
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.resx">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioEncargado\AlertadeProducto.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioProveedor\AlertadeProducto.resx">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </EmbeddedResource>
     <!--<EmbeddedResource Include="Login.resx">

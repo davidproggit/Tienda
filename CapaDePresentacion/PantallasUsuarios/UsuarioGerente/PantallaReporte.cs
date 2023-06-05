@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuarios.Gerente
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
 {
     public partial class PantallaReporte : Form
     {
@@ -60,7 +60,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Gerente
 
         private void CargarVendedores()
         {
-            CapaDeEntidades.Gerente gerente = new CapaDeEntidades.Gerente();
+            Gerente gerente = new Gerente();
             DataTable vendedores = new DataTable();
 
             vendedores = gerente.CargarVendedores();

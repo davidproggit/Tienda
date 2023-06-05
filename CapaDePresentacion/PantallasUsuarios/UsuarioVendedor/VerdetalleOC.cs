@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuarios.Vendedor
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     public partial class VerdetalleOC : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace CapaDePresentacion.PantallasUsuarios.Gerente
+﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
 {
     partial class PantallaReporte
     {

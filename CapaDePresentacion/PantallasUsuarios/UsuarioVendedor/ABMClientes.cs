@@ -1,6 +1,6 @@
 ﻿using CapaDeEntidades;
 using CapaDeNegocio;
-using CapaDePresentacion.PantallasUsuarios.Vendedor;
+using CapaDePresentacion.PantallasUsuarios.UsuarioVendedor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

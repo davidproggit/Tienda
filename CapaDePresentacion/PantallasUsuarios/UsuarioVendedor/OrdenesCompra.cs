@@ -1,7 +1,7 @@
 ﻿using CapaComun.Cache;
 using CapaComun;
 using CapaDeNegocio;
-using CapaDePresentacion.PantallasUsuarios.Cliente;
+using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuarios.Vendedor
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     public partial class OrdenesCompra : Form
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun.Cache;
 using CapaDeNegocio;
-using CapaDePresentacion.PantallasUsuarios.Cliente;
+using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 
 namespace CapaDePresentacion
 {

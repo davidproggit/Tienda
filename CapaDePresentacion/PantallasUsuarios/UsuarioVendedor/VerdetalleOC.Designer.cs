@@ -1,5 +1,5 @@
 ﻿
-namespace CapaDePresentacion.PantallasUsuarios.Vendedor
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     partial class VerdetalleOC
     {

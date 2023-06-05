@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
 
-namespace CapaDePresentacion.PantallasUsuarios.Cliente
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class ProductoCarrito : UserControl
     {

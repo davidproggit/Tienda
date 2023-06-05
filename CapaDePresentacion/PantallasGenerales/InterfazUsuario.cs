@@ -1,5 +1,5 @@
 ﻿using CapaComun.Cache;
-using CapaDePresentacion.PantallasUsuarios.Gerente;
+using CapaDePresentacion.PantallasUsuarios.UsuarioGerente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

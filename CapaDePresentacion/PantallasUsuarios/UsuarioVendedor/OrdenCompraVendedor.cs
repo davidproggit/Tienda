@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuarios.Cliente
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class OrdenCompraVendedor : UserControl
     {
