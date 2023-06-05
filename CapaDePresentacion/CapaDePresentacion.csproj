@@ -86,6 +86,24 @@
     <Compile Include="PantallasUsuarios\Cliente\ClienteCarrito.Designer.cs">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\Historial.Designer.cs">
+      <DependentUpon>Historial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\OrdenCompraCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\OrdenCompraCliente.Designer.cs">
+      <DependentUpon>OrdenCompraCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\OrdenCompraVendedor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\Cliente\OrdenCompraVendedor.Designer.cs">
+      <DependentUpon>OrdenCompraVendedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuarios\Cliente\ProductoCarrito.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +179,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Cliente\ClienteCarrito.resx">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\Historial.resx">
+      <DependentUpon>Historial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\OrdenCompraCliente.resx">
+      <DependentUpon>OrdenCompraCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\Cliente\OrdenCompraVendedor.resx">
+      <DependentUpon>OrdenCompraVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\Cliente\ProductoCarrito.resx">
       <DependentUpon>ProductoCarrito.cs</DependentUpon>
