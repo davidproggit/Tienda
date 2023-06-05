@@ -22,6 +22,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
         private void OrdenCompraVendedor_Load(object sender, EventArgs e)
         {
             CargarInformacion();
+            VerificarEstado();
         }
 
         #region "Atributos"
@@ -125,6 +126,18 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             productos.CancelarOrden(ordenId);
             ProductoEstado = "Cancelado";
             CargarInformacion();
+        }
+
+        private void VerificarEstado()
+        {
+            if (ProductoEstado != "Pendiente")
+                DesactivarBotones();
+        }
+
+        private void DesactivarBotones()
+        {
+            btnAprobar.Enabled = false;
+            btnCancelar.Enabled = false;
         }
     }
 }

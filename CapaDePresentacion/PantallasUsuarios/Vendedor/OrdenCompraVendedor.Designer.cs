@@ -73,9 +73,9 @@
             // btnAprobar
             // 
             this.btnAprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAprobar.Location = new System.Drawing.Point(325, 25);
+            this.btnAprobar.Location = new System.Drawing.Point(294, 25);
             this.btnAprobar.Name = "btnAprobar";
-            this.btnAprobar.Size = new System.Drawing.Size(204, 59);
+            this.btnAprobar.Size = new System.Drawing.Size(235, 59);
             this.btnAprobar.TabIndex = 11;
             this.btnAprobar.Text = "Aprobar compra";
             this.btnAprobar.UseVisualStyleBackColor = true;
@@ -84,9 +84,9 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(325, 113);
+            this.btnCancelar.Location = new System.Drawing.Point(294, 113);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(204, 59);
+            this.btnCancelar.Size = new System.Drawing.Size(235, 59);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar compra";
             this.btnCancelar.UseVisualStyleBackColor = true;
