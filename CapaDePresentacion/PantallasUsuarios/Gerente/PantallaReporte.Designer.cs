@@ -32,6 +32,7 @@
             this.btnMostrarTodo = new System.Windows.Forms.Button();
             this.btnUltimaSemana = new System.Windows.Forms.Button();
             this.btnUltimoMes = new System.Windows.Forms.Button();
+            this.comboVendedores = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grillaOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,11 +79,20 @@
             this.btnUltimoMes.UseVisualStyleBackColor = true;
             this.btnUltimoMes.Click += new System.EventHandler(this.btnUltimoMes_Click);
             // 
+            // comboVendedores
+            // 
+            this.comboVendedores.FormattingEnabled = true;
+            this.comboVendedores.Location = new System.Drawing.Point(811, 64);
+            this.comboVendedores.Name = "comboVendedores";
+            this.comboVendedores.Size = new System.Drawing.Size(121, 28);
+            this.comboVendedores.TabIndex = 4;
+            // 
             // PantallaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 741);
+            this.Controls.Add(this.comboVendedores);
             this.Controls.Add(this.btnUltimoMes);
             this.Controls.Add(this.btnUltimaSemana);
             this.Controls.Add(this.btnMostrarTodo);
@@ -102,5 +112,6 @@
         private System.Windows.Forms.Button btnMostrarTodo;
         private System.Windows.Forms.Button btnUltimaSemana;
         private System.Windows.Forms.Button btnUltimoMes;
+        private System.Windows.Forms.ComboBox comboVendedores;
     }
 }

@@ -176,5 +176,20 @@ namespace CapaDeDatos
 
         #endregion
 
+        public DataTable CargarVendedores()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarVendedores";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.ExecuteNonQuery();
+
+            DataTable tablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
+
+            adaptador.Fill(tablaFiltrada);
+
+            _conexion.CerrarConexion();
+            return tablaFiltrada;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace CapaDePresentacion.PantallasUsuarios.Gerente
         private void PantallaReporte_Load(object sender, EventArgs e)
         {
             MostrarOrdenes();
+            CargarVendedores();
         }
 
         private void btnMostrarTodo_Click(object sender, EventArgs e)
@@ -56,6 +58,16 @@ namespace CapaDePresentacion.PantallasUsuarios.Gerente
             grillaOrdenes.DataSource = productos.MostrarOrdenesMes();
         }
 
-      
+        private void CargarVendedores()
+        {
+            CapaDeEntidades.Gerente gerente = new CapaDeEntidades.Gerente();
+            DataTable vendedores = new DataTable();
+
+            vendedores = gerente.CargarVendedores();
+
+            foreach (DataRow vendedor in vendedores.Rows) 
+                comboVendedores.Items.Add(vendedor["Nombre"].ToString());
+        }
+
     }
 }
