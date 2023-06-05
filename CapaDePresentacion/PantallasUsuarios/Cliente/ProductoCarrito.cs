@@ -26,60 +26,71 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             CargarDatos();
         }
 
-        private int _id;
+        #region "Atributos"
 
-        public int id
+        private int _ProductoId;
+
+        public int ProductoId
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _ProductoId; }
+            set { _ProductoId = value; }
         }
 
-        private string _nombre;
+        private string _ProductoNombre;
 
-        public string nombre
+        public string ProductoNombre
         {
-            get { return _nombre; }
-            set { _nombre = value; }
+            get { return _ProductoNombre; }
+            set { _ProductoNombre = value; }
         }
 
-        private string _descripcion;
+        private string _ProductoDescripcion;
 
-        public string descripcion
+        public string ProductoDescripcion
         {
-            get { return _descripcion; }
-            set { _descripcion = value; }
+            get { return _ProductoDescripcion; }
+            set { _ProductoDescripcion = value; }
         }
 
-        private string _marca;
+        private string _ProductoMarca;
 
-        public string marca
+        public string ProductoMarca
         {
-            get { return _marca; }
-            set { _marca = value; }
+            get { return _ProductoMarca; }
+            set { _ProductoMarca = value; }
         }
 
-        private float _precio;
+        private float _ProductoPrecio;
 
-        public float precio
+        public float ProductoPrecio
         {
-            get { return _precio; }
-            set { _precio = value; }
+            get { return _ProductoPrecio; }
+            set { _ProductoPrecio = value; }
         }
 
-        private int _cantidad;
+        private int _ProductoCantidad;
 
-        public int cantidad
+        public int ProductoCantidad
         {
-            get { return _cantidad; }
-            set { _cantidad = value; }
+            get { return _ProductoCantidad; }
+            set { _ProductoCantidad = value; }
         }
 
-      
+        private string _ProductoEstado;
+
+        public string ProductoEstado
+        {
+            get { return _ProductoEstado; }
+            set { _ProductoEstado = value; }
+        }
+
+        #endregion
+
         private void CargarDatos()
         {
-            lblNombre.Text = nombre;
-            lblPrecio.Text = "$" + precio.ToString();
-            lblCantidad.Text = "Cantidad: " + cantidad.ToString();
+            lblNombre.Text = ProductoNombre;
+            lblPrecio.Text = "$" + ProductoPrecio.ToString();
+            lblCantidad.Text = "Cantidad: " + ProductoCantidad.ToString();
         }
 
         private void linkQuitarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -101,9 +112,9 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
         {
             Productos productos = new Productos();
 
-            productos.CambiarEstadoProducto(id, "Disponible");
-            productos.EliminarProductoCarrito(id);
-            productos.EliminarClienteProducto(id);
+            productos.CambiarEstadoProducto(ProductoId, "Disponible");
+            productos.EliminarProductoCarrito(ProductoId);
+            productos.EliminarClienteProducto(ProductoId);
 
             RecargarPantalla();
         }

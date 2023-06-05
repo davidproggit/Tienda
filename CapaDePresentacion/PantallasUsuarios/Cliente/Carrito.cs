@@ -38,12 +38,12 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             {
                 ProductoCarrito productoCarrito = new ProductoCarrito();
 
-                productoCarrito.id = datos.id;
-                productoCarrito.nombre = datos.nombre;
-                productoCarrito.descripcion = datos.descripcion;
-                productoCarrito.marca = datos.marca;
-                productoCarrito.precio = datos.precio;
-                productoCarrito.cantidad = datos.cantidad;
+                productoCarrito.ProductoId = datos.ProductoId;
+                productoCarrito.ProductoNombre = datos.ProductoNombre;
+                productoCarrito.ProductoDescripcion = datos.ProductoDescripcion;
+                productoCarrito.ProductoMarca = datos.ProductoMarca;
+                productoCarrito.ProductoPrecio = datos.ProductoPrecio;
+                productoCarrito.ProductoCantidad = datos.ProductoCantidad;
 
                 contenedorProductos.Controls.Add(productoCarrito);
             }
@@ -60,8 +60,8 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
 
             foreach (FormatoProductos datos in _valores)
             {
-                productos.CambiarEstadoProducto(datos.id, "Enviado");
-                productos.EnviarOrdenCompra(datos.id, CacheSesionUsuario.ID, datos.nombre, datos.descripcion, datos.marca, datos.cantidad, datos.precio, "Pendiente");
+                productos.CambiarEstadoProducto(datos.ProductoId, "Enviado");
+                productos.EnviarOrdenCompra(datos.ProductoId, CacheSesionUsuario.ID, datos.ProductoNombre, datos.ProductoDescripcion, datos.ProductoMarca, datos.ProductoCantidad, datos.ProductoPrecio, "Pendiente");
                 productos.VaciarCarrito(CacheSesionUsuario.ID);
                 LimpiarCarrito();
                 Llenar();

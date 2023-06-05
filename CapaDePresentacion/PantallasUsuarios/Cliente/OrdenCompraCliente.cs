@@ -22,70 +22,71 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
         }
 
         #region "Atributos"
-        private int _id;
 
-        public int id
+        private int _ProductoId;
+
+        public int ProductoId
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _ProductoId; }
+            set { _ProductoId = value; }
         }
 
-        private string _nombre;
+        private string _ProductoNombre;
 
-        public string nombre
+        public string ProductoNombre
         {
-            get { return _nombre; }
-            set { _nombre = value; }
+            get { return _ProductoNombre; }
+            set { _ProductoNombre = value; }
         }
 
-        private string _descripcion;
+        private string _ProductoDescripcion;
 
-        public string descripcion
+        public string ProductoDescripcion
         {
-            get { return _descripcion; }
-            set { _descripcion = value; }
+            get { return _ProductoDescripcion; }
+            set { _ProductoDescripcion = value; }
         }
 
-        private string _marca;
+        private string _ProductoMarca;
 
-        public string marca
+        public string ProductoMarca
         {
-            get { return _marca; }
-            set { _marca = value; }
+            get { return _ProductoMarca; }
+            set { _ProductoMarca = value; }
         }
 
-        private float _precio;
+        private float _ProductoPrecio;
 
-        public float precio
+        public float ProductoPrecio
         {
-            get { return _precio; }
-            set { _precio = value; }
+            get { return _ProductoPrecio; }
+            set { _ProductoPrecio = value; }
         }
 
-        private int _cantidad;
+        private int _ProductoCantidad;
 
-        public int cantidad
+        public int ProductoCantidad
         {
-            get { return _cantidad; }
-            set { _cantidad = value; }
+            get { return _ProductoCantidad; }
+            set { _ProductoCantidad = value; }
         }
 
-        private string _estado;
+        private string _ProductoEstado;
 
-        public string estado
+        public string ProductoEstado
         {
-            get { return _estado; }
-            set { _estado = value; }
+            get { return _ProductoEstado; }
+            set { _ProductoEstado = value; }
         }
 
         #endregion
 
         private void CargarInformacion()
         {
-            lblNombreProducto.Text = nombre;
-            lblPrecio.Text = "Precio: $" + precio.ToString();
-            lblCantidad.Text = "Cantidad: " + cantidad.ToString();
-            lblEstado.Text = estado;
+            lblNombreProducto.Text = ProductoNombre;
+            lblPrecio.Text = "Precio: $" + ProductoPrecio.ToString();
+            lblCantidad.Text = "Cantidad: " + ProductoCantidad.ToString();
+            lblEstado.Text = ProductoEstado;
         }
     }
 }

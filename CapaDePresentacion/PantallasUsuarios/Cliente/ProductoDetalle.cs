@@ -27,71 +27,71 @@ namespace WindowsFormsApp1
             CargarDatos();
         }
 
-        private int _id;
+        private int _ProductoId;
 
-        public int id
+        public int ProductoId
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _ProductoId; }
+            set { _ProductoId = value; }
         }
 
-        private string _nombre;
+        private string _ProductoNombre;
 
-        public string nombre
+        public string ProductoNombre
         {
             get { return lblNombre.Text; }
             set { lblNombre.Text = value; }
         }
 
-        private string _descripcion;
+        private string _ProductoDescripcion;
 
-        public string descripcion
+        public string ProductoDescripcion
         {
             get { return lblDescripcion.Text; }
             set { lblDescripcion.Text = value; }
         }
 
-        private string _marca;
+        private string _ProductoMarca;
 
-        public string marca
+        public string ProductoMarca
         {
             get { return lblMarca.Text; }
             set { lblMarca.Text = value; }
         }
 
-        private int _cantidad;
+        private int _ProductoCantidad;
 
-        public int cantidad
+        public int ProductoCantidad
         {
-            get { return _cantidad; }
-            set { _cantidad = value; }
+            get { return _ProductoCantidad; }
+            set { _ProductoCantidad = value; }
         }
 
-        private float _precio;
+        private float _ProductoPrecio;
 
-        public float precio
+        public float ProductoPrecio
         {
-            get { return _precio; }
-            set { _precio = value; }
+            get { return _ProductoPrecio; }
+            set { _ProductoPrecio = value; }
         }
 
-        private string _estado;
+        private string _ProductoEstado;
 
-        public string estado
+        public string ProductoEstado
         {
-            get { return _estado; }
-            set { _estado = value; }
+            get { return _ProductoEstado; }
+            set { _ProductoEstado = value; }
         }
 
         private void CargarDatos()
         {
-            lblNombre.Text = nombre;
-            lblPrecio.Text = "$" + precio.ToString();
+            lblNombre.Text = ProductoNombre;
+            lblPrecio.Text = "$" + ProductoPrecio.ToString();
         }
 
         private void Verificar()
         {
-            if (estado == "Disponible") 
+            if (ProductoEstado == "Disponible") 
                 btnAgregarCarrito.Text = "Agregar al carrito";
             else
             {
@@ -103,7 +103,7 @@ namespace WindowsFormsApp1
 
         private void EstablecerCantidadMaxima()
         {
-            selectorCantidad.Maximum = cantidad;
+            selectorCantidad.Maximum = ProductoCantidad;
         }
 
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
@@ -117,11 +117,11 @@ namespace WindowsFormsApp1
 
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
-            productos.AgregarCarrito(CacheSesionUsuario.ID, id, nombre, descripcion, marca, cantidadSeleccionada, precio, "Carrito");
-            productos.CambiarEstadoProducto(id, "Carrito");
-            productos.AsignarClienteProducto(id, CacheSesionUsuario.ID);
+            productos.AgregarCarrito(CacheSesionUsuario.ID, ProductoId, ProductoNombre, ProductoDescripcion, ProductoMarca, cantidadSeleccionada, ProductoPrecio, "Carrito");
+            productos.CambiarEstadoProducto(ProductoId, "Carrito");
+            productos.AsignarClienteProducto(ProductoId, CacheSesionUsuario.ID);
 
-            estado = "Carrito";
+            ProductoEstado = "Carrito";
 
             Verificar();
         }

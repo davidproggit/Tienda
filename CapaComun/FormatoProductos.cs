@@ -8,14 +8,14 @@ namespace CapaComun
 {
     public class FormatoProductos
     {
-        public int idProducto { get; set; }
-        public int idCliente { get; set; }
-        public string nombreProducto { get; set; }
-        public string nombreCliente { get; set; }
-        public string descripcionProducto { get; set; }
-        public string marcaProducto { get; set; }
-        public int cantidadProducto { get; set; }
-        public float precioProducto { get; set; }
-        public string estadoProducto { get; set; }
+        public int ProductoId { get; set; }
+        public int ClienteId { get; set; }
+        public string ProductoNombre { get; set; }
+        public string ClienteNombre { get; set; }
+        public string ProductoDescripcion { get; set; }
+        public string ProductoMarca { get; set; }
+        public int ProductoCantidad { get; set; }
+        public float ProductoPrecio { get; set; }
+        public string ProductoEstado { get; set; }
     }
 }

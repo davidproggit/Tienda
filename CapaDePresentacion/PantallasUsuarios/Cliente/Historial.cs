@@ -37,13 +37,13 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
             {
                 OrdenCompraCliente ordenCompraCliente = new OrdenCompraCliente();
 
-                ordenCompraCliente.id = datos.id;
-                ordenCompraCliente.nombre = datos.nombre;
-                ordenCompraCliente.descripcion = datos.descripcion;
-                ordenCompraCliente.marca = datos.marca;
-                ordenCompraCliente.precio = datos.precio;
-                ordenCompraCliente.cantidad = datos.cantidad;
-                ordenCompraCliente.estado = datos.estado;
+                ordenCompraCliente.ProductoId = datos.ProductoId;
+                ordenCompraCliente.ProductoNombre = datos.ProductoNombre;
+                ordenCompraCliente.ProductoDescripcion = datos.ProductoDescripcion;
+                ordenCompraCliente.ProductoMarca = datos.ProductoMarca;
+                ordenCompraCliente.ProductoPrecio = datos.ProductoPrecio;
+                ordenCompraCliente.ProductoCantidad = datos.ProductoCantidad;
+                ordenCompraCliente.ProductoEstado = datos.ProductoEstado;
 
                 contenedorProductos.Controls.Add(ordenCompraCliente);
             }
