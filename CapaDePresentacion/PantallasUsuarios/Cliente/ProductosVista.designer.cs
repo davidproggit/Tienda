@@ -30,6 +30,7 @@
         {
             this.contenedorProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.linkCarrito = new System.Windows.Forms.LinkLabel();
+            this.linkHistorial = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // contenedorProductos
@@ -53,11 +54,24 @@
             this.linkCarrito.Text = "Carrito";
             this.linkCarrito.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCarrito_LinkClicked);
             // 
+            // linkHistorial
+            // 
+            this.linkHistorial.AutoSize = true;
+            this.linkHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkHistorial.Location = new System.Drawing.Point(714, 26);
+            this.linkHistorial.Name = "linkHistorial";
+            this.linkHistorial.Size = new System.Drawing.Size(310, 37);
+            this.linkHistorial.TabIndex = 2;
+            this.linkHistorial.TabStop = true;
+            this.linkHistorial.Text = "Historial de compras";
+            this.linkHistorial.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkHistorial_LinkClicked);
+            // 
             // ProductosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1339, 660);
+            this.Controls.Add(this.linkHistorial);
             this.Controls.Add(this.linkCarrito);
             this.Controls.Add(this.contenedorProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -73,6 +87,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel contenedorProductos;
         private System.Windows.Forms.LinkLabel linkCarrito;
+        private System.Windows.Forms.LinkLabel linkHistorial;
     }
 }
 

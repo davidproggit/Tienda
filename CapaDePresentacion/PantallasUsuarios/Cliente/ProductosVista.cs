@@ -58,5 +58,12 @@ namespace WindowsFormsApp1
         {
             contenedorProductos.Controls.Clear();
         }
+
+        private void linkHistorial_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Historial historial = new Historial();
+            historial.Show();
+        }
+       
     }
 }
