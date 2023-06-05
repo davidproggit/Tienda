@@ -15,9 +15,10 @@ namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
-        #region "Objeto"
+        #region "Objetos"
 
         Proveedor _proveedor = new Proveedor();
+        public List<Datos> valores { get; set; }
 
         #endregion
 
@@ -38,11 +39,9 @@ namespace CapaDePresentacion
 
         #region "Cargar datos"
 
-        public List<Datos> Valores { get; set; }
-
         private void AlertadeProducto_Load(object sender, EventArgs e)
         {
-            Rellenar(Valores);
+            Rellenar(valores);
         }
 
         public void Rellenar(List<Datos> valores)
@@ -76,7 +75,7 @@ namespace CapaDePresentacion
         private void btnGuardarAlerta_Click(object sender, EventArgs e)
         {
             if (!_sinProducto)
-                CambiarMensajeCantidad(Valores);
+                CambiarMensajeCantidad(valores);
             else
                 MessageBox.Show("Error: debe haber al menos 1 producto cargado");
         }

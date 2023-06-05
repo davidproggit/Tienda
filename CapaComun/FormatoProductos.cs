@@ -10,16 +10,16 @@ namespace CapaComun
     {
         #region "Atributos"
 
-        public int ProductoId { get; set; }
+        public int productoId { get; set; }
         public int ordenId { get; set; }
-        public int ClienteId { get; set; }
-        public string ProductoNombre { get; set; }
-        public string ClienteNombre { get; set; }
-        public string ProductoDescripcion { get; set; }
-        public string ProductoMarca { get; set; }
-        public int ProductoCantidad { get; set; }
-        public float ProductoPrecio { get; set; }
-        public string ProductoEstado { get; set; }
+        public int clienteId { get; set; }
+        public string productoNombre { get; set; }
+        public string clienteNombre { get; set; }
+        public string productoDescripcion { get; set; }
+        public string productoMarca { get; set; }
+        public int productoCantidad { get; set; }
+        public float productoPrecio { get; set; }
+        public string productoEstado { get; set; }
 
         #endregion
 

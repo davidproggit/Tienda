@@ -46,13 +46,13 @@ namespace WindowsFormsApp1
             {
                 ProductoPrevisualizacion productoPrevisualizacion = new ProductoPrevisualizacion();
 
-                productoPrevisualizacion.ProductoId = datos.ProductoId;
-                productoPrevisualizacion.ProductoNombre = datos.ProductoNombre;
-                productoPrevisualizacion.ProductoDescripcion = datos.ProductoDescripcion;
-                productoPrevisualizacion.ProductoMarca = datos.ProductoMarca;
-                productoPrevisualizacion.ProductoPrecio = datos.ProductoPrecio;
-                productoPrevisualizacion.ProductoCantidad = datos.ProductoCantidad;
-                productoPrevisualizacion.ProductoEstado = datos.ProductoEstado;
+                productoPrevisualizacion.productoId = datos.productoId;
+                productoPrevisualizacion.productoNombre = datos.productoNombre;
+                productoPrevisualizacion.productoDescripcion = datos.productoDescripcion;
+                productoPrevisualizacion.productoMarca = datos.productoMarca;
+                productoPrevisualizacion.productoPrecio = datos.productoPrecio;
+                productoPrevisualizacion.productoCantidad = datos.productoCantidad;
+                productoPrevisualizacion.productoEstado = datos.productoEstado;
 
                 contenedorProductos.Controls.Add(productoPrevisualizacion);
             }

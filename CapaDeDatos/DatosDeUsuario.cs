@@ -180,13 +180,13 @@ namespace CapaDeDatos
 
         private static void FormatoCamposCache(SqlDataReader lector)
         {
-            CacheSesionUsuario.ID = lector.GetInt32(0);
-            CacheSesionUsuario.Usuario = lector.GetString(1);
-            CacheSesionUsuario.Clave = lector.GetString(2);
-            CacheSesionUsuario.Nombre = lector.GetString(3);
-            CacheSesionUsuario.Apellido = lector.GetString(4);
-            CacheSesionUsuario.Email = lector.GetString(5);
-            CacheSesionUsuario.Cargo = lector.GetString(6);
+            CacheSesionUsuario.id = lector.GetInt32(0);
+            CacheSesionUsuario.usuario = lector.GetString(1);
+            CacheSesionUsuario.clave = lector.GetString(2);
+            CacheSesionUsuario.nombre = lector.GetString(3);
+            CacheSesionUsuario.apellido = lector.GetString(4);
+            CacheSesionUsuario.email = lector.GetString(5);
+            CacheSesionUsuario.cargo = lector.GetString(6);
         }
 
         #endregion

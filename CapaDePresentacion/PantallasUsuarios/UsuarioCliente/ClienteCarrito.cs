@@ -24,7 +24,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Cargar datos"
 
-        public List<Datos> Valores { get; set; }
+        public List<Datos> valores { get; set; }
 
         private void ClienteCarrito_Load(object sender, EventArgs e)
         {

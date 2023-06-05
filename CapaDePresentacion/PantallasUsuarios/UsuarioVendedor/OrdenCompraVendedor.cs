@@ -33,12 +33,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             set { _ordenId = value; }
         }
 
-        private int _ProductoId;
+        private int _productoId;
 
-        public int ProductoId
+        public int productoId
         {
-            get { return _ProductoId; }
-            set { _ProductoId = value; }
+            get { return _productoId; }
+            set { _productoId = value; }
         }
 
         private int _idCliente;
@@ -49,52 +49,52 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             set { _idCliente = value; }
         }
 
-        private string _ProductoNombre;
+        private string _productoNombre;
 
-        public string ProductoNombre
+        public string productoNombre
         {
-            get { return _ProductoNombre; }
-            set { _ProductoNombre = value; }
+            get { return _productoNombre; }
+            set { _productoNombre = value; }
         }
 
-        private string _ProductoDescripcion;
+        private string _productoDescripcion;
 
-        public string ProductoDescripcion
+        public string productoDescripcion
         {
-            get { return _ProductoDescripcion; }
-            set { _ProductoDescripcion = value; }
+            get { return _productoDescripcion; }
+            set { _productoDescripcion = value; }
         }
 
-        private string _ProductoMarca;
+        private string _productoMarca;
 
-        public string ProductoMarca
+        public string productoMarca
         {
-            get { return _ProductoMarca; }
-            set { _ProductoMarca = value; }
+            get { return _productoMarca; }
+            set { _productoMarca = value; }
         }
 
-        private float _ProductoPrecio;
+        private float _productoPrecio;
 
-        public float ProductoPrecio
+        public float productoPrecio
         {
-            get { return _ProductoPrecio; }
-            set { _ProductoPrecio = value; }
+            get { return _productoPrecio; }
+            set { _productoPrecio = value; }
         }
 
-        private int _ProductoCantidad;
+        private int _productoCantidad;
 
-        public int ProductoCantidad
+        public int productoCantidad
         {
-            get { return _ProductoCantidad; }
-            set { _ProductoCantidad = value; }
+            get { return _productoCantidad; }
+            set { _productoCantidad = value; }
         }
 
-        private string _ProductoEstado;
+        private string _productoEstado;
 
-        public string ProductoEstado
+        public string productoEstado
         {
-            get { return _ProductoEstado; }
-            set { _ProductoEstado = value; }
+            get { return _productoEstado; }
+            set { _productoEstado = value; }
         }
 
         #endregion
@@ -110,10 +110,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         private void CargarInformacion()
         {
             lblNombreCliente.Text = "Cliente nº: " + idCliente;
-            lblNombreProducto.Text = ProductoNombre;
-            lblPrecio.Text = "Precio: $" + ProductoPrecio.ToString();
-            lblCantidad.Text = "Cantidad: " + ProductoCantidad.ToString();
-            lblEstado.Text = ProductoEstado;
+            lblNombreProducto.Text = productoNombre;
+            lblPrecio.Text = "Precio: $" + productoPrecio.ToString();
+            lblCantidad.Text = "Cantidad: " + productoCantidad.ToString();
+            lblEstado.Text = productoEstado;
         }
 
         #endregion
@@ -139,7 +139,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             Productos productos = new Productos();
 
             productos.AprobarOrden(ordenId);
-            ProductoEstado = "Aprobado";
+            productoEstado = "Aprobado";
             CargarInformacion();
         }
 
@@ -148,13 +148,13 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             Productos productos = new Productos();
 
             productos.CancelarOrden(ordenId);
-            ProductoEstado = "Cancelado";
+            productoEstado = "Cancelado";
             CargarInformacion();
         }
 
         private void VerificarEstado()
         {
-            if (ProductoEstado != "Pendiente")
+            if (productoEstado != "Pendiente")
                 DesactivarBotones();
         }
 

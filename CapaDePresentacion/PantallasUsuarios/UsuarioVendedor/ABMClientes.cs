@@ -40,8 +40,8 @@ namespace CapaDePresentacion
 
         private void CargarListaUsuarios()
         {
-            Vendedor _vendedor = new Vendedor();
-            grillaClientes.DataSource = _vendedor.CargarClientes();
+            Vendedor vendedor = new Vendedor();
+            grillaClientes.DataSource = vendedor.CargarClientes();
         }
 
         #endregion
@@ -77,11 +77,11 @@ namespace CapaDePresentacion
 
         private void GuardarNuevoCliente()
         {
-            Vendedor _vendedor = new Vendedor();
+            Vendedor vendedor = new Vendedor();
 
             if (!CamposVacios())
             {
-                _vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -92,8 +92,8 @@ namespace CapaDePresentacion
 
         private void BuscarCliente()
         {
-            Vendedor _vendedor = new Vendedor();
-            grillaClientes.DataSource = _vendedor.FiltrarCliente(txtBuscar.Text);
+            Vendedor vendedor = new Vendedor();
+            grillaClientes.DataSource = vendedor.FiltrarCliente(txtBuscar.Text);
         }
 
         private void RellenarCamposEdicion()
@@ -116,11 +116,11 @@ namespace CapaDePresentacion
 
         private void GuardarClienteEditado()
         {
-            Vendedor _vendedor = new Vendedor();
+            Vendedor vendedor = new Vendedor();
 
             if (!CamposVacios())
             {
-                _vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 LimpiarFormulario();
                 CargarListaUsuarios();
                 _editar = false;

@@ -23,60 +23,60 @@ namespace WindowsFormsApp1
 
         #region "Atributos"
 
-        private int _ProductoId;
+        private int _productoId;
 
-        public int ProductoId
+        public int productoId
         {
-            get { return _ProductoId; }
-            set { _ProductoId = value; }
+            get { return _productoId; }
+            set { _productoId = value; }
         }
 
-        private string _ProductoNombre;
+        private string _productoNombre;
 
-        public string ProductoNombre
+        public string productoNombre
         {
-            get { return _ProductoNombre; }
-            set { _ProductoNombre = value; }
+            get { return _productoNombre; }
+            set { _productoNombre = value; }
         }
 
-        private string _ProductoDescripcion;
+        private string _productoDescripcion;
 
-        public string ProductoDescripcion
+        public string productoDescripcion
         {
-            get { return _ProductoDescripcion; }
-            set { _ProductoDescripcion = value; }
+            get { return _productoDescripcion; }
+            set { _productoDescripcion = value; }
         }
 
-        private string _ProductoMarca;
+        private string _productoMarca;
 
-        public string ProductoMarca
+        public string productoMarca
         {
-            get { return _ProductoMarca; }
-            set { _ProductoMarca = value; }
+            get { return _productoMarca; }
+            set { _productoMarca = value; }
         }
 
-        private float _ProductoPrecio;
+        private float _productoPrecio;
 
-        public float ProductoPrecio
+        public float productoPrecio
         {
-            get { return _ProductoPrecio; }
-            set { _ProductoPrecio = value; }
+            get { return _productoPrecio; }
+            set { _productoPrecio = value; }
         }
 
-        private int _ProductoCantidad;
+        private int _productoCantidad;
 
-        public int ProductoCantidad
+        public int productoCantidad
         {
-            get { return _ProductoCantidad; }
-            set { _ProductoCantidad = value; }
+            get { return _productoCantidad; }
+            set { _productoCantidad = value; }
         }
 
-        private string _ProductoEstado;
+        private string _productoEstado;
 
-        public string ProductoEstado
+        public string productoEstado
         {
-            get { return _ProductoEstado; }
-            set { _ProductoEstado = value; }
+            get { return _productoEstado; }
+            set { _productoEstado = value; }
         }
 
         #endregion
@@ -90,8 +90,8 @@ namespace WindowsFormsApp1
 
         private void CargarDatos()
         {
-            lblNombre.Text = ProductoNombre;
-            lblPrecio.Text = "$" + ProductoPrecio.ToString();
+            lblNombre.Text = productoNombre;
+            lblPrecio.Text = "$" + productoPrecio.ToString();
         }
 
         #endregion
@@ -111,13 +111,13 @@ namespace WindowsFormsApp1
         {
             ProductoDetalle productoDetalle = new ProductoDetalle();
 
-            productoDetalle.ProductoId = ProductoId;
-            productoDetalle.ProductoNombre = ProductoNombre;
-            productoDetalle.ProductoDescripcion = ProductoDescripcion;
-            productoDetalle.ProductoMarca = ProductoMarca;
-            productoDetalle.ProductoPrecio = ProductoPrecio;
-            productoDetalle.ProductoCantidad = ProductoCantidad;
-            productoDetalle.ProductoEstado = ProductoEstado;
+            productoDetalle.productoId = productoId;
+            productoDetalle.productoNombre = productoNombre;
+            productoDetalle.productoDescripcion = productoDescripcion;
+            productoDetalle.productoMarca = productoMarca;
+            productoDetalle.productoPrecio = productoPrecio;
+            productoDetalle.productoCantidad = productoCantidad;
+            productoDetalle.productoEstado = productoEstado;
 
             productoDetalle.Show();
         }

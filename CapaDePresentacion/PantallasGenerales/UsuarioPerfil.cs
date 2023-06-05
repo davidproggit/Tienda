@@ -32,11 +32,11 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void DatosPerfil()
         {
-            lblUsuario.Text = CacheSesionUsuario.Usuario;
-            lblNombre.Text = CacheSesionUsuario.Nombre;
-            lblApellido.Text = CacheSesionUsuario.Apellido;
-            lblEmail.Text = CacheSesionUsuario.Email;
-            lblCargo.Text = CacheSesionUsuario.Cargo;
+            lblUsuario.Text = CacheSesionUsuario.usuario;
+            lblNombre.Text = CacheSesionUsuario.nombre;
+            lblApellido.Text = CacheSesionUsuario.apellido;
+            lblEmail.Text = CacheSesionUsuario.email;
+            lblCargo.Text = CacheSesionUsuario.cargo;
         }
 
         #endregion

@@ -130,13 +130,13 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
-                    ProductoId = productoId,
-                    ProductoNombre = productoNombre,
-                    ProductoDescripcion = productoDescripcion,
-                    ProductoMarca = productoMarca,
-                    ProductoPrecio = productoPrecio,
-                    ProductoCantidad = productoCantidad,
-                    ProductoEstado = productoEstado
+                    productoId = productoId,
+                    productoNombre = productoNombre,
+                    productoDescripcion = productoDescripcion,
+                    productoMarca = productoMarca,
+                    productoPrecio = productoPrecio,
+                    productoCantidad = productoCantidad,
+                    productoEstado = productoEstado
                 });
             }
 
@@ -163,12 +163,12 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
-                    ProductoId = productoId,
-                    ProductoNombre = productoNombre,
-                    ProductoDescripcion = productoDescripcion,
-                    ProductoMarca = productoMarca,
-                    ProductoCantidad = productoCantidad,
-                    ProductoPrecio = productoPrecio
+                    productoId = productoId,
+                    productoNombre = productoNombre,
+                    productoDescripcion = productoDescripcion,
+                    productoMarca = productoMarca,
+                    productoCantidad = productoCantidad,
+                    productoPrecio = productoPrecio
                 });
             }
 
@@ -203,13 +203,13 @@ namespace CapaDeDatos
 
                 _valores.Add(new FormatoProductos
                 {
-                    ProductoId = productoId,
-                    ProductoNombre = productoNombre,
-                    ProductoDescripcion = productoDescripcion,
-                    ProductoMarca = productoMarca,
-                    ProductoCantidad = productoCantidad,
-                    ProductoPrecio = productoPrecio,
-                    ProductoEstado = productoEstado
+                    productoId = productoId,
+                    productoNombre = productoNombre,
+                    productoDescripcion = productoDescripcion,
+                    productoMarca = productoMarca,
+                    productoCantidad = productoCantidad,
+                    productoPrecio = productoPrecio,
+                    productoEstado = productoEstado
                 });
             }
 
@@ -342,14 +342,14 @@ namespace CapaDeDatos
                 _valores.Add(new FormatoProductos
                 {
                     ordenId = ordenId,
-                    ProductoId = productoId,
-                    ClienteId = clienteId,
-                    ProductoNombre = productoNombre,
-                    ProductoDescripcion = productoDescripcion,
-                    ProductoMarca = productoMarca,
-                    ProductoCantidad = productoCantidad,
-                    ProductoPrecio = productoPrecio,
-                    ProductoEstado = productoEstado
+                    productoId = productoId,
+                    clienteId = clienteId,
+                    productoNombre = productoNombre,
+                    productoDescripcion = productoDescripcion,
+                    productoMarca = productoMarca,
+                    productoCantidad = productoCantidad,
+                    productoPrecio = productoPrecio,
+                    productoEstado = productoEstado
                 });
             }
 

@@ -48,12 +48,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             {
                 ProductoCarrito productoCarrito = new ProductoCarrito();
 
-                productoCarrito.ProductoId = datos.ProductoId;
-                productoCarrito.ProductoNombre = datos.ProductoNombre;
-                productoCarrito.ProductoDescripcion = datos.ProductoDescripcion;
-                productoCarrito.ProductoMarca = datos.ProductoMarca;
-                productoCarrito.ProductoPrecio = datos.ProductoPrecio;
-                productoCarrito.ProductoCantidad = datos.ProductoCantidad;
+                productoCarrito.productoId = datos.productoId;
+                productoCarrito.productoNombre = datos.productoNombre;
+                productoCarrito.productoDescripcion = datos.productoDescripcion;
+                productoCarrito.productoMarca = datos.productoMarca;
+                productoCarrito.productoPrecio = datos.productoPrecio;
+                productoCarrito.productoCantidad = datos.productoCantidad;
 
                 contenedorProductos.Controls.Add(productoCarrito);
             }
@@ -78,9 +78,9 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
             foreach (FormatoProductos datos in _valores)
             {
-                productos.CambiarEstadoProducto(datos.ProductoId, "Enviado");
-                productos.EnviarOrdenCompra(datos.ProductoId, CacheSesionUsuario.ID, datos.ProductoNombre, datos.ProductoDescripcion, datos.ProductoMarca, datos.ProductoCantidad, datos.ProductoPrecio, "Pendiente");
-                productos.VaciarCarrito(CacheSesionUsuario.ID);
+                productos.CambiarEstadoProducto(datos.productoId, "Enviado");
+                productos.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente");
+                productos.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
                 Llenar();
             }

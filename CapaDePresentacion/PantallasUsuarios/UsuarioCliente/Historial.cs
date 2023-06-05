@@ -41,19 +41,19 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         private void CargarHistorial()
         {
             Productos productos = new Productos();
-            _valores = productos.CargarHistorial(CacheSesionUsuario.ID);
+            _valores = productos.CargarHistorial(CacheSesionUsuario.id);
 
             foreach (FormatoProductos datos in _valores)
             {
                 OrdenCompraCliente ordenCompraCliente = new OrdenCompraCliente();
 
-                ordenCompraCliente.ProductoId = datos.ProductoId;
-                ordenCompraCliente.ProductoNombre = datos.ProductoNombre;
-                ordenCompraCliente.ProductoDescripcion = datos.ProductoDescripcion;
-                ordenCompraCliente.ProductoMarca = datos.ProductoMarca;
-                ordenCompraCliente.ProductoPrecio = datos.ProductoPrecio;
-                ordenCompraCliente.ProductoCantidad = datos.ProductoCantidad;
-                ordenCompraCliente.ProductoEstado = datos.ProductoEstado;
+                ordenCompraCliente.productoId = datos.productoId;
+                ordenCompraCliente.productoNombre = datos.productoNombre;
+                ordenCompraCliente.productoDescripcion = datos.productoDescripcion;
+                ordenCompraCliente.productoMarca = datos.productoMarca;
+                ordenCompraCliente.productoPrecio = datos.productoPrecio;
+                ordenCompraCliente.productoCantidad = datos.productoCantidad;
+                ordenCompraCliente.productoEstado = datos.productoEstado;
 
                 contenedorProductos.Controls.Add(ordenCompraCliente);
             }

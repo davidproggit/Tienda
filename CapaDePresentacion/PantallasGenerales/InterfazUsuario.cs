@@ -26,6 +26,12 @@ namespace CapaDePresentacion.PantallasGenerales
 
         #endregion
 
+        #region "Condicional"
+
+        private bool _perfil = false;
+
+        #endregion
+
         #region "Cargar datos principales"
 
         private void InterfazUsuario_Load(object sender, EventArgs e)
@@ -36,19 +42,19 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarPantallasUsuarios()
         {
-            if (CacheSesionUsuario.Cargo == Cargos.cargoAdmin)
+            if (CacheSesionUsuario.cargo == Cargos.cargoAdmin)
                 AbrirFormulario<ABMUsuarios>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.cargoVendedor)
+            if (CacheSesionUsuario.cargo == Cargos.cargoVendedor)
                 AbrirFormulario<ABMClientes>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.cargoProveedor)
+            if (CacheSesionUsuario.cargo == Cargos.cargoProveedor)
                 AbrirFormulario<InterfazProducto>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.cargoGerente)
+            if (CacheSesionUsuario.cargo == Cargos.cargoGerente)
                 AbrirFormulario<PantallaReporte>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.cargoCliente)
+            if (CacheSesionUsuario.cargo == Cargos.cargoCliente)
                 AbrirFormulario<ProductosVista>();
         }
 
@@ -69,7 +75,6 @@ namespace CapaDePresentacion.PantallasGenerales
         #endregion
 
         #region "Cargar pantalla generica"
-        private bool _perfil = false;
 
         private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -93,7 +98,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         private void CargarNombreUsuario()
         {
-            lblNombre.Text = CacheSesionUsuario.Nombre;
+            lblNombre.Text = CacheSesionUsuario.nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
