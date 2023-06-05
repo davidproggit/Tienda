@@ -37,6 +37,11 @@ namespace CapaDeNegocio
             return _datosProductos.RellenarCarrito();
         }
 
+        public List<FormatoProductos> CargarHistorial(int idCliente)
+        {
+            return _datosProductos.CargarHistorial(idCliente);
+        }
+
         public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
             _datosProductos.AgregarCarrito(idCliente, idProducto, nombre, descripcion, marca, cantidad, precio, estado);

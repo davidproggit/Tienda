@@ -173,6 +173,48 @@ namespace CapaDeDatos
             return _valores;
         }
 
+        public List<FormatoProductos> CargarHistorial(int idCliente)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            //_comando.CommandText = "select IdProducto, NombreProducto, DescripcionProducto, MarcaProducto, CantidadProducto, PrecioProducto, EstadoProducto from OrdenCompra where IdCliente = @idCliente";
+            //_comando.CommandText = "select IdProducto, NombreProducto, DescripcionProducto, MarcaProducto, CantidadProducto, PrecioProducto, EstadoProducto from OrdenCompra";// where IdCliente = ('" + @idCliente+"')";
+            //_comando.CommandType = CommandType.Text;
+
+            _comando.CommandText = "CargarHistorial";
+            _comando.Parameters.AddWithValue("@idCliente", idCliente);
+
+            _comando.CommandType = CommandType.StoredProcedure;
+
+            _lector = _comando.ExecuteReader();
+
+            while (_lector.Read())
+            {
+                int productoId = int.Parse(_lector["IdProducto"].ToString());
+                string productoNombre = _lector["NombreProducto"].ToString();
+                string productoDescripcion = _lector["DescripcionProducto"].ToString();
+                string productoMarca = _lector["MarcaProducto"].ToString();
+                int productoCantidad = int.Parse(_lector["CantidadProducto"].ToString());
+                float productoPrecio = float.Parse(_lector["PrecioProducto"].ToString());
+                string productoEstado = _lector["EstadoProducto"].ToString();
+
+                _valores.Add(new FormatoProductos
+                {
+                    id = productoId,
+                    nombre = productoNombre,
+                    descripcion = productoDescripcion,
+                    marca = productoMarca,
+                    cantidad = productoCantidad,
+                    precio = productoPrecio,
+                    estado = productoEstado
+                });
+            }
+
+            _conexion.CerrarConexion();
+
+            return _valores;
+        }
+
+
         public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
             _comando.Connection = _conexion.AbrirConexion();
