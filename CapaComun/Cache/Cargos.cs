@@ -8,10 +8,10 @@ namespace CapaComun.Cache
 {
     public class Cargos
     {
-        public const string Admin = "Admin";
-        public const string Vendedor = "Vendedor";
-        public const string Encargado = "Encargado";
-        public const string Gerente = "Gerente";
-        public const string Cliente = "Cliente";
+        public const string cargoAdmin = "Admin";
+        public const string cargoVendedor = "Vendedor";
+        public const string cargoEncargado = "Encargado";
+        public const string cargoGerente = "Gerente";
+        public const string cargoCliente = "Cliente";
     }
 }

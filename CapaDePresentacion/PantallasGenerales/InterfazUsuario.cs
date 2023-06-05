@@ -32,19 +32,19 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarPantallasUsuarios()
         {
-            if (CacheSesionUsuario.Cargo == Cargos.Admin)
+            if (CacheSesionUsuario.Cargo == Cargos.cargoAdmin)
                 AbrirFormulario<ABMUsuarios>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
+            if (CacheSesionUsuario.Cargo == Cargos.cargoVendedor)
                 AbrirFormulario<ABMClientes>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
+            if (CacheSesionUsuario.Cargo == Cargos.cargoEncargado)
                 AbrirFormulario<InterfazProducto>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
+            if (CacheSesionUsuario.Cargo == Cargos.cargoGerente)
                 AbrirFormulario<PantallaReporte>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
+            if (CacheSesionUsuario.Cargo == Cargos.cargoCliente)
                 AbrirFormulario<ProductosVista>();
         }
 
