@@ -111,9 +111,12 @@ namespace CapaDePresentacion
                 MostrarProductos();
                 _editar = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex);
+                if (CamposVacios())
+                    MessageBox.Show("Error: tiene que completar todos los campos");
+                else
+                    MessageBox.Show("Error: los campos tienen que tener un valor correcto");
             }
         }
 
