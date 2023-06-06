@@ -55,9 +55,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Opciones"
 
-        private void linkEnviarCompra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnEnviarCompra_Click(object sender, EventArgs e)
         {
             EnviarOrdenCompra();
+        }
+
+        private void btnVaciar_Click(object sender, EventArgs e)
+        {
+            ComprobarVaciarCarrito();
         }
 
         #endregion
@@ -78,6 +83,20 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             }
         }
 
+        private void ComprobarVaciarCarrito()
+        {
+            Productos productos = new Productos();
+
+            DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere vaciar el carrito?", "Vaciar carrito", MessageBoxButtons.YesNo);
+
+            if (pantallaAdvertencia == DialogResult.Yes)
+            {
+                productos.VaciarCarrito(CacheSesionUsuario.id);
+                LimpiarCarrito();
+                Llenar();
+            }
+        }
+
         public void LimpiarCarrito()
         {
             contenedorProductos.Controls.Clear();
@@ -85,5 +104,6 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+      
     }
 }

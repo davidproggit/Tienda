@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.contenedorProductos = new System.Windows.Forms.FlowLayoutPanel();
-            this.linkEnviarCompra = new System.Windows.Forms.LinkLabel();
+            this.btnEnviarCompra = new System.Windows.Forms.Button();
+            this.btnVaciar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contenedorProductos
@@ -38,40 +39,51 @@
             this.contenedorProductos.BackColor = System.Drawing.Color.Gray;
             this.contenedorProductos.Location = new System.Drawing.Point(122, 56);
             this.contenedorProductos.Name = "contenedorProductos";
-            this.contenedorProductos.Size = new System.Drawing.Size(620, 420);
+            this.contenedorProductos.Size = new System.Drawing.Size(598, 420);
             this.contenedorProductos.TabIndex = 1;
             // 
-            // linkEnviarCompra
+            // btnEnviarCompra
             // 
-            this.linkEnviarCompra.AutoSize = true;
-            this.linkEnviarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkEnviarCompra.Location = new System.Drawing.Point(645, 498);
-            this.linkEnviarCompra.Name = "linkEnviarCompra";
-            this.linkEnviarCompra.Size = new System.Drawing.Size(224, 37);
-            this.linkEnviarCompra.TabIndex = 2;
-            this.linkEnviarCompra.TabStop = true;
-            this.linkEnviarCompra.Text = "Enviar compra";
-            this.linkEnviarCompra.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEnviarCompra_LinkClicked);
+            this.btnEnviarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarCompra.Location = new System.Drawing.Point(468, 520);
+            this.btnEnviarCompra.Name = "btnEnviarCompra";
+            this.btnEnviarCompra.Size = new System.Drawing.Size(252, 71);
+            this.btnEnviarCompra.TabIndex = 4;
+            this.btnEnviarCompra.Text = "Enviar compra";
+            this.btnEnviarCompra.UseVisualStyleBackColor = true;
+            this.btnEnviarCompra.Click += new System.EventHandler(this.btnEnviarCompra_Click);
+            // 
+            // btnVaciar
+            // 
+            this.btnVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVaciar.Location = new System.Drawing.Point(122, 520);
+            this.btnVaciar.Name = "btnVaciar";
+            this.btnVaciar.Size = new System.Drawing.Size(207, 71);
+            this.btnVaciar.TabIndex = 5;
+            this.btnVaciar.Text = "Vaciar carrito";
+            this.btnVaciar.UseVisualStyleBackColor = true;
+            this.btnVaciar.Click += new System.EventHandler(this.btnVaciar_Click);
             // 
             // Carrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 558);
-            this.Controls.Add(this.linkEnviarCompra);
+            this.ClientSize = new System.Drawing.Size(906, 613);
+            this.Controls.Add(this.btnVaciar);
+            this.Controls.Add(this.btnEnviarCompra);
             this.Controls.Add(this.contenedorProductos);
             this.Name = "Carrito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carrito";
             this.Load += new System.EventHandler(this.Carrito_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel contenedorProductos;
-        private System.Windows.Forms.LinkLabel linkEnviarCompra;
+        private System.Windows.Forms.Button btnEnviarCompra;
+        private System.Windows.Forms.Button btnVaciar;
     }
 }
