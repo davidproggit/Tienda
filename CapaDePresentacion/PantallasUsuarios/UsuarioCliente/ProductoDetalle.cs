@@ -74,6 +74,8 @@ namespace WindowsFormsApp1
             set { _productoEstado = value; }
         }
 
+        private bool _aumentarCantidadCarrito = false;
+
         #endregion
 
         #region "Cargar datos"
@@ -106,14 +108,12 @@ namespace WindowsFormsApp1
 
         private void Verificar()
         {
-            if (productoEstado == "Disponible") 
-                btnAgregarCarrito.Text = "Agregar al carrito";
-            else
-            {
-                btnAgregarCarrito.Text = "Ya agregado al carrito";
-                btnAgregarCarrito.Enabled = false;
-                selectorCantidad.Enabled = false;
-            }
+            Productos productos = new Productos();
+
+            int numero = productos.VerificarProductoCarrito(productoId);
+
+            if (numero != productoId) 
+                _aumentarCantidadCarrito = true;
         }
 
         private void EstablecerCantidadMaxima()
@@ -127,13 +127,13 @@ namespace WindowsFormsApp1
 
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
-            productos.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
+            if (_aumentarCantidadCarrito)
+                productos.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
+            else
+                productos.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
+
             productos.CambiarEstadoProducto(productoId, "Carrito");
             productos.AsignarClienteProducto(productoId, CacheSesionUsuario.id);
-
-            productoEstado = "Carrito";
-
-            Verificar();
         }
 
         private void ProductoDetalle_FormClosed(object sender, FormClosedEventArgs e)

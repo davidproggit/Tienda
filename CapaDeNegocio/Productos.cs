@@ -121,6 +121,18 @@ namespace CapaDeNegocio
             _datosProductos.CancelarOrden(ordenId);
         }
 
+        public int VerificarProductoCarrito(int productoId)
+        {
+            return _datosProductos.VerificarProductoCarrito(productoId);
+        }
+
+        public void ModificarCantidadCarrito(int productoId, int cantidad)
+        {
+            _datosProductos.ModificarCantidadCarrito(productoId, cantidad);
+        }
+
+
+
         #endregion
 
     }

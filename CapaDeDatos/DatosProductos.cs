@@ -310,6 +310,39 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        public int VerificarProductoCarrito(int productoId)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "VerificarProductoCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@productoId", productoId);
+            _lector = _comando.ExecuteReader();
+
+            int productoIdEncontrado = 0;
+
+            while (_lector.Read())
+            {
+                productoIdEncontrado = int.Parse(_lector["IdProducto"].ToString());
+                
+
+             }
+
+            _conexion.CerrarConexion();
+
+            return productoIdEncontrado;
+        }
+
+        public void ModificarCantidadCarrito(int productoId, int cantidad)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "ModificarCantidadCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@productoId", productoId);
+            _comando.Parameters.AddWithValue("@cantidad", cantidad);
+            _comando.ExecuteNonQuery();
+            _comando.Parameters.Clear();
+        }
+
         #endregion
 
         #region "Vendedor"
