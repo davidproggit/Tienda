@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CapaComun;
-using CapaComun.Cache;
 using CapaDeDatos;
 
 namespace CapaDeNegocio
