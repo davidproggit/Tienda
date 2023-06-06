@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
 
         private void ProductoDetalle_Load(object sender, EventArgs e)
         {
-            Verificar();
+            VerificarProductoCarrito();
             EstablecerCantidadMaxima();
             CargarDatos();
         }
@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
 
         #region "Metodos"
 
-        private void Verificar()
+        private void VerificarProductoCarrito()
         {
             Productos productos = new Productos();
             Productos productos2 = new Productos();
@@ -123,10 +123,8 @@ namespace WindowsFormsApp1
 
         private void EstablecerCantidadMaxima()
         {
-            if (_agregarProductoCarrito)
-                selectorCantidad.Maximum = productoCantidad;
-            else
-                selectorCantidad.Maximum = productoCantidad - _cantidadCarrito;
+            Productos productos = new Productos();
+            selectorCantidad.Maximum = productos.DevolverCantidadMaxima(_cantidadCarrito, productoCantidad, _agregarProductoCarrito);
         }
 
         private void AgregarCarrito()
