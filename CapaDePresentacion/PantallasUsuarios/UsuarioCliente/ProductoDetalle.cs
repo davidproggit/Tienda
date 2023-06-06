@@ -74,7 +74,8 @@ namespace WindowsFormsApp1
             set { _productoEstado = value; }
         }
 
-        private bool _aumentarCantidadCarrito = false;
+        private bool _agregarProductoCarrito = true;
+        private int _cantidadCarrito=0;
 
         #endregion
 
@@ -109,16 +110,23 @@ namespace WindowsFormsApp1
         private void Verificar()
         {
             Productos productos = new Productos();
+            Productos productos2 = new Productos();
 
-            int numero = productos.VerificarProductoCarrito(productoId);
+            int productoCarrito = productos.VerificarProductoCarrito(productoId);
 
-            if (numero != productoId) 
-                _aumentarCantidadCarrito = true;
+            if (productoCarrito == productoId)
+            {
+                _agregarProductoCarrito = false;
+                _cantidadCarrito = productos2.DevolverCantidadCarrito(productoId);
+            }
         }
 
         private void EstablecerCantidadMaxima()
         {
-            selectorCantidad.Maximum = productoCantidad;
+            if (_agregarProductoCarrito)
+                selectorCantidad.Maximum = productoCantidad;
+            else
+                selectorCantidad.Maximum = productoCantidad - _cantidadCarrito;
         }
 
         private void AgregarCarrito()
@@ -127,7 +135,7 @@ namespace WindowsFormsApp1
 
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
-            if (_aumentarCantidadCarrito)
+            if (_agregarProductoCarrito)
                 productos.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
             else
                 productos.ModificarCantidadCarrito(productoId, cantidadSeleccionada);

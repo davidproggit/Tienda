@@ -131,7 +131,10 @@ namespace CapaDeNegocio
             _datosProductos.ModificarCantidadCarrito(productoId, cantidad);
         }
 
-
+        public int DevolverCantidadCarrito(int productoId)
+        {
+            return _datosProductos.DevolverCantidadCarrito(productoId);
+        }
 
         #endregion
 

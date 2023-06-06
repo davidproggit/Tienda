@@ -337,6 +337,27 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
+        public int DevolverCantidadCarrito(int productoId)
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "DevolverCantidadCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@productoId", productoId);
+            _lector = _comando.ExecuteReader();
+
+            int cantidadProductoEncontrada = 0;
+
+            while (_lector.Read())
+            {
+                cantidadProductoEncontrada = int.Parse(_lector["Cantidad"].ToString());
+            }
+
+            _conexion.CerrarConexion();
+
+            return cantidadProductoEncontrada;
+        }
+
+
         #endregion
 
         #region "Vendedor"
