@@ -175,10 +175,6 @@ namespace CapaDeDatos
         public List<FormatoProductos> CargarHistorial(int idCliente)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            //_comando.CommandText = "select IdProducto, NombreProducto, DescripcionProducto, MarcaProducto, CantidadProducto, PrecioProducto, EstadoProducto from OrdenCompra where IdCliente = @idCliente";
-            //_comando.CommandText = "select IdProducto, NombreProducto, DescripcionProducto, MarcaProducto, CantidadProducto, PrecioProducto, EstadoProducto from OrdenCompra";// where IdCliente = ('" + @idCliente+"')";
-            //_comando.CommandType = CommandType.Text;
-
             _comando.CommandText = "CargarHistorial";
             _comando.Parameters.AddWithValue("@idCliente", idCliente);
 
@@ -323,9 +319,7 @@ namespace CapaDeDatos
             while (_lector.Read())
             {
                 productoIdEncontrado = int.Parse(_lector["IdProducto"].ToString());
-                
-
-             }
+            }
 
             _conexion.CerrarConexion();
 
