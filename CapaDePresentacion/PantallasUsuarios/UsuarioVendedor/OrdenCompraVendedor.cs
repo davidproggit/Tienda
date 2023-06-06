@@ -116,11 +116,13 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         private void btnAprobar_Click(object sender, EventArgs e)
         {
             AprobarOrden();
+            VerificarEstado();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             CancelarOrden();
+            VerificarEstado();
         }
 
         #endregion
