@@ -1,24 +1,21 @@
-﻿using CapaComun.Cache;
-using CapaDeNegocio;
+﻿using CapaDeNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class Login : Form
     {
+        #region "Constructor"
+
         public Login()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Metodos de mover la ventana"
         private void MoverVentana_MouseDown(object sender, MouseEventArgs e)

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun.Cache;
 using CapaDeEntidades;
@@ -15,14 +9,21 @@ namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        private Proveedor _proveedor = new Proveedor();
+        #region "Condicionales"
+
         private int _idProducto;
         private bool _editar = false;
+
+        #endregion
+
+        #region "Constructor"
 
         public InterfazProducto()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 
@@ -33,8 +34,9 @@ namespace CapaDePresentacion
 
         private void MostrarProductos()
         {
-            Productos _productos = new Productos();
-            grillaProductos.DataSource = _productos.MostrarProducto();
+            Productos productos = new Productos();
+            grillaProductos.DataSource = productos.MostrarProducto();
+            grillaProductos.Columns["ID"].Visible = false;
         }
 
         #endregion
@@ -100,24 +102,31 @@ namespace CapaDePresentacion
 
         private void GuardarProductoEditado()
         {
+            Proveedor proveedor = new Proveedor();
+
             try
             {
-                _proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
+                proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex);
+                if (CamposVacios())
+                    MessageBox.Show("Error: tiene que completar todos los campos");
+                else
+                    MessageBox.Show("Error: los campos tienen que tener un valor correcto");
             }
         }
 
         private void GuardarProductoNuevo()
         {
+            Proveedor proveedor = new Proveedor();
+
             try
             {
-                _proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -164,14 +173,16 @@ namespace CapaDePresentacion
 
         private void EliminarProducto()
         {
+            Proveedor proveedor = new Proveedor();
+
             _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
-            _proveedor.EliminarProducto(_idProducto);
+            proveedor.EliminarProducto(_idProducto);
         }
 
         private void BuscarProducto()
         {
-            Productos _productos = new Productos();
-            grillaProductos.DataSource = _productos.FiltrarProducto(txtBuscar.Text);
+            Productos productos = new Productos();
+            grillaProductos.DataSource = productos.FiltrarProducto(txtBuscar.Text);
         }
 
         private void EnviarDatosAlerta()
@@ -191,7 +202,7 @@ namespace CapaDePresentacion
             }
 
             AlertadeProducto alertadeProducto = new AlertadeProducto();
-            alertadeProducto.Valores = Valores;
+            alertadeProducto.valores = Valores;
             alertadeProducto.Show();
         }
 

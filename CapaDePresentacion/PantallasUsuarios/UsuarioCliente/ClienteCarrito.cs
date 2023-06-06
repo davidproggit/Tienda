@@ -1,31 +1,28 @@
 ﻿using CapaComun.Cache;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuarios.Cliente
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class ClienteCarrito : Form
     {
+        #region "Constructor"
+        
         public ClienteCarrito()
         {
             InitializeComponent();
         }
 
+        #endregion
 
         #region "Cargar datos"
 
-        public List<Datos> Valores { get; set; }
+        public List<Datos> valores { get; set; }
 
         private void ClienteCarrito_Load(object sender, EventArgs e)
         {
-            Rellenar(Valores);
+            //Rellenar(Valores);
         }
 
         public void Rellenar(List<Datos> valores)
@@ -55,6 +52,5 @@ namespace CapaDePresentacion.PantallasUsuarios.Cliente
 
         #endregion
 
-       
     }
 }

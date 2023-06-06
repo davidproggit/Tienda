@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CapaDeNegocio
+﻿namespace CapaDeNegocio
 {
     public class ComprobarCampos
     {
+        #region "Atributo"
+
         private string _mensaje = "";
+
+        #endregion
+
+        #region "Metodo"
 
         public string ComprobarCamposIndividuales(string campo)
         {
@@ -28,5 +28,7 @@ namespace CapaDeNegocio
 
             return _mensaje;
         }
+
+        #endregion
     }
 }

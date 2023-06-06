@@ -1,19 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using CapaDeDatos;
 
 namespace CapaDeEntidades
 {
     public class Administrador
     {
+        #region "Objetos"
+
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DataTable _tabla = new DataTable();
 
+        #endregion
+
+        #region "Constructor"
+
         public Administrador() { }
+
+        #endregion
+
+        #region "DataTable"
+
+        public DataTable CargarRoles()
+        {
+            _tabla = _datosDeUsuario.CargarRoles();
+            return _tabla;
+        }
 
         public DataTable CargarUsuarios()
         {
@@ -27,6 +38,10 @@ namespace CapaDeEntidades
             return _tabla;
         }
 
+        #endregion
+
+        #region "Usuario"
+
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
@@ -36,6 +51,8 @@ namespace CapaDeEntidades
         {
             _datosDeUsuario.EliminarUsuario(id);
         }
-       
+
+        #endregion
+
     }
 }

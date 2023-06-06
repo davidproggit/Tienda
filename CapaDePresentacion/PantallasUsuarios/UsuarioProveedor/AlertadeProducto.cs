@@ -1,35 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun.Cache;
-using CapaDeNegocio;
 using CapaDeEntidades;
 
 namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
+        #region "Objetos"
+
         Proveedor _proveedor = new Proveedor();
+        public List<Datos> valores { get; set; }
+
+        #endregion
+
+        #region "Atributo"
+
         private bool _sinProducto = true;
+
+        #endregion
+
+        #region "Constructor"
 
         public AlertadeProducto()
         {
             InitializeComponent();
         }
 
-        #region "Cargar datos"
+        #endregion
 
-        public List<Datos> Valores { get; set; }
+        #region "Cargar datos"
 
         private void AlertadeProducto_Load(object sender, EventArgs e)
         {
-            Rellenar(Valores);
+            Rellenar(valores);
         }
 
         public void Rellenar(List<Datos> valores)
@@ -63,7 +68,7 @@ namespace CapaDePresentacion
         private void btnGuardarAlerta_Click(object sender, EventArgs e)
         {
             if (!_sinProducto)
-                CambiarMensajeCantidad(Valores);
+                CambiarMensajeCantidad(valores);
             else
                 MessageBox.Show("Error: debe haber al menos 1 producto cargado");
         }

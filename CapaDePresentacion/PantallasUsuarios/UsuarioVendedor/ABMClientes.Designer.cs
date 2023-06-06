@@ -53,6 +53,7 @@ namespace CapaDePresentacion
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grillaClientes)).BeginInit();
             this.panelDatosCliente.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -318,11 +319,24 @@ namespace CapaDePresentacion
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(29, 655);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(371, 37);
+            this.linkLabel1.TabIndex = 53;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Abrir ordenes de compra";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ABMClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 740);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGuardarCliente);
@@ -370,5 +384,6 @@ namespace CapaDePresentacion
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

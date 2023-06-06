@@ -1,24 +1,30 @@
 ﻿using CapaComun.Cache;
+using CapaDePresentacion.PantallasUsuarios.UsuarioGerente;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class InterfazUsuario : Form
     {
+        #region "Constructor"
+
         public InterfazUsuario()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
         }
+
+        #endregion
+
+        #region "Condicional"
+
+        private bool _perfil = false;
+
+        #endregion
 
         #region "Cargar datos principales"
 
@@ -30,20 +36,20 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarPantallasUsuarios()
         {
-            if (CacheSesionUsuario.Cargo == Cargos.Admin)
+            if (CacheSesionUsuario.cargo == Cargos.cargoAdmin)
                 AbrirFormulario<ABMUsuarios>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
+            if (CacheSesionUsuario.cargo == Cargos.cargoVendedor)
                 AbrirFormulario<ABMClientes>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
+            if (CacheSesionUsuario.cargo == Cargos.cargoProveedor)
                 AbrirFormulario<InterfazProducto>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
-                AbrirFormulario<Reportes>();
+            if (CacheSesionUsuario.cargo == Cargos.cargoGerente)
+                AbrirFormulario<PantallaReporte>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
-                AbrirFormulario<ABMCompraProductos>();
+            if (CacheSesionUsuario.cargo == Cargos.cargoCliente)
+                AbrirFormulario<ProductosVista>();
         }
 
         #endregion
@@ -63,7 +69,6 @@ namespace CapaDePresentacion.PantallasGenerales
         #endregion
 
         #region "Cargar pantalla generica"
-        private bool _perfil = false;
 
         private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -87,7 +92,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         private void CargarNombreUsuario()
         {
-            lblNombre.Text = CacheSesionUsuario.Nombre;
+            lblNombre.Text = CacheSesionUsuario.nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

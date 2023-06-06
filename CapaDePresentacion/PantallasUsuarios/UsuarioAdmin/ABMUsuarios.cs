@@ -1,23 +1,20 @@
 ﻿using CapaDeEntidades;
-using CapaDeNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion
 {
     public partial class ABMUsuarios : Form
     {
+        #region "Constructor"
+
         public ABMUsuarios()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 
@@ -29,17 +26,19 @@ namespace CapaDePresentacion
 
         private void CargarListaUsuarios()
         {
-            Administrador _administrador = new Administrador();
-            grillaUsuarios.DataSource = _administrador.CargarUsuarios();
+            Administrador administrador = new Administrador();
+            grillaUsuarios.DataSource = administrador.CargarUsuarios();
         }
 
         private void CargarRoles()
         {
-            comboCargo.Items.Add("Cliente");
-            comboCargo.Items.Add("Admin");
-            comboCargo.Items.Add("Vendedor");
-            comboCargo.Items.Add("Encargado");
-            comboCargo.Items.Add("Gerente");
+            Administrador administrador = new Administrador();
+            DataTable cargos = new DataTable();
+
+            cargos = administrador.CargarRoles();
+
+            foreach (DataRow vendedor in cargos.Rows)
+                comboCargo.Items.Add(vendedor["Cargo"].ToString());
         }
 
         #endregion
@@ -92,11 +91,11 @@ namespace CapaDePresentacion
 
         private void GuardarNuevoUsuario()
         {
-            Administrador _administrador = new Administrador();
+            Administrador administrador = new Administrador();
 
             if (!CamposVacios())
             {
-                _administrador.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
+                administrador.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -123,15 +122,15 @@ namespace CapaDePresentacion
 
         private void BorrarUsuario()
         {
-            Administrador _administrador = new Administrador();
+            Administrador administrador = new Administrador();
             int _idUsuario = (int)grillaUsuarios.CurrentRow.Cells["Id"].Value;
-            _administrador.EliminarUsuario(_idUsuario);
+            administrador.EliminarUsuario(_idUsuario);
         }
 
         private void BuscarUsuario()
         {
-            Administrador _administrador = new Administrador();
-            grillaUsuarios.DataSource = _administrador.FiltrarUsuario(txtBuscar.Text);
+            Administrador administrador = new Administrador();
+            grillaUsuarios.DataSource = administrador.FiltrarUsuario(txtBuscar.Text);
         }
 
         #endregion

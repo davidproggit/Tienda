@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaComun.Cache;
 using CapaDeNegocio;
-using CapaDePresentacion.PantallasUsuarios.Cliente;
+using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 
 namespace CapaDePresentacion
 {
     public partial class ABMCompraProductos : Form
     {
+        #region "Constructor"
+
         public ABMCompraProductos()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 
@@ -60,13 +58,13 @@ namespace CapaDePresentacion
 
         private void AgregarProducto()
         {
-            List<Datos> Valores = new List<Datos>();
+            List<Datos> valores = new List<Datos>();
 
             foreach (DataGridViewRow celda in grillaProductos.Rows)
             {
                 if (Convert.ToBoolean(celda.Cells[0].Value))
                 {
-                    Valores.Add(new Datos
+                    valores.Add(new Datos
                     {
                         id = (int)celda.Cells[1].Value,
                         nombre = celda.Cells[2].Value.ToString(),
@@ -77,12 +75,11 @@ namespace CapaDePresentacion
             }
 
             ClienteCarrito clienteCarrito = new ClienteCarrito();
-            clienteCarrito.Valores = Valores;
+            clienteCarrito.valores = valores;
             clienteCarrito.Show();
         }
 
         #endregion
-
         
     }
 }

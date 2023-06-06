@@ -1,26 +1,27 @@
 ﻿using CapaDeEntidades;
-using CapaDeNegocio;
+using CapaDePresentacion.PantallasUsuarios.UsuarioVendedor;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion
 {
     public partial class ABMClientes : Form
     {
+        #region "Condicionales"
+
         private bool _editar = false;
         private int _idCliente;
+
+        #endregion
+
+        #region "Constructor"
 
         public ABMClientes()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region "Cargar datos"
 
@@ -31,8 +32,8 @@ namespace CapaDePresentacion
 
         private void CargarListaUsuarios()
         {
-            Vendedor _vendedor = new Vendedor();
-            grillaClientes.DataSource = _vendedor.CargarClientes();
+            Vendedor vendedor = new Vendedor();
+            grillaClientes.DataSource = vendedor.CargarClientes();
         }
 
         #endregion
@@ -57,17 +58,22 @@ namespace CapaDePresentacion
             RellenarCamposEdicion();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirOrdenesCompra();
+        }
+
         #endregion
 
         #region "Metodos de los botones"
 
         private void GuardarNuevoCliente()
         {
-            Vendedor _vendedor = new Vendedor();
+            Vendedor vendedor = new Vendedor();
 
             if (!CamposVacios())
             {
-                _vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -78,8 +84,8 @@ namespace CapaDePresentacion
 
         private void BuscarCliente()
         {
-            Vendedor _vendedor = new Vendedor();
-            grillaClientes.DataSource = _vendedor.FiltrarCliente(txtBuscar.Text);
+            Vendedor vendedor = new Vendedor();
+            grillaClientes.DataSource = vendedor.FiltrarCliente(txtBuscar.Text);
         }
 
         private void RellenarCamposEdicion()
@@ -102,17 +108,23 @@ namespace CapaDePresentacion
 
         private void GuardarClienteEditado()
         {
-            Vendedor _vendedor = new Vendedor();
+            Vendedor vendedor = new Vendedor();
 
             if (!CamposVacios())
             {
-                _vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 LimpiarFormulario();
                 CargarListaUsuarios();
                 _editar = false;
             }
             else
                 MessageBox.Show("Error: tiene que completar todos los campos");
+        }
+
+        private static void AbrirOrdenesCompra()
+        {
+            OrdenesCompra ordenesCompra = new OrdenesCompra();
+            ordenesCompra.Show();
         }
 
         #endregion
@@ -139,6 +151,6 @@ namespace CapaDePresentacion
         }
 
         #endregion
-       
+
     }
 }

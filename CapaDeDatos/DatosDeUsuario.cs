@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using CapaComun.Cache;
-using System.Collections;
-using System.Text.RegularExpressions;
 
 namespace CapaDeDatos
 {
     public class DatosDeUsuario
     {
+        #region "Objetos"
+
         private Conexion _conexion = new Conexion();
         private SqlDataReader _lector;
         private DataTable _tabla = new DataTable();
         private SqlCommand _comando = new SqlCommand();
+
+        #endregion
 
         #region "Admin y vendedor"
 
@@ -40,6 +37,17 @@ namespace CapaDeDatos
         #endregion
 
         #region "Administrador"
+
+        public DataTable CargarRoles()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarRoles";
+            _lector = _comando.ExecuteReader();
+            _comando.CommandType = CommandType.StoredProcedure;
+            _tabla.Load(_lector);
+            _conexion.CerrarConexion();
+            return _tabla;
+        }
 
         public DataTable FiltrarUsuario(string txtBuscar)
         {
@@ -165,13 +173,33 @@ namespace CapaDeDatos
 
         private static void FormatoCamposCache(SqlDataReader lector)
         {
-            CacheSesionUsuario.ID = lector.GetInt32(0);
-            CacheSesionUsuario.Usuario = lector.GetString(1);
-            CacheSesionUsuario.Clave = lector.GetString(2);
-            CacheSesionUsuario.Nombre = lector.GetString(3);
-            CacheSesionUsuario.Apellido = lector.GetString(4);
-            CacheSesionUsuario.Email = lector.GetString(5);
-            CacheSesionUsuario.Cargo = lector.GetString(6);
+            CacheSesionUsuario.id = lector.GetInt32(0);
+            CacheSesionUsuario.usuario = lector.GetString(1);
+            CacheSesionUsuario.clave = lector.GetString(2);
+            CacheSesionUsuario.nombre = lector.GetString(3);
+            CacheSesionUsuario.apellido = lector.GetString(4);
+            CacheSesionUsuario.email = lector.GetString(5);
+            CacheSesionUsuario.cargo = lector.GetString(6);
+        }
+
+        #endregion
+
+        #region "Gerente"
+
+        public DataTable CargarVendedores()
+        {
+            _comando.Connection = _conexion.AbrirConexion();
+            _comando.CommandText = "CargarVendedores";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.ExecuteNonQuery();
+
+            DataTable tablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_comando);
+
+            adaptador.Fill(tablaFiltrada);
+
+            _conexion.CerrarConexion();
+            return tablaFiltrada;
         }
 
         #endregion

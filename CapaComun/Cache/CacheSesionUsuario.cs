@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CapaComun.Cache
+﻿namespace CapaComun.Cache
 {
     public class CacheSesionUsuario
     {
-        public static int ID { get; set; }
-        public static string Usuario { get; set; }
-        public static string Clave { get; set; }
-        public static string Nombre { get; set; }
-        public static string Apellido { get; set; }
-        public static string Email { get; set; }
-        public static string Cargo { get; set; }
+        #region "Atributos"
+
+        public static int id { get; set; }
+        public static string usuario { get; set; }
+        public static string clave { get; set; }
+        public static string nombre { get; set; }
+        public static string apellido { get; set; }
+        public static string email { get; set; }
+        public static string cargo { get; set; }
+
+        #endregion
+
     }
 }
