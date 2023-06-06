@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaComun.Cache;
+using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
 
@@ -130,7 +131,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Productos productos = new Productos();
 
-            productos.AprobarOrden(ordenId);
+            productos.AprobarOrden(ordenId, CacheSesionUsuario.nombre);
             productoEstado = "Aprobado";
             CargarInformacion();
         }
@@ -139,7 +140,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Productos productos = new Productos();
 
-            productos.CancelarOrden(ordenId);
+            productos.CancelarOrden(ordenId, CacheSesionUsuario.nombre);
             productoEstado = "Cancelado";
             CargarInformacion();
         }
