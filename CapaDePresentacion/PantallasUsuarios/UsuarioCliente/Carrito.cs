@@ -78,12 +78,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             }
         }
 
-        private void LimpiarCarrito()
-        {
-            contenedorProductos.Controls.Clear();
-        }
-
-        public void LimpiarProductos()
+        public void LimpiarCarrito()
         {
             contenedorProductos.Controls.Clear();
         }
