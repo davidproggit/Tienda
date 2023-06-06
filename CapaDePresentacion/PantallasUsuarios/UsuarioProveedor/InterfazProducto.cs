@@ -9,12 +9,6 @@ namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        #region "Objeto"
-
-        private Proveedor _proveedor = new Proveedor();
-
-        #endregion
-
         #region "Condicionales"
 
         private int _idProducto;
@@ -108,9 +102,11 @@ namespace CapaDePresentacion
 
         private void GuardarProductoEditado()
         {
+            Proveedor proveedor = new Proveedor();
+
             try
             {
-                _proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
+                proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
@@ -123,9 +119,11 @@ namespace CapaDePresentacion
 
         private void GuardarProductoNuevo()
         {
+            Proveedor proveedor = new Proveedor();
+
             try
             {
-                _proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -172,8 +170,10 @@ namespace CapaDePresentacion
 
         private void EliminarProducto()
         {
+            Proveedor proveedor = new Proveedor();
+
             _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
-            _proveedor.EliminarProducto(_idProducto);
+            proveedor.EliminarProducto(_idProducto);
         }
 
         private void BuscarProducto()
