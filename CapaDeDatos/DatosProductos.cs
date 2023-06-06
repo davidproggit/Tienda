@@ -402,13 +402,15 @@ namespace CapaDeDatos
             return _valores;
         }
 
-        public void AprobarOrden(int ordenId, string vendedor)
+        public void AprobarOrden(int ordenId, string vendedor, int cantidad, int productoId)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "AprobarOrden";
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.AddWithValue("@ordenId", ordenId);
             _comando.Parameters.AddWithValue("@vendedor", vendedor);
+            _comando.Parameters.AddWithValue("@cantidad", cantidad);
+            _comando.Parameters.AddWithValue("@productoId", productoId);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }

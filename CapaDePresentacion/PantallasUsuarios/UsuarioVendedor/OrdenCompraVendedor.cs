@@ -133,7 +133,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Productos productos = new Productos();
 
-            productos.AprobarOrden(ordenId, CacheSesionUsuario.nombre);
+            productos.AprobarOrden(ordenId, CacheSesionUsuario.nombre, productoCantidad,productoId);
             productoEstado = "Aprobado";
             CargarInformacion();
         }

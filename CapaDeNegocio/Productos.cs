@@ -111,9 +111,9 @@ namespace CapaDeNegocio
             _datosProductos.VaciarCarrito(idCliente);
         }
 
-        public void AprobarOrden(int ordenId, string vendedor)
+        public void AprobarOrden(int ordenId, string vendedor, int cantidad, int productoId)
         {
-            _datosProductos.AprobarOrden(ordenId, vendedor);
+            _datosProductos.AprobarOrden(ordenId, vendedor, cantidad, productoId);
         }
 
         public void CancelarOrden(int ordenId, string vendedor)
