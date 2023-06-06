@@ -86,6 +86,7 @@ namespace WindowsFormsApp1
             VerificarProductoCarrito();
             EstablecerCantidadMaxima();
             CargarDatos();
+            VerificarProductoDisponible();
         }
 
         private void CargarDatos()
@@ -140,6 +141,15 @@ namespace WindowsFormsApp1
 
             productos.CambiarEstadoProducto(productoId, "Carrito");
             productos.AsignarClienteProducto(productoId, CacheSesionUsuario.id);
+        }
+
+        private void VerificarProductoDisponible()
+        {
+            if (productoCantidad==0)
+            {
+                selectorCantidad.Enabled = false;
+                btnAgregarCarrito.Enabled = false;
+            }
         }
 
         private void ProductoDetalle_FormClosed(object sender, FormClosedEventArgs e)
