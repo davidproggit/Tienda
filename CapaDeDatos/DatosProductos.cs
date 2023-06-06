@@ -252,7 +252,7 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void EnviarOrdenCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
+        public void EnviarOrdenCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado, string fecha)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "EnviarOrdenCompra";
@@ -266,6 +266,7 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@cantidad", cantidad);
             _comando.Parameters.AddWithValue("@precio", precio);
             _comando.Parameters.AddWithValue("@estado", estado);
+            _comando.Parameters.AddWithValue("@fecha", fecha);
 
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();

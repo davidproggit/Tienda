@@ -72,11 +72,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         private void EnviarOrdenCompra()
         {
             Productos productos = new Productos();
+            string fecha = DateTime.Now.ToString("yyy-MM-dd");
 
             foreach (FormatoProductos datos in _valores)
             {
                 productos.CambiarEstadoProducto(datos.productoId, "Enviado");
-                productos.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente");
+                productos.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
                 productos.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
                 Llenar();
