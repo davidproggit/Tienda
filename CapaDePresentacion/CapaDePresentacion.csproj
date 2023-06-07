@@ -80,10 +80,10 @@
     <Compile Include="PantallasUsuarios\UsuarioCliente\CarritoVista.Designer.cs">
       <DependentUpon>CarritoVista.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Antiguo\ClienteCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Antiguo\ClienteCarrito.Designer.cs">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioCliente\VistaOrdenCompraCliente.cs">
@@ -148,10 +148,10 @@
     <Compile Include="PantallasUsuarios\UsuarioVendedor\ABMClientes.Designer.cs">
       <DependentUpon>ABMClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Antiguo\ABMCompraProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\Antiguo\ABMCompraProductos.Designer.cs">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioProveedor\AlertadeProducto.cs">
@@ -160,10 +160,10 @@
     <Compile Include="PantallasUsuarios\UsuarioProveedor\AlertadeProducto.Designer.cs">
       <DependentUpon>AlertadeProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\Antiguo\AprobarOrdendeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\Antiguo\AprobarOrdendeCompra.Designer.cs">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.cs">
@@ -172,10 +172,10 @@
     <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.Designer.cs">
       <DependentUpon>OrdenesCompraClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\Antiguo\VerdetalleOC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\Antiguo\VerdetalleOC.Designer.cs">
       <DependentUpon>VerdetalleOC.cs</DependentUpon>
     </Compile>
     <!--<Compile Include="Login.cs">
@@ -189,7 +189,7 @@
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\CarritoVista.resx">
       <DependentUpon>CarritoVista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\Antiguo\ClienteCarrito.resx">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\VistaOrdenCompraCliente.resx">
@@ -221,10 +221,10 @@
     </EmbeddedResource>
     <!-- <EmbeddedResource Include="Login.resx">-->
     <!--<Compile Include="Reportes.cs">-->
-    <Compile Include="PantallasUsuarios\UsuarioGerente\Reportes.cs">
+    <Compile Include="PantallasUsuarios\UsuarioGerente\Antiguo\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioGerente\Reportes.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioGerente\Antiguo\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioAdmin\ABMUsuarios.cs">
@@ -236,7 +236,7 @@
     <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\ABMClientes.resx">
       <DependentUpon>ABMClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ABMCompraProductos.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\Antiguo\ABMCompraProductos.resx">
       <DependentUpon>ABMCompraProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioProveedor\AlertadeProducto.resx">
@@ -274,20 +274,20 @@
     <EmbeddedResource Include="PantallasGenerales\UsuarioPerfil.resx">
       <DependentUpon>UsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\Antiguo\AprobarOrdendeCompra.resx">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.resx">
       <DependentUpon>OrdenesCompraClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\Antiguo\VerdetalleOC.resx">
       <DependentUpon>VerdetalleOC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioGerente\Reportes.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioGerente\Antiguo\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioAdmin\ABMUsuarios.resx">
