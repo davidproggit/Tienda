@@ -11,14 +11,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
     {
         private List<FormatoProductos> _listaOrdenes = new List<FormatoProductos>();
 
-        #region "Constructor"
-
         public OrdenesCompraClientes()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
