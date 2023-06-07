@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    public partial class Carrito : Form
+    public partial class CarritoVista : Form
     {
         #region "Lista"
 
@@ -17,7 +18,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Constructor"
 
-        public Carrito()
+        public CarritoVista()
         {
             InitializeComponent();
         }
@@ -33,8 +34,9 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         public void Llenar()
         {
-            Productos productos = new Productos();
-            _valores = productos.RellenarCarrito();
+            Carrito carrito = new Carrito();
+
+            _valores = carrito.RellenarCarrito();
 
             foreach (FormatoProductos datos in _valores)
             {
@@ -71,14 +73,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void EnviarOrdenCompra()
         {
-            Productos productos = new Productos();
+            Carrito carrito = new Carrito();
+
             string fecha = DateTime.Now.ToString("yyy-MM-dd");
 
             foreach (FormatoProductos datos in _valores)
             {
-                productos.CambiarEstadoProducto(datos.productoId, "Enviado");
-                productos.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
-                productos.VaciarCarrito(CacheSesionUsuario.id);
+                carrito.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
+                carrito.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
                 Llenar();
             }
@@ -86,13 +88,13 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void ComprobarVaciarCarrito()
         {
-            Productos productos = new Productos();
+            Carrito carrito = new Carrito();
 
             DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere vaciar el carrito?", "Vaciar carrito", MessageBoxButtons.YesNo);
 
             if (pantallaAdvertencia == DialogResult.Yes)
             {
-                productos.VaciarCarrito(CacheSesionUsuario.id);
+                carrito.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
                 Llenar();
             }

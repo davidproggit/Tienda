@@ -1,4 +1,5 @@
 ﻿using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
@@ -131,18 +132,18 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void AprobarOrden()
         {
-            Productos productos = new Productos();
+            Vendedor vendedor = new Vendedor();
 
-            productos.AprobarOrden(ordenId, CacheSesionUsuario.nombre, productoCantidad,productoId);
+            vendedor.AprobarOrden(ordenId, CacheSesionUsuario.nombre, productoCantidad,productoId);
             productoEstado = "Aprobado";
             CargarInformacion();
         }
 
         private void CancelarOrden()
         {
-            Productos productos = new Productos();
+            Vendedor vendedor = new Vendedor();
 
-            productos.CancelarOrden(ordenId, CacheSesionUsuario.nombre);
+            vendedor.CancelarOrden(ordenId, CacheSesionUsuario.nombre);
             productoEstado = "Cancelado";
             CargarInformacion();
         }

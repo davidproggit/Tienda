@@ -1,6 +1,6 @@
-﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
+﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    partial class OrdenesCompra
+    partial class VistaOrdenCompraCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -38,18 +38,18 @@
             this.contenedorProductos.Location = new System.Drawing.Point(90, 15);
             this.contenedorProductos.Name = "contenedorProductos";
             this.contenedorProductos.Size = new System.Drawing.Size(620, 420);
-            this.contenedorProductos.TabIndex = 3;
+            this.contenedorProductos.TabIndex = 2;
             // 
-            // OrdenesCompra
+            // Historial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.contenedorProductos);
-            this.Name = "OrdenesCompra";
+            this.Name = "Historial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrdenesCompra";
-            this.Load += new System.EventHandler(this.OrdenesCompra_Load);
+            this.Text = "Historial";
+            this.Load += new System.EventHandler(this.Historial_Load);
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    partial class Carrito
+    partial class CarritoVista
     {
         /// <summary>
         /// Required designer variable.

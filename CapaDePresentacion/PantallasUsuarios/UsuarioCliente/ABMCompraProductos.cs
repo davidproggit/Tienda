@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 
@@ -27,8 +28,8 @@ namespace CapaDePresentacion
 
         private void MostrarProductos()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.MostrarProducto();
+            Cliente cliente = new Cliente();
+            grillaProductos.DataSource = cliente.MostrarProducto();
             grillaProductos.Columns["ID"].Visible = false;
         }
 
@@ -52,8 +53,8 @@ namespace CapaDePresentacion
 
         private void BuscarProducto()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.FiltrarProducto(txtBusqueda.Text);
+            Cliente cliente = new Cliente();
+            grillaProductos.DataSource = cliente.FiltrarProducto(txtBusqueda.Text);
         }
 
         private void AgregarProducto()

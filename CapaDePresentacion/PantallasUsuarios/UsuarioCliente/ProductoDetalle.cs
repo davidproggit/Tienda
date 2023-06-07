@@ -1,4 +1,5 @@
 ﻿using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
@@ -110,15 +111,15 @@ namespace WindowsFormsApp1
 
         private void VerificarProductoCarrito()
         {
-            Productos productos = new Productos();
-            Productos productos2 = new Productos();
+            Carrito carritoVerificar = new Carrito();
+            Carrito carritoCantidad = new Carrito();
 
-            int productoCarrito = productos.VerificarProductoCarrito(productoId);
+            int productoCarrito = carritoVerificar.VerificarProductoCarrito(productoId);
 
             if (productoCarrito == productoId)
             {
                 _agregarProductoCarrito = false;
-                _cantidadCarrito = productos2.DevolverCantidadCarrito(productoId);
+                _cantidadCarrito = carritoCantidad.DevolverCantidadCarrito(productoId);
             }
         }
 
@@ -130,17 +131,16 @@ namespace WindowsFormsApp1
 
         private void AgregarCarrito()
         {
-            Productos productos = new Productos();
+            Cliente cliente = new Cliente();
 
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
             if (_agregarProductoCarrito)
-                productos.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
+                cliente.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
             else
-                productos.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
+                cliente.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
 
-            productos.CambiarEstadoProducto(productoId, "Carrito");
-            productos.AsignarClienteProducto(productoId, CacheSesionUsuario.id);
+            cliente.AsignarClienteProducto(productoId, CacheSesionUsuario.id);
         }
 
         private void VerificarProductoDisponible()

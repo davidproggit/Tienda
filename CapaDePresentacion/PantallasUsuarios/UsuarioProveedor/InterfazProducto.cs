@@ -34,8 +34,8 @@ namespace CapaDePresentacion
 
         private void MostrarProductos()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.MostrarProducto();
+            Proveedor proveedor = new Proveedor();
+            grillaProductos.DataSource = proveedor.MostrarProducto();
             grillaProductos.Columns["ID"].Visible = false;
         }
 
@@ -181,8 +181,8 @@ namespace CapaDePresentacion
 
         private void BuscarProducto()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.FiltrarProducto(txtBuscar.Text);
+            Proveedor proveedor = new Proveedor();
+            grillaProductos.DataSource = proveedor.FiltrarProducto(txtBuscar.Text);
         }
 
         private void EnviarDatosAlerta()

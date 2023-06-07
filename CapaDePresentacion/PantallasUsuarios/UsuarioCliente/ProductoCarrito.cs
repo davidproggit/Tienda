@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
 using WindowsFormsApp1;
@@ -113,19 +114,19 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void EliminarProducto()
         {
-            Productos productos = new Productos();
+            Cliente cliente = new Cliente();
+            Carrito carrito = new Carrito();
 
-            productos.CambiarEstadoProducto(productoId, "Disponible");
-            productos.EliminarProductoCarrito(productoId);
-            productos.EliminarClienteProducto(productoId);
+            carrito.EliminarProductoCarrito(productoId);
+            cliente.EliminarProductoCliente(productoId);
 
             RecargarPantalla();
         }
 
         private static void RecargarPantalla()
         {
-            (Application.OpenForms["Carrito"] as Carrito).LimpiarCarrito();
-            (Application.OpenForms["Carrito"] as Carrito).Llenar();
+            (Application.OpenForms["Carrito"] as CarritoVista).LimpiarCarrito();
+            (Application.OpenForms["Carrito"] as CarritoVista).Llenar();
             (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
             (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
         }

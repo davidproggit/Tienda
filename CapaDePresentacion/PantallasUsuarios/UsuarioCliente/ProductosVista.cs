@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaComun;
 using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
+using CapaDeEntidades;
 
 namespace WindowsFormsApp1
 {
@@ -33,8 +34,9 @@ namespace WindowsFormsApp1
 
         public void Llenar()
         {
-            Productos productos = new Productos();
-            _valores = productos.Rellenar();
+            Cliente cliente = new Cliente();
+
+            _valores = cliente.CargarProductos();
 
             foreach (FormatoProductos datos in _valores)
             {
@@ -46,7 +48,6 @@ namespace WindowsFormsApp1
                 productoPrevisualizacion.productoMarca = datos.productoMarca;
                 productoPrevisualizacion.productoPrecio = datos.productoPrecio;
                 productoPrevisualizacion.productoCantidad = datos.productoCantidad;
-                productoPrevisualizacion.productoEstado = datos.productoEstado;
 
                 contenedorProductos.Controls.Add(productoPrevisualizacion);
             }
@@ -58,7 +59,7 @@ namespace WindowsFormsApp1
 
         private void linkCarrito_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Carrito carrito = new Carrito();
+            CarritoVista carrito = new CarritoVista();
             carrito.Show();
         }
 
@@ -78,7 +79,7 @@ namespace WindowsFormsApp1
 
         private static void AbrirOrdenes()
         {
-            Historial historial = new Historial();
+            VistaOrdenCompraCliente historial = new VistaOrdenCompraCliente();
             historial.Show();
         }
 

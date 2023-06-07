@@ -1,4 +1,5 @@
 ﻿using CapaComun;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 using System;
@@ -7,17 +8,17 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
-    public partial class OrdenesCompra : Form
+    public partial class OrdenesCompraClientes : Form
     {
         #region "Lista"
 
-        private List<FormatoProductos> _valores = new List<FormatoProductos>();
+        private List<FormatoProductos> _listaOrdenes = new List<FormatoProductos>();
 
         #endregion
 
         #region "Constructor"
 
-        public OrdenesCompra()
+        public OrdenesCompraClientes()
         {
             InitializeComponent();
         }
@@ -33,10 +34,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 
         private void CargarOrdenesCompra()
         {
-            Productos productos = new Productos();
-            _valores = productos.CargarOrdenesCompra();
+            Vendedor vendedor = new Vendedor();
+            _listaOrdenes = vendedor.CargarOrdenesCompra();
 
-            foreach (FormatoProductos datos in _valores)
+            foreach (FormatoProductos datos in _listaOrdenes)
             {
                 OrdenCompraVendedor ordenCompraVendedor = new OrdenCompraVendedor();
 

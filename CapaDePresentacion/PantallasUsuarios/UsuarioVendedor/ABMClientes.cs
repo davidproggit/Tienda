@@ -73,7 +73,7 @@ namespace CapaDePresentacion
 
             if (!CamposVacios())
             {
-                vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.InsertarNuevoCliente(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -112,7 +112,7 @@ namespace CapaDePresentacion
 
             if (!CamposVacios())
             {
-                vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.EditarPerfilCliente(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 LimpiarFormulario();
                 CargarListaUsuarios();
                 _editar = false;
@@ -123,7 +123,7 @@ namespace CapaDePresentacion
 
         private static void AbrirOrdenesCompra()
         {
-            OrdenesCompra ordenesCompra = new OrdenesCompra();
+            OrdenesCompraClientes ordenesCompra = new OrdenesCompraClientes();
             ordenesCompra.Show();
         }
 

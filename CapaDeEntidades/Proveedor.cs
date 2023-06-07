@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using CapaDeDatos;
 
 namespace CapaDeEntidades
@@ -8,6 +9,7 @@ namespace CapaDeEntidades
         #region "Objetos"
 
         private DatosProductos _datosProductos = new DatosProductos();
+        private DataTable _tabla = new DataTable();
 
         #endregion
 
@@ -17,7 +19,7 @@ namespace CapaDeEntidades
 
         #endregion
 
-        #region "Metodos"
+        #region "Producto"
 
         public void InsertarProducto(string nombre, string descripcion, string marca, string precio, string stock)
         {
@@ -33,6 +35,22 @@ namespace CapaDeEntidades
         {
             _datosProductos.Eliminar(id);
         }
+
+        public DataTable MostrarProducto()
+        {
+            _tabla = _datosProductos.Mostrar();
+            return _tabla;
+        }
+
+        public DataTable FiltrarProducto(string textoBuscar)
+        {
+            _tabla = _datosProductos.Filtrar(textoBuscar);
+            return _tabla;
+        }
+
+        #endregion
+
+        #region "Alerta"
 
         public void ModificarAlerta(int id, string mensaje, string cantidadMinima)
         {

@@ -1,4 +1,6 @@
-﻿using CapaDeDatos;
+﻿using CapaComun;
+using CapaDeDatos;
+using System.Collections.Generic;
 using System.Data;
 
 namespace CapaDeEntidades
@@ -8,6 +10,7 @@ namespace CapaDeEntidades
         #region "Objetos"
 
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
+        private DatosProductos _datosProductos = new DatosProductos();
         private DataTable _tabla = new DataTable();
 
         #endregion
@@ -18,7 +21,7 @@ namespace CapaDeEntidades
 
         #endregion
 
-        #region "DataTable"
+        #region "Cliente"
 
         public DataTable CargarClientes()
         {
@@ -32,21 +35,35 @@ namespace CapaDeEntidades
             return _tabla;
         }
 
-        #endregion
-
-        #region "Usuario"
-
-        public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public void EditarPerfilCliente(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _datosDeUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
 
-        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public void InsertarNuevoCliente(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
             _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
 
         #endregion
 
+        #region "Ordenes"
+
+        public List<FormatoProductos> CargarOrdenesCompra()
+        {
+            return _datosProductos.CargarOrdenesCompra();
+        }
+
+        public void AprobarOrden(int ordenId, string vendedor, int cantidad, int productoId)
+        {
+            _datosProductos.AprobarOrden(ordenId, vendedor, cantidad, productoId);
+        }
+
+        public void CancelarOrden(int ordenId, string vendedor)
+        {
+            _datosProductos.CancelarOrden(ordenId, vendedor);
+        }
+
+        #endregion
     }
 }

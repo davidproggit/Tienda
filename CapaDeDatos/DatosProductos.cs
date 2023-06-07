@@ -172,7 +172,7 @@ namespace CapaDeDatos
             return _valores;
         }
 
-        public List<FormatoProductos> CargarHistorial(int idCliente)
+        public List<FormatoProductos> CargarHistorialOrdenes(int idCliente)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "CargarHistorial";

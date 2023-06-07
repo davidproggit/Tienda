@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaComun.Cache;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    public partial class Historial : Form
+    public partial class VistaOrdenCompraCliente : Form
     {
         #region "Lista"
 
@@ -17,7 +18,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Constructor"
 
-        public Historial()
+        public VistaOrdenCompraCliente()
         {
             InitializeComponent();
         }
@@ -33,8 +34,9 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void CargarHistorial()
         {
-            Productos productos = new Productos();
-            _valores = productos.CargarHistorial(CacheSesionUsuario.id);
+            Cliente cliente = new Cliente();
+
+            _valores = cliente.CargarHistorialOrdenes(CacheSesionUsuario.id);
 
             foreach (FormatoProductos datos in _valores)
             {

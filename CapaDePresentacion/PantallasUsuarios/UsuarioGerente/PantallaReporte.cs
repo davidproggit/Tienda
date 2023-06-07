@@ -66,26 +66,26 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
 
         private void MostrarOrdenes()
         {
-            Productos productos = new Productos();
-            grillaOrdenes.DataSource = productos.MostrarOrdenes();
+            Gerente gerente = new Gerente();
+            grillaOrdenes.DataSource = gerente.MostrarOrdenes();
         }
 
         private void MostrarOrdenesSemana()
         {
-            Productos productos = new Productos();
-            grillaOrdenes.DataSource = productos.MostrarOrdenesSemana();
+            Gerente gerente = new Gerente();
+            grillaOrdenes.DataSource = gerente.MostrarOrdenesSemana();
         }
 
         private void MostrarOrdenesMes()
         {
-            Productos productos = new Productos();
-            grillaOrdenes.DataSource = productos.MostrarOrdenesMes();
+            Gerente gerente = new Gerente();
+            grillaOrdenes.DataSource = gerente.MostrarOrdenesMes();
         }
 
         private void MostrarOrdenesVendedor()
         {
-            Productos productos = new Productos();
-            grillaOrdenes.DataSource = productos.MostrarOrdenesVendedor(comboVendedores.Text);
+            Gerente gerente = new Gerente();
+            grillaOrdenes.DataSource = gerente.MostrarOrdenesVendedor(comboVendedores.Text);
         }
 
         #endregion

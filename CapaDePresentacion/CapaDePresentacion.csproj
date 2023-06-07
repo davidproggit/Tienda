@@ -74,11 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\Carrito.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\CarritoVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\Carrito.Designer.cs">
-      <DependentUpon>Carrito.cs</DependentUpon>
+    <Compile Include="PantallasUsuarios\UsuarioCliente\CarritoVista.Designer.cs">
+      <DependentUpon>CarritoVista.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.cs">
       <SubType>Form</SubType>
@@ -86,11 +86,11 @@
     <Compile Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.Designer.cs">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\Historial.cs">
+    <Compile Include="PantallasUsuarios\UsuarioCliente\VistaOrdenCompraCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioCliente\Historial.Designer.cs">
-      <DependentUpon>Historial.cs</DependentUpon>
+    <Compile Include="PantallasUsuarios\UsuarioCliente\VistaOrdenCompraCliente.Designer.cs">
+      <DependentUpon>VistaOrdenCompraCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioCliente\OrdenCompraCliente.cs">
       <SubType>UserControl</SubType>
@@ -166,11 +166,11 @@
     <Compile Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.Designer.cs">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompra.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompra.Designer.cs">
-      <DependentUpon>OrdenesCompra.cs</DependentUpon>
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.Designer.cs">
+      <DependentUpon>OrdenesCompraClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.cs">
       <SubType>Form</SubType>
@@ -186,14 +186,14 @@
     </Compile>-->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\Carrito.resx">
-      <DependentUpon>Carrito.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\CarritoVista.resx">
+      <DependentUpon>CarritoVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ClienteCarrito.resx">
       <DependentUpon>ClienteCarrito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\Historial.resx">
-      <DependentUpon>Historial.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\VistaOrdenCompraCliente.resx">
+      <DependentUpon>VistaOrdenCompraCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\OrdenCompraCliente.resx">
       <DependentUpon>OrdenCompraCliente.cs</DependentUpon>
@@ -277,8 +277,8 @@
     <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\AprobarOrdendeCompra.resx">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompra.resx">
-      <DependentUpon>OrdenesCompra.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.resx">
+      <DependentUpon>OrdenesCompraClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\VerdetalleOC.resx">
       <DependentUpon>VerdetalleOC.cs</DependentUpon>
