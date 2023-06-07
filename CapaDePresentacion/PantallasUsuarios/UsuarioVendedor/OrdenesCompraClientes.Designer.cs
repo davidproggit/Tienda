@@ -35,18 +35,18 @@
             // 
             this.contenedorProductos.AutoScroll = true;
             this.contenedorProductos.BackColor = System.Drawing.Color.Gray;
-            this.contenedorProductos.Location = new System.Drawing.Point(90, 15);
+            this.contenedorProductos.Location = new System.Drawing.Point(30, 12);
             this.contenedorProductos.Name = "contenedorProductos";
-            this.contenedorProductos.Size = new System.Drawing.Size(620, 420);
+            this.contenedorProductos.Size = new System.Drawing.Size(1050, 568);
             this.contenedorProductos.TabIndex = 3;
             // 
-            // OrdenesCompra
+            // OrdenesCompraClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1267, 621);
             this.Controls.Add(this.contenedorProductos);
-            this.Name = "OrdenesCompra";
+            this.Name = "OrdenesCompraClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrdenesCompra";
             this.Load += new System.EventHandler(this.OrdenesCompra_Load);

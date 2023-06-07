@@ -37,16 +37,16 @@
             // 
             this.contenedorProductos.AutoScroll = true;
             this.contenedorProductos.BackColor = System.Drawing.Color.Gray;
-            this.contenedorProductos.Location = new System.Drawing.Point(24, 94);
+            this.contenedorProductos.Location = new System.Drawing.Point(44, 266);
             this.contenedorProductos.Name = "contenedorProductos";
-            this.contenedorProductos.Size = new System.Drawing.Size(1237, 540);
+            this.contenedorProductos.Size = new System.Drawing.Size(1270, 344);
             this.contenedorProductos.TabIndex = 0;
             // 
             // linkCarrito
             // 
             this.linkCarrito.AutoSize = true;
             this.linkCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkCarrito.Location = new System.Drawing.Point(1077, 26);
+            this.linkCarrito.Location = new System.Drawing.Point(1200, 26);
             this.linkCarrito.Name = "linkCarrito";
             this.linkCarrito.Size = new System.Drawing.Size(114, 37);
             this.linkCarrito.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.linkHistorial.AutoSize = true;
             this.linkHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkHistorial.Location = new System.Drawing.Point(714, 26);
+            this.linkHistorial.Location = new System.Drawing.Point(832, 26);
             this.linkHistorial.Name = "linkHistorial";
             this.linkHistorial.Size = new System.Drawing.Size(310, 37);
             this.linkHistorial.TabIndex = 2;

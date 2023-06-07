@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
+using CapaDePresentacion.PantallasUsuarios.UsuarioVendedor.OrdenComponente;
 using System;
 using System.Windows.Forms;
 
@@ -103,10 +104,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
       
         private void CargarInformacion()
         {
-            lblNombreCliente.Text = "Cliente nº: " + idCliente;
-            lblNombreProducto.Text = productoNombre;
-            lblPrecio.Text = "Precio: $" + productoPrecio.ToString();
-            lblCantidad.Text = "Cantidad: " + productoCantidad.ToString();
+            lblOrden.Text = "Orden nº: " + ordenId;
             lblEstado.Text = productoEstado;
         }
 
@@ -162,5 +160,19 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+        private void linkDetalle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OrdenDetalle ordenDetalle = new OrdenDetalle();
+
+            ordenDetalle.ordenId = ordenId;
+            ordenDetalle.idCliente = idCliente;
+            ordenDetalle.productoNombre = productoNombre;
+            ordenDetalle.productoMarca = productoMarca;
+            ordenDetalle.productoDescripcion = productoDescripcion;
+            ordenDetalle.productoPrecio = productoPrecio;
+            ordenDetalle.productoCantidad = productoCantidad;
+
+            ordenDetalle.Show();
+        }
     }
 }

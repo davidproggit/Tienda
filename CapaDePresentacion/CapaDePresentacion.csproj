@@ -104,10 +104,10 @@
     <Compile Include="PantallasUsuarios\UsuarioGerente\PantallaReporte.Designer.cs">
       <DependentUpon>PantallaReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenComponente\OrdenCompraVendedor.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenCompra\OrdenCompraVendedor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenComponente\OrdenCompraVendedor.Designer.cs">
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenCompra\OrdenCompraVendedor.Designer.cs">
       <DependentUpon>OrdenCompraVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuarios\UsuarioCliente\ProductoComponente\ProductoCarrito.cs">
@@ -166,6 +166,12 @@
     <Compile Include="PantallasUsuarios\UsuarioVendedor\Antiguo\AprobarOrdendeCompra.Designer.cs">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenCompra\OrdenDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenCompra\OrdenDetalle.Designer.cs">
+      <DependentUpon>OrdenDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,7 +207,7 @@
     <EmbeddedResource Include="PantallasUsuarios\UsuarioGerente\PantallaReporte.resx">
       <DependentUpon>PantallaReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenComponente\OrdenCompraVendedor.resx">
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenCompra\OrdenCompraVendedor.resx">
       <DependentUpon>OrdenCompraVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioCliente\ProductoComponente\ProductoCarrito.resx">
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\Antiguo\AprobarOrdendeCompra.resx">
       <DependentUpon>AprobarOrdendeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenCompra\OrdenDetalle.resx">
+      <DependentUpon>OrdenDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuarios\UsuarioVendedor\OrdenesCompraClientes.resx">
       <DependentUpon>OrdenesCompraClientes.cs</DependentUpon>
