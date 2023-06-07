@@ -1,4 +1,4 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
 using System;
 using System.Windows.Forms;
 

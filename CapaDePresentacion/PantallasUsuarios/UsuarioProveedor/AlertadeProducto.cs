@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using CapaComun.Cache;
+using CapaComun;
 using CapaDeEntidades;
 
 namespace CapaDePresentacion

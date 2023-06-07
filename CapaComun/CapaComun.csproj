@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\CacheSesionUsuario.cs" />
-    <Compile Include="Cache\Cargos.cs" />
-    <Compile Include="Cache\Datos.cs" />
+    <Compile Include="CacheSesionUsuario.cs" />
+    <Compile Include="Cargos.cs" />
+    <Compile Include="Datos.cs" />
     <Compile Include="FormatoProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

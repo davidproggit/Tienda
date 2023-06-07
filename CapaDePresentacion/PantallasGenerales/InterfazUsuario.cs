@@ -1,4 +1,4 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
 using CapaDePresentacion.PantallasUsuarios.UsuarioGerente;
 using System;
 using System.Linq;

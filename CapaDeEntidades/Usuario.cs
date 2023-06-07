@@ -1,4 +1,4 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
 using CapaDeDatos;
 using System;
 using System.Collections.Generic;

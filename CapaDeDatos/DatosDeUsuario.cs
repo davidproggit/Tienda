@@ -1,6 +1,5 @@
 ﻿using System.Data;
-using System.Data.SqlClient;
-using CapaComun.Cache;
+using System.Data.SqlClient;using CapaComun;
 
 namespace CapaDeDatos
 {

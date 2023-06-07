@@ -1,4 +1,4 @@
-﻿namespace CapaComun.Cache
+﻿namespace CapaComun
 {
     public class CacheSesionUsuario
     {

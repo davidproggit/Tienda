@@ -1,5 +1,5 @@
 ﻿using CapaComun;
-using CapaComun.Cache;
+using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
