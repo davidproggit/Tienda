@@ -3,7 +3,7 @@ using CapaDeDatos;
 
 namespace CapaDeEntidades
 {
-    public class Administrador
+    public class Administrador : Usuario
     {
         #region "Objetos"
 

@@ -5,7 +5,7 @@ using System.Data;
 
 namespace CapaDeEntidades
 {
-    public class Vendedor
+    public class Vendedor : Usuario
     {
         #region "Objetos"
 

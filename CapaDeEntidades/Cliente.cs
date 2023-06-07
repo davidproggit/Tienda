@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CapaDeEntidades
 {
-    public class Cliente
+    public class Cliente : Usuario
     {
         public Cliente() { }
 

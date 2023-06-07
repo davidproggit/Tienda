@@ -3,7 +3,7 @@ using System.Data;
 
 namespace CapaDeEntidades
 {
-    public class Gerente
+    public class Gerente : Usuario
     {
         #region "Objetos"
 

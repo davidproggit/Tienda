@@ -4,7 +4,7 @@ using CapaDeDatos;
 
 namespace CapaDeEntidades
 {
-    public class Proveedor
+    public class Proveedor : Usuario
     {
         #region "Objetos"
 
