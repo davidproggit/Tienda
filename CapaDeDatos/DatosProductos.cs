@@ -229,19 +229,6 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void CambiarEstadoProducto(int id, string estado)
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "CambiarEstadoProducto";
-            _comando.CommandType = CommandType.StoredProcedure;
-
-            _comando.Parameters.AddWithValue("@id", id);
-            _comando.Parameters.AddWithValue("@estado", estado);
-
-            _comando.ExecuteNonQuery();
-            _comando.Parameters.Clear();
-        }
-
         public void EliminarProductoCarrito(int id)
         {
             _comando.Connection = _conexion.AbrirConexion();
