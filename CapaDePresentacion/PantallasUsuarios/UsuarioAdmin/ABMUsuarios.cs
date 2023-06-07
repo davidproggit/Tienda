@@ -24,6 +24,7 @@ namespace CapaDePresentacion
         {
             Administrador administrador = new Administrador();
             grillaUsuarios.DataSource = administrador.CargarUsuarios();
+            grillaUsuarios.Columns["ID"].Visible = false;
         }
 
         private void CargarRoles()
