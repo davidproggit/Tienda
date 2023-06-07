@@ -10,6 +10,8 @@ namespace CapaDeEntidades
 
         public Carrito() { }
 
+        #region "Metodos"
+
         public void VaciarCarrito(int idCliente)
         {
             _datosProductos.VaciarCarrito(idCliente);
@@ -39,6 +41,8 @@ namespace CapaDeEntidades
         {
             return _datosProductos.RellenarCarrito();
         }
+
+        #endregion
 
     }
 }

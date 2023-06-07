@@ -5,20 +5,12 @@ namespace CapaDeEntidades
 {
     public class Gerente : Usuario
     {
-        #region "Objetos"
-
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DatosProductos _datosProductos = new DatosProductos();
 
-        #endregion
-
-        #region "Constructor"
-
         public Gerente() { }
 
-        #endregion
-
-        #region "DataTable"
+        #region "Metodos"
 
         public DataTable CargarVendedores()
         {

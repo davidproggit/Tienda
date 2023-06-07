@@ -8,20 +8,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class CarritoVista : Form
     {
-        #region "Lista"
-
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
-
-        #endregion
-
-        #region "Constructor"
 
         public CarritoVista()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 

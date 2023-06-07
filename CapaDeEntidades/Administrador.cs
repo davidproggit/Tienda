@@ -5,19 +5,11 @@ namespace CapaDeEntidades
 {
     public class Administrador : Usuario
     {
-        #region "Objetos"
-
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
-
-        #endregion
-
-        #region "Constructor"
 
         public Administrador() { }
 
-        #endregion
-
-        #region "DataTable"
+        #region "Usuario"
 
         public DataTable CargarRoles()
         {
@@ -33,10 +25,6 @@ namespace CapaDeEntidades
         {
             return _datosDeUsuario.FiltrarUsuario(txtBuscar);
         }
-
-        #endregion
-
-        #region "Usuario"
 
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {

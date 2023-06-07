@@ -10,7 +10,9 @@ namespace CapaDeEntidades
         public Cliente() { }
 
         private DatosProductos _datosProductos = new DatosProductos();
-        
+
+        #region "Metodos"
+
         public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
             _datosProductos.AgregarCarrito(idCliente, idProducto, nombre, descripcion, marca, cantidad, precio, estado);
@@ -51,5 +53,6 @@ namespace CapaDeEntidades
             return _datosProductos.CargarHistorialOrdenes(idCliente);
         }
 
+        #endregion
     }
 }

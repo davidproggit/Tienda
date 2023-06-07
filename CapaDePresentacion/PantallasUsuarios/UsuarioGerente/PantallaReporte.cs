@@ -7,14 +7,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioGerente
 {
     public partial class PantallaReporte : Form
     {
-        #region "Constructor"
-
         public PantallaReporte()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Carga de datos"
 

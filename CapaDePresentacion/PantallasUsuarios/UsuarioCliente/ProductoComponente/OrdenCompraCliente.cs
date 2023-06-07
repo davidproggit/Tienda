@@ -5,14 +5,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class OrdenCompraCliente : UserControl
     {
-        #region "Constructor"
-
         public OrdenCompraCliente()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 

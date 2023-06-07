@@ -7,18 +7,10 @@ namespace CapaDeEntidades
 {
     public class Vendedor : Usuario
     {
-        #region "Objetos"
-
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DatosProductos _datosProductos = new DatosProductos();
 
-        #endregion
-
-        #region "Constructor"
-
         public Vendedor() { }
-
-        #endregion
 
         #region "Cliente"
 

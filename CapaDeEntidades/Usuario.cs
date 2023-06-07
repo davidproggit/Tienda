@@ -9,6 +9,8 @@ namespace CapaDeEntidades
 
         public Usuario() { }
 
+        #region "Sesion"
+
         public bool IniciarSesion(string usuario, string clave)
         {
             return _datosDeUsuario.IniciarSesion(usuario, clave);
@@ -24,5 +26,6 @@ namespace CapaDeEntidades
             CacheSesionUsuario.cargo = "";
         }
 
+        #endregion
     }
 }

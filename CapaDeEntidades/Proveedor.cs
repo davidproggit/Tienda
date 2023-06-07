@@ -6,17 +6,14 @@ namespace CapaDeEntidades
 {
     public class Proveedor : Usuario
     {
-        #region "Objetos"
-
         private DatosProductos _datosProductos = new DatosProductos();
-
-        #endregion
-
-        #region "Constructor"
 
         public Proveedor() { }
 
-        #endregion
+        public void ModificarAlerta(int id, string mensaje, string cantidadMinima)
+        {
+            _datosProductos.ModificarAlerta(id, mensaje, Convert.ToInt32(cantidadMinima));
+        }
 
         #region "Producto"
 
@@ -43,15 +40,6 @@ namespace CapaDeEntidades
         public DataTable FiltrarProducto(string textoBuscar)
         {
             return _datosProductos.Filtrar(textoBuscar);
-        }
-
-        #endregion
-
-        #region "Alerta"
-
-        public void ModificarAlerta(int id, string mensaje, string cantidadMinima)
-        {
-            _datosProductos.ModificarAlerta(id, mensaje, Convert.ToInt32(cantidadMinima));
         }
 
         #endregion

@@ -8,14 +8,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class OrdenCompraVendedor : UserControl
     {
-        #region "Constructor"
-
         public OrdenCompraVendedor()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 

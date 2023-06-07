@@ -8,21 +8,13 @@ namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        #region "Condicionales"
-
         private int _idProducto;
         private bool _editar = false;
-
-        #endregion
-
-        #region "Constructor"
 
         public InterfazProducto()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 

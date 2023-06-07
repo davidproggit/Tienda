@@ -8,14 +8,10 @@ namespace WindowsFormsApp1
 {
     public partial class ProductoDetalle : Form
     {
-        #region "Constructor"
-
         public ProductoDetalle()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 
@@ -98,14 +94,10 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region "Opciones"
-
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
             AgregarCarrito();
         }
-
-        #endregion
 
         #region "Metodos"
 

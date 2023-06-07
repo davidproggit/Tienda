@@ -7,14 +7,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class ProductoCarrito : UserControl
     {
-        #region "Constructor"
-
         public ProductoCarrito()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 
@@ -92,16 +88,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
-        #region "Opciones"
-
         private void linkQuitarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ComprobarEliminarProducto();
         }
 
-        #endregion
-
-        #region "Metodos de las opciones"
+        #region "Metodos"
 
         private void ComprobarEliminarProducto()
         {

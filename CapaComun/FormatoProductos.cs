@@ -2,8 +2,6 @@
 {
     public class FormatoProductos
     {
-        #region "Atributos"
-
         public int productoId { get; set; }
         public int ordenId { get; set; }
         public int clienteId { get; set; }
@@ -14,8 +12,6 @@
         public int productoCantidad { get; set; }
         public float productoPrecio { get; set; }
         public string productoEstado { get; set; }
-
-        #endregion
 
     }
 }

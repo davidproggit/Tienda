@@ -9,20 +9,12 @@ namespace WindowsFormsApp1
 {
     public partial class ProductosVista : Form
     {
-        #region "Lista"
-
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
-
-        #endregion
-
-        #region "Constructor"
 
         public ProductosVista()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 

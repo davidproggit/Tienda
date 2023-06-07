@@ -9,11 +9,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     public partial class OrdenesCompraClientes : Form
     {
-        #region "Lista"
-
         private List<FormatoProductos> _listaOrdenes = new List<FormatoProductos>();
-
-        #endregion
 
         #region "Constructor"
 

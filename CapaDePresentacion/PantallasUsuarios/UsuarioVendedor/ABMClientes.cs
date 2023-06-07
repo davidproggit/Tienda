@@ -7,21 +7,13 @@ namespace CapaDePresentacion
 {
     public partial class ABMClientes : Form
     {
-        #region "Condicionales"
-
         private bool _editar = false;
         private int _idCliente;
-
-        #endregion
-
-        #region "Constructor"
 
         public ABMClientes()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 

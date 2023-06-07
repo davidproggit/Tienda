@@ -70,6 +70,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor.OrdenComponente
 
         #endregion
 
+        #region "Cargar datos"
+
         private void OrdenDetalle_Load(object sender, EventArgs e)
         {
             CargarInformacion();
@@ -83,5 +85,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor.OrdenComponente
             lblPrecio.Text = "Precio: $" + productoPrecio.ToString();
             lblCantidad.Text = "Cantidad: " + productoCantidad.ToString();
         }
+
+        #endregion
     }
 }

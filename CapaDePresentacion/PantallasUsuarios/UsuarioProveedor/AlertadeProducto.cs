@@ -8,27 +8,14 @@ namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
-        #region "Objetos"
-
-        Proveedor _proveedor = new Proveedor();
         public List<Datos> valores { get; set; }
 
-        #endregion
-
-        #region "Atributo"
-
         private bool _sinProducto = true;
-
-        #endregion
-
-        #region "Constructor"
 
         public AlertadeProducto()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
@@ -84,10 +71,12 @@ namespace CapaDePresentacion
 
         private void CambiarMensajeCantidad(List<Datos> valores)
         {
+            Proveedor proveedor = new Proveedor();
+
             if (rTBoxMensajeAlerta.Text != "" && txtCantidadMinima.Text != "")
             {
                 foreach (Datos valor in valores)
-                    _proveedor.ModificarAlerta(valor.id, rTBoxMensajeAlerta.Text, txtCantidadMinima.Text);
+                    proveedor.ModificarAlerta(valor.id, rTBoxMensajeAlerta.Text, txtCantidadMinima.Text);
 
                 MessageBox.Show("Alerta guardada");
             }
