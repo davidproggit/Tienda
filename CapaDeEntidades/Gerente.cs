@@ -9,7 +9,6 @@ namespace CapaDeEntidades
 
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DatosProductos _datosProductos = new DatosProductos();
-        private DataTable _tabla = new DataTable();
 
         #endregion
 
@@ -23,8 +22,7 @@ namespace CapaDeEntidades
 
         public DataTable CargarVendedores()
         {
-            _tabla = _datosDeUsuario.CargarVendedores();
-            return _tabla;
+            return _datosDeUsuario.CargarVendedores();
         }
 
         public DataTable MostrarOrdenes()
@@ -39,7 +37,7 @@ namespace CapaDeEntidades
 
         public DataTable MostrarOrdenesMes()
         {
-            return _datosProductos.MostrarOrdenesMes(); ;
+            return _datosProductos.MostrarOrdenesMes();
         }
 
         public DataTable MostrarOrdenesVendedor(string vendedor)

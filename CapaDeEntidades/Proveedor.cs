@@ -9,7 +9,6 @@ namespace CapaDeEntidades
         #region "Objetos"
 
         private DatosProductos _datosProductos = new DatosProductos();
-        private DataTable _tabla = new DataTable();
 
         #endregion
 
@@ -38,14 +37,12 @@ namespace CapaDeEntidades
 
         public DataTable MostrarProducto()
         {
-            _tabla = _datosProductos.Mostrar();
-            return _tabla;
+            return _datosProductos.Mostrar();
         }
 
         public DataTable FiltrarProducto(string textoBuscar)
         {
-            _tabla = _datosProductos.Filtrar(textoBuscar);
-            return _tabla;
+            return _datosProductos.Filtrar(textoBuscar);
         }
 
         #endregion

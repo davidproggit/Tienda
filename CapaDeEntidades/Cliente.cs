@@ -14,7 +14,6 @@ namespace CapaDeEntidades
         public Cliente() { }
 
         private DatosProductos _datosProductos = new DatosProductos();
-        private DataTable _tabla = new DataTable();
         
         public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
         {
@@ -38,14 +37,12 @@ namespace CapaDeEntidades
 
         public DataTable MostrarProducto()
         {
-            _tabla = _datosProductos.Mostrar();
-            return _tabla;
+            return _datosProductos.Mostrar();
         }
 
         public DataTable FiltrarProducto(string textoBuscar)
         {
-            _tabla = _datosProductos.Filtrar(textoBuscar);
-            return _tabla;
+            return _datosProductos.Filtrar(textoBuscar);
         }
 
         public List<FormatoProductos> CargarProductos()

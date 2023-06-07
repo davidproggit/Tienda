@@ -11,7 +11,6 @@ namespace CapaDeEntidades
 
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
         private DatosProductos _datosProductos = new DatosProductos();
-        private DataTable _tabla = new DataTable();
 
         #endregion
 
@@ -25,14 +24,12 @@ namespace CapaDeEntidades
 
         public DataTable CargarClientes()
         {
-            _tabla = _datosDeUsuario.CargarClientes();
-            return _tabla;
+            return _datosDeUsuario.CargarClientes();
         }
 
         public DataTable FiltrarCliente(string txtBuscar)
         {
-            _tabla = _datosDeUsuario.FiltrarCliente(txtBuscar);
-            return _tabla;
+            return _datosDeUsuario.FiltrarCliente(txtBuscar);
         }
 
         public void EditarPerfilCliente(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)

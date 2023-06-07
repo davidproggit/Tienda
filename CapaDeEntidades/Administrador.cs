@@ -8,7 +8,6 @@ namespace CapaDeEntidades
         #region "Objetos"
 
         private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
-        private DataTable _tabla = new DataTable();
 
         #endregion
 
@@ -22,20 +21,17 @@ namespace CapaDeEntidades
 
         public DataTable CargarRoles()
         {
-            _tabla = _datosDeUsuario.CargarRoles();
-            return _tabla;
+            return _datosDeUsuario.CargarRoles();
         }
 
         public DataTable CargarUsuarios()
         {
-            _tabla = _datosDeUsuario.CargarUsuarios();
-            return _tabla;
+            return _datosDeUsuario.CargarUsuarios();
         }
 
         public DataTable FiltrarUsuario(string txtBuscar)
         {
-            _tabla = _datosDeUsuario.FiltrarUsuario(txtBuscar);
-            return _tabla;
+            return _datosDeUsuario.FiltrarUsuario(txtBuscar);
         }
 
         #endregion
