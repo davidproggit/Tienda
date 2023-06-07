@@ -1,6 +1,5 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
-using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
 using System;
 using System.Collections.Generic;

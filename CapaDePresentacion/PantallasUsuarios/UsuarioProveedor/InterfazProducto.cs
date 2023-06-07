@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaComun;
 using CapaDeEntidades;
-using CapaDeNegocio;
 
 namespace CapaDePresentacion
 {

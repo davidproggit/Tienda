@@ -1,7 +1,5 @@
 ﻿using CapaComun;
-using CapaComun;
 using CapaDeEntidades;
-using CapaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

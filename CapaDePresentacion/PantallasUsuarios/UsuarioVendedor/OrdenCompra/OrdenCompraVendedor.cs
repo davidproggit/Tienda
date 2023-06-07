@@ -1,6 +1,5 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
-using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuarios.UsuarioVendedor.OrdenComponente;
 using System;
 using System.Windows.Forms;

@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using CapaComun;
-using CapaDeDatos;
-
-namespace CapaDeNegocio
+﻿namespace CapaDeNegocio
 {
     public class Productos
     {

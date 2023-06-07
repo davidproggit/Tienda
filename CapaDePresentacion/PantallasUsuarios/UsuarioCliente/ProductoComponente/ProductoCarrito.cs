@@ -1,5 +1,4 @@
 ﻿using CapaDeEntidades;
-using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
 using WindowsFormsApp1;
