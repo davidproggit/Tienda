@@ -119,6 +119,11 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             VerificarEstado();
         }
 
+        private void linkDetalle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirDetalle();
+        }
+
         #endregion
 
         #region "Metodos de las opciones"
@@ -153,9 +158,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             btnCancelar.Enabled = false;
         }
 
-        #endregion
-
-        private void linkDetalle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void AbrirDetalle()
         {
             OrdenDetalle ordenDetalle = new OrdenDetalle();
 
@@ -169,5 +172,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
             ordenDetalle.Show();
         }
+
+        #endregion
     }
 }
