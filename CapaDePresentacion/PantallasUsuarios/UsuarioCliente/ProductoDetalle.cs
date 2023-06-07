@@ -141,6 +141,8 @@ namespace WindowsFormsApp1
                 cliente.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
 
             cliente.AsignarClienteProducto(productoId, CacheSesionUsuario.id);
+
+            MessageBox.Show("Agrego: " + selectorCantidad.Value + " " + productoNombre);
         }
 
         private void VerificarProductoDisponible()
