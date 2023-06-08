@@ -19,14 +19,14 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void Carrito_Load(object sender, EventArgs e)
         {
-            Llenar();
+            RellenarCarrito();
         }
 
-        public void Llenar()
+        public void RellenarCarrito()
         {
             Carrito carrito = new Carrito();
 
-            _valores = carrito.RellenarCarrito();
+            _valores = carrito.RellenarCarrito(CacheSesionUsuario.id);
 
             foreach (FormatoProductos datos in _valores)
             {
@@ -72,7 +72,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
                 carrito.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
                 carrito.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
-                Llenar();
+                RellenarCarrito();
             }
         }
 
@@ -86,7 +86,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             {
                 carrito.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
-                Llenar();
+                RellenarCarrito();
             }
         }
 

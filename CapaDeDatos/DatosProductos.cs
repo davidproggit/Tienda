@@ -140,11 +140,13 @@ namespace CapaDeDatos
             return _valores;
         }
         
-        public List<FormatoProductos> RellenarCarrito()
+        public List<FormatoProductos> RellenarCarrito(int clienteId)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Cantidad, Precio from Carrito";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "RellenarCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@clienteId", clienteId);
+
             _lector = _comando.ExecuteReader();
 
             while (_lector.Read())

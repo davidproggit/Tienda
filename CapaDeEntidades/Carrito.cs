@@ -37,9 +37,9 @@ namespace CapaDeEntidades
             return _datosProductos.VerificarProductoCarrito(productoId);
         }
 
-        public List<FormatoProductos> RellenarCarrito()
+        public List<FormatoProductos> RellenarCarrito(int clienteId)
         {
-            return _datosProductos.RellenarCarrito();
+            return _datosProductos.RellenarCarrito(clienteId);
         }
 
         #endregion
