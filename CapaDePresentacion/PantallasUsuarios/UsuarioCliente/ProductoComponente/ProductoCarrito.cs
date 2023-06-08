@@ -124,10 +124,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private static void RecargarPantalla()
         {
-            (Application.OpenForms["Carrito"] as CarritoVista).LimpiarCarrito();
-            (Application.OpenForms["Carrito"] as CarritoVista).RellenarCarrito();
-            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
-            (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
+            (Application.OpenForms["Carrito"] as CarritoVista).LimpiarVistaCarrito();
+            (Application.OpenForms["Carrito"] as CarritoVista).RellenarVistaCarrito();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarVistaProductos();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).RellenarVistaProductos();
         }
 
         private void EnviarProductoCompra()

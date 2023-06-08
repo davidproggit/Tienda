@@ -148,8 +148,8 @@ namespace WindowsFormsApp1
 
         private void ProductoDetalle_FormClosed(object sender, FormClosedEventArgs e)
         {
-            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
-            (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarVistaProductos();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).RellenarVistaProductos();
         }
 
         #endregion

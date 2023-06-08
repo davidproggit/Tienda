@@ -20,10 +20,10 @@ namespace WindowsFormsApp1
 
         private void ProductosVista_Load(object sender, EventArgs e)
         {
-            Llenar();
+            RellenarVistaProductos();
         }
 
-        public void Llenar()
+        public void RellenarVistaProductos()
         {
             Cliente cliente = new Cliente();
 
@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
 
         #region "Metodos"
 
-        public void LimpiarProductos()
+        public void LimpiarVistaProductos()
         {
             contenedorProductos.Controls.Clear();
         }

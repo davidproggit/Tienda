@@ -19,10 +19,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void Carrito_Load(object sender, EventArgs e)
         {
-            RellenarCarrito();
+            RellenarVistaCarrito();
         }
 
-        public void RellenarCarrito()
+        public void RellenarVistaCarrito()
         {
             Carrito carrito = new Carrito();
 
@@ -71,8 +71,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             {
                 carrito.EnviarProductoCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
                 carrito.VaciarCarrito(CacheSesionUsuario.id);
-                LimpiarCarrito();
-                RellenarCarrito();
+                LimpiarVistaCarrito();
+                RellenarVistaCarrito();
             }
         }
 
@@ -85,12 +85,12 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             if (pantallaAdvertencia == DialogResult.Yes)
             {
                 carrito.VaciarCarrito(CacheSesionUsuario.id);
-                LimpiarCarrito();
-                RellenarCarrito();
+                LimpiarVistaCarrito();
+                RellenarVistaCarrito();
             }
         }
 
-        public void LimpiarCarrito()
+        public void LimpiarVistaCarrito()
         {
             contenedorProductos.Controls.Clear();
         }
