@@ -8,8 +8,6 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class VistaOrdenCompraCliente : Form
     {
-        private List<FormatoProductos> _valores = new List<FormatoProductos>();
-
         public VistaOrdenCompraCliente()
         {
             InitializeComponent();
@@ -25,10 +23,11 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         private void CargarHistorial()
         {
             Cliente cliente = new Cliente();
+            List<FormatoProductos> valores = new List<FormatoProductos>();
 
-            _valores = cliente.CargarHistorialOrdenes(CacheSesionUsuario.id);
+            valores = cliente.CargarHistorialOrdenes(CacheSesionUsuario.id);
 
-            foreach (FormatoProductos datos in _valores)
+            foreach (FormatoProductos datos in valores)
             {
                 OrdenCompraCliente ordenCompraCliente = new OrdenCompraCliente();
 

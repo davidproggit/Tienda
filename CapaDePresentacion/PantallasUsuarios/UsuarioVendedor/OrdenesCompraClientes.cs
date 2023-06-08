@@ -9,8 +9,6 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
 {
     public partial class OrdenesCompraClientes : Form
     {
-        private List<FormatoProductos> _listaOrdenes = new List<FormatoProductos>();
-
         public OrdenesCompraClientes()
         {
             InitializeComponent();
@@ -26,9 +24,11 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor
         private void CargarOrdenesCompra()
         {
             Vendedor vendedor = new Vendedor();
-            _listaOrdenes = vendedor.CargarOrdenesCompra();
+            List<FormatoProductos> listaOrdenes = new List<FormatoProductos>();
 
-            foreach (FormatoProductos datos in _listaOrdenes)
+            listaOrdenes = vendedor.CargarOrdenesCompra();
+
+            foreach (FormatoProductos datos in listaOrdenes)
             {
                 OrdenCompraVendedor ordenCompraVendedor = new OrdenCompraVendedor();
 

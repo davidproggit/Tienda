@@ -9,8 +9,6 @@ namespace WindowsFormsApp1
 {
     public partial class ProductosVista : Form
     {
-        private List<FormatoProductos> _valores = new List<FormatoProductos>();
-
         public ProductosVista()
         {
             InitializeComponent();
@@ -26,10 +24,11 @@ namespace WindowsFormsApp1
         public void RellenarVistaProductos()
         {
             Cliente cliente = new Cliente();
+            List<FormatoProductos> valores = new List<FormatoProductos>();
 
-            _valores = cliente.CargarVistaProductos();
+            valores = cliente.CargarVistaProductos();
 
-            foreach (FormatoProductos datos in _valores)
+            foreach (FormatoProductos datos in valores)
             {
                 ProductoPrevisualizacion productoPrevisualizacion = new ProductoPrevisualizacion();
 
