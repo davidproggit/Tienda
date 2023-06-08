@@ -59,13 +59,13 @@ namespace CapaDePresentacion
 
         private void AgregarProducto()
         {
-            List<Datos> valores = new List<Datos>();
+            List<DatosAlerta> valores = new List<DatosAlerta>();
 
             foreach (DataGridViewRow celda in grillaProductos.Rows)
             {
                 if (Convert.ToBoolean(celda.Cells[0].Value))
                 {
-                    valores.Add(new Datos
+                    valores.Add(new DatosAlerta
                     {
                         id = (int)celda.Cells[1].Value,
                         nombre = celda.Cells[2].Value.ToString(),

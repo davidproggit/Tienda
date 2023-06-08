@@ -132,7 +132,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Vendedor vendedor = new Vendedor();
 
-            vendedor.AprobarOrden(ordenId, CacheSesionUsuario.nombre, productoCantidad,productoId);
+            vendedor.AprobarOrden(ordenId, DatosUsuario.nombre, productoCantidad,productoId);
             productoEstado = "Aprobado";
             CargarInformacion();
         }
@@ -141,7 +141,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Vendedor vendedor = new Vendedor();
 
-            vendedor.CancelarOrden(ordenId, CacheSesionUsuario.nombre);
+            vendedor.CancelarOrden(ordenId, DatosUsuario.nombre);
             productoEstado = "Cancelado";
             CargarInformacion();
         }

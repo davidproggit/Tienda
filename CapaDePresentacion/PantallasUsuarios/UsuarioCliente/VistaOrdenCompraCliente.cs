@@ -25,7 +25,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             Cliente cliente = new Cliente();
             List<FormatoProductos> valores = new List<FormatoProductos>();
 
-            valores = cliente.CargarHistorialOrdenes(CacheSesionUsuario.id);
+            valores = cliente.CargarHistorialOrdenes(DatosUsuario.id);
 
             foreach (FormatoProductos datos in valores)
             {

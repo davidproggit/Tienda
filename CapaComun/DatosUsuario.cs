@@ -1,6 +1,6 @@
 ﻿namespace CapaComun
 {
-    public class CacheSesionUsuario
+    public class DatosUsuario
     {
         public static int id { get; set; }
         public static string usuario { get; set; }

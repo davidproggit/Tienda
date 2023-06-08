@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CacheSesionUsuario.cs" />
+    <Compile Include="DatosUsuario.cs" />
     <Compile Include="Cargos.cs" />
-    <Compile Include="Datos.cs" />
+    <Compile Include="DatosAlerta.cs" />
     <Compile Include="FormatoProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

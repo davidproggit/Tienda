@@ -117,7 +117,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Carrito carrito = new Carrito();
 
-            carrito.EliminarProductoCarrito(productoId, CacheSesionUsuario.id);
+            carrito.EliminarProductoCarrito(productoId, DatosUsuario.id);
 
             RecargarPantalla();
         }
@@ -136,7 +136,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
             string fecha = DateTime.Now.ToString("yyy-MM-dd");
 
-            carrito.EnviarProductoCompra(productoId, CacheSesionUsuario.id, productoNombre, productoDescripcion, productoMarca, productoCantidad, productoPrecio, "Pendiente", fecha);
+            carrito.EnviarProductoCompra(productoId, DatosUsuario.id, productoNombre, productoDescripcion, productoMarca, productoCantidad, productoPrecio, "Pendiente", fecha);
             EliminarProducto();
             RecargarPantalla();
         }

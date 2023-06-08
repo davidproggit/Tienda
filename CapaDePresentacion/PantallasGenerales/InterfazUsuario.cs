@@ -28,19 +28,19 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarPantallasUsuarios()
         {
-            if (CacheSesionUsuario.cargo == Cargos.cargoAdmin)
+            if (DatosUsuario.cargo == Cargos.cargoAdmin)
                 AbrirFormulario<ABMUsuarios>();
 
-            if (CacheSesionUsuario.cargo == Cargos.cargoVendedor)
+            if (DatosUsuario.cargo == Cargos.cargoVendedor)
                 AbrirFormulario<ABMClientes>();
 
-            if (CacheSesionUsuario.cargo == Cargos.cargoProveedor)
+            if (DatosUsuario.cargo == Cargos.cargoProveedor)
                 AbrirFormulario<InterfazProducto>();
 
-            if (CacheSesionUsuario.cargo == Cargos.cargoGerente)
+            if (DatosUsuario.cargo == Cargos.cargoGerente)
                 AbrirFormulario<PantallaReporte>();
 
-            if (CacheSesionUsuario.cargo == Cargos.cargoCliente)
+            if (DatosUsuario.cargo == Cargos.cargoCliente)
                 AbrirFormulario<ProductosVista>();
         }
 
@@ -84,7 +84,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         private void CargarNombreUsuario()
         {
-            lblNombre.Text = CacheSesionUsuario.nombre;
+            lblNombre.Text = DatosUsuario.nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

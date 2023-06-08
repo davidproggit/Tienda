@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="DatosProductos.cs" />
-    <Compile Include="DatosDeUsuario.cs" />
+    <Compile Include="ConsultasProductos.cs" />
+    <Compile Include="ConsultasUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

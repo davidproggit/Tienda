@@ -8,7 +8,7 @@ namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
-        public List<Datos> valores { get; set; }
+        public List<DatosAlerta> valores { get; set; }
 
         private bool _sinProducto = true;
 
@@ -24,9 +24,9 @@ namespace CapaDePresentacion
             Rellenar(valores);
         }
 
-        public void Rellenar(List<Datos> valores)
+        public void Rellenar(List<DatosAlerta> valores)
         {
-            foreach (Datos valor in valores)
+            foreach (DatosAlerta valor in valores)
             {
                 int posicion = grillaProductos.Rows.Add();
 
@@ -69,13 +69,13 @@ namespace CapaDePresentacion
 
         #region "Metodos de los botones"
 
-        private void CambiarMensajeCantidad(List<Datos> valores)
+        private void CambiarMensajeCantidad(List<DatosAlerta> valores)
         {
             Proveedor proveedor = new Proveedor();
 
             if (rTBoxMensajeAlerta.Text != "" && txtCantidadMinima.Text != "")
             {
-                foreach (Datos valor in valores)
+                foreach (DatosAlerta valor in valores)
                     proveedor.ModificarAlerta(valor.id, rTBoxMensajeAlerta.Text, txtCantidadMinima.Text);
 
                 MessageBox.Show("Alerta guardada");

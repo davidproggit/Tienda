@@ -178,13 +178,13 @@ namespace CapaDePresentacion
 
         private void EnviarDatosAlerta()
         {
-            List<Datos> Valores = new List<Datos>();
+            List<DatosAlerta> Valores = new List<DatosAlerta>();
 
             foreach (DataGridViewRow celda in grillaProductos.Rows)
             {
                 if (Convert.ToBoolean(celda.Cells[0].Value))
                 {
-                    Valores.Add(new Datos
+                    Valores.Add(new DatosAlerta
                     {
                         id = (int)celda.Cells[1].Value,
                         nombre = celda.Cells[2].Value.ToString()

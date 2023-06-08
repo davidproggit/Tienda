@@ -26,7 +26,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
         {
             Carrito carrito = new Carrito();
 
-            _valores = carrito.RellenarCarrito(CacheSesionUsuario.id);
+            _valores = carrito.RellenarCarrito(DatosUsuario.id);
 
             foreach (FormatoProductos datos in _valores)
             {
@@ -69,8 +69,8 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
             foreach (FormatoProductos datos in _valores)
             {
-                carrito.EnviarProductoCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
-                carrito.VaciarCarrito(CacheSesionUsuario.id);
+                carrito.EnviarProductoCompra(datos.productoId, DatosUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
+                carrito.VaciarCarrito(DatosUsuario.id);
                 LimpiarVistaCarrito();
                 RellenarVistaCarrito();
             }
@@ -84,7 +84,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
             if (pantallaAdvertencia == DialogResult.Yes)
             {
-                carrito.VaciarCarrito(CacheSesionUsuario.id);
+                carrito.VaciarCarrito(DatosUsuario.id);
                 LimpiarVistaCarrito();
                 RellenarVistaCarrito();
             }

@@ -5,8 +5,8 @@ namespace CapaDeEntidades
 {
     public class Gerente : Usuario
     {
-        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
-        private DatosProductos _datosProductos = new DatosProductos();
+        private ConsultasUsuario _consultasUsuario = new ConsultasUsuario();
+        private ConsultasProductos _consultasProductos = new ConsultasProductos();
 
         public Gerente() { }
 
@@ -14,27 +14,27 @@ namespace CapaDeEntidades
 
         public DataTable CargarVendedores()
         {
-            return _datosDeUsuario.CargarVendedores();
+            return _consultasUsuario.CargarVendedores();
         }
 
         public DataTable MostrarOrdenes()
         {
-            return _datosProductos.MostrarOrdenes();
+            return _consultasProductos.MostrarOrdenes();
         }
 
         public DataTable MostrarOrdenesSemana()
         {
-            return _datosProductos.MostrarOrdenesSemana();
+            return _consultasProductos.MostrarOrdenesSemana();
         }
 
         public DataTable MostrarOrdenesMes()
         {
-            return _datosProductos.MostrarOrdenesMes();
+            return _consultasProductos.MostrarOrdenesMes();
         }
 
         public DataTable MostrarOrdenesVendedor(string vendedor)
         {
-            return _datosProductos.MostrarOrdenesVendedor(vendedor);
+            return _consultasProductos.MostrarOrdenesVendedor(vendedor);
         }
 
         #endregion

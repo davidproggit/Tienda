@@ -5,7 +5,7 @@ namespace CapaDeEntidades
 {
     public class Administrador : Usuario
     {
-        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
+        private ConsultasUsuario _consultasUsuario = new ConsultasUsuario();
 
         public Administrador() { }
 
@@ -13,27 +13,27 @@ namespace CapaDeEntidades
 
         public DataTable CargarRoles()
         {
-            return _datosDeUsuario.CargarRoles();
+            return _consultasUsuario.CargarRoles();
         }
 
         public DataTable CargarUsuarios()
         {
-            return _datosDeUsuario.CargarUsuarios();
+            return _consultasUsuario.CargarUsuarios();
         }
 
         public DataTable FiltrarUsuario(string usuarioCoincidencia)
         {
-            return _datosDeUsuario.FiltrarUsuario(usuarioCoincidencia);
+            return _consultasUsuario.FiltrarUsuario(usuarioCoincidencia);
         }
 
         public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
-            _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+            _consultasUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
 
         public void EliminarUsuario(int id)
         {
-            _datosDeUsuario.EliminarUsuario(id);
+            _consultasUsuario.EliminarUsuario(id);
         }
 
         #endregion

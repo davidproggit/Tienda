@@ -4,7 +4,7 @@ using CapaComun;
 
 namespace CapaDeDatos
 {
-    public class DatosDeUsuario
+    public class ConsultasUsuario
     {
         #region "Objetos"
 
@@ -177,13 +177,13 @@ namespace CapaDeDatos
 
         private static void FormatoCamposCache(SqlDataReader lector)
         {
-            CacheSesionUsuario.id = lector.GetInt32(0);
-            CacheSesionUsuario.usuario = lector.GetString(1);
-            CacheSesionUsuario.clave = lector.GetString(2);
-            CacheSesionUsuario.nombre = lector.GetString(3);
-            CacheSesionUsuario.apellido = lector.GetString(4);
-            CacheSesionUsuario.email = lector.GetString(5);
-            CacheSesionUsuario.cargo = lector.GetString(6);
+            DatosUsuario.id = lector.GetInt32(0);
+            DatosUsuario.usuario = lector.GetString(1);
+            DatosUsuario.clave = lector.GetString(2);
+            DatosUsuario.nombre = lector.GetString(3);
+            DatosUsuario.apellido = lector.GetString(4);
+            DatosUsuario.email = lector.GetString(5);
+            DatosUsuario.cargo = lector.GetString(6);
         }
 
         #endregion

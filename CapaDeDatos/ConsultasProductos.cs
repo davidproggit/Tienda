@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace CapaDeDatos
 {
-    public class DatosProductos
+    public class ConsultasProductos
     {
         #region "Objetos"
 

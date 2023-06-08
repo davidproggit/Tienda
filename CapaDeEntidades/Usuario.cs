@@ -5,7 +5,7 @@ namespace CapaDeEntidades
 {
     public class Usuario
     {
-        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
+        private ConsultasUsuario _consultasUsuario = new ConsultasUsuario();
 
         public Usuario() { }
 
@@ -13,17 +13,17 @@ namespace CapaDeEntidades
 
         public bool IniciarSesion(string usuario, string clave)
         {
-            return _datosDeUsuario.IniciarSesion(usuario, clave);
+            return _consultasUsuario.IniciarSesion(usuario, clave);
         }
 
         public void CerrarSesion()
         {
-            CacheSesionUsuario.id = 0;
-            CacheSesionUsuario.usuario = "";
-            CacheSesionUsuario.clave = "";
-            CacheSesionUsuario.nombre = "";
-            CacheSesionUsuario.email = "";
-            CacheSesionUsuario.cargo = "";
+            DatosUsuario.id = 0;
+            DatosUsuario.usuario = "";
+            DatosUsuario.clave = "";
+            DatosUsuario.nombre = "";
+            DatosUsuario.email = "";
+            DatosUsuario.cargo = "";
         }
 
         #endregion
