@@ -89,11 +89,6 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
-        private void linkQuitarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ComprobarEliminarProducto();
-        }
-
         #region "Metodos"
 
         private void ComprobarEliminarProducto()
@@ -123,5 +118,9 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+        private void btnQuitarProducto_Click(object sender, EventArgs e)
+        {
+            ComprobarEliminarProducto();
+        }
     }
 }
