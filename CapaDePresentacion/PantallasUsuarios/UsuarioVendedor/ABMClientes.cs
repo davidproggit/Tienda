@@ -26,6 +26,7 @@ namespace CapaDePresentacion
         {
             Vendedor vendedor = new Vendedor();
             grillaClientes.DataSource = vendedor.CargarClientes();
+            grillaClientes.Columns["ID"].Visible = false;
         }
 
         #endregion
