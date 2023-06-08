@@ -117,8 +117,8 @@ namespace WindowsFormsApp1
 
         private void EstablecerCantidadMaxima()
         {
-            Productos productos = new Productos();
-            selectorCantidad.Maximum = productos.DevolverCantidadMaxima(_cantidadCarrito, productoCantidad, _agregarProductoCarrito);
+            CantidadMaxima cantidadMaxima = new CantidadMaxima();
+            selectorCantidad.Maximum = cantidadMaxima.DevolverCantidadMaxima(_cantidadCarrito, productoCantidad, _agregarProductoCarrito);
         }
 
         private void AgregarCarrito()
