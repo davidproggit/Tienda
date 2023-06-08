@@ -22,9 +22,9 @@ namespace CapaDeEntidades
             _datosProductos.EnviarOrdenCompra(idProducto, idCLiente, nombre, descripcion, marca, cantidad, precio, estado, fecha);
         }
 
-        public void EliminarProductoCarrito(int id)
+        public void EliminarProductoCarrito(int productoId, int clienteId)
         {
-            _datosProductos.EliminarProductoCarrito(id);
+            _datosProductos.EliminarProductoCarrito(productoId, clienteId);
         }
 
         public int DevolverCantidadCarrito(int productoId)

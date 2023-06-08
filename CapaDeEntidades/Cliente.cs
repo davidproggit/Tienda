@@ -23,11 +23,6 @@ namespace CapaDeEntidades
             _datosProductos.AsignarClienteProducto(id, idCliente);
         }
 
-        public void EliminarProductoCliente(int id)
-        {
-            _datosProductos.EliminarClienteProducto(id);
-        }
-
         public void ModificarCantidadCarrito(int productoId, int cantidad)
         {
             _datosProductos.ModificarCantidadCarrito(productoId, cantidad);

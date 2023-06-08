@@ -229,12 +229,13 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void EliminarProductoCarrito(int id)
+        public void EliminarProductoCarrito(int productoId, int clienteId)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "EliminarProductoCarrito";
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@productoId", productoId);
+            _comando.Parameters.AddWithValue("@clienteId", clienteId);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
@@ -268,16 +269,6 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@id", id);
             _comando.Parameters.AddWithValue("@idCliente", idCliente);
 
-            _comando.ExecuteNonQuery();
-            _comando.Parameters.Clear();
-        }
-
-        public void EliminarClienteProducto(int id)
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EliminarClienteProducto";
-            _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.AddWithValue("@id", id);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }

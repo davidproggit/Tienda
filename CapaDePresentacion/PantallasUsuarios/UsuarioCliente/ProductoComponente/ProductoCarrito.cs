@@ -1,4 +1,5 @@
-﻿using CapaDeEntidades;
+﻿using CapaComun;
+using CapaDeEntidades;
 using System;
 using System.Windows.Forms;
 using WindowsFormsApp1;
@@ -105,11 +106,9 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void EliminarProducto()
         {
-            Cliente cliente = new Cliente();
             Carrito carrito = new Carrito();
 
-            carrito.EliminarProductoCarrito(productoId);
-            cliente.EliminarProductoCliente(productoId);
+            carrito.EliminarProductoCarrito(productoId, CacheSesionUsuario.id);
 
             RecargarPantalla();
         }
