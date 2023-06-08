@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.imagenProducto = new System.Windows.Forms.PictureBox();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.selectorCantidad = new System.Windows.Forms.NumericUpDown();
             this.lblMarca = new System.Windows.Forms.Label();
@@ -37,12 +38,14 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectorCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.imagenProducto);
             this.panel1.Controls.Add(this.lblCantidad);
             this.panel1.Controls.Add(this.selectorCantidad);
             this.panel1.Controls.Add(this.lblMarca);
@@ -55,6 +58,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(670, 450);
             this.panel1.TabIndex = 3;
+            // 
+            // imagenProducto
+            // 
+            this.imagenProducto.Image = global::CapaDePresentacion.Properties.Resources.IconoProducto;
+            this.imagenProducto.Location = new System.Drawing.Point(35, 54);
+            this.imagenProducto.Name = "imagenProducto";
+            this.imagenProducto.Size = new System.Drawing.Size(271, 253);
+            this.imagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagenProducto.TabIndex = 6;
+            this.imagenProducto.TabStop = false;
             // 
             // lblCantidad
             // 
@@ -155,6 +168,7 @@
             this.Load += new System.EventHandler(this.ProductoDetalle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectorCantidad)).EndInit();
             this.ResumeLayout(false);
 
@@ -170,5 +184,6 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.NumericUpDown selectorCantidad;
+        private System.Windows.Forms.PictureBox imagenProducto;
     }
 }

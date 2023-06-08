@@ -37,9 +37,9 @@
             // 
             this.contenedorProductos.AutoScroll = true;
             this.contenedorProductos.BackColor = System.Drawing.Color.Gray;
-            this.contenedorProductos.Location = new System.Drawing.Point(44, 266);
+            this.contenedorProductos.Location = new System.Drawing.Point(215, 191);
             this.contenedorProductos.Name = "contenedorProductos";
-            this.contenedorProductos.Size = new System.Drawing.Size(1270, 344);
+            this.contenedorProductos.Size = new System.Drawing.Size(1099, 445);
             this.contenedorProductos.TabIndex = 0;
             // 
             // linkCarrito
