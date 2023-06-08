@@ -242,10 +242,10 @@ namespace CapaDeDatos
             _comando.Parameters.Clear();
         }
 
-        public void EnviarOrdenCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado, string fecha)
+        public void EnviarProductoCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado, string fecha)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EnviarOrdenCompra";
+            _comando.CommandText = "EnviarProductoCompra";
             _comando.CommandType = CommandType.StoredProcedure;
 
             _comando.Parameters.AddWithValue("@idProducto", idProducto);
@@ -338,7 +338,7 @@ namespace CapaDeDatos
             return cantidadProductoEncontrada;
         }
 
-
+       
         #endregion
 
         #region "Vendedor"

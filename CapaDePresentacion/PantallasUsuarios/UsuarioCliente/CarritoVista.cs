@@ -49,7 +49,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void btnEnviarCompra_Click(object sender, EventArgs e)
         {
-            EnviarOrdenCompra();
+            EnviarProductosCompra();
         }
 
         private void btnVaciar_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Metodos de las opciones"
 
-        private void EnviarOrdenCompra()
+        private void EnviarProductosCompra()
         {
             Carrito carrito = new Carrito();
 
@@ -69,7 +69,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
             foreach (FormatoProductos datos in _valores)
             {
-                carrito.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
+                carrito.EnviarProductoCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
                 carrito.VaciarCarrito(CacheSesionUsuario.id);
                 LimpiarCarrito();
                 RellenarCarrito();

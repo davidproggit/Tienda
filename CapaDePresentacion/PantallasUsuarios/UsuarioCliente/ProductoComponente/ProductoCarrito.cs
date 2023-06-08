@@ -89,6 +89,20 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #endregion
 
+        #region "Opciones"
+
+        private void btnQuitarProducto_Click(object sender, EventArgs e)
+        {
+            ComprobarEliminarProducto();
+        }
+
+        private void btnEnviarProducto_Click(object sender, EventArgs e)
+        {
+            EnviarProductoCompra();
+        }
+
+        #endregion
+
         #region "Metodos"
 
         private void ComprobarEliminarProducto()
@@ -116,11 +130,18 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
         }
 
+        private void EnviarProductoCompra()
+        {
+            Carrito carrito = new Carrito();
+
+            string fecha = DateTime.Now.ToString("yyy-MM-dd");
+
+            carrito.EnviarProductoCompra(productoId, CacheSesionUsuario.id, productoNombre, productoDescripcion, productoMarca, productoCantidad, productoPrecio, "Pendiente", fecha);
+            EliminarProducto();
+            RecargarPantalla();
+        }
+
         #endregion
 
-        private void btnQuitarProducto_Click(object sender, EventArgs e)
-        {
-            ComprobarEliminarProducto();
-        }
     }
 }

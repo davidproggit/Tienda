@@ -32,6 +32,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnQuitarProducto = new System.Windows.Forms.Button();
+            this.btnEnviarProducto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPrecio
@@ -77,11 +78,23 @@
             this.btnQuitarProducto.UseVisualStyleBackColor = true;
             this.btnQuitarProducto.Click += new System.EventHandler(this.btnQuitarProducto_Click);
             // 
+            // btnEnviarProducto
+            // 
+            this.btnEnviarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarProducto.Location = new System.Drawing.Point(308, 43);
+            this.btnEnviarProducto.Name = "btnEnviarProducto";
+            this.btnEnviarProducto.Size = new System.Drawing.Size(222, 53);
+            this.btnEnviarProducto.TabIndex = 9;
+            this.btnEnviarProducto.Text = "Enviar producto";
+            this.btnEnviarProducto.UseVisualStyleBackColor = true;
+            this.btnEnviarProducto.Click += new System.EventHandler(this.btnEnviarProducto_Click);
+            // 
             // ProductoCarrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnEnviarProducto);
             this.Controls.Add(this.btnQuitarProducto);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblPrecio);
@@ -100,5 +113,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Button btnQuitarProducto;
+        private System.Windows.Forms.Button btnEnviarProducto;
     }
 }
