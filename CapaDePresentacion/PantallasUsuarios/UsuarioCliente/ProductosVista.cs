@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             Cliente cliente = new Cliente();
 
-            _valores = cliente.CargarProductos();
+            _valores = cliente.CargarVistaProductos();
 
             foreach (FormatoProductos datos in _valores)
             {

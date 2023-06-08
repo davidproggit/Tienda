@@ -26,7 +26,7 @@ namespace CapaDePresentacion
         private void MostrarProductos()
         {
             Proveedor proveedor = new Proveedor();
-            grillaProductos.DataSource = proveedor.MostrarProducto();
+            grillaProductos.DataSource = proveedor.MostrarProductosStock();
             grillaProductos.Columns["ID"].Visible = false;
         }
 
@@ -97,7 +97,7 @@ namespace CapaDePresentacion
 
             try
             {
-                proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
+                proveedor.EditarProductoStock(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
@@ -117,7 +117,7 @@ namespace CapaDePresentacion
 
             try
             {
-                proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                proveedor.InsertarProductoStock(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -167,13 +167,13 @@ namespace CapaDePresentacion
             Proveedor proveedor = new Proveedor();
 
             _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
-            proveedor.EliminarProducto(_idProducto);
+            proveedor.EliminarProductoStock(_idProducto);
         }
 
         private void BuscarProducto()
         {
             Proveedor proveedor = new Proveedor();
-            grillaProductos.DataSource = proveedor.FiltrarProducto(txtBuscar.Text);
+            grillaProductos.DataSource = proveedor.FiltrarProductoStock(txtBuscar.Text);
         }
 
         private void EnviarDatosAlerta()

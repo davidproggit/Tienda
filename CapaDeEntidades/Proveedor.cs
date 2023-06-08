@@ -17,29 +17,29 @@ namespace CapaDeEntidades
 
         #region "Producto"
 
-        public void InsertarProducto(string nombre, string descripcion, string marca, string precio, string stock)
+        public void InsertarProductoStock(string nombre, string descripcion, string marca, string precio, string stock)
         {
-            _datosProductos.Insertar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
+            _datosProductos.InsertarProductoStock(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock));
         }
 
-        public void EditarProducto(string nombre, string descripcion, string marca, string precio, string stock, int id)
+        public void EditarProductoStock(string nombre, string descripcion, string marca, string precio, string stock, int id)
         {
-            _datosProductos.Editar(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), id);
+            _datosProductos.EditarProductoStock(nombre, descripcion, marca, Convert.ToDouble(precio), Convert.ToInt32(stock), id);
         }
 
-        public void EliminarProducto(int id)
+        public void EliminarProductoStock(int id)
         {
-            _datosProductos.Eliminar(id);
+            _datosProductos.EliminarProductoStock(id);
         }
 
-        public DataTable MostrarProducto()
+        public DataTable MostrarProductosStock()
         {
-            return _datosProductos.Mostrar();
+            return _datosProductos.MostrarProductosStock();
         }
 
-        public DataTable FiltrarProducto(string textoBuscar)
+        public DataTable FiltrarProductoStock(string textoBuscar)
         {
-            return _datosProductos.Filtrar(textoBuscar);
+            return _datosProductos.FiltrarProductoStock(textoBuscar);
         }
 
         #endregion

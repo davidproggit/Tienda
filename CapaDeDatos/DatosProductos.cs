@@ -19,20 +19,20 @@ namespace CapaDeDatos
 
         #region "Proveedor"
 
-        public void Insertar(string nombre, string descripcion, string marca, double precio, int stock)
+        public void InsertarProductoStock(string nombre, string descripcion, string marca, double precio, int stock)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "InsertarProducto";
+            _comando.CommandText = "InsertarProductoStock";
             _comando.CommandType = CommandType.StoredProcedure;
             CamposProducto(nombre, descripcion, marca, precio, stock);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
 
-        public void Editar(string nombre, string descripcion, string marca, double precio, int stock, int id)
+        public void EditarProductoStock(string nombre, string descripcion, string marca, double precio, int stock, int id)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EditarProducto";
+            _comando.CommandText = "EditarProductoStock";
             _comando.CommandType = CommandType.StoredProcedure;
             CamposProducto(nombre, descripcion, marca, precio, stock);
             _comando.Parameters.AddWithValue("@id", id);
@@ -49,10 +49,10 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@stock", stock);
         }
 
-        public void Eliminar(int id)
+        public void EliminarProductoStock(int id)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EliminarProducto";
+            _comando.CommandText = "EliminarProductoStock";
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.AddWithValue("@idproductoeliminar", id);
             _comando.ExecuteNonQuery();
@@ -75,10 +75,10 @@ namespace CapaDeDatos
 
         #region "Cliente y proveedor"
 
-        public DataTable Mostrar()
+        public DataTable MostrarProductosStock()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "MostrarProductos";
+            _comando.CommandText = "MostrarProductosStock";
             _lector = _comando.ExecuteReader();
             _comando.CommandType = CommandType.StoredProcedure;
             _tabla.Load(_lector);
@@ -86,11 +86,12 @@ namespace CapaDeDatos
             return _tabla;
         }
 
-        public DataTable Filtrar(string textoBuscar)
+        public DataTable FiltrarProductoStock(string productoCoincidencia)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "SELECT Id,Nombre, Descripcion, Marca, Precio, Stock FROM Productos where Nombre like ('" + textoBuscar + "%')";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "FiltrarProductoStock";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@productoCoincidencia", productoCoincidencia);
             _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();
@@ -106,11 +107,11 @@ namespace CapaDeDatos
 
         #region "Cliente"
 
-        public List<FormatoProductos> Rellenar()
+        public List<FormatoProductos> CargarVistaProductos()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Precio, Stock, Estado from Productos";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "CargarVistaProductos";
+            _comando.CommandType = CommandType.StoredProcedure;
             _lector = _comando.ExecuteReader();
 
             while (_lector.Read())

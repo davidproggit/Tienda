@@ -49,11 +49,13 @@ namespace CapaDeDatos
             return _tabla;
         }
 
-        public DataTable FiltrarUsuario(string txtBuscar)
+        public DataTable FiltrarUsuario(string usuarioCoincidencia)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%')";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "FiltrarUsuario";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@usuarioCoincidencia", usuarioCoincidencia);
+
             _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();
@@ -90,11 +92,13 @@ namespace CapaDeDatos
 
         #region "Vendedor"
 
-        public DataTable FiltrarCliente(string txtBuscar)
+        public DataTable FiltrarCliente(string clienteCoincidencia)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "FiltrarCliente";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@clienteCoincidencia", clienteCoincidencia);
+
             _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();

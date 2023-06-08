@@ -29,7 +29,7 @@ namespace CapaDePresentacion
         private void MostrarProductos()
         {
             Cliente cliente = new Cliente();
-            grillaProductos.DataSource = cliente.MostrarProducto();
+            grillaProductos.DataSource = cliente.MostrarProductosStock();
             grillaProductos.Columns["ID"].Visible = false;
         }
 
@@ -54,7 +54,7 @@ namespace CapaDePresentacion
         private void BuscarProducto()
         {
             Cliente cliente = new Cliente();
-            grillaProductos.DataSource = cliente.FiltrarProducto(txtBusqueda.Text);
+            grillaProductos.DataSource = cliente.FiltrarProductoStock(txtBusqueda.Text);
         }
 
         private void AgregarProducto()

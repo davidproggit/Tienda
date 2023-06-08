@@ -28,19 +28,19 @@ namespace CapaDeEntidades
             _datosProductos.ModificarCantidadCarrito(productoId, cantidad);
         }
 
-        public DataTable MostrarProducto()
+        public DataTable MostrarProductosStock()
         {
-            return _datosProductos.Mostrar();
+            return _datosProductos.MostrarProductosStock();
         }
 
-        public DataTable FiltrarProducto(string textoBuscar)
+        public DataTable FiltrarProductoStock(string productoCoincidencia)
         {
-            return _datosProductos.Filtrar(textoBuscar);
+            return _datosProductos.FiltrarProductoStock(productoCoincidencia);
         }
 
-        public List<FormatoProductos> CargarProductos()
+        public List<FormatoProductos> CargarVistaProductos()
         {
-            return _datosProductos.Rellenar();
+            return _datosProductos.CargarVistaProductos();
         }
 
         public List<FormatoProductos> CargarHistorialOrdenes(int idCliente)

@@ -19,9 +19,9 @@ namespace CapaDeEntidades
             return _datosDeUsuario.CargarClientes();
         }
 
-        public DataTable FiltrarCliente(string txtBuscar)
+        public DataTable FiltrarCliente(string clienteCoincidencia)
         {
-            return _datosDeUsuario.FiltrarCliente(txtBuscar);
+            return _datosDeUsuario.FiltrarCliente(clienteCoincidencia);
         }
 
         public void EditarPerfilCliente(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
