@@ -122,7 +122,6 @@ namespace CapaDeDatos
                 string productoMarca = _lector["Marca"].ToString();
                 float productoPrecio = float.Parse(_lector["Precio"].ToString());
                 int productoCantidad = int.Parse(_lector["Stock"].ToString());
-                string productoEstado = _lector["Estado"].ToString();
 
                 _valores.Add(new FormatoProductos
                 {
@@ -132,7 +131,6 @@ namespace CapaDeDatos
                     productoMarca = productoMarca,
                     productoPrecio = productoPrecio,
                     productoCantidad = productoCantidad,
-                    productoEstado = productoEstado
                 });
             }
 
@@ -213,7 +211,7 @@ namespace CapaDeDatos
         }
 
 
-        public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
+        public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "AgregarProductoCarrito";
@@ -226,7 +224,6 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@marca", marca);
             _comando.Parameters.AddWithValue("@cantidad", cantidad);
             _comando.Parameters.AddWithValue("@precio", precio);
-            _comando.Parameters.AddWithValue("@estado", estado);
            
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();

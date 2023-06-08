@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
             if (_agregarProductoCarrito)
-                cliente.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
+                cliente.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio);
             else
                 cliente.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
 
