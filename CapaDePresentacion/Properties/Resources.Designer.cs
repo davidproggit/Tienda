@@ -63,6 +63,16 @@ namespace CapaDePresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IconoProducto {
+            get {
+                object obj = ResourceManager.GetObject("IconoProducto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconoUsuario {
             get {
                 object obj = ResourceManager.GetObject("IconoUsuario", resourceCulture);

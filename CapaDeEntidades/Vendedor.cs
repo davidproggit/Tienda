@@ -1,40 +1,58 @@
-﻿using CapaDeDatos;
-using System;
+﻿using CapaComun;
+using CapaDeDatos;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaDeEntidades
 {
-    public class Vendedor
+    public class Vendedor : Usuario
     {
-        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
-        private DataTable _tabla = new DataTable();
+        private ConsultasUsuario _consultasUsuario = new ConsultasUsuario();
+        private ConsultasProductos _consultasProductos = new ConsultasProductos();
 
         public Vendedor() { }
 
+        #region "Cliente"
+
         public DataTable CargarClientes()
         {
-            _tabla = _datosDeUsuario.CargarClientes();
-            return _tabla;
-        }
-        public DataTable FiltrarCliente(string txtBuscar)
-        {
-            _tabla = _datosDeUsuario.FiltrarCliente(txtBuscar);
-            return _tabla;
+            return _consultasUsuario.CargarClientes();
         }
 
-        public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public DataTable FiltrarCliente(string clienteCoincidencia)
         {
-            _datosDeUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+            return _consultasUsuario.FiltrarCliente(clienteCoincidencia);
         }
 
-        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public void EditarPerfilCliente(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
         {
-            _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+            _consultasUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
-  
+
+        public void InsertarNuevoCliente(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            _consultasUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+        }
+
+        #endregion
+
+        #region "Ordenes"
+
+        public List<FormatoProductos> CargarOrdenesCompra()
+        {
+            return _consultasProductos.CargarOrdenesCompra();
+        }
+
+        public void AprobarOrden(int ordenId, string vendedor, int cantidad, int productoId)
+        {
+            _consultasProductos.AprobarOrden(ordenId, vendedor, cantidad, productoId);
+        }
+
+        public void CancelarOrden(int ordenId, string vendedor)
+        {
+            _consultasProductos.CancelarOrden(ordenId, vendedor);
+        }
+
+        #endregion
     }
 }

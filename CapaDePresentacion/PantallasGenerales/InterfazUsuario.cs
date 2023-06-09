@@ -1,14 +1,10 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
+using CapaDePresentacion.PantallasUsuarios.UsuarioGerente;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace CapaDePresentacion.PantallasGenerales
 {
@@ -20,6 +16,8 @@ namespace CapaDePresentacion.PantallasGenerales
             WindowState = FormWindowState.Maximized;
         }
 
+        private bool _perfil = false;
+
         #region "Cargar datos principales"
 
         private void InterfazUsuario_Load(object sender, EventArgs e)
@@ -30,20 +28,20 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarPantallasUsuarios()
         {
-            if (CacheSesionUsuario.Cargo == Cargos.Admin)
+            if (DatosUsuario.cargo == Cargos.cargoAdmin)
                 AbrirFormulario<ABMUsuarios>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Vendedor)
+            if (DatosUsuario.cargo == Cargos.cargoVendedor)
                 AbrirFormulario<ABMClientes>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Encargado)
+            if (DatosUsuario.cargo == Cargos.cargoProveedor)
                 AbrirFormulario<InterfazProducto>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Gerente)
-                AbrirFormulario<Reportes>();
+            if (DatosUsuario.cargo == Cargos.cargoGerente)
+                AbrirFormulario<PantallaReporte>();
 
-            if (CacheSesionUsuario.Cargo == Cargos.Cliente)
-                AbrirFormulario<ABMCompraProductos>();
+            if (DatosUsuario.cargo == Cargos.cargoCliente)
+                AbrirFormulario<ProductosVista>();
         }
 
         #endregion
@@ -63,7 +61,6 @@ namespace CapaDePresentacion.PantallasGenerales
         #endregion
 
         #region "Cargar pantalla generica"
-        private bool _perfil = false;
 
         private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -87,7 +84,7 @@ namespace CapaDePresentacion.PantallasGenerales
         }
         private void CargarNombreUsuario()
         {
-            lblNombre.Text = CacheSesionUsuario.Nombre;
+            lblNombre.Text = DatosUsuario.nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -1,12 +1,5 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasGenerales
@@ -27,11 +20,11 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void DatosPerfil()
         {
-            lblUsuario.Text = CacheSesionUsuario.Usuario;
-            lblNombre.Text = CacheSesionUsuario.Nombre;
-            lblApellido.Text = CacheSesionUsuario.Apellido;
-            lblEmail.Text = CacheSesionUsuario.Email;
-            lblCargo.Text = CacheSesionUsuario.Cargo;
+            lblUsuario.Text = DatosUsuario.usuario;
+            lblNombre.Text = DatosUsuario.nombre;
+            lblApellido.Text = DatosUsuario.apellido;
+            lblEmail.Text = DatosUsuario.email;
+            lblCargo.Text = DatosUsuario.cargo;
         }
 
         #endregion
