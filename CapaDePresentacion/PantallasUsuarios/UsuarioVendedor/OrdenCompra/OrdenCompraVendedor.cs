@@ -1,5 +1,6 @@
-﻿using CapaComun.Cache;
-using CapaDeNegocio;
+﻿using CapaComun;
+using CapaDeEntidades;
+using CapaDePresentacion.PantallasUsuarios.UsuarioVendedor.OrdenComponente;
 using System;
 using System.Windows.Forms;
 
@@ -7,14 +8,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class OrdenCompraVendedor : UserControl
     {
-        #region "Constructor"
-
         public OrdenCompraVendedor()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 
@@ -102,10 +99,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
       
         private void CargarInformacion()
         {
-            lblNombreCliente.Text = "Cliente nº: " + idCliente;
-            lblNombreProducto.Text = productoNombre;
-            lblPrecio.Text = "Precio: $" + productoPrecio.ToString();
-            lblCantidad.Text = "Cantidad: " + productoCantidad.ToString();
+            lblOrden.Text = "Orden nº: " + ordenId;
             lblEstado.Text = productoEstado;
         }
 
@@ -125,24 +119,29 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             VerificarEstado();
         }
 
+        private void linkDetalle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirDetalle();
+        }
+
         #endregion
 
         #region "Metodos de las opciones"
 
         private void AprobarOrden()
         {
-            Productos productos = new Productos();
+            Vendedor vendedor = new Vendedor();
 
-            productos.AprobarOrden(ordenId, CacheSesionUsuario.nombre, productoCantidad,productoId);
+            vendedor.AprobarOrden(ordenId, DatosUsuario.nombre, productoCantidad,productoId);
             productoEstado = "Aprobado";
             CargarInformacion();
         }
 
         private void CancelarOrden()
         {
-            Productos productos = new Productos();
+            Vendedor vendedor = new Vendedor();
 
-            productos.CancelarOrden(ordenId, CacheSesionUsuario.nombre);
+            vendedor.CancelarOrden(ordenId, DatosUsuario.nombre);
             productoEstado = "Cancelado";
             CargarInformacion();
         }
@@ -159,7 +158,21 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             btnCancelar.Enabled = false;
         }
 
-        #endregion
+        private void AbrirDetalle()
+        {
+            OrdenDetalle ordenDetalle = new OrdenDetalle();
 
+            ordenDetalle.ordenId = ordenId;
+            ordenDetalle.idCliente = idCliente;
+            ordenDetalle.productoNombre = productoNombre;
+            ordenDetalle.productoMarca = productoMarca;
+            ordenDetalle.productoDescripcion = productoDescripcion;
+            ordenDetalle.productoPrecio = productoPrecio;
+            ordenDetalle.productoCantidad = productoCantidad;
+
+            ordenDetalle.Show();
+        }
+
+        #endregion
     }
 }

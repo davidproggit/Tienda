@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    partial class Historial
+    partial class VistaOrdenCompraCliente
     {
         /// <summary>
         /// Required designer variable.

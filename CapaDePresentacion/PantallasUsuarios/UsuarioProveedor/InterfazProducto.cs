@@ -1,29 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using CapaComun.Cache;
+using CapaComun;
 using CapaDeEntidades;
-using CapaDeNegocio;
 
 namespace CapaDePresentacion
 {
     public partial class InterfazProducto : Form
     {
-        #region "Condicionales"
-
         private int _idProducto;
         private bool _editar = false;
-
-        #endregion
-
-        #region "Constructor"
 
         public InterfazProducto()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
@@ -34,8 +25,8 @@ namespace CapaDePresentacion
 
         private void MostrarProductos()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.MostrarProducto();
+            Proveedor proveedor = new Proveedor();
+            grillaProductos.DataSource = proveedor.MostrarProductosStock();
             grillaProductos.Columns["ID"].Visible = false;
         }
 
@@ -106,7 +97,7 @@ namespace CapaDePresentacion
 
             try
             {
-                proveedor.EditarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
+                proveedor.EditarProductoStock(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text, _idProducto);
                 LimpiarFormulario();
                 MostrarProductos();
                 _editar = false;
@@ -126,7 +117,7 @@ namespace CapaDePresentacion
 
             try
             {
-                proveedor.InsertarProducto(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
+                proveedor.InsertarProductoStock(txtNombre.Text, txtDescripcion.Text, txtMarca.Text, txtPrecio.Text, txtStock.Text);
                 LimpiarFormulario();
                 MostrarProductos();
             }
@@ -176,24 +167,24 @@ namespace CapaDePresentacion
             Proveedor proveedor = new Proveedor();
 
             _idProducto = (int)grillaProductos.CurrentRow.Cells["Id"].Value;
-            proveedor.EliminarProducto(_idProducto);
+            proveedor.EliminarProductoStock(_idProducto);
         }
 
         private void BuscarProducto()
         {
-            Productos productos = new Productos();
-            grillaProductos.DataSource = productos.FiltrarProducto(txtBuscar.Text);
+            Proveedor proveedor = new Proveedor();
+            grillaProductos.DataSource = proveedor.FiltrarProductoStock(txtBuscar.Text);
         }
 
         private void EnviarDatosAlerta()
         {
-            List<Datos> Valores = new List<Datos>();
+            List<DatosAlerta> Valores = new List<DatosAlerta>();
 
             foreach (DataGridViewRow celda in grillaProductos.Rows)
             {
                 if (Convert.ToBoolean(celda.Cells[0].Value))
                 {
-                    Valores.Add(new Datos
+                    Valores.Add(new DatosAlerta
                     {
                         id = (int)celda.Cells[1].Value,
                         nombre = celda.Cells[2].Value.ToString()

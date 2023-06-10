@@ -1,40 +1,32 @@
 ﻿using CapaComun;
-using CapaComun.Cache;
-using CapaDeNegocio;
+using CapaDeEntidades;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    public partial class Carrito : Form
+    public partial class CarritoVista : Form
     {
-        #region "Lista"
-
         private List<FormatoProductos> _valores = new List<FormatoProductos>();
 
-        #endregion
-
-        #region "Constructor"
-
-        public Carrito()
+        public CarritoVista()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
         private void Carrito_Load(object sender, EventArgs e)
         {
-            Llenar();
+            RellenarVistaCarrito();
         }
 
-        public void Llenar()
+        public void RellenarVistaCarrito()
         {
-            Productos productos = new Productos();
-            _valores = productos.RellenarCarrito();
+            Carrito carrito = new Carrito();
+
+            _valores = carrito.RellenarCarrito(DatosUsuario.id);
 
             foreach (FormatoProductos datos in _valores)
             {
@@ -57,7 +49,7 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void btnEnviarCompra_Click(object sender, EventArgs e)
         {
-            EnviarOrdenCompra();
+            EnviarProductosCompra();
         }
 
         private void btnVaciar_Click(object sender, EventArgs e)
@@ -69,36 +61,36 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Metodos de las opciones"
 
-        private void EnviarOrdenCompra()
+        private void EnviarProductosCompra()
         {
-            Productos productos = new Productos();
+            Carrito carrito = new Carrito();
+
             string fecha = DateTime.Now.ToString("yyy-MM-dd");
 
             foreach (FormatoProductos datos in _valores)
             {
-                productos.CambiarEstadoProducto(datos.productoId, "Enviado");
-                productos.EnviarOrdenCompra(datos.productoId, CacheSesionUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
-                productos.VaciarCarrito(CacheSesionUsuario.id);
-                LimpiarCarrito();
-                Llenar();
+                carrito.EnviarProductoCompra(datos.productoId, DatosUsuario.id, datos.productoNombre, datos.productoDescripcion, datos.productoMarca, datos.productoCantidad, datos.productoPrecio, "Pendiente", fecha);
+                carrito.VaciarCarrito(DatosUsuario.id);
+                LimpiarVistaCarrito();
+                RellenarVistaCarrito();
             }
         }
 
         private void ComprobarVaciarCarrito()
         {
-            Productos productos = new Productos();
+            Carrito carrito = new Carrito();
 
             DialogResult pantallaAdvertencia = MessageBox.Show("¿Quiere vaciar el carrito?", "Vaciar carrito", MessageBoxButtons.YesNo);
 
             if (pantallaAdvertencia == DialogResult.Yes)
             {
-                productos.VaciarCarrito(CacheSesionUsuario.id);
-                LimpiarCarrito();
-                Llenar();
+                carrito.VaciarCarrito(DatosUsuario.id);
+                LimpiarVistaCarrito();
+                RellenarVistaCarrito();
             }
         }
 
-        public void LimpiarCarrito()
+        public void LimpiarVistaCarrito()
         {
             contenedorProductos.Controls.Clear();
         }

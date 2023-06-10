@@ -7,21 +7,13 @@ namespace CapaDePresentacion
 {
     public partial class ABMClientes : Form
     {
-        #region "Condicionales"
-
         private bool _editar = false;
         private int _idCliente;
-
-        #endregion
-
-        #region "Constructor"
 
         public ABMClientes()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
@@ -34,6 +26,7 @@ namespace CapaDePresentacion
         {
             Vendedor vendedor = new Vendedor();
             grillaClientes.DataSource = vendedor.CargarClientes();
+            grillaClientes.Columns["ID"].Visible = false;
         }
 
         #endregion
@@ -73,7 +66,7 @@ namespace CapaDePresentacion
 
             if (!CamposVacios())
             {
-                vendedor.InsertarNuevoUsuario(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.InsertarNuevoCliente(txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 MessageBox.Show("Datos insertados");
                 CargarListaUsuarios();
                 LimpiarFormulario();
@@ -112,7 +105,7 @@ namespace CapaDePresentacion
 
             if (!CamposVacios())
             {
-                vendedor.EditarPerfilUsuario(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
+                vendedor.EditarPerfilCliente(_idCliente, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, "Cliente", txtDNI.Text, txtCuil.Text);
                 LimpiarFormulario();
                 CargarListaUsuarios();
                 _editar = false;
@@ -123,7 +116,7 @@ namespace CapaDePresentacion
 
         private static void AbrirOrdenesCompra()
         {
-            OrdenesCompra ordenesCompra = new OrdenesCompra();
+            OrdenesCompraClientes ordenesCompra = new OrdenesCompraClientes();
             ordenesCompra.Show();
         }
 

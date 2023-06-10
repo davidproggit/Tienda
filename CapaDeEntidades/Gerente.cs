@@ -3,30 +3,42 @@ using System.Data;
 
 namespace CapaDeEntidades
 {
-    public class Gerente
+    public class Gerente : Usuario
     {
-        #region "Objetos"
-
-        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
-        private DataTable _tabla = new DataTable();
-
-        #endregion
-
-        #region "Constructor"
+        private ConsultasUsuario _consultasUsuario = new ConsultasUsuario();
+        private ConsultasProductos _consultasProductos = new ConsultasProductos();
 
         public Gerente() { }
 
-        #endregion
-
-        #region "DataTable"
+        #region "Metodos"
 
         public DataTable CargarVendedores()
         {
-            _tabla = _datosDeUsuario.CargarVendedores();
-            return _tabla;
+            return _consultasUsuario.CargarVendedores();
+        }
+
+        public DataTable MostrarOrdenes()
+        {
+            return _consultasProductos.MostrarOrdenes();
+        }
+
+        public DataTable MostrarOrdenesSemana()
+        {
+            return _consultasProductos.MostrarOrdenesSemana();
+        }
+
+        public DataTable MostrarOrdenesMes()
+        {
+            return _consultasProductos.MostrarOrdenesMes();
+        }
+
+        public DataTable MostrarOrdenesVendedor(string vendedor)
+        {
+            return _consultasProductos.MostrarOrdenesVendedor(vendedor);
         }
 
         #endregion
+
 
     }
 }

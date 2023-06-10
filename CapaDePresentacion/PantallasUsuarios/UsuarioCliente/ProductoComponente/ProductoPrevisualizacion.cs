@@ -5,14 +5,10 @@ namespace WindowsFormsApp1
 {
     public partial class ProductoPrevisualizacion : UserControl
     {
-        #region "Constructor"
-
         public ProductoPrevisualizacion()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 
@@ -89,16 +85,12 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region "Opciones"
+        #region "Ver mas"
 
         private void btnVerMas_Click(object sender, EventArgs e)
         {
             VerMas();
         }
-
-        #endregion
-
-        #region "Metodos"
 
         private void VerMas()
         {

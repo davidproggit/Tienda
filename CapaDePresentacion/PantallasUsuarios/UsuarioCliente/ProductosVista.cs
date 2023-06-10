@@ -1,42 +1,34 @@
-﻿using CapaDeNegocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaComun;
 using CapaDePresentacion.PantallasUsuarios.UsuarioCliente;
+using CapaDeEntidades;
 
 namespace WindowsFormsApp1
 {
     public partial class ProductosVista : Form
     {
-        #region "Lista"
-
-        private List<FormatoProductos> _valores = new List<FormatoProductos>();
-
-        #endregion
-
-        #region "Constructor"
-
         public ProductosVista()
         {
             InitializeComponent();
         }
 
-        #endregion
-
         #region "Cargar datos"
 
         private void ProductosVista_Load(object sender, EventArgs e)
         {
-            Llenar();
+            RellenarVistaProductos();
         }
 
-        public void Llenar()
+        public void RellenarVistaProductos()
         {
-            Productos productos = new Productos();
-            _valores = productos.Rellenar();
+            Cliente cliente = new Cliente();
+            List<FormatoProductos> valores = new List<FormatoProductos>();
 
-            foreach (FormatoProductos datos in _valores)
+            valores = cliente.CargarVistaProductos();
+
+            foreach (FormatoProductos datos in valores)
             {
                 ProductoPrevisualizacion productoPrevisualizacion = new ProductoPrevisualizacion();
 
@@ -46,7 +38,6 @@ namespace WindowsFormsApp1
                 productoPrevisualizacion.productoMarca = datos.productoMarca;
                 productoPrevisualizacion.productoPrecio = datos.productoPrecio;
                 productoPrevisualizacion.productoCantidad = datos.productoCantidad;
-                productoPrevisualizacion.productoEstado = datos.productoEstado;
 
                 contenedorProductos.Controls.Add(productoPrevisualizacion);
             }
@@ -58,7 +49,7 @@ namespace WindowsFormsApp1
 
         private void linkCarrito_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Carrito carrito = new Carrito();
+            CarritoVista carrito = new CarritoVista();
             carrito.Show();
         }
 
@@ -71,14 +62,14 @@ namespace WindowsFormsApp1
 
         #region "Metodos"
 
-        public void LimpiarProductos()
+        public void LimpiarVistaProductos()
         {
             contenedorProductos.Controls.Clear();
         }
 
         private static void AbrirOrdenes()
         {
-            Historial historial = new Historial();
+            VistaOrdenCompraCliente historial = new VistaOrdenCompraCliente();
             historial.Show();
         }
 

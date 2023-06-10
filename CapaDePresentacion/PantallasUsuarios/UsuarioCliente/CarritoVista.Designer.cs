@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
-    partial class Carrito
+    partial class CarritoVista
     {
         /// <summary>
         /// Required designer variable.
@@ -45,11 +45,11 @@
             // btnEnviarCompra
             // 
             this.btnEnviarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCompra.Location = new System.Drawing.Point(468, 520);
+            this.btnEnviarCompra.Location = new System.Drawing.Point(461, 520);
             this.btnEnviarCompra.Name = "btnEnviarCompra";
-            this.btnEnviarCompra.Size = new System.Drawing.Size(252, 71);
+            this.btnEnviarCompra.Size = new System.Drawing.Size(259, 71);
             this.btnEnviarCompra.TabIndex = 4;
-            this.btnEnviarCompra.Text = "Enviar compra";
+            this.btnEnviarCompra.Text = "Enviar productos";
             this.btnEnviarCompra.UseVisualStyleBackColor = true;
             this.btnEnviarCompra.Click += new System.EventHandler(this.btnEnviarCompra_Click);
             // 
@@ -64,7 +64,7 @@
             this.btnVaciar.UseVisualStyleBackColor = true;
             this.btnVaciar.Click += new System.EventHandler(this.btnVaciar_Click);
             // 
-            // Carrito
+            // CarritoVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,7 +72,7 @@
             this.Controls.Add(this.btnVaciar);
             this.Controls.Add(this.btnEnviarCompra);
             this.Controls.Add(this.contenedorProductos);
-            this.Name = "Carrito";
+            this.Name = "CarritoVista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carrito";
             this.Load += new System.EventHandler(this.Carrito_Load);

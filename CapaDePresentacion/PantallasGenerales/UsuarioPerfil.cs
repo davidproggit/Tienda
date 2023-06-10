@@ -1,4 +1,4 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
 using System;
 using System.Windows.Forms;
 
@@ -6,15 +6,10 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class UsuarioPerfil : Form
     {
-
-        #region "Constructor"
-
         public UsuarioPerfil()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
@@ -25,11 +20,11 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void DatosPerfil()
         {
-            lblUsuario.Text = CacheSesionUsuario.usuario;
-            lblNombre.Text = CacheSesionUsuario.nombre;
-            lblApellido.Text = CacheSesionUsuario.apellido;
-            lblEmail.Text = CacheSesionUsuario.email;
-            lblCargo.Text = CacheSesionUsuario.cargo;
+            lblUsuario.Text = DatosUsuario.usuario;
+            lblNombre.Text = DatosUsuario.nombre;
+            lblApellido.Text = DatosUsuario.apellido;
+            lblEmail.Text = DatosUsuario.email;
+            lblCargo.Text = DatosUsuario.cargo;
         }
 
         #endregion

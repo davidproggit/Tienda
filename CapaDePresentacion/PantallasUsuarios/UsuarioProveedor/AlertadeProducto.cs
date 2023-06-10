@@ -1,34 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using CapaComun.Cache;
+using CapaComun;
 using CapaDeEntidades;
 
 namespace CapaDePresentacion
 {
     public partial class AlertadeProducto : Form
     {
-        #region "Objetos"
-
-        Proveedor _proveedor = new Proveedor();
-        public List<Datos> valores { get; set; }
-
-        #endregion
-
-        #region "Atributo"
+        public List<DatosAlerta> valores { get; set; }
 
         private bool _sinProducto = true;
-
-        #endregion
-
-        #region "Constructor"
 
         public AlertadeProducto()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
@@ -37,9 +24,9 @@ namespace CapaDePresentacion
             Rellenar(valores);
         }
 
-        public void Rellenar(List<Datos> valores)
+        public void Rellenar(List<DatosAlerta> valores)
         {
-            foreach (Datos valor in valores)
+            foreach (DatosAlerta valor in valores)
             {
                 int posicion = grillaProductos.Rows.Add();
 
@@ -82,12 +69,14 @@ namespace CapaDePresentacion
 
         #region "Metodos de los botones"
 
-        private void CambiarMensajeCantidad(List<Datos> valores)
+        private void CambiarMensajeCantidad(List<DatosAlerta> valores)
         {
+            Proveedor proveedor = new Proveedor();
+
             if (rTBoxMensajeAlerta.Text != "" && txtCantidadMinima.Text != "")
             {
-                foreach (Datos valor in valores)
-                    _proveedor.ModificarAlerta(valor.id, rTBoxMensajeAlerta.Text, txtCantidadMinima.Text);
+                foreach (DatosAlerta valor in valores)
+                    proveedor.ModificarAlerta(valor.id, rTBoxMensajeAlerta.Text, txtCantidadMinima.Text);
 
                 MessageBox.Show("Alerta guardada");
             }

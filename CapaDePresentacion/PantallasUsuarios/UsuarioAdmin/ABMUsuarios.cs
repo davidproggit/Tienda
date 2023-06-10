@@ -7,14 +7,10 @@ namespace CapaDePresentacion
 {
     public partial class ABMUsuarios : Form
     {
-        #region "Constructor"
-
         public ABMUsuarios()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Cargar datos"
 
@@ -28,6 +24,7 @@ namespace CapaDePresentacion
         {
             Administrador administrador = new Administrador();
             grillaUsuarios.DataSource = administrador.CargarUsuarios();
+            grillaUsuarios.Columns["ID"].Visible = false;
         }
 
         private void CargarRoles()

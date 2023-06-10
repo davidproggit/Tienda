@@ -1,4 +1,5 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
+using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
@@ -7,14 +8,10 @@ namespace WindowsFormsApp1
 {
     public partial class ProductoDetalle : Form
     {
-        #region "Constructor"
-
         public ProductoDetalle()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 
@@ -97,50 +94,47 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        #region "Opciones"
-
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
             AgregarCarrito();
         }
 
-        #endregion
-
         #region "Metodos"
 
         private void VerificarProductoCarrito()
         {
-            Productos productos = new Productos();
-            Productos productos2 = new Productos();
+            Carrito carritoVerificar = new Carrito();
+            Carrito carritoCantidad = new Carrito();
 
-            int productoCarrito = productos.VerificarProductoCarrito(productoId);
+            int productoCarrito = carritoVerificar.VerificarProductoCarrito(productoId);
 
             if (productoCarrito == productoId)
             {
                 _agregarProductoCarrito = false;
-                _cantidadCarrito = productos2.DevolverCantidadCarrito(productoId);
+                _cantidadCarrito = carritoCantidad.DevolverCantidadCarrito(productoId);
             }
         }
 
         private void EstablecerCantidadMaxima()
         {
-            Productos productos = new Productos();
-            selectorCantidad.Maximum = productos.DevolverCantidadMaxima(_cantidadCarrito, productoCantidad, _agregarProductoCarrito);
+            CantidadMaxima cantidadMaxima = new CantidadMaxima();
+            selectorCantidad.Maximum = cantidadMaxima.DevolverCantidadMaxima(_cantidadCarrito, productoCantidad, _agregarProductoCarrito);
         }
 
         private void AgregarCarrito()
         {
-            Productos productos = new Productos();
+            Cliente cliente = new Cliente();
 
             int cantidadSeleccionada = (int)selectorCantidad.Value;
 
             if (_agregarProductoCarrito)
-                productos.AgregarCarrito(CacheSesionUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio, "Carrito");
+                cliente.AgregarCarrito(DatosUsuario.id, productoId, productoNombre, productoDescripcion, productoMarca, cantidadSeleccionada, productoPrecio);
             else
-                productos.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
+                cliente.ModificarCantidadCarrito(productoId, cantidadSeleccionada);
 
-            productos.CambiarEstadoProducto(productoId, "Carrito");
-            productos.AsignarClienteProducto(productoId, CacheSesionUsuario.id);
+            cliente.AsignarClienteProducto(productoId, DatosUsuario.id);
+
+            MessageBox.Show("Agrego: " + selectorCantidad.Value + " " + productoNombre);
         }
 
         private void VerificarProductoDisponible()
@@ -154,8 +148,8 @@ namespace WindowsFormsApp1
 
         private void ProductoDetalle_FormClosed(object sender, FormClosedEventArgs e)
         {
-            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
-            (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarVistaProductos();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).RellenarVistaProductos();
         }
 
         #endregion

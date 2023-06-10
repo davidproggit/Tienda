@@ -31,7 +31,8 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.linkQuitarProducto = new System.Windows.Forms.LinkLabel();
+            this.btnQuitarProducto = new System.Windows.Forms.Button();
+            this.btnEnviarProducto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPrecio
@@ -66,24 +67,35 @@
             this.lblCantidad.TabIndex = 6;
             this.lblCantidad.Text = "Cantidad";
             // 
-            // linkQuitarProducto
+            // btnQuitarProducto
             // 
-            this.linkQuitarProducto.AutoSize = true;
-            this.linkQuitarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkQuitarProducto.Location = new System.Drawing.Point(320, 81);
-            this.linkQuitarProducto.Name = "linkQuitarProducto";
-            this.linkQuitarProducto.Size = new System.Drawing.Size(210, 32);
-            this.linkQuitarProducto.TabIndex = 7;
-            this.linkQuitarProducto.TabStop = true;
-            this.linkQuitarProducto.Text = "Quitar producto";
-            this.linkQuitarProducto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkQuitarProducto_LinkClicked);
+            this.btnQuitarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarProducto.Location = new System.Drawing.Point(308, 129);
+            this.btnQuitarProducto.Name = "btnQuitarProducto";
+            this.btnQuitarProducto.Size = new System.Drawing.Size(222, 53);
+            this.btnQuitarProducto.TabIndex = 8;
+            this.btnQuitarProducto.Text = "Quitar producto";
+            this.btnQuitarProducto.UseVisualStyleBackColor = true;
+            this.btnQuitarProducto.Click += new System.EventHandler(this.btnQuitarProducto_Click);
+            // 
+            // btnEnviarProducto
+            // 
+            this.btnEnviarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarProducto.Location = new System.Drawing.Point(308, 43);
+            this.btnEnviarProducto.Name = "btnEnviarProducto";
+            this.btnEnviarProducto.Size = new System.Drawing.Size(222, 53);
+            this.btnEnviarProducto.TabIndex = 9;
+            this.btnEnviarProducto.Text = "Enviar producto";
+            this.btnEnviarProducto.UseVisualStyleBackColor = true;
+            this.btnEnviarProducto.Click += new System.EventHandler(this.btnEnviarProducto_Click);
             // 
             // ProductoCarrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.linkQuitarProducto);
+            this.Controls.Add(this.btnEnviarProducto);
+            this.Controls.Add(this.btnQuitarProducto);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
@@ -100,6 +112,7 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.LinkLabel linkQuitarProducto;
+        private System.Windows.Forms.Button btnQuitarProducto;
+        private System.Windows.Forms.Button btnEnviarProducto;
     }
 }

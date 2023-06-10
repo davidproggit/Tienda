@@ -32,7 +32,6 @@
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
             this.grillaUsuarios = new System.Windows.Forms.DataGridView();
-            this.ColSeleccionarCliente = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -66,7 +65,7 @@
             // btnEliminarUsuario
             // 
             this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(1392, 753);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(1201, 760);
             this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(126, 58);
@@ -102,22 +101,12 @@
             // grillaUsuarios
             // 
             this.grillaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColSeleccionarCliente});
             this.grillaUsuarios.Location = new System.Drawing.Point(64, 566);
             this.grillaUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grillaUsuarios.Name = "grillaUsuarios";
             this.grillaUsuarios.RowHeadersWidth = 62;
-            this.grillaUsuarios.Size = new System.Drawing.Size(1454, 165);
+            this.grillaUsuarios.Size = new System.Drawing.Size(1263, 165);
             this.grillaUsuarios.TabIndex = 35;
-            // 
-            // ColSeleccionarCliente
-            // 
-            this.ColSeleccionarCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColSeleccionarCliente.HeaderText = "Seleccionar";
-            this.ColSeleccionarCliente.MinimumWidth = 8;
-            this.ColSeleccionarCliente.Name = "ColSeleccionarCliente";
-            this.ColSeleccionarCliente.Width = 98;
             // 
             // txtClave
             // 
@@ -373,7 +362,7 @@
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.lblFiltrar);
             this.panel1.Controls.Add(this.btnBuscarUsuario);
-            this.panel1.Location = new System.Drawing.Point(878, 739);
+            this.panel1.Location = new System.Drawing.Point(700, 739);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(449, 100);
             this.panel1.TabIndex = 51;
@@ -429,7 +418,6 @@
         private System.Windows.Forms.Label lblCuil;
         private System.Windows.Forms.TextBox txtCuil;
         private System.Windows.Forms.ComboBox comboCargo;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColSeleccionarCliente;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Panel panelDatosPersonales;

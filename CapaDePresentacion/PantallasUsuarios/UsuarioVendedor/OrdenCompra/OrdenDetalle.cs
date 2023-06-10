@@ -1,27 +1,31 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
+namespace CapaDePresentacion.PantallasUsuarios.UsuarioVendedor.OrdenComponente
 {
-    public partial class OrdenCompraCliente : UserControl
+    public partial class OrdenDetalle : Form
     {
-        #region "Constructor"
-
-        public OrdenCompraCliente()
+        public OrdenDetalle()
         {
             InitializeComponent();
         }
 
-        #endregion
-
         #region "Atributos"
 
-        private int _productoId;
+        private int _ordenId;
 
-        public int productoId
+        public int ordenId
         {
-            get { return _productoId; }
-            set { _productoId = value; }
+            get { return _ordenId; }
+            set { _ordenId = value; }
+        }
+
+        private int _idCliente;
+
+        public int idCliente
+        {
+            get { return _idCliente; }
+            set { _idCliente = value; }
         }
 
         private string _productoNombre;
@@ -64,32 +68,24 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
             set { _productoCantidad = value; }
         }
 
-        private string _productoEstado;
-
-        public string productoEstado
-        {
-            get { return _productoEstado; }
-            set { _productoEstado = value; }
-        }
-
         #endregion
 
         #region "Cargar datos"
 
-        private void OrdenCompraCliente_Load(object sender, EventArgs e)
+        private void OrdenDetalle_Load(object sender, EventArgs e)
         {
             CargarInformacion();
         }
 
         private void CargarInformacion()
         {
-            lblNombreProducto.Text = productoNombre;
+            lblDetalle.Text = "Detalle de orden nº " + ordenId;
+            lblNombreCliente.Text = "Cliente nº: " + idCliente;
+            lblNombreProducto.Text = "Producto: " + productoNombre;
             lblPrecio.Text = "Precio: $" + productoPrecio.ToString();
             lblCantidad.Text = "Cantidad: " + productoCantidad.ToString();
-            lblEstado.Text = productoEstado;
         }
 
         #endregion
-
     }
 }

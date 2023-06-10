@@ -42,12 +42,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="Carrito.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Gerente.cs" />
     <Compile Include="Proveedor.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="Vendedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{54A55B9C-B35D-4975-8B2F-D10E8131C62A}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj">
       <Project>{e5583948-83a4-4515-8bc0-53336b723525}</Project>
       <Name>CapaDeDatos</Name>

@@ -2,13 +2,9 @@
 {
     public class ComprobarCampos
     {
-        #region "Atributo"
-
         private string _mensaje = "";
 
-        #endregion
-
-        #region "Metodo"
+        #region "Campos"
 
         public string ComprobarCamposIndividuales(string campo)
         {

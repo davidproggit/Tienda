@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace CapaDeDatos
 {
-    public class DatosProductos
+    public class ConsultasProductos
     {
         #region "Objetos"
 
@@ -19,20 +19,20 @@ namespace CapaDeDatos
 
         #region "Proveedor"
 
-        public void Insertar(string nombre, string descripcion, string marca, double precio, int stock)
+        public void InsertarProductoStock(string nombre, string descripcion, string marca, double precio, int stock)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "InsertarProducto";
+            _comando.CommandText = "InsertarProductoStock";
             _comando.CommandType = CommandType.StoredProcedure;
             CamposProducto(nombre, descripcion, marca, precio, stock);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
 
-        public void Editar(string nombre, string descripcion, string marca, double precio, int stock, int id)
+        public void EditarProductoStock(string nombre, string descripcion, string marca, double precio, int stock, int id)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EditarProducto";
+            _comando.CommandText = "EditarProductoStock";
             _comando.CommandType = CommandType.StoredProcedure;
             CamposProducto(nombre, descripcion, marca, precio, stock);
             _comando.Parameters.AddWithValue("@id", id);
@@ -49,10 +49,10 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@stock", stock);
         }
 
-        public void Eliminar(int id)
+        public void EliminarProductoStock(int id)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EliminarProducto";
+            _comando.CommandText = "EliminarProductoStock";
             _comando.CommandType = CommandType.StoredProcedure;
             _comando.Parameters.AddWithValue("@idproductoeliminar", id);
             _comando.ExecuteNonQuery();
@@ -75,10 +75,10 @@ namespace CapaDeDatos
 
         #region "Cliente y proveedor"
 
-        public DataTable Mostrar()
+        public DataTable MostrarProductosStock()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "MostrarProductos";
+            _comando.CommandText = "MostrarProductosStock";
             _lector = _comando.ExecuteReader();
             _comando.CommandType = CommandType.StoredProcedure;
             _tabla.Load(_lector);
@@ -86,11 +86,12 @@ namespace CapaDeDatos
             return _tabla;
         }
 
-        public DataTable Filtrar(string textoBuscar)
+        public DataTable FiltrarProductoStock(string productoCoincidencia)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "SELECT Id,Nombre, Descripcion, Marca, Precio, Stock FROM Productos where Nombre like ('" + textoBuscar + "%')";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "FiltrarProductoStock";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@productoCoincidencia", productoCoincidencia);
             _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();
@@ -106,11 +107,11 @@ namespace CapaDeDatos
 
         #region "Cliente"
 
-        public List<FormatoProductos> Rellenar()
+        public List<FormatoProductos> CargarVistaProductos()
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Precio, Stock, Estado from Productos";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "CargarVistaProductos";
+            _comando.CommandType = CommandType.StoredProcedure;
             _lector = _comando.ExecuteReader();
 
             while (_lector.Read())
@@ -121,7 +122,6 @@ namespace CapaDeDatos
                 string productoMarca = _lector["Marca"].ToString();
                 float productoPrecio = float.Parse(_lector["Precio"].ToString());
                 int productoCantidad = int.Parse(_lector["Stock"].ToString());
-                string productoEstado = _lector["Estado"].ToString();
 
                 _valores.Add(new FormatoProductos
                 {
@@ -131,7 +131,6 @@ namespace CapaDeDatos
                     productoMarca = productoMarca,
                     productoPrecio = productoPrecio,
                     productoCantidad = productoCantidad,
-                    productoEstado = productoEstado
                 });
             }
 
@@ -140,11 +139,13 @@ namespace CapaDeDatos
             return _valores;
         }
         
-        public List<FormatoProductos> RellenarCarrito()
+        public List<FormatoProductos> RellenarCarrito(int clienteId)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select Id, Nombre, Descripcion, Marca, Cantidad, Precio from Carrito";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "RellenarCarrito";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@clienteId", clienteId);
+
             _lector = _comando.ExecuteReader();
 
             while (_lector.Read())
@@ -172,7 +173,7 @@ namespace CapaDeDatos
             return _valores;
         }
 
-        public List<FormatoProductos> CargarHistorial(int idCliente)
+        public List<FormatoProductos> CargarHistorialOrdenes(int idCliente)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "CargarHistorial";
@@ -210,7 +211,7 @@ namespace CapaDeDatos
         }
 
 
-        public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio, string estado)
+        public void AgregarCarrito(int idCliente, int idProducto, string nombre, string descripcion, string marca, int cantidad, float precio)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "AgregarProductoCarrito";
@@ -223,39 +224,26 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@marca", marca);
             _comando.Parameters.AddWithValue("@cantidad", cantidad);
             _comando.Parameters.AddWithValue("@precio", precio);
-            _comando.Parameters.AddWithValue("@estado", estado);
            
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
 
-        public void CambiarEstadoProducto(int id, string estado)
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "CambiarEstadoProducto";
-            _comando.CommandType = CommandType.StoredProcedure;
-
-            _comando.Parameters.AddWithValue("@id", id);
-            _comando.Parameters.AddWithValue("@estado", estado);
-
-            _comando.ExecuteNonQuery();
-            _comando.Parameters.Clear();
-        }
-
-        public void EliminarProductoCarrito(int id)
+        public void EliminarProductoCarrito(int productoId, int clienteId)
         {
             _comando.Connection = _conexion.AbrirConexion();
             _comando.CommandText = "EliminarProductoCarrito";
             _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.AddWithValue("@id", id);
+            _comando.Parameters.AddWithValue("@productoId", productoId);
+            _comando.Parameters.AddWithValue("@clienteId", clienteId);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
 
-        public void EnviarOrdenCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado, string fecha)
+        public void EnviarProductoCompra(int idProducto, int idCLiente, string nombre, string descripcion, string marca, int cantidad, float precio, string estado, string fecha)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EnviarOrdenCompra";
+            _comando.CommandText = "EnviarProductoCompra";
             _comando.CommandType = CommandType.StoredProcedure;
 
             _comando.Parameters.AddWithValue("@idProducto", idProducto);
@@ -281,16 +269,6 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@id", id);
             _comando.Parameters.AddWithValue("@idCliente", idCliente);
 
-            _comando.ExecuteNonQuery();
-            _comando.Parameters.Clear();
-        }
-
-        public void EliminarClienteProducto(int id)
-        {
-            _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "EliminarClienteProducto";
-            _comando.CommandType = CommandType.StoredProcedure;
-            _comando.Parameters.AddWithValue("@id", id);
             _comando.ExecuteNonQuery();
             _comando.Parameters.Clear();
         }
@@ -358,7 +336,7 @@ namespace CapaDeDatos
             return cantidadProductoEncontrada;
         }
 
-
+       
         #endregion
 
         #region "Vendedor"

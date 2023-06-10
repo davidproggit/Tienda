@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaComun;
+using CapaDeEntidades;
 using System;
 using System.Windows.Forms;
 using WindowsFormsApp1;
@@ -7,14 +8,10 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 {
     public partial class ProductoCarrito : UserControl
     {
-        #region "Constructor"
-
         public ProductoCarrito()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Atributos"
 
@@ -94,14 +91,19 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Opciones"
 
-        private void linkQuitarProducto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnQuitarProducto_Click(object sender, EventArgs e)
         {
             ComprobarEliminarProducto();
         }
 
+        private void btnEnviarProducto_Click(object sender, EventArgs e)
+        {
+            EnviarProductoCompra();
+        }
+
         #endregion
 
-        #region "Metodos de las opciones"
+        #region "Metodos"
 
         private void ComprobarEliminarProducto()
         {
@@ -113,21 +115,30 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         private void EliminarProducto()
         {
-            Productos productos = new Productos();
+            Carrito carrito = new Carrito();
 
-            productos.CambiarEstadoProducto(productoId, "Disponible");
-            productos.EliminarProductoCarrito(productoId);
-            productos.EliminarClienteProducto(productoId);
+            carrito.EliminarProductoCarrito(productoId, DatosUsuario.id);
 
             RecargarPantalla();
         }
 
         private static void RecargarPantalla()
         {
-            (Application.OpenForms["Carrito"] as Carrito).LimpiarCarrito();
-            (Application.OpenForms["Carrito"] as Carrito).Llenar();
-            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarProductos();
-            (Application.OpenForms["ProductosVista"] as ProductosVista).Llenar();
+            (Application.OpenForms["CarritoVista"] as CarritoVista).LimpiarVistaCarrito();
+            (Application.OpenForms["CarritoVista"] as CarritoVista).RellenarVistaCarrito();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).LimpiarVistaProductos();
+            (Application.OpenForms["ProductosVista"] as ProductosVista).RellenarVistaProductos();
+        }
+
+        private void EnviarProductoCompra()
+        {
+            Carrito carrito = new Carrito();
+
+            string fecha = DateTime.Now.ToString("yyy-MM-dd");
+
+            carrito.EnviarProductoCompra(productoId, DatosUsuario.id, productoNombre, productoDescripcion, productoMarca, productoCantidad, productoPrecio, "Pendiente", fecha);
+            EliminarProducto();
+            RecargarPantalla();
         }
 
         #endregion

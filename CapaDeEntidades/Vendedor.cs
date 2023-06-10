@@ -1,52 +1,58 @@
-﻿using CapaDeDatos;
+﻿using CapaComun;
+using CapaDeDatos;
+using System.Collections.Generic;
 using System.Data;
 
 namespace CapaDeEntidades
 {
-    public class Vendedor
+    public class Vendedor : Usuario
     {
-        #region "Objetos"
-
-        private DatosDeUsuario _datosDeUsuario = new DatosDeUsuario();
-        private DataTable _tabla = new DataTable();
-
-        #endregion
-
-        #region "Constructor"
+        private ConsultasUsuario _consultasUsuario = new ConsultasUsuario();
+        private ConsultasProductos _consultasProductos = new ConsultasProductos();
 
         public Vendedor() { }
 
-        #endregion
-
-        #region "DataTable"
+        #region "Cliente"
 
         public DataTable CargarClientes()
         {
-            _tabla = _datosDeUsuario.CargarClientes();
-            return _tabla;
+            return _consultasUsuario.CargarClientes();
         }
 
-        public DataTable FiltrarCliente(string txtBuscar)
+        public DataTable FiltrarCliente(string clienteCoincidencia)
         {
-            _tabla = _datosDeUsuario.FiltrarCliente(txtBuscar);
-            return _tabla;
+            return _consultasUsuario.FiltrarCliente(clienteCoincidencia);
+        }
+
+        public void EditarPerfilCliente(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            _consultasUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+        }
+
+        public void InsertarNuevoCliente(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            _consultasUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
         }
 
         #endregion
 
-        #region "Usuario"
+        #region "Ordenes"
 
-        public void EditarPerfilUsuario(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public List<FormatoProductos> CargarOrdenesCompra()
         {
-            _datosDeUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+            return _consultasProductos.CargarOrdenesCompra();
         }
 
-        public void InsertarNuevoUsuario(string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        public void AprobarOrden(int ordenId, string vendedor, int cantidad, int productoId)
         {
-            _datosDeUsuario.InsertarNuevoUsuario(usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+            _consultasProductos.AprobarOrden(ordenId, vendedor, cantidad, productoId);
+        }
+
+        public void CancelarOrden(int ordenId, string vendedor)
+        {
+            _consultasProductos.CancelarOrden(ordenId, vendedor);
         }
 
         #endregion
-
     }
 }

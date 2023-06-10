@@ -1,4 +1,5 @@
-﻿using CapaDeNegocio;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -8,14 +9,10 @@ namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class Login : Form
     {
-        #region "Constructor"
-
         public Login()
         {
             InitializeComponent();
         }
-
-        #endregion
 
         #region "Metodos de mover la ventana"
         private void MoverVentana_MouseDown(object sender, MouseEventArgs e)
@@ -81,17 +78,16 @@ namespace CapaDePresentacion.PantallasGenerales
         private void IniciarSesion()
         {
             if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
-            {
-                ModeloUsuario usuario = new ModeloUsuario();
-                BusquedaUsuario(usuario);
-            }
+                BusquedaUsuario();
         }
 
-        private void BusquedaUsuario(ModeloUsuario usuario)
+        private void BusquedaUsuario()
         {
+            Usuario usuario = new Usuario();
+
             try
             {
-                var loginValido = usuario.LoginUsuario(txtUsuario.Text, txtClave.Text);
+                var loginValido = usuario.IniciarSesion(txtUsuario.Text, txtClave.Text);
                 LoginValidado(loginValido);
             }
             catch (Exception)
@@ -104,7 +100,7 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             InterfazUsuario interfazUsuario = new InterfazUsuario();
             interfazUsuario.Show();
-            interfazUsuario.FormClosed += CerrarSesion;
+            interfazUsuario.FormClosed += LimpiarPantallaInicio;
         }
 
         #endregion
@@ -138,8 +134,12 @@ namespace CapaDePresentacion.PantallasGenerales
             lblError.Visible = true;
         }
 
-        private void CerrarSesion(object sender, FormClosedEventArgs e)
+        private void LimpiarPantallaInicio(object sender, FormClosedEventArgs e)
         {
+            Usuario usuario = new Usuario();
+
+            usuario.CerrarSesion();
+
             txtClave.Clear();
             txtUsuario.Clear();
             lblError.Visible = false;

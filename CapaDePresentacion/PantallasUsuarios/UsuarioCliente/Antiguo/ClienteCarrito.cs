@@ -1,4 +1,4 @@
-﻿using CapaComun.Cache;
+﻿using CapaComun;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -18,16 +18,16 @@ namespace CapaDePresentacion.PantallasUsuarios.UsuarioCliente
 
         #region "Cargar datos"
 
-        public List<Datos> valores { get; set; }
+        public List<DatosAlerta> valores { get; set; }
 
         private void ClienteCarrito_Load(object sender, EventArgs e)
         {
             //Rellenar(Valores);
         }
 
-        public void Rellenar(List<Datos> valores)
+        public void Rellenar(List<DatosAlerta> valores)
         {
-            foreach (Datos valor in valores)
+            foreach (DatosAlerta valor in valores)
             {
                 int posicion = grillaProductos.Rows.Add();
 

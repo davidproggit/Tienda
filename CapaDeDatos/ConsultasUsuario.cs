@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using CapaComun.Cache;
+using CapaComun;
 
 namespace CapaDeDatos
 {
-    public class DatosDeUsuario
+    public class ConsultasUsuario
     {
         #region "Objetos"
 
@@ -49,11 +49,13 @@ namespace CapaDeDatos
             return _tabla;
         }
 
-        public DataTable FiltrarUsuario(string txtBuscar)
+        public DataTable FiltrarUsuario(string usuarioCoincidencia)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%')";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "FiltrarUsuario";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@usuarioCoincidencia", usuarioCoincidencia);
+
             _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();
@@ -90,11 +92,13 @@ namespace CapaDeDatos
 
         #region "Vendedor"
 
-        public DataTable FiltrarCliente(string txtBuscar)
+        public DataTable FiltrarCliente(string clienteCoincidencia)
         {
             _comando.Connection = _conexion.AbrirConexion();
-            _comando.CommandText = "select ID, Usuario, Clave, Nombre, Apellido, Email, Cargo, Dni, Cuil from Usuarios where Nombre like ('" + txtBuscar + "%') and Cargo='cliente'";
-            _comando.CommandType = CommandType.Text;
+            _comando.CommandText = "FiltrarCliente";
+            _comando.CommandType = CommandType.StoredProcedure;
+            _comando.Parameters.AddWithValue("@clienteCoincidencia", clienteCoincidencia);
+
             _comando.ExecuteNonQuery();
 
             DataTable tablaFiltrada = new DataTable();
@@ -173,13 +177,13 @@ namespace CapaDeDatos
 
         private static void FormatoCamposCache(SqlDataReader lector)
         {
-            CacheSesionUsuario.id = lector.GetInt32(0);
-            CacheSesionUsuario.usuario = lector.GetString(1);
-            CacheSesionUsuario.clave = lector.GetString(2);
-            CacheSesionUsuario.nombre = lector.GetString(3);
-            CacheSesionUsuario.apellido = lector.GetString(4);
-            CacheSesionUsuario.email = lector.GetString(5);
-            CacheSesionUsuario.cargo = lector.GetString(6);
+            DatosUsuario.id = lector.GetInt32(0);
+            DatosUsuario.usuario = lector.GetString(1);
+            DatosUsuario.clave = lector.GetString(2);
+            DatosUsuario.nombre = lector.GetString(3);
+            DatosUsuario.apellido = lector.GetString(4);
+            DatosUsuario.email = lector.GetString(5);
+            DatosUsuario.cargo = lector.GetString(6);
         }
 
         #endregion
