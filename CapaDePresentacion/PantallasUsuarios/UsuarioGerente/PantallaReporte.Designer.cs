@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaOrdenes = new System.Windows.Forms.DataGridView();
             this.btnMostrarTodo = new System.Windows.Forms.Button();
             this.btnUltimaSemana = new System.Windows.Forms.Button();
@@ -41,23 +41,24 @@
             // 
             // grillaOrdenes
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grillaOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grillaOrdenes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaOrdenes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.grillaOrdenes.EnableHeadersVisualStyles = false;
             this.grillaOrdenes.Location = new System.Drawing.Point(54, 141);
             this.grillaOrdenes.Name = "grillaOrdenes";
             this.grillaOrdenes.RowHeadersWidth = 62;
@@ -67,35 +68,38 @@
             // 
             // btnMostrarTodo
             // 
+            this.btnMostrarTodo.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnMostrarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarTodo.Location = new System.Drawing.Point(54, 36);
             this.btnMostrarTodo.Name = "btnMostrarTodo";
             this.btnMostrarTodo.Size = new System.Drawing.Size(185, 74);
             this.btnMostrarTodo.TabIndex = 1;
             this.btnMostrarTodo.Text = "Mostrar todo";
-            this.btnMostrarTodo.UseVisualStyleBackColor = true;
+            this.btnMostrarTodo.UseVisualStyleBackColor = false;
             this.btnMostrarTodo.Click += new System.EventHandler(this.btnMostrarTodo_Click);
             // 
             // btnUltimaSemana
             // 
+            this.btnUltimaSemana.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnUltimaSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUltimaSemana.Location = new System.Drawing.Point(274, 36);
             this.btnUltimaSemana.Name = "btnUltimaSemana";
             this.btnUltimaSemana.Size = new System.Drawing.Size(221, 74);
             this.btnUltimaSemana.TabIndex = 2;
             this.btnUltimaSemana.Text = "Ultima semana";
-            this.btnUltimaSemana.UseVisualStyleBackColor = true;
+            this.btnUltimaSemana.UseVisualStyleBackColor = false;
             this.btnUltimaSemana.Click += new System.EventHandler(this.btnUltimaSemana_Click);
             // 
             // btnUltimoMes
             // 
+            this.btnUltimoMes.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnUltimoMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUltimoMes.Location = new System.Drawing.Point(530, 36);
             this.btnUltimoMes.Name = "btnUltimoMes";
             this.btnUltimoMes.Size = new System.Drawing.Size(204, 74);
             this.btnUltimoMes.TabIndex = 3;
             this.btnUltimoMes.Text = "Ultimo mes";
-            this.btnUltimoMes.UseVisualStyleBackColor = true;
+            this.btnUltimoMes.UseVisualStyleBackColor = false;
             this.btnUltimoMes.Click += new System.EventHandler(this.btnUltimoMes_Click);
             // 
             // comboVendedores
@@ -122,6 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1409, 741);
             this.Controls.Add(this.lblVendedor);
             this.Controls.Add(this.comboVendedores);

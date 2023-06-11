@@ -29,6 +29,8 @@ namespace CapaDePresentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -183,12 +185,29 @@ namespace CapaDePresentacion
             // 
             // grillaClientes
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaClientes.Location = new System.Drawing.Point(46, 446);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grillaClientes.EnableHeadersVisualStyles = false;
+            this.grillaClientes.Location = new System.Drawing.Point(46, 502);
             this.grillaClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grillaClientes.Name = "grillaClientes";
             this.grillaClientes.RowHeadersWidth = 62;
-            this.grillaClientes.Size = new System.Drawing.Size(1113, 164);
+            this.grillaClientes.Size = new System.Drawing.Size(1142, 164);
             this.grillaClientes.TabIndex = 17;
             // 
             // btnBuscarCliente
@@ -205,19 +224,20 @@ namespace CapaDePresentacion
             // 
             // btnGuardarCliente
             // 
+            this.btnGuardarCliente.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnGuardarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarCliente.Location = new System.Drawing.Point(1031, 369);
+            this.btnGuardarCliente.Location = new System.Drawing.Point(835, 390);
             this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
             this.btnGuardarCliente.Size = new System.Drawing.Size(128, 49);
             this.btnGuardarCliente.TabIndex = 19;
             this.btnGuardarCliente.Text = "Guardar";
-            this.btnGuardarCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarCliente.UseVisualStyleBackColor = false;
             this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // panelDatosCliente
             // 
-            this.panelDatosCliente.BackColor = System.Drawing.Color.LightGray;
+            this.panelDatosCliente.BackColor = System.Drawing.Color.Aquamarine;
             this.panelDatosCliente.Controls.Add(this.lblUsuario);
             this.panelDatosCliente.Controls.Add(this.txtUsuario);
             this.panelDatosCliente.Controls.Add(this.txtCuil);
@@ -298,32 +318,33 @@ namespace CapaDePresentacion
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BackColor = System.Drawing.Color.Aquamarine;
             this.panel1.Controls.Add(this.btnBuscarCliente);
             this.panel1.Controls.Add(this.lblFiltrar);
             this.panel1.Controls.Add(this.txtBuscar);
-            this.panel1.Location = new System.Drawing.Point(665, 634);
+            this.panel1.Location = new System.Drawing.Point(46, 369);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(494, 94);
             this.panel1.TabIndex = 52;
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(491, 655);
+            this.btnEditar.Location = new System.Drawing.Point(1009, 389);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(125, 49);
             this.btnEditar.TabIndex = 52;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(29, 655);
+            this.linkLabel1.Location = new System.Drawing.Point(39, 694);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(371, 37);
             this.linkLabel1.TabIndex = 53;
@@ -335,7 +356,8 @@ namespace CapaDePresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 740);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1208, 740);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);

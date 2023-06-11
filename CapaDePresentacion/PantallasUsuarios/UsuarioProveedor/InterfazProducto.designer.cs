@@ -64,9 +64,9 @@
             this.grillaProductos.AllowUserToAddRows = false;
             this.grillaProductos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MidnightBlue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -75,18 +75,19 @@
             this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColSeleccionar});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grillaProductos.DefaultCellStyle = dataGridViewCellStyle4;
+            this.grillaProductos.EnableHeadersVisualStyles = false;
             this.grillaProductos.Location = new System.Drawing.Point(57, 22);
             this.grillaProductos.Name = "grillaProductos";
             this.grillaProductos.RowHeadersWidth = 62;
             this.grillaProductos.RowTemplate.Height = 28;
-            this.grillaProductos.Size = new System.Drawing.Size(1296, 414);
+            this.grillaProductos.Size = new System.Drawing.Size(1115, 414);
             this.grillaProductos.TabIndex = 0;
             // 
             // ColSeleccionar
@@ -188,46 +189,50 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(939, 38);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(140, 71);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(3, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(140, 71);
             this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.botonEditar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(196, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(140, 71);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(1128, 38);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(140, 71);
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
             // txtBuscar
@@ -261,7 +266,7 @@
             // 
             // panelFiltrar
             // 
-            this.panelFiltrar.BackColor = System.Drawing.Color.LightGray;
+            this.panelFiltrar.BackColor = System.Drawing.Color.Aquamarine;
             this.panelFiltrar.Controls.Add(this.btnBuscar);
             this.panelFiltrar.Controls.Add(this.lblFiltrar);
             this.panelFiltrar.Controls.Add(this.txtBuscar);
@@ -272,7 +277,7 @@
             // 
             // panelGuardarProducto
             // 
-            this.panelGuardarProducto.BackColor = System.Drawing.Color.LightGray;
+            this.panelGuardarProducto.BackColor = System.Drawing.Color.Aquamarine;
             this.panelGuardarProducto.Controls.Add(this.txtNombre);
             this.panelGuardarProducto.Controls.Add(this.lblNombre);
             this.panelGuardarProducto.Controls.Add(this.btnCancelar);
@@ -292,7 +297,7 @@
             // 
             // panelEdicionProducto
             // 
-            this.panelEdicionProducto.BackColor = System.Drawing.Color.LightGray;
+            this.panelEdicionProducto.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelEdicionProducto.Controls.Add(this.btnGenerarAlerta);
             this.panelEdicionProducto.Controls.Add(this.btnEditar);
             this.panelEdicionProducto.Controls.Add(this.btnEliminar);
@@ -303,19 +308,21 @@
             // 
             // btnGenerarAlerta
             // 
+            this.btnGenerarAlerta.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnGenerarAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarAlerta.Location = new System.Drawing.Point(398, 3);
             this.btnGenerarAlerta.Name = "btnGenerarAlerta";
             this.btnGenerarAlerta.Size = new System.Drawing.Size(219, 71);
             this.btnGenerarAlerta.TabIndex = 21;
             this.btnGenerarAlerta.Text = "Generar Alerta";
-            this.btnGenerarAlerta.UseVisualStyleBackColor = true;
+            this.btnGenerarAlerta.UseVisualStyleBackColor = false;
             this.btnGenerarAlerta.Click += new System.EventHandler(this.btnGenerarAlerta_Click);
             // 
             // InterfazProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1684, 769);
             this.Controls.Add(this.panelEdicionProducto);
             this.Controls.Add(this.panelGuardarProducto);
@@ -323,7 +330,7 @@
             this.Controls.Add(this.grillaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazProducto";
-            this.Text = "InterfazProducto";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.InterfazProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaProductos)).EndInit();
             this.panelFiltrar.ResumeLayout(false);

@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
             this.panel1.Controls.Add(this.imagenProducto);
             this.panel1.Controls.Add(this.lblCantidad);
             this.panel1.Controls.Add(this.selectorCantidad);
@@ -124,13 +124,14 @@
             // 
             // btnAgregarCarrito
             // 
+            this.btnAgregarCarrito.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.Location = new System.Drawing.Point(343, 329);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
             this.btnAgregarCarrito.Size = new System.Drawing.Size(284, 92);
             this.btnAgregarCarrito.TabIndex = 4;
             this.btnAgregarCarrito.Text = "Agregar al carrito";
-            this.btnAgregarCarrito.UseVisualStyleBackColor = true;
+            this.btnAgregarCarrito.UseVisualStyleBackColor = false;
             this.btnAgregarCarrito.Click += new System.EventHandler(this.btnAgregarCarrito_Click);
             // 
             // lblPrecio
