@@ -134,7 +134,7 @@ namespace CapaDeDatos
             _comando.Parameters.AddWithValue("@id", id);
             _comando.Parameters.AddWithValue("@cargo", cargo);
             _comando.Parameters.AddWithValue("@dni", dni);
-            _comando.Parameters.AddWithValue("@cuil", id);
+            _comando.Parameters.AddWithValue("@cuil", cuil);
             _comando.ExecuteNonQuery();
             _conexion.CerrarConexion();
         }

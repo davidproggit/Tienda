@@ -36,6 +36,11 @@ namespace CapaDeEntidades
             _consultasUsuario.EliminarUsuario(id);
         }
 
+        public void EditarPerfilUsuarios(int id, string usuario, string clave, string nombre, string apellido, string email, string cargo, string dni, string cuil)
+        {
+            _consultasUsuario.EditarPerfilUsuario(id, usuario, clave, nombre, apellido, email, cargo, dni, cuil);
+        }
+
         #endregion
 
     }

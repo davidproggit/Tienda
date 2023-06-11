@@ -6,8 +6,7 @@ namespace CapaDeDatos
     public class Conexion
     {
         private SqlConnection _conexion = new SqlConnection("Server=(local); DataBase=Tienda;Integrated Security=true");
-
-        #region "Conexion"
+        //private SqlConnection _conexion = new SqlConnection(@"Data Source=Laptop_Dell\SQLEXPRESS; DataBase=Tienda; integrated security = true");
 
         public SqlConnection AbrirConexion()
         {
@@ -25,7 +24,7 @@ namespace CapaDeDatos
             return _conexion;
         }
 
-        #endregion
+        //#endregion
 
     }
 }
