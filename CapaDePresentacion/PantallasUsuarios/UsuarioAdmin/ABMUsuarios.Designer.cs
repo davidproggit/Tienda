@@ -56,6 +56,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditarUsuario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grillaUsuarios)).BeginInit();
             this.panelDatosPersonales.SuspendLayout();
             this.panelDatosLaborales.SuspendLayout();
@@ -367,11 +368,24 @@
             this.panel1.Size = new System.Drawing.Size(449, 100);
             this.panel1.TabIndex = 51;
             // 
+            // btnEditarUsuario
+            // 
+            this.btnEditarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarUsuario.Location = new System.Drawing.Point(935, 471);
+            this.btnEditarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditarUsuario.Name = "btnEditarUsuario";
+            this.btnEditarUsuario.Size = new System.Drawing.Size(120, 55);
+            this.btnEditarUsuario.TabIndex = 52;
+            this.btnEditarUsuario.Text = "Editar";
+            this.btnEditarUsuario.UseVisualStyleBackColor = true;
+            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
+            // 
             // ABMUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1551, 846);
+            this.Controls.Add(this.btnEditarUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.panelDatosLaborales);
@@ -425,5 +439,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEditarUsuario;
     }
 }

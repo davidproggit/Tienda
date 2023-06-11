@@ -7,6 +7,8 @@ namespace CapaDePresentacion
 {
     public partial class ABMUsuarios : Form
     {
+        private bool _editar = false;
+        private int _idUsuario;
         public ABMUsuarios()
         {
             InitializeComponent();
@@ -69,7 +71,10 @@ namespace CapaDePresentacion
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
-            GuardarNuevoUsuario();
+            if (!_editar)
+                GuardarNuevoUsuario();
+            if (_editar)
+                GuardarUsuariosEditado();
         }
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
@@ -80,6 +85,11 @@ namespace CapaDePresentacion
         private void btnBuscarUsuario_Click(object sender, EventArgs e)
         {
             BuscarUsuario();
+        }
+
+        private void btnEditarUsuario_Click(object sender, EventArgs e)
+        {
+            RellenarEdicion();
         }
 
         #endregion
@@ -128,6 +138,40 @@ namespace CapaDePresentacion
         {
             Administrador administrador = new Administrador();
             grillaUsuarios.DataSource = administrador.FiltrarUsuario(txtBuscar.Text);
+        }
+
+        private void RellenarEdicion()
+        {
+            if (grillaUsuarios.SelectedRows.Count > 0)
+            {
+                _editar = true;
+                txtNombre.Text = grillaUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtApellido.Text = grillaUsuarios.CurrentRow.Cells["Apellido"].Value.ToString();
+                txtEmail.Text = grillaUsuarios.CurrentRow.Cells["Email"].Value.ToString();
+                txtDNI.Text = grillaUsuarios.CurrentRow.Cells["DNI"].Value.ToString();
+                txtClave.Text = grillaUsuarios.CurrentRow.Cells["Clave"].Value.ToString();
+                txtCuil.Text = grillaUsuarios.CurrentRow.Cells["Cuil"].Value.ToString();
+                txtUsuario.Text = grillaUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
+                comboCargo.Text = grillaUsuarios.CurrentRow.Cells["Cargo"].Value.ToString();
+                _idUsuario = (int)grillaUsuarios.CurrentRow.Cells["Id"].Value;
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void GuardarUsuariosEditado()
+        {
+            Administrador administrador = new Administrador();
+
+            if (!CamposVacios())
+            {
+                administrador.EditarPerfilUsuarios(_idUsuario, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, comboCargo.Text, txtDNI.Text, txtCuil.Text);
+                LimpiarFormulario();
+                CargarListaUsuarios();
+                _editar = false;
+            }
+            else
+                MessageBox.Show("Error: tiene que completar todos los campos");
         }
 
         #endregion
