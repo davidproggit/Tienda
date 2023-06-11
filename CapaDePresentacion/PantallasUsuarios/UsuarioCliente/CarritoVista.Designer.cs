@@ -44,24 +44,26 @@
             // 
             // btnEnviarCompra
             // 
+            this.btnEnviarCompra.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEnviarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarCompra.Location = new System.Drawing.Point(461, 520);
             this.btnEnviarCompra.Name = "btnEnviarCompra";
             this.btnEnviarCompra.Size = new System.Drawing.Size(259, 71);
             this.btnEnviarCompra.TabIndex = 4;
             this.btnEnviarCompra.Text = "Enviar productos";
-            this.btnEnviarCompra.UseVisualStyleBackColor = true;
+            this.btnEnviarCompra.UseVisualStyleBackColor = false;
             this.btnEnviarCompra.Click += new System.EventHandler(this.btnEnviarCompra_Click);
             // 
             // btnVaciar
             // 
+            this.btnVaciar.BackColor = System.Drawing.Color.Red;
             this.btnVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVaciar.Location = new System.Drawing.Point(122, 520);
             this.btnVaciar.Name = "btnVaciar";
             this.btnVaciar.Size = new System.Drawing.Size(207, 71);
             this.btnVaciar.TabIndex = 5;
             this.btnVaciar.Text = "Vaciar carrito";
-            this.btnVaciar.UseVisualStyleBackColor = true;
+            this.btnVaciar.UseVisualStyleBackColor = false;
             this.btnVaciar.Click += new System.EventHandler(this.btnVaciar_Click);
             // 
             // CarritoVista
