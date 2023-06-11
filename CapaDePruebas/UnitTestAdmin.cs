@@ -30,5 +30,23 @@ namespace Test
 
             Assert.IsTrue((resultado.Rows.Count) == 0);
         }
+
+        //Leandro
+        [DataTestMethod]
+        [DataRow("admin", "1", true)]
+        [DataRow("proveedor", "1", true)]
+        [DataRow("gerente", "1", true)]
+        [DataRow("vendedor", "1", true)]
+        [DataRow("cliente", "1", true)]
+        [DataRow("usuario_inexistente", "contraseña_incorrecta", false)]
+        [DataRow("admin", "contraseña_incorrecta", false)]
+        public void ValidarLogin(string usuarioNombre, string clave, bool resultadoEsperado)
+        {
+            Usuario usuario = new Usuario();
+
+            bool resultadoLogin = usuario.IniciarSesion(usuarioNombre, clave);
+
+            Assert.AreEqual(resultadoEsperado, resultadoLogin);
+        }
     }
 }
