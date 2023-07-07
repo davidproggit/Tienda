@@ -29,8 +29,8 @@ namespace CapaDePresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -185,23 +185,23 @@ namespace CapaDePresentacion
             // 
             // grillaClientes
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grillaClientes.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.grillaClientes.EnableHeadersVisualStyles = false;
             this.grillaClientes.Location = new System.Drawing.Point(46, 502);
             this.grillaClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -212,7 +212,7 @@ namespace CapaDePresentacion
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.LightBlue;
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.LightGray;
             this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCliente.Location = new System.Drawing.Point(350, 21);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -225,7 +225,7 @@ namespace CapaDePresentacion
             // 
             // btnGuardarCliente
             // 
-            this.btnGuardarCliente.BackColor = System.Drawing.Color.LightGreen;
+            this.btnGuardarCliente.BackColor = System.Drawing.Color.LightGray;
             this.btnGuardarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCliente.Location = new System.Drawing.Point(835, 390);
             this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -238,7 +238,7 @@ namespace CapaDePresentacion
             // 
             // panelDatosCliente
             // 
-            this.panelDatosCliente.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelDatosCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelDatosCliente.Controls.Add(this.lblUsuario);
             this.panelDatosCliente.Controls.Add(this.txtUsuario);
             this.panelDatosCliente.Controls.Add(this.txtCuil);
@@ -319,7 +319,7 @@ namespace CapaDePresentacion
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.btnBuscarCliente);
             this.panel1.Controls.Add(this.lblFiltrar);
             this.panel1.Controls.Add(this.txtBuscar);
@@ -330,7 +330,7 @@ namespace CapaDePresentacion
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEditar.BackColor = System.Drawing.Color.LightGray;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(1009, 389);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -357,7 +357,7 @@ namespace CapaDePresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1208, 740);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnEditar);

@@ -69,7 +69,7 @@
             // 
             // btnQuitarProducto
             // 
-            this.btnQuitarProducto.BackColor = System.Drawing.Color.LightCoral;
+            this.btnQuitarProducto.BackColor = System.Drawing.Color.LightGray;
             this.btnQuitarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarProducto.Location = new System.Drawing.Point(308, 129);
             this.btnQuitarProducto.Name = "btnQuitarProducto";
@@ -81,7 +81,7 @@
             // 
             // btnEnviarProducto
             // 
-            this.btnEnviarProducto.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEnviarProducto.BackColor = System.Drawing.Color.LightGray;
             this.btnEnviarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarProducto.Location = new System.Drawing.Point(308, 43);
             this.btnEnviarProducto.Name = "btnEnviarProducto";

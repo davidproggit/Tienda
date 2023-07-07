@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
@@ -67,9 +67,9 @@
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.BackColor = System.Drawing.Color.LightCoral;
+            this.btnEliminarUsuario.BackColor = System.Drawing.Color.LightGray;
             this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(1153, 475);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(1097, 472);
             this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(126, 55);
@@ -80,6 +80,7 @@
             // 
             // btnBuscarUsuario
             // 
+            this.btnBuscarUsuario.BackColor = System.Drawing.Color.LightGray;
             this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarUsuario.Location = new System.Drawing.Point(307, 27);
             this.btnBuscarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -87,14 +88,14 @@
             this.btnBuscarUsuario.Size = new System.Drawing.Size(126, 55);
             this.btnBuscarUsuario.TabIndex = 36;
             this.btnBuscarUsuario.Text = "Buscar";
-            this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
             this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // btnGuardarUsuario
             // 
-            this.btnGuardarUsuario.BackColor = System.Drawing.Color.LightGreen;
+            this.btnGuardarUsuario.BackColor = System.Drawing.Color.LightGray;
             this.btnGuardarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(845, 475);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(789, 472);
             this.btnGuardarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(120, 55);
@@ -105,23 +106,23 @@
             // 
             // grillaUsuarios
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grillaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grillaUsuarios.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grillaUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
             this.grillaUsuarios.EnableHeadersVisualStyles = false;
             this.grillaUsuarios.Location = new System.Drawing.Point(64, 600);
             this.grillaUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -327,7 +328,7 @@
             // 
             // panelDatosPersonales
             // 
-            this.panelDatosPersonales.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelDatosPersonales.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelDatosPersonales.Controls.Add(this.lblDatosPersonales);
             this.panelDatosPersonales.Controls.Add(this.lblApellido);
             this.panelDatosPersonales.Controls.Add(this.lblDni);
@@ -344,7 +345,7 @@
             // 
             // panelDatosLaborales
             // 
-            this.panelDatosLaborales.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelDatosLaborales.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelDatosLaborales.Controls.Add(this.lblDatosLaborales);
             this.panelDatosLaborales.Controls.Add(this.lblEmail);
             this.panelDatosLaborales.Controls.Add(this.lblUsuario);
@@ -380,7 +381,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.lblFiltrar);
             this.panel1.Controls.Add(this.btnBuscarUsuario);
@@ -391,9 +392,9 @@
             // 
             // btnEditarUsuario
             // 
-            this.btnEditarUsuario.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEditarUsuario.BackColor = System.Drawing.Color.LightGray;
             this.btnEditarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarUsuario.Location = new System.Drawing.Point(1000, 475);
+            this.btnEditarUsuario.Location = new System.Drawing.Point(944, 472);
             this.btnEditarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditarUsuario.Name = "btnEditarUsuario";
             this.btnEditarUsuario.Size = new System.Drawing.Size(120, 55);
@@ -406,7 +407,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1551, 846);
             this.Controls.Add(this.btnEditarUsuario);
             this.Controls.Add(this.panel1);

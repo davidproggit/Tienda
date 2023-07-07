@@ -64,9 +64,9 @@
             this.grillaProductos.AllowUserToAddRows = false;
             this.grillaProductos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -75,7 +75,7 @@
             this.grillaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColSeleccionar});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -189,7 +189,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnGuardar.BackColor = System.Drawing.Color.LightGray;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(939, 38);
             this.btnGuardar.Name = "btnGuardar";
@@ -201,7 +201,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEditar.BackColor = System.Drawing.Color.LightGray;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(3, 3);
             this.btnEditar.Name = "btnEditar";
@@ -213,7 +213,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnEliminar.BackColor = System.Drawing.Color.LightGray;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(196, 3);
             this.btnEliminar.Name = "btnEliminar";
@@ -225,7 +225,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnCancelar.BackColor = System.Drawing.Color.LightGray;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(1128, 38);
             this.btnCancelar.Name = "btnCancelar";
@@ -245,7 +245,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnBuscar.BackColor = System.Drawing.Color.LightGray;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(363, 3);
             this.btnBuscar.Name = "btnBuscar";
@@ -267,7 +267,7 @@
             // 
             // panelFiltrar
             // 
-            this.panelFiltrar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelFiltrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelFiltrar.Controls.Add(this.btnBuscar);
             this.panelFiltrar.Controls.Add(this.lblFiltrar);
             this.panelFiltrar.Controls.Add(this.txtBuscar);
@@ -278,7 +278,7 @@
             // 
             // panelGuardarProducto
             // 
-            this.panelGuardarProducto.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelGuardarProducto.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelGuardarProducto.Controls.Add(this.txtNombre);
             this.panelGuardarProducto.Controls.Add(this.lblNombre);
             this.panelGuardarProducto.Controls.Add(this.btnCancelar);
@@ -309,7 +309,7 @@
             // 
             // btnGenerarAlerta
             // 
-            this.btnGenerarAlerta.BackColor = System.Drawing.Color.LightBlue;
+            this.btnGenerarAlerta.BackColor = System.Drawing.Color.LightGray;
             this.btnGenerarAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarAlerta.Location = new System.Drawing.Point(398, 3);
             this.btnGenerarAlerta.Name = "btnGenerarAlerta";
@@ -323,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1684, 769);
             this.Controls.Add(this.panelEdicionProducto);
             this.Controls.Add(this.panelGuardarProducto);
