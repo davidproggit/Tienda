@@ -69,24 +69,26 @@
             // 
             // btnQuitarProducto
             // 
+            this.btnQuitarProducto.BackColor = System.Drawing.Color.LightCoral;
             this.btnQuitarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarProducto.Location = new System.Drawing.Point(308, 129);
             this.btnQuitarProducto.Name = "btnQuitarProducto";
             this.btnQuitarProducto.Size = new System.Drawing.Size(222, 53);
             this.btnQuitarProducto.TabIndex = 8;
             this.btnQuitarProducto.Text = "Quitar producto";
-            this.btnQuitarProducto.UseVisualStyleBackColor = true;
+            this.btnQuitarProducto.UseVisualStyleBackColor = false;
             this.btnQuitarProducto.Click += new System.EventHandler(this.btnQuitarProducto_Click);
             // 
             // btnEnviarProducto
             // 
+            this.btnEnviarProducto.BackColor = System.Drawing.Color.LightBlue;
             this.btnEnviarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarProducto.Location = new System.Drawing.Point(308, 43);
             this.btnEnviarProducto.Name = "btnEnviarProducto";
             this.btnEnviarProducto.Size = new System.Drawing.Size(222, 53);
             this.btnEnviarProducto.TabIndex = 9;
             this.btnEnviarProducto.Text = "Enviar producto";
-            this.btnEnviarProducto.UseVisualStyleBackColor = true;
+            this.btnEnviarProducto.UseVisualStyleBackColor = false;
             this.btnEnviarProducto.Click += new System.EventHandler(this.btnEnviarProducto_Click);
             // 
             // ProductoCarrito

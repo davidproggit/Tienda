@@ -62,13 +62,14 @@
             // 
             // btnVerMas
             // 
+            this.btnVerMas.BackColor = System.Drawing.Color.LightBlue;
             this.btnVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMas.Location = new System.Drawing.Point(21, 346);
             this.btnVerMas.Name = "btnVerMas";
             this.btnVerMas.Size = new System.Drawing.Size(155, 53);
             this.btnVerMas.TabIndex = 4;
             this.btnVerMas.Text = "Ver mas";
-            this.btnVerMas.UseVisualStyleBackColor = true;
+            this.btnVerMas.UseVisualStyleBackColor = false;
             this.btnVerMas.Click += new System.EventHandler(this.btnVerMas_Click);
             // 
             // lblPrecio

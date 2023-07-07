@@ -44,7 +44,8 @@
             // 
             // btnEnviarCompra
             // 
-            this.btnEnviarCompra.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEnviarCompra.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEnviarCompra.FlatAppearance.BorderSize = 0;
             this.btnEnviarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarCompra.Location = new System.Drawing.Point(461, 520);
             this.btnEnviarCompra.Name = "btnEnviarCompra";
@@ -56,7 +57,7 @@
             // 
             // btnVaciar
             // 
-            this.btnVaciar.BackColor = System.Drawing.Color.Red;
+            this.btnVaciar.BackColor = System.Drawing.Color.LightCoral;
             this.btnVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVaciar.Location = new System.Drawing.Point(122, 520);
             this.btnVaciar.Name = "btnVaciar";
@@ -70,6 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(906, 613);
             this.Controls.Add(this.btnVaciar);
             this.Controls.Add(this.btnEnviarCompra);

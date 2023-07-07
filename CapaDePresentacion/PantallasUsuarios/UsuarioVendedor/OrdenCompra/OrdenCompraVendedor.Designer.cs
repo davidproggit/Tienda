@@ -49,24 +49,26 @@
             // 
             // btnAprobar
             // 
+            this.btnAprobar.BackColor = System.Drawing.Color.LightGreen;
             this.btnAprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAprobar.Location = new System.Drawing.Point(720, 80);
             this.btnAprobar.Name = "btnAprobar";
             this.btnAprobar.Size = new System.Drawing.Size(235, 59);
             this.btnAprobar.TabIndex = 11;
             this.btnAprobar.Text = "Aprobar compra";
-            this.btnAprobar.UseVisualStyleBackColor = true;
+            this.btnAprobar.UseVisualStyleBackColor = false;
             this.btnAprobar.Click += new System.EventHandler(this.btnAprobar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightCoral;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(453, 80);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(235, 59);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar compra";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblEstado

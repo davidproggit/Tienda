@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.imagenProducto);
             this.panel1.Controls.Add(this.lblCantidad);
             this.panel1.Controls.Add(this.selectorCantidad);
@@ -124,7 +124,7 @@
             // 
             // btnAgregarCarrito
             // 
-            this.btnAgregarCarrito.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarCarrito.BackColor = System.Drawing.Color.LightBlue;
             this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.Location = new System.Drawing.Point(343, 329);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
